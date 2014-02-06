@@ -1,0 +1,69 @@
+Bon bon bon alors les fêtes c'est bien, bouffer c'est bien aussi, les cadeaux c'est cool,
+mais le projet tut c'est encore mieux, fini de se la couler douce mtnt on taf !
+
+Pour la fin des vacances il faut, afin de compléter notre précieux dossier, :
+
+1. Le truc en retard de 35 jours de nicolas hein je te rappelle au cas où la description rapide du sujet (->elaboration scenario, perso...) 
++ jeu video en html 5 pk c bien (naviguateur...)
++ on a besoin d'un moteur de jeu-> recherche
++ on a besoin de l'html, css, js -> maitriser. 
+Je rajouterais la description des langages que tu as fait avc Pierrick
+
+Off course termine le lvl 3 hein. 
+
+
+2. Pierrick t'as un peu d'avance sur le moteur il faut que tu me fasses une description de quintus. 
+Rapide speech que tu piques sur le site officiel et refait et après les 8 ou 9 librairies.
+Chacune servent a gérer quoi, fonctions
+principales données : http://html5quintus.com/docs/quintus.html 
+http://html5quintus.com/guide/core.md si ca peut help.
+T'étale pas une page c'est très bien avec des tirets ..
+
+3. Bon il faut aussi qu'on sache les ennemis donc en fin de lvl lance des petits trucs genre pistolet chez pas vous vous debrouillez peu importe fait une base
+on validera sur fb . mais il me faut une description de ca de la fin des levels comment ca marche si le personnage on doit le faire tomber dans un trou
+qu'il est de + en + intelligent 
+tir plus rapide
+imagine des sols cassables d'autre pas
+invente 4 fins magiques quoi
+et ça fait un beau paragraphe de 7 lignes ou plus ca me va (taille 12) --> Nicolas parce que c'est pas parce que t'as du retard que t'auras pas te donner de taf.
+
+4. Maxime un speech sur le fait qu'on sauvegarde dans les cookies le nickname, le score des lvls qui est ecrasé s'il est meilleur,  
+sauvegarde automatique en fin de lvl. explique aussi l'incnvénient des cookies mais que c'est un jeu dont le but c d'être dans le top 10 peu importe 
+les scores d'avant on s'en fout puisuq'on prends par niveau les meilleurs. Si c'est pas clair tu le diras mdr
+
+5. Un petit truc sur l'IA des mob qui grandit au fur et a mesure on peut imaginer que des que le perso est dans un perimetre il change direction vers lui
+pis après il pourrait courrir vers lui. Manifestez vous celui qui veut faire ca, si y a personne c'est random.
+
+6. Ordre de ce qu'on va faire pareil qui veut prends, juste qu'on ai une base on retravaillera ca a la rentrée aussi detaillé que en gestion de projet.
+	Ce qui faut dvlper pour les lv (ex cubes qui bouge, cube qui se detruise mm si c deja fait)
+	Construire les lvl d'abord le fond
+	la sauvegarde
+	les scores la bdd...
+	ajouter musique a la fin
+-> Relisez (et pas lisez bien entendu) le rapport de la derniere fois ca peut inspirer sur la tâche.
+
+
+
+Ps : Moi j'ai de quoi faire aussi vous inquietez pas.
+
+
+
+Pour finir tout le monde, il faut que vous regardiez l'archive suivante qui contient le site pour comprendre un peu comment ca foncionne.
+
+Des Questions ? Pas de questions ? Vous avez une semaine. :)
+
+
+
+
+
+
+
+
+
+
+
+SON A RAJOUTER
+
+Les effets sonores en particulier viennent soutenir l’immersion et la solitude perçues (sons réalistes, bruitages travaillés). Les sons produits par Laura bénéficient d’un traitement spécial. Étant constamment protégée derrière son masque, ils sont étouffés et résonnent d’une manière caverneuse. - La musique quant à elle est présente en filigrane, de façon discrète afin de venir souligner des moments clés ou soutenir l’action du joueur. C’est une musique peu rythmée et noire, triste.  
+
+
