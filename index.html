@@ -60,122 +60,12 @@
 			.touch();
 	
 	   
-    //Création des personnages / ennemis
+    //Création des personnages / ennemis / Composants
 		include ('personnage.js');
         include ('ennemis.js');
+		include ('Components.js');
 
 
-	// Comportement des cubes du sol  -> POSSIBLE ENLEVER SI BLOC UNIQUEMENT PREMIER
-		 Q.component("cube", {
-            added: function() {
-                var entity = this.entity;				
-                entity.on("bump.top",function(collision) {
-                	if(collision.obj.isA("Orange")) { 
-                    	if (collision.obj.first == 1){
-							collision.obj.first = 0 ;
-							collision.obj.sol = this;
-							this.variable--;
-						}else{
-							if (this != collision.obj.sol){             
-								this.variable--;
-								if (collision.obj.sol != null){
-							 		if (collision.obj.sol.variable == 0){
-										collision.obj.sol.destroy();
-									}
-								}
-								collision.obj.sol = this;
-								if (this.variable == 0){
-									this.destroy();
-								}
-							}
-						}
-					}    
-                });
-            },
-        });
-		
-		
-	// Cube qui s'autodetruise apres nb passage du personnage
-		 Q.component("AutoCube", {
-            added: function() {
-                var entity = this.entity;				
-                entity.on("bump.top",function(collision) {
-                    if(collision.obj.isA("Orange")) { 
-					if (this != collision.obj.sol){             
-                      	this.variable = this.variable - 1;						 
-						if (collision.obj.sol.variable == 0){
-							collision.obj.sol.destroy();}
-						collision.obj.sol = this;
-					}}
-                });
-            },
-        });
-			     
-		
-		
-	//Differents sprites de cubes...	
-	// variable = nb fois que l'on peut marcher sur le cube
-   
-		Q.Sprite.extend("Sol_1", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
-				this.variable = 1;
-				this.add("2d2, cube");
-            }
-        });
-		
-		Q.Sprite.extend("Sol_2", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "neige.png"});
-				this.variable = 2;
-				this.add("2d2, cube");
-            }
-        });
-		
-		 Q.Sprite.extend("Sol_3", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
-				this.variable = 3;
-				this.add("2d2, cube");
-            }
-        });		   
-		
-		Q.Sprite.extend("Sol_5", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
-				this.variable = 5;
-				this.add("2d2, cube");
-            }
-        });
-		
-		Q.Sprite.extend("Sol_pierre1_D", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
-				this.variable = 1;
-				this.add("2d2, AutoCube");
-            }
-        });
-		
-		Q.Sprite.extend("Sol_pierre2_D", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
-				this.variable = 2;
-				this.add("2d2, AutoCube");
-            }
-        });
-		
-		Q.Sprite.extend("Sol_pierre3_D", {
-            init: function(p) {
-                this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
-				this.variable = 3;
-				this.add("2d2, AutoCube");
-            }
-        });
-
-	   			
-	// Ajout des scenes lvl
-		include ('lvl1.js');
-		
 	// Fenetre menu 
 		Q.scene("Debut", function(stage) {
 			
@@ -232,20 +122,127 @@
 					y: 0,
                 }),Menu2);
 				
-		var sco = stage.insert(new Q.UI.Button({ 
+		var cred = stage.insert(new Q.UI.Button({ 
                     label: "Crédits",
                     color: "white",
                     x: 0,
 					y: 0,
                 }),Menu3);
-				
-//Récuperer lvl en cour pour le relancer TODO				
+							
 				men.on("click",function() {
+				Q.clearStages();
+      			Q.stageScene('niveau');
+				
+     		 });
+		});
+		
+		
+		// Choix du niveau 
+		
+		Q.scene("niveau", function(stage) {
+			
+		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
+        stage.insert(background);
+			
+		var Menu = stage.insert(new Q.UI.Container({
+		    fill: "grey",
+                x: wi/2,
+                y: hi-(hi/6)-180,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgba(0,0,0,0.5)",
+                w: wi/4.5,
+                h: 50
+		    })
+            );
+			
+		var Menu2 = stage.insert(new Q.UI.Container({
+		    fill: "grey",
+                x: wi/2,
+                y: hi-(hi/6)-100,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgba(0,0,0,0.5)",
+                w: wi/4.5,
+                h: 50	
+		    })
+            );
+			
+		var Menu3 = stage.insert(new Q.UI.Container({
+		    fill: "grey",
+                x: wi/2,
+                y: hi-(hi/6)-20,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgba(0,0,0,0.5)",
+                w: wi/4.5,
+                h: 50
+		    })
+            );
+			
+		var Menu4 = stage.insert(new Q.UI.Container({
+			fill: "grey",
+                x: wi/2,
+                y: hi-(hi/6)+60,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgba(0,0,0,0.5)",
+                w: wi/4.5,
+                h: 50
+		    })
+            );
+		
+		var un = stage.insert(new Q.UI.Button({ 
+                    label: "Lvl 1",
+                    color: "white",
+                    x: 0,
+					y: 0,
+                }),Menu);
+				
+		var deux = stage.insert(new Q.UI.Button({ 
+                    label: "Lvl 2",
+                    color: "white",
+                    x: 0,
+					y: 0,
+                }),Menu2);
+				
+		var trois = stage.insert(new Q.UI.Button({ 
+                    label: "Lvl 3",
+                    color: "white",
+                    x: 0,
+					y: 0,
+                }),Menu3);
+				
+		var quatre = stage.insert(new Q.UI.Button({ 
+                    label: "Lvl 4",
+                    color: "white",
+                    x: 0,
+					y: 0,
+                }),Menu4);
+		
+				un.on("click",function() {
 				Q.clearStages();
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				});
 				
-     		 });
+				deux.on("click",function() {
+				Q.clearStages();
+      			Q.stageScene('level2');
+				Q.stageScene("gameStats",1);
+				});
+				 
+				trois.on("click",function() {
+				Q.clearStages();
+      			Q.stageScene('level3');
+				Q.stageScene("gameStats",1);
+				});
+				 
+				quatre.on("click",function() {
+				Q.clearStages();
+      			Q.stageScene('level4');
+				Q.stageScene("gameStats",1);
+				});
 		});
 		
 
@@ -282,12 +279,9 @@
 					fill: "#CCCCCC"
                 }),GameoV);
 		
-		
-//Récuperer lvl en cour pour le relancer TODO
 			msg.on("click",function() {
         		Q.clearStages();
-      			Q.stageScene('level1');
-				Q.stageScene("gameStats",1);
+      			Q.stageScene('niveau');
      		 });
 		});
 		
@@ -372,7 +366,7 @@
         });
 
 
-        Q.load(["tiles_map.png", "orange.png","tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "men.tmx",
+        Q.load(["tiles_map.png", "orange.png","tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "men.tmx",
 		"htmltiles.jpg", "neige.png", "pause.png", "play.png", "ananas.png"
 		]
 		, function() {
