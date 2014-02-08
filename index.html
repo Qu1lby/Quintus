@@ -6,9 +6,7 @@
     </head>
     
 	<body >
-	
-	
- <script src="script/jquery.js" type="text/javascript"></script>
+ <script src="script/jquery.js"></script>
  <script src="script/background.js"></script>
  <script src="script/include.js"></script>
  
@@ -23,7 +21,6 @@
  <script src="lib/quintus_touch.js"></script>
  <script src="lib/quintus_ui.js"></script>
 
-
 	<div id='loading'>
 		<div id='loading_container'>
         	Loading...
@@ -32,16 +29,13 @@
       	</div>
     </div>
 
-
-
 <script>		
-
 	var wi = document.documentElement.clientWidth * 0.9;
 	if (wi>960){wi=960;}
 	var hi = document.documentElement.clientHeight -40 ;
 	if (hi>610){hi=610;}
 	
-	// Initialisation du moteur de jeu <img src="html.jpg">
+	// Initialisation du moteur de jeu
         var Q = Quintus()
             .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI")
 			.setup({
@@ -55,328 +49,27 @@
 				maximize: "touch"
 				//maximize : true
 			})
-			.controls()
 			//.enableSound()
+			.controls()
 			.touch();
 	
 	   
-    //Création des personnages / ennemis / Composants
+    // Création des Personnages / Ennemis / Composants / Affichage
 		include ('personnage.js');
         include ('ennemis.js');
-		include ('Components.js');
+		include ('components.js');
+		include ('affichage.js');
 
-
-	// Fenetre menu 
-		Q.scene("Debut", function(stage) {
-			
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
-        stage.insert(background);
-			
-		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)-130,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50
-		    })
-            );
-			
-		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)-50,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50	
-		    })
-            );
-			
-		var Menu3 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)+30,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50
-		    })
-            );
-		
-		var men = stage.insert(new Q.UI.Button({ 
-                    label: "Jouer",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu);
-				
-		var sco = stage.insert(new Q.UI.Button({ 
-                    label: "Scores",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu2);
-				
-		var cred = stage.insert(new Q.UI.Button({ 
-                    label: "Crédits",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu3);
-							
-				men.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('niveau');
-				
-     		 });
-		});
-		
-		
-		// Choix du niveau 
-		
-		Q.scene("niveau", function(stage) {
-			
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
-        stage.insert(background);
-			
-		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)-180,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50
-		    })
-            );
-			
-		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)-100,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50	
-		    })
-            );
-			
-		var Menu3 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)-20,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50
-		    })
-            );
-			
-		var Menu4 = stage.insert(new Q.UI.Container({
-			fill: "grey",
-                x: wi/2,
-                y: hi-(hi/6)+60,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi/4.5,
-                h: 50
-		    })
-            );
-		
-		var un = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 1",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu);
-				
-		var deux = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 2",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu2);
-				
-		var trois = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 3",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu3);
-				
-		var quatre = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 4",
-                    color: "white",
-                    x: 0,
-					y: 0,
-                }),Menu4);
-		
-				un.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level1');
-				Q.stageScene("gameStats",1);
-				});
-				
-				deux.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level2');
-				Q.stageScene("gameStats",1);
-				});
-				 
-				trois.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level3');
-				Q.stageScene("gameStats",1);
-				});
-				 
-				quatre.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level4');
-				Q.stageScene("gameStats",1);
-				});
-		});
-		
-
-	// Fenêtre de fin
-        Q.scene("endGame",function(stage) {
-					
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
-        stage.insert(background);
-		
-  			var GameoV = stage.insert(new Q.UI.Container({
-                fill: "grey",
-                x: wi/2,
-                y: hi/2,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: 300,
-                h: 200
-                })
-            );
-			
-			var msg = stage.insert(new Q.UI.Text({ 
-                    label: "¡ Game Over !",
-                    color: "white",
-                    x: 0,
-                    y: -30
-                }),GameoV);
-        
-			var msg = stage.insert(new Q.UI.Button({ 
-                    label: "Try again",
-                    color: "white",
-                    x: 0,
-                    y: 30,
-					fill: "#CCCCCC"
-                }),GameoV);
-		
-			msg.on("click",function() {
-        		Q.clearStages();
-      			Q.stageScene('niveau');
-     		 });
-		});
-		
-		
-       // Fenêtre des scores / vies
-        Q.scene("gameStats", function(stage) {
-            var statsContainer = stage.insert(new Q.UI.Container({
-                fill: "grey",
-                x: wi/2,
-                y: hi-20,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
-                w: wi,
-                h: 40
-                })
-            );
-
- 			var lives = stage.insert(new Q.UI.Text({ 
-                    label: "Lives x 2",
-                    color: "white",
-                    x: -wi/3,
-                    y: 0
-                }),statsContainer);
-				
-			 var temps = stage.insert(new Q.UI.Text({ 
-                    label: "Temps : 00:00",
-                    color: "white",
-                    x: wi/3.5,
-                    y: 0,
-                }),statsContainer);	
-				
-		  pau = false;
-		  var Play;
-		  var Pause = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "pause.png",
-                x: wi-20,
-                y: 20,
-                w: 29,
-                h: 28
-                })
-            );
-			
-	
-			Pause.on("click",function() {
-				Q.stage().pause(); 
-				pau = !pau;
-				Pause.destroy();
-				
-				var Play = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "play.png",
-                x: wi-20,
-                y: 20,
-                w: 32,
-                h: 32
-                })
-				);
-
-				 });
-            
-			
-			Play.on("click",function() {
-				Q.stage().unpause() ; 
-				pau = !pau;
-				Play.destroy();
-				
-				var Pause = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "pause.png",
-                x: wi-20,
-                y: 20,
-                w: 29,
-                h: 28
-                })
-          		 );
-				
-				 });
-
- 			
-        });
-
-
-        Q.load(["tiles_map.png", "orange.png","tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "men.tmx",
-		"htmltiles.jpg", "neige.png", "pause.png", "play.png", "ananas.png"
+	// Charge tous les éléments
+        Q.load(["tiles_map.png", "orange.png", "tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "htmltiles.jpg", "neige.png", "pause.png", "play.png"
 		]
 		, function() {
  			
-            Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});  
+			Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});  
 			Q.sheet("tilesmenu","htmltiles.jpg", { tilew: 70, tileh: 70});   			
-        	
 			Q.stageScene("Debut");
 			
-			}, { 
+		}, { 
 			progressCallback: function(loaded,total) {
    			var element = document.getElementById("loading_progress");
     		element.style.width = Math.floor(loaded/total*100) + "%";
@@ -385,6 +78,7 @@
         });
  
 </script>
+
 		</div>  
     </body>
 </html>
