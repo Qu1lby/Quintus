@@ -5,15 +5,6 @@
  border-radius: 10px;
  }
 
- /** 
- img{
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:-1;
- }
- */
- 
  #cache{
  visibility : hidden;
  }
