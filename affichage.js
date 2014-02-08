@@ -12,36 +12,36 @@
 		
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "#83C108",
+		    fill: "rgb(131,193,8)",
                 x: wi/2,
                 y: hi-(hi/6)-130,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50
 		    })
             );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "#F6A313",
+		    fill: "rgb(246,163,19)",
                 x: wi/2,
                 y: hi-(hi/6)-50,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50	
 		    })
             );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-(hi/6)+30,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50
 		    })
@@ -49,111 +49,110 @@
 		
 		var men = stage.insert(new Q.UI.Button({ 
                     label: "Jouer",
-                    color: "white",
                     x: 0,
 					y: 0,
                 }),Menu);
 				
 		var sco = stage.insert(new Q.UI.Button({ 
                     label: "Scores",
-                    color: "white",
                     x: 0,
 					y: 0,
                 }),Menu2);
 				
 		var cred = stage.insert(new Q.UI.Button({ 
                     label: "Crédits",
-                    color: "white",
                     x: 0,
 					y: 0,
                 }),Menu3);
 							
-				men.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('niveau');
-				
-     		 });
-		});
+		men.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('niveau');
+		
+     	});	
+	});
 		
 		
-	// Choix du niveau 
-		Q.scene("niveau", function(stage) {
+// Choix du niveau 
+	Q.scene("niveau", function(stage) {
 			
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
+		var background = new Q.TileLayer({ 
+		dataAsset: "men.tmx",
+		layerIndex: 0,
+		sheet: "tilesmenu",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+		
         stage.insert(background);
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-(hi/6)-180,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50
 		    })
             );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-(hi/6)-100,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50	
 		    })
             );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-(hi/6)-20,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50
 		    })
             );
 			
 		var Menu4 = stage.insert(new Q.UI.Container({
-			fill: "grey",
+			fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-(hi/6)+60,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi/4.5,
                 h: 50
 		    })
             );
 		
 		var un = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 1",
-                    color: "white",
+                    label: "LvL 1",
                     x: 0,
 					y: 0,
                 }),Menu);
 				
 		var deux = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 2",
-                    color: "white",
+                    label: "LvL 2",
                     x: 0,
 					y: 0,
                 }),Menu2);
 				
 		var trois = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 3",
-                    color: "white",
+                    label: "LvL 3",
                     x: 0,
 					y: 0,
                 }),Menu3);
 				
 		var quatre = stage.insert(new Q.UI.Button({ 
-                    label: "Lvl 4",
-                    color: "white",
+                    label: "LvL 4",
                     x: 0,
 					y: 0,
                 }),Menu4);
@@ -184,27 +183,32 @@
 		});
 		
 
-	// Fenêtre de fin
-        Q.scene("endGame",function(stage) {
+// Fenêtre de fin
+	Q.scene("endGame",function(stage) {
 					
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
-        stage.insert(background);
+		var background = new Q.TileLayer({
+		dataAsset: "men.tmx",
+		layerIndex: 0,
+		sheet: "tilesmenu",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+        
+		stage.insert(background);
 		
-  			var GameoV = stage.insert(new Q.UI.Container({
-                fill: "grey",
+		var GameoV = stage.insert(new Q.UI.Container({
+                fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi/2,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: 300,
                 h: 200
                 })
             );
 			
 			var msg = stage.insert(new Q.UI.Text({ 
-                    label: "¡ Game Over !",
-                    color: "white",
+                    label: "Game Over",
                     x: 0,
                     y: -30
                 }),GameoV);
@@ -214,7 +218,7 @@
                     color: "white",
                     x: 0,
                     y: 30,
-					fill: "#CCCCCC"
+					fill: "rgb(160,160,160)"
                 }),GameoV);
 		
 			msg.on("click",function() {
@@ -224,15 +228,15 @@
 		});
 		
 		
-       // Fenêtre des scores / vies
-        Q.scene("gameStats", function(stage) {
-            var statsContainer = stage.insert(new Q.UI.Container({
-                fill: "grey",
+// Fenêtre des scores / vies
+	Q.scene("gameStats", function(stage) {
+    	var statsContainer = stage.insert(new Q.UI.Container({
+        		fill: "rgb(160,160,160)",
                 x: wi/2,
                 y: hi-20,
                 border: 1,
                 shadow: 3,
-                shadowColor: "rgba(0,0,0,0.5)",
+                shadowColor: "rgb(160,160,160)",
                 w: wi,
                 h: 40
                 })
@@ -240,14 +244,12 @@
 
  			var lives = stage.insert(new Q.UI.Text({ 
                     label: "Lives x 2",
-                    color: "white",
                     x: -wi/3,
                     y: 0
                 }),statsContainer);
 				
 			 var temps = stage.insert(new Q.UI.Text({ 
                     label: "Temps : 00:00",
-                    color: "white",
                     x: wi/3.5,
                     y: 0,
                 }),statsContainer);	
@@ -280,7 +282,7 @@
                 })
 				);
 
-				 });
+				});
             
 			
 			Play.on("click",function() {
@@ -298,7 +300,5 @@
                 })
           		 );
 				
-				 });
-
- 			
-        });
+		});
+	});
