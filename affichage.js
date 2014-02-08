@@ -1,12 +1,18 @@
-
-	// Fenetre Menu Principal
-		Q.scene("Debut", function(stage) {
-			
-		var background = new Q.TileLayer({ dataAsset: "men.tmx", layerIndex: 0, sheet: "tilesmenu", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
+// Fenetre Menu Principal
+	Q.scene("Debut", function(stage) {
+		
+		var background = new Q.TileLayer({ 
+		dataAsset: "men.tmx",
+		layerIndex: 0,
+		sheet: "tilesmenu",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+		
         stage.insert(background);
+		
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "#83C108",
                 x: wi/2,
                 y: hi-(hi/6)-130,
                 border: 1,
@@ -18,7 +24,7 @@
             );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "grey",
+		    fill: "#F6A313",
                 x: wi/2,
                 y: hi-(hi/6)-50,
                 border: 1,
