@@ -1,11 +1,10 @@
-
 		//init : à la création
 		//step : à chaque instant
 		//damage : à chaque dommage
 		
 	Q.Sprite.extend("Orange",{
         init: function(p) {
-        this._super(p, { asset: "ananas.png", x: 100, y: 200, jumpSpeed: -400, lives: 2});
+        this._super(p, { asset: "orange.png", x: 100, y: 200, jumpSpeed: -400, lives: 2});
         this.add("2d, platformerControls"); 
         this.p.timeInvincible = 0;
 		this.p.sol = 0; 	 // Retiens le dernier cube

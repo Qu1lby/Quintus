@@ -280,7 +280,7 @@
                     y: 0,
                 }),statsContainer);	
 			
-			
+		/*	
 // A perfectionner ! 	 TO-DO
 		  pau = false;
 		  var Play;
@@ -328,5 +328,5 @@
                 })
           		 );
 				
-		});
+		});*/
 	});

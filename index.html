@@ -52,12 +52,19 @@
 			.controls()
 			.touch();
 	
-	   
+	    var pause = false;
+		Q.input.on("pause", function () {  
+			pause ? Q.unpauseGame() : Q.pauseGame();
+			pause = !pause;
+		});﻿	
+		
+		
     // Création des Personnages / Ennemis / Composants / Affichage
 		include ('personnage.js');
         include ('ennemis.js');
 		include ('components.js');
 		include ('affichage.js');
+		
 		
 	// Ajout des scenes lvl
 		include ('lvl1.js');
@@ -65,7 +72,7 @@
 		include ('lvl3.js');
 		include ('lvl4.js');
 		
-
+		
 	// Charge tous les éléments
         Q.load(["tiles_map.png", "orange.png", "tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "htmltiles.jpg", "neige.png", "pause.png", "play.png"
 		]
