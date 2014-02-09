@@ -279,54 +279,50 @@
                     x: wi/3.5,
                     y: 0,
                 }),statsContainer);	
+			});
 			
-		/*	
+			
 // A perfectionner ! 	 TO-DO
-		  pau = false;
-		  var Play;
-		  var Pause = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "pause.png",
-                x: wi-20,
-                y: 20,
-                w: 29,
-                h: 28
+	Q.scene("Pau", function(stage) {
+ 	   var Pause = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+ 	       asset: "pause.png",
+        	x: wi-20,
+        	y: 20,
+        	w: 29,
+        	h: 28
+   		}));
+			
+		Pause.on("click",function() {
+			Q.stage().pause(); 			
+		});
+	});
+			
+	Q.scene("Pla", function(stage) {
+	    var Play = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+	        asset: "play.png",
+	        x: wi-20,
+	        y: 20,
+	        w: 32,
+	        h: 32
+   		}));
+			
+		Play.on("click",function() {
+			Q.stage().unpause() ; 
+		});
+	});           
+	
+	Q.scene("PauseAff", function(stage) {
+ 	  var statsContainer = stage.insert(new Q.UI.Container({
+        		fill: "rgb(160,160,160)",
+                x: wi/2,
+                y: hi/2,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgb(160,160,160)",
+                w: wi,
+                h: 40
                 })
             );
-			
-	
-			Pause.on("click",function() {
-				Q.stage().pause(); 
-				pau = !pau;
-				Pause.destroy();
-				
-				var Play = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "play.png",
-                x: wi-20,
-                y: 20,
-                w: 32,
-                h: 32
-                })
-				);
-
-				});
-            
-			
-			Play.on("click",function() {
-				Q.stage().unpause() ; 
-				pau = !pau;
-				Play.destroy();
-				
-				var Pause = stage.insert(new Q.UI.Button({
-			    fill: "transparent",
-                asset: "pause.png",
-                x: wi-20,
-                y: 20,
-                w: 29,
-                h: 28
-                })
-          		 );
-				
-		});*/
 	});

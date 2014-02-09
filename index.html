@@ -55,9 +55,16 @@
 	    var pause = false;
 		Q.input.on("pause", function () {  
 			pause ? Q.unpauseGame() : Q.pauseGame();
+			pause ? Q.stageScene('PauseAff',2) :Q.stageScene('PauseAff',2);
 			pause = !pause;
 		});﻿	
 		
+		// DOESN'T WORK
+		if (!pause){
+			Q.stageScene('Pau');	
+		}else{
+			Q.stageScene('Pla');
+		}
 		
     // Création des Personnages / Ennemis / Composants / Affichage
 		include ('personnage.js');
