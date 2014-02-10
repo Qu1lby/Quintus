@@ -53,19 +53,17 @@
 			.touch();
 	
 	    var pause = false;
-		var st;
 		Q.input.on("pause", function () {  
 			
 			if (!pause){
-				st = Q.stageScene('PauseAff',2);
+				Q.stageScene('PauseAff',2);
 				Q.stage().pause();  
 			}else{
-				st.destroy();
+				Q.stageScene('PauseFin',2);
 				Q.stage().unpause();	
 			}
 			pause = !pause;
 		});﻿	
-		
 		
 		
 	/*	// DOESN'T WORK

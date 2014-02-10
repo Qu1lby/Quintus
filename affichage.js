@@ -12,7 +12,7 @@
 		
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "rgb(131,193,8)",
+		    fill: "rgb(162,205,90)",
                 x: wi/2,
                 y: hi-(hi/6)-130,
                 border: 1,
@@ -281,7 +281,7 @@
                 }),statsContainer);	
 			});
 			
-			
+/*			
 // A perfectionner ! 	 TO-DO
 	Q.scene("Pau", function(stage) {
  	   var Pause = stage.insert(new Q.UI.Button({
@@ -312,17 +312,35 @@
 			Q.stage().unpause() ; 
 		});
 	});           
-	
+*/	
 	Q.scene("PauseAff", function(stage) {
- 	  var statsContainer = stage.insert(new Q.UI.Container({
+ 	 	
+		var Opacite = stage.insert(new Q.UI.Container({
         		fill: "rgb(160,160,160)",
-                x: wi/2,
-                y: hi/2,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi,
-                h: 40
+				opacity : 0.5,
+                x: 0,
+                y: 0,
+                w: wi*2,
+                h: hi*2
                 })
             );
+			
+		var Container = stage.insert(new Q.UI.Container({
+        		fill: "transparent",
+                x: wi/2,
+                y: hi/2,
+                w: wi,
+                h: hi
+                })
+            );
+			
+		var lives = stage.insert(new Q.UI.Text({ 
+                label: "P A U S E",
+				size : 40,
+                x: 0,
+                y: 0
+                }),Container);
+	});
+	
+	Q.scene("PauseFin", function(stage) 	{
 	});
