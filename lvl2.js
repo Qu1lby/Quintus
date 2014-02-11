@@ -10,8 +10,8 @@
             
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
-				["Sol_3D", {x: 1225 , y : 1155}],
-				["Sol_2D", {x: 1295 , y : 1155}],
+				["Sol_5", {x: 1225 , y : 1155}],
+				["Sol_5", {x: 1295 , y : 1155}],
 				["Sol_5", {x: 1365 , y : 1155}],
 				["Sol_5", {x: 1435 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1155}],
