@@ -6,7 +6,7 @@
            
             stage.collisionLayer(new Q.TileLayer({ dataAsset: "Lvl2.tmx", layerIndex:1,  sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_DEFAULT }));
             
-            var player = stage.insert(new Q.Orange());
+            var player = stage.insert(new Q.Banane());
             
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
