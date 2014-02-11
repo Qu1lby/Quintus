@@ -17,7 +17,7 @@
 				["Sol_5", {x: 1505 , y : 1155}],
 				["Sol_5", {x: 1575 , y : 1155}],
 				["Sol_5", {x: 1645 , y : 1155}],
-				
+				// un commentaire
 				["Sol_pierre1_D", {x: 315 , y : 245}],
 				["Sol_pierre3_D", {x: 385 , y : 245}],
 				["Sol_pierre2_D", {x: 455 , y : 245}],
