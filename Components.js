@@ -65,11 +65,30 @@
         },
 	});
 	
+	//verticalPlatform
+	Q.Sprite.extend("VerticalPlatform", {
+    	init: function(p) {
+       		this._super(p, { gravity: 0, asset: "tomates.png" });
+            this.add("2d");
+            this.p.initialY = this.p.y;
+        },
+        
+		step: function(dt) {                
+            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
+        	    this.p.vy = -this.p.vy;
+            } 
+            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
+                 	this.p.vy = -this.p.vy;
+        	} 
+		}
+	});
+	
+	
 	//horizontal platform 
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
-       		this._super(p, {gravity: 0, asset: "fly.png" });
+       		this._super(p, {gravity: 0, asset: "tomates.png" });
             this.add("2d");
             this.p.initialX = this.p.x;
         },
