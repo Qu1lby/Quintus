@@ -10,13 +10,46 @@
             
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
-				["Sol_5", {x: 1225 , y : 1155}],
-				["Sol_5", {x: 1295 , y : 1155}],
+				["Sol_pierre3_D", {x: 1225 , y : 1155}],
+				["Sol_pierre2_D", {x: 1295 , y : 1155}],
 				["Sol_5", {x: 1365 , y : 1155}],
 				["Sol_5", {x: 1435 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1155}],
 				["Sol_5", {x: 1575 , y : 1155}],
 				["Sol_5", {x: 1645 , y : 1155}],
+				
+				["Sol_pierre2_D", {x: 1785 , y : 1085}],
+				["Sol_pierre2_D", {x: 1855 , y : 1085}],
+				["Sol_pierre2_D", {x: 1925 , y : 1085}],
+				["Sol_pierre2_D", {x: 1995 , y : 1085}],
+				["Sol_pierre2_D", {x: 2065 , y : 1085}],
+				["Sol_pierre2_D", {x: 2275 , y : 1155}],
+				["Sol_pierre2_D", {x: 2345 , y : 1155}],
+				
+				["Sol_pierre2_D", {x: 1925 , y : 945}],
+				["Sol_pierre2_D", {x: 1995 , y : 875}],
+				["Sol_pierre2_D", {x: 2065 , y : 805}],
+				
+				["Sol_pierre2_D", {x: 1715 , y : 1505}],
+				["Sol_pierre2_D", {x: 1785 , y : 1505}],
+				
+				["Sol_pierre2_D", {x: 2135 , y : 1505}],
+				["Sol_pierre2_D", {x: 2205 , y : 1505}],
+				["Sol_pierre2_D", {x: 2275 , y : 1505}],
+				["Sol_pierre2_D", {x: 2345 , y : 1505}],
+				["Sol_pierre2_D", {x: 2415 , y : 1505}],
+				
+				["Sol_pierre2_D", {x: 805 , y : 1155}],
+				["Sol_pierre2_D", {x: 735 , y : 1085}],
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				// un commentaire
 				["Sol_pierre1_D", {x: 315 , y : 245}],
 				["Sol_pierre3_D", {x: 385 , y : 245}],

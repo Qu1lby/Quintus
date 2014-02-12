@@ -86,6 +86,14 @@
 			this.add("2d2, cube");
         }
     });
+	
+		Q.Sprite.extend("Sol_2T", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
+			this.variable = 2;
+			this.add("2d2, Autocube");
+        }
+    });
 		
 	Q.Sprite.extend("Sol_3", {
     	init: function(p) {
@@ -94,6 +102,14 @@
 			this.add("2d2, cube");
         }
     });		   
+	
+			Q.Sprite.extend("Sol_3T", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
+			this.variable = 3;
+			this.add("2d2, Autocube");
+        }
+    });
 		
 	Q.Sprite.extend("Sol_5", {
         init: function(p) {
