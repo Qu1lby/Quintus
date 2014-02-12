@@ -186,7 +186,7 @@
 		
 	Q.Sprite.extend("Banane",{
         init: function(p) {
-        this._super(p, { asset: "banane.png", x: 1505, y: 1085, jumpSpeed: -600, lives: 2});
+        this._super(p, { asset: "banane.png", x: 1505, y: 1085, jumpSpeed: -530, lives: 2});
         this.add("2d, platformerControls"); 
         this.p.timeInvincible = 0;
 		this.p.sol = 0; 	 // Retiens le dernier cube
@@ -244,6 +244,12 @@
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
+			// Détruit le personnage s'il tombe sur la 1ere partie du Lvl 1
+			if(this.p.y>1645){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1, {label: "Game Over"})
+			}
 
         },
 			

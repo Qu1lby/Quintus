@@ -46,6 +46,12 @@
 				["Sol_pierre2_D", {x: 805 , y : 1155}],
 				["Sol_pierre2_D", {x: 735 , y : 1085}],
 				
+				["Sol_jump", {x: 875 , y : 1015}],
+				["Sol_jump", {x: 1015 , y : 875}],
+				["Sol_jump", {x: 945 , y : 805}],	
+
+				["Sol_pierre2_D", {x: 1085 , y : 735}],
+				["Sol_pierre2_D", {x: 1155 , y : 735}],				
 
             ];
               stage.loadAssets(levelAssets);  
