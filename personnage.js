@@ -108,6 +108,7 @@
 		this.p.minute = 0;
 		this.p.once = false;
 		this.p.test = false;
+		this.p.test = false;
 		this.p.date_prec = this.p.maintenant;
    		this.p.secondeabs = 0; 
         },

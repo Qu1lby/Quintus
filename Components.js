@@ -65,6 +65,26 @@
             });
         },
 	});
+	
+		Q.component("CaseJump", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					collision.obj.p.vy = -650;
+					if (this != collision.obj.sol){             
+                    	this.variable = this.variable - 1;						
+						if (collision.obj.sol.variable == 0){
+
+						}
+					collision.obj.sol = this;
+				}}
+            });
+        },
+	});
+	
+	
+	
 			     
 		
 		
@@ -86,14 +106,6 @@
 			this.add("2d2, cube");
         }
     });
-	
-		Q.Sprite.extend("Sol_2T", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
-			this.variable = 2;
-			this.add("2d2, Autocube");
-        }
-    });
 		
 	Q.Sprite.extend("Sol_3", {
     	init: function(p) {
@@ -102,14 +114,6 @@
 			this.add("2d2, cube");
         }
     });		   
-	
-			Q.Sprite.extend("Sol_3T", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
-			this.variable = 3;
-			this.add("2d2, Autocube");
-        }
-    });
 		
 	Q.Sprite.extend("Sol_5", {
         init: function(p) {
@@ -129,11 +133,21 @@
 		
 	Q.Sprite.extend("Sol_pierre2_D", {
         init: function(p) {
-            this._super(p,  {gravity : -5, asset : "fond_pierre_haut.png"});
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
 			this.variable = 2;
 			this.add("2d2, AutoCube");
         }
     });
+	
+		Q.Sprite.extend("Sol_jump", {
+        init: function(p) {
+            this._super(p,  {vx : -500, gravity : 0, asset : "tomate.png"});
+			this.variable = 2;
+			this.add("2d2, aiBounce, CaseJump");
+        }
+    });
+	
+	
 		
 	Q.Sprite.extend("Sol_pierre3_D", {
         init: function(p) {

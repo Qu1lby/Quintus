@@ -32,6 +32,7 @@
 				
 				["Sol_pierre2_D", {x: 1715 , y : 1505}],
 				["Sol_pierre2_D", {x: 1785 , y : 1505}],
+				["Sol_jump", {x: 1855 , y : 1505}],
 				
 				["Sol_pierre2_D", {x: 2135 , y : 1505}],
 				["Sol_pierre2_D", {x: 2205 , y : 1505}],
