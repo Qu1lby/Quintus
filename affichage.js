@@ -1,6 +1,8 @@
 // Fenetre Menu Principal
 	Q.scene("Debut", function(stage) {
 		
+		scene_courante="menu";
+		
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
 		layerIndex: 0,
@@ -68,6 +70,8 @@
 		men.on("click",function() {
 			Q.clearStages();
       		Q.stageScene('niveau');
+			scene_courante = "niveau";
+			scene_prec = "menu";
 		
      	});	
 	});
@@ -179,29 +183,44 @@
 				Q.clearStages();
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				
+				scene_courante = "lvl1";
+				scene_prec = "niveau";
 			});
 				
 			deux.on("click",function() {
 				Q.clearStages();
       			Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
+				
+				scene_courante = "lvl2";
+				scene_prec = "niveau";
 			});
 				 
 			trois.on("click",function() {
 				Q.clearStages();
       			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
+				
+				scene_courante = "lvl3";
+				scene_prec = "niveau";
 			});
 				 
 			quatre.on("click",function() {
 				Q.clearStages();
       			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
+				
+				scene_courante = "lvl4";
+				scene_prec = "niveau";
 			});
 			
 			cinq.on("click",function() {
 				Q.clearStages();
       			Q.stageScene('Debut');
+				
+				scene_courante = "menu";
+				scene_prec = "niveau";
 			});
 		});
 		
@@ -250,6 +269,10 @@
 			msg.on("click",function() {
         		Q.clearStages();
       			Q.stageScene('niveau');
+				
+				scene_prec = scene_courante
+				scene_courante = "niveau";
+				
      		 });
 		});
 		
