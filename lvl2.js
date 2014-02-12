@@ -42,39 +42,6 @@
 				["Sol_pierre2_D", {x: 805 , y : 1155}],
 				["Sol_pierre2_D", {x: 735 , y : 1085}],
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				// un commentaire
-				["Sol_pierre1_D", {x: 315 , y : 245}],
-				["Sol_pierre3_D", {x: 385 , y : 245}],
-				["Sol_pierre2_D", {x: 455 , y : 245}],
-				["Sol_pierre3_D", {x: 525 , y : 245}],
-				["Sol_pierre2_D", {x: 595 , y : 245}],
-				["Sol_pierre1_D", {x: 665 , y : 245}],
-				["Sol_5", {x: 735 , y : 245}],
-				["Sol_5", {x: 805 , y : 245}],
-				
-				["Sol_2", {x: 945 , y : 245}],
-				["Sol_2", {x: 1015 , y : 245}],
-				["Sol_2", {x: 1085 , y :250}],
-				["Sol_2", {x: 1155 , y : 245}],
-
-				["Sol_pierre1_D", {x: 1295 , y : 175}],
-				["Sol_pierre1_D", {x: 1505 , y : 175}],
-				["Sol_5", {x: 1645 , y : 315}],
-
-				["Sol_pierre3_D", {x: 1855 , y : 665}],
-								
-								
-				["GroundEnemy", {x: 1640 , y : 245, asset: "slime2.png"}],
-				
-				
 
             ];
               stage.loadAssets(levelAssets);  
