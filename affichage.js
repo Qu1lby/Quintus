@@ -304,9 +304,8 @@
                 }),statsContainer);	
 			});
 			
-/*			
-// A perfectionner ! 	 TO-DO
-	Q.scene("Pau", function(stage) {
+
+	Q.scene("Pau_bouton", function(stage) {
  	   var Pause = stage.insert(new Q.UI.Button({
 			fill: "transparent",
  	       asset: "pause.png",
@@ -321,7 +320,7 @@
 		});
 	});
 			
-	Q.scene("Pla", function(stage) {
+	Q.scene("Pla_bouton", function(stage) {
 	    var Play = stage.insert(new Q.UI.Button({
 			fill: "transparent",
 	        asset: "play.png",
@@ -335,7 +334,7 @@
 			Q.stage().unpause() ; 
 		});
 	});           
-*/	
+
 	Q.scene("PauseAff", function(stage) {
  	 	
 		var Opacite = stage.insert(new Q.UI.Container({
