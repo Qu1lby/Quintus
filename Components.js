@@ -65,6 +65,25 @@
         },
 	});
 	
+	//horizontal platform 
+	Q.Sprite.extend("HorizontalPlatform", {
+    	init: function(p) {
+			// parametre {vx: , rangeX: }
+       		this._super(p, {gravity: 0, asset: "fly.png" });
+            this.add("2d");
+            this.p.initialX = this.p.x;
+        },
+        
+		step: function(dt) {                
+            if(this.p.x - this.p.initialx >= this.p.rangex && this.p.vx > 0) {
+        	    this.p.vx = -this.p.vx;
+            } 
+            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
+                 	this.p.vx = -this.p.vx;
+        	} 
+		}
+	});
+	
 	
 // Cases qui font sauter le personnage
 	Q.component("CaseJump", {
