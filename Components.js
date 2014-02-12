@@ -54,7 +54,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -129,7 +129,7 @@
 		
 	Q.Sprite.extend("Sol_pierre2_D", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
+            this._super(p,  {gravity : -5, asset : "fond_pierre_haut.png"});
 			this.variable = 2;
 			this.add("2d2, AutoCube");
         }

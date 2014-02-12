@@ -345,7 +345,6 @@
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="6"/>
-   
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="6"/>
@@ -475,7 +474,7 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
    <tile gid="7"/>
    <tile gid="7"/>
    <tile gid="9"/>
@@ -514,7 +513,7 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
    <tile gid="6"/>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -553,7 +552,7 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
    <tile gid="6"/>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -616,7 +615,6 @@
    <tile gid="6"/>
    <tile gid="7"/>
    <tile gid="7"/>
-   <tile gid="17"/>
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -632,10 +630,11 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="7"/>
    <tile gid="7"/>
    <tile gid="9"/>
@@ -657,7 +656,7 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -678,8 +677,8 @@
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="6"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="13"/>
    <tile gid="9"/>
    <tile gid="9"/>
@@ -870,17 +869,17 @@
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="6"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="13"/>
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="13"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
-   <tile gid="17"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
    <tile gid="9"/>
