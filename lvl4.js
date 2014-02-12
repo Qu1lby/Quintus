@@ -1,7 +1,13 @@
 //setup level 1
 Q.scene("level4",function(stage) {
 				
-            var background = new Q.TileLayer({ dataAsset: "Lvl4.tmx", layerIndex: 0, sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
+            var background = new Q.TileLayer({ 
+				dataAsset: "Lvl4.tmx", 
+				layerIndex: 0, 
+				sheet: "tiles", 
+				tileW: 70, tileH: 70, 
+				type: Q.SPRITE_NONE });
+				
             stage.insert(background);
            
             stage.collisionLayer(new Q.TileLayer({ dataAsset: "Lvl4.tmx", layerIndex:1,  sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_DEFAULT }));
@@ -42,25 +48,4 @@ Q.scene("level4",function(stage) {
 
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
 		   
-        });
-		
-		//Comportement for common enemy behaviors
-    	Q.component("commonEnemy", {
-            added: function() {
-                var entity = this.entity;
-                entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-                    if(collision.obj.isA("Orange")) {                        
-                    	collision.obj.damage();
-                    }
-                });
-				
-                entity.on("bump.top",function(collision) {
-                    if(collision.obj.isA("Orange")) { 
-                        //make the player jump
-                        collision.obj.p.vy = -100;
-                        this.destroy();
-                    }
-                });
-            },
-            
         });
