@@ -65,20 +65,13 @@
             });
         },
 	});
-	
+	// Cases qui font sauter le personnage
 		Q.component("CaseJump", {
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					collision.obj.p.vy = -650;
-					if (this != collision.obj.sol){             
-                    	this.variable = this.variable - 1;						
-						if (collision.obj.sol.variable == 0){
-
-						}
-					collision.obj.sol = this;
-				}}
+					collision.obj.p.vy = -650;}
             });
         },
 	});
