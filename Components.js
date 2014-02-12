@@ -1,4 +1,3 @@
-
 // Comportement des cubes du sol  
 	Q.component("cube", {
     	added: function() {
@@ -49,7 +48,7 @@
     });
 		
 		
-// Cube qui s'autodetruise apres nb passage du personnage
+// Cube qui s'autodetruise apres nb passage d'un personnage
 	Q.component("AutoCube", {
     	added: function() {
         	var entity = this.entity;				
@@ -65,8 +64,10 @@
             });
         },
 	});
-	// Cases qui font sauter le personnage
-		Q.component("CaseJump", {
+	
+	
+// Cases qui font sauter le personnage
+	Q.component("CaseJump", {
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
@@ -77,11 +78,7 @@
 	});
 	
 	
-	
-			     
-		
-		
-//Differents sprites de cubes...	
+// Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
    
 	Q.Sprite.extend("Sol_1", {
@@ -131,21 +128,19 @@
 			this.add("2d2, AutoCube");
         }
     });
-	
-		Q.Sprite.extend("Sol_jump", {
-        init: function(p) {
-            this._super(p,  {vx : -500, gravity : 0, asset : "tomate.png"});
-			this.variable = 2;
-			this.add("2d2, aiBounce, CaseJump");
-        }
-    });
-	
-	
 		
 	Q.Sprite.extend("Sol_pierre3_D", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
 			this.variable = 3;
 			this.add("2d2, AutoCube");
+        }
+    });
+	
+			Q.Sprite.extend("Sol_jump", {
+        init: function(p) {
+            this._super(p,  {vx : -500, gravity : 0, asset : "tomate.png"});
+			this.variable = 2;
+			this.add("2d2, aiBounce, CaseJump");
         }
     });
