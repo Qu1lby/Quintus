@@ -18,6 +18,8 @@
 				["Sol_5", {x: 1575 , y : 1155}],
 				["Sol_5", {x: 1645 , y : 1155}],
 				
+				["Sol_jump", {x: 1785 , y : 1155}],
+				
 				["Sol_jump", {x: 1015 , y : 1365}],
 				
 				["Sol_pierre2_D", {x: 1785 , y : 1085}],
@@ -45,17 +47,20 @@
 				
 				["Sol_pierre2_D", {x: 805 , y : 1155}],
 				["Sol_pierre2_D", {x: 735 , y : 1085}],
+				["Sol_pierre2_D", {x: 665 , y : 1085}],
 				
 				["Sol_jump", {x: 875 , y : 1015}],
-				["Sol_jump", {x: 1015 , y : 875}],
-				["Sol_jump", {x: 945 , y : 805}],	
-
-				["Sol_pierre2_D", {x: 1085 , y : 735}],
-				["Sol_pierre2_D", {x: 1155 , y : 735}],		
+				["Sol_jump", {x: 945 , y : 805}],
+				["Sol_jump", {x: 735 , y : 665}],
+				["Sol_jump", {x: 455 , y : 665}],	
+				["Sol_jump", {x: 385 , y : 455}],					
+				["Sol_jump", {x: 595 , y : 315}],
+				["Sol_jump", {x: 735 , y : 315}],	
+				["Sol_jump", {x: 875 , y : 315}],				
 
 				["Sol_jump", {x: 2415 , y : 1155}],		
 				["Sol_jump", {x: 2625 , y : 1085}],	
-				["Sol_jump", {x: 2695 , y : 945}],					
+				["Sol_jump", {x: 2695 , y : 875}],					
 
             ];
               stage.loadAssets(levelAssets);  
