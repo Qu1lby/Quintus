@@ -65,6 +65,23 @@
         },
 	});
 	
+	// Cube qui s'autodetruise apres nb passage d'un personnage
+	Q.component("AutoCubeBas", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.bottom",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					if (this != collision.obj.sol){             
+                    	this.variable = this.variable - 1;						
+						if (collision.obj.sol.variable == 0){
+							collision.obj.sol.destroy();
+						}
+					collision.obj.sol = this;
+				}}
+            });
+        },
+	});
+	
 		
 	
 // Cases qui détruisent autour d'eux
@@ -184,6 +201,14 @@
             this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
 			this.variable = 2;
 			this.add("2d2, AutoCube");
+        }
+    });
+	
+		Q.Sprite.extend("Sol_pierre1_DB", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre.png"});
+			this.variable = 1;
+			this.add("2d2, AutoCubeBas");
         }
     });
 		
