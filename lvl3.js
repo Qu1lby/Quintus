@@ -1,10 +1,10 @@
         //setup level 1, @TODO make it so that it could be multiple levels?
-        Q.scene("level1",function(stage) {
+        Q.scene("level3",function(stage) {
 				
-            var background = new Q.TileLayer({ dataAsset: "Lvl1.tmx", layerIndex: 0, sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
+            var background = new Q.TileLayer({ dataAsset: "Lvl3.tmx", layerIndex: 0, sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_NONE });
             stage.insert(background);
            
-            stage.collisionLayer(new Q.TileLayer({ dataAsset: "Lvl1.tmx", layerIndex:1,  sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_DEFAULT }));
+            stage.collisionLayer(new Q.TileLayer({ dataAsset: "Lvl3.tmx", layerIndex:1,  sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_DEFAULT }));
             
             var player = stage.insert(new Q.Fraise());
             
