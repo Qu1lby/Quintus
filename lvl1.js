@@ -1,6 +1,5 @@
 // Setup level 1
-Q.scene("level1",function(stage) {
-				
+Q.scene("level1",function(stage) {		
 	var background = new Q.TileLayer({
 		dataAsset: "Lvl1.tmx",
 		layerIndex: 0,
@@ -47,5 +46,15 @@ Q.scene("level1",function(stage) {
 			stage.loadAssets(levelAssets);  
 
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
+			
+			
+			var $canvas = $('#quintus'); 
+			$canvas.drawArc({
+			fillStyle: 'black',
+  			x: 100, y: 100,
+  			radius: 50
+			});
+		
+		
 		   
 	});
