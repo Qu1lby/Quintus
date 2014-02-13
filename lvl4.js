@@ -74,6 +74,13 @@
 			["Sol_pierre1_D", {x: 465 , y : 1085}],
 			["Sol_pierre2_D", {x: 395 , y : 1085}],
 			
+			// a supprimer
+			
+			
+			["Sol_jump", {x: 315 , y : 1085}],
+			["Sol_jump", {x: 245 , y : 875}],
+			["Sol_jump", {x: 175 , y : 665}],
+			
 			//Deuxieme etage 
 			["Sol_pierre1_D", {x: 805 , y : 595}],
 			["Sol_pierre1_D", {x: 805 , y : 525}],
