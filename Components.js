@@ -65,6 +65,26 @@
         },
 	});
 	
+		
+	
+// Cases qui détruisent autour d'eux
+		Q.component("AutoDestruc", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					if (this != collision.obj.sol){             
+                    	this.variable = this.variable - 1;						
+						if (collision.obj.sol.variable == 0){
+							collision.obj.sol.destroy();
+						}
+					collision.obj.sol = this;
+				}}
+            });
+        },
+	});
+	
+	
 	//verticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
@@ -180,5 +200,13 @@
             this._super(p,  {vx : -500, gravity : 0, asset : "tomate.png"});
 			this.variable = 2;
 			this.add("2d2, aiBounce, CaseJump");
+        }
+    });
+	
+		Q.Sprite.extend("Destruc_double", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
+			this.variable = 2;
+			this.add("2d2, AutoDestruc");
         }
     });
