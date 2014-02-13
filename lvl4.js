@@ -11,22 +11,40 @@
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
 			
+			
+			
+			//Spawn du personnages
+			["Sol_5", {x: 105 , y : 1645}],
+			["Sol_5", {x: 175 , y : 1645}],
+			["Sol_5", {x: 245 , y : 1645}],
+			
+			
 			//Petit ilot a gauche (rdc)
 			["Sol_pierre1_D", {x: 315 , y : 1575}],
 			["Sol_pierre1_D", {x: 385 , y : 1575}],
 			["Sol_pierre1_D", {x: 385 , y : 1505}],
 			["Sol_pierre1_D", {x: 455 , y : 1435}],
+			["Sol_pierre1_D", {x: 455 , y : 1505}],
 			["Sol_pierre1_D", {x: 525 , y : 1435}],
 			["Sol_pierre1_D", {x: 525 , y : 1365}],
 			["Sol_pierre1_D", {x: 595 , y : 1435}],
 			["Sol_pierre1_D", {x: 595 , y : 1505}],
 			["Sol_pierre1_D", {x: 595 , y : 1575}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
+			["Sol_pierre1_D", {x: 805 , y : 1645}],
 			
-			//["UN PONT ICI", {x: 735 , y : 1575}],
-			//["UN PONT ICI", {x: 805 , y : 1575}],
-			//["UN PONT ICI", {x: 875 , y : 1575}],
-			//["UN PONT ICI", {x: 945 , y : 1575}],
+			//["UN PONT ICI", {x: 735 , y : 1645}],
+			//["UN PONT ICI", {x: 805 , y : 1645}],
+			//["UN PONT ICI", {x: 875 , y : 1645}],
+			//["UN PONT ICI", {x: 945 , y : 1645}],
+			
+			
+			//Test pont existant
+			// ["Sol_5", {x: 735 , y : 1645}],
+			// ["Sol_5", {x: 805 , y : 1645}],
+			// ["Sol_5", {x: 875 , y : 1645}],
+			// ["Sol_5", {x: 945 , y : 1645}],
+			
 			
 			// Apres le pont a gauche (rdc)
 			["Sol_pierre1_D", {x: 1085 , y : 1645}],
