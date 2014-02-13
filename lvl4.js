@@ -40,10 +40,15 @@
 			
 			
 			//Test pont existant
-			// ["Sol_5", {x: 735 , y : 1645}],
-			// ["Sol_5", {x: 805 , y : 1645}],
-			// ["Sol_5", {x: 875 , y : 1645}],
-			// ["Sol_5", {x: 945 , y : 1645}],
+			 ["Sol_5", {x: 735 , y : 1645}],
+			 ["Sol_5", {x: 805 , y : 1645}],
+			 ["Sol_5", {x: 875 , y : 1645}],
+			 ["Sol_5", {x: 945 , y : 1645}],
+			 
+			 // A supprimer
+			 ["Sol_jump", {x: 1365 , y : 1645}],
+			 ["Sol_jump", {x: 1295 , y : 1435}],
+			 ["Sol_jump", {x: 1225 , y : 1225}],
 			
 			
 			// Apres le pont a gauche (rdc)
@@ -65,9 +70,9 @@
 			["Sol_pierre2_D", {x: 665 , y : 1085}],
 			["Sol_pierre1_D", {x: 595 , y : 1085}],
 			["Sol_pierre1_D", {x: 595 , y : 1085}],
-			["Sol_pierre2_D", {x: 455 , y : 1085}],
-			["Sol_pierre1_D", {x: 385 , y : 1085}],
-			["Sol_pierre2_D", {x: 315 , y : 1085}],
+			["Sol_pierre2_D", {x: 525 , y : 1085}],
+			["Sol_pierre1_D", {x: 465 , y : 1085}],
+			["Sol_pierre2_D", {x: 395 , y : 1085}],
 			
 			//Deuxieme etage 
 			["Sol_pierre1_D", {x: 805 , y : 595}],
