@@ -206,7 +206,7 @@
 	
 		Q.Sprite.extend("Sol_pierre1_DB", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre.png"});
+            this._super(p,  {gravity : 0, asset : "dessous.png"});
 			this.variable = 1;
 			this.add("2d2, AutoCubeBas");
         }
