@@ -141,7 +141,22 @@
 	});
 	
 	
-// Cases qui font sauter le personnage
+// Bouton
+	Q.component("Button", {
+    	added: function() {
+		var passage = 0;
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					if(passage == 0){
+						Q.stage().locate(1435,1155).destroy();
+						passage += 1;}
+					}
+            });
+        },
+	});
+	
+	// Cases qui font sauter le personnage
 	Q.component("CaseJump", {
     	added: function() {
         	var entity = this.entity;				
@@ -233,5 +248,13 @@
             this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
 			this.variable = 1;
 			this.add("2d2, AutoDestruc");
+        }
+    });
+	
+			Q.Sprite.extend("test", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "banane.png"});
+			this.variable = 1;
+			this.add("2d2, Button");
         }
     });
