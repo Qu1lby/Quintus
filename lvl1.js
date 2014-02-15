@@ -48,13 +48,13 @@ Q.scene("level1",function(stage) {
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
 			
 			
-			var $canvas = $('#quintus'); 
+			var $canvas = $('#Jquery'); 
 			$canvas.drawArc({
 			fillStyle: 'black',
   			x: 100, y: 100,
   			radius: 50
 			});
 		
-		
+			//Canvas.SetZIndex(image1, 2);
 		   
 	});

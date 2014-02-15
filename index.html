@@ -22,7 +22,8 @@
  <script src="lib/quintus_sprites.js"></script>
  <script src="lib/quintus_touch.js"></script>
  <script src="lib/quintus_ui.js"></script>
-
+ 
+ 
 	<div id='loading'>
 		<div id='loading_container'>
         	Loading...
@@ -30,27 +31,30 @@
             </div>
       	</div>
     </div>
+    
+	<canvas id='Quintus' width='960' height='610' style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+	<canvas id='Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
 
 
-<script>		
-	var wi = document.documentElement.clientWidth * 0.9;
-	if (wi>960){wi=960;}
-	var hi = document.documentElement.clientHeight -40 ;
-	if (hi>610){hi=610;}
+<script>	
+	
+	//var wi = document.documentElement.clientWidth * 0.9;
+	//if (wi>960){wi=960;}
+	//var hi = document.documentElement.clientHeight -40 ;
+	//if (hi>610){hi=610;}
 	
 	// Initialisation du moteur de jeu
         var Q = Quintus()
             .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI")
-			.setup({
-                width: wi,
-                height: hi,
+			.setup("Quintus", {
+                width: 960,
+                height: 610,
                 development: true,
 				upsampleWidth:  420, 
   				upsampleHeight: 320,  
 				downsampleWidth: 1024, 
   				downsampleHeight: 768 ,
 				maximize: "touch"
-				//maximize : true
 			})
 			//.enableSound()
 			.controls()
@@ -119,8 +123,11 @@
 		
 		
 	// Charge tous les éléments
-        Q.load(["tiles_map.png", "dessous.png", "jump.png", "orange.png", "tomate.png",  "banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png","fond_pierre_haut2.png", "htmltiles.jpg", "neige.png", "pause.png", "play.png"
-		]
+        Q.load(["tiles_map.png", "dessous.png", "jump.png", "orange.png", "tomate.png",
+			"banane.png", "ananas.png", "slime2.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx",
+			"Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png",
+			"fond_pierre_haut2.png", "htmltiles.jpg", "neige.png", "pause.png", "play.png"
+			]
 		, function() {
  			
 			Q.sheet("tiles","tiles_map.png", { tilew: 70, tileh: 70});  
@@ -132,8 +139,6 @@
    			var element = document.getElementById("loading_progress");
     		element.style.width = Math.floor(loaded/total*100) + "%";
   			}	
-				
-			 
         });
  
 </script>
