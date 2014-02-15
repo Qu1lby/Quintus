@@ -27,28 +27,7 @@
         },
 	});
 		
-		
-//Comportement for common enemy behaviors
-	Q.component("commonEnemy", {
-    	added: function() {
-        	var entity = this.entity;
-            entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {                   
-                	collision.obj.damage();
-                }
-            });
-				
-            entity.on("bump.top",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-                	collision.obj.p.vy = -100;
-                    this.destroy();
-                }
-            });
-        },        
-    });
-		
-		
-// Cube qui s'autodetruise apres nb passage d'un personnage
+// Cubes qui s'autodetruisent apres nb passage d'un personnage
 	Q.component("AutoCube", {
     	added: function() {
         	var entity = this.entity;				
@@ -65,7 +44,6 @@
         },
 	});
 	
-	// Cube qui s'autodetruise apres nb passage d'un personnage
 	Q.component("AutoCubeBas", {
     	added: function() {
         	var entity = this.entity;				
@@ -102,7 +80,19 @@
 	});
 	
 	
-	//verticalPlatform
+// Case qui fait sauter le personnage
+	Q.component("CaseJump", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					collision.obj.p.vy = -650;}
+            });
+        },
+	});
+	
+		
+// VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
        		this._super(p, { gravity: 0, asset: "tomates.png" });
@@ -121,7 +111,7 @@
 	});
 	
 	
-	//horizontal platform 
+// Horizontal platform 
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
@@ -152,17 +142,6 @@
 						Q.stage().locate(1435,1155).destroy();
 						passage += 1;}
 					}
-            });
-        },
-	});
-	
-	// Cases qui font sauter le personnage
-	Q.component("CaseJump", {
-    	added: function() {
-        	var entity = this.entity;				
-            entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					collision.obj.p.vy = -650;}
             });
         },
 	});

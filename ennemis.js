@@ -47,3 +47,22 @@
         	} 
 		}
 	});
+	
+	//Comportement for common enemy behaviors
+	Q.component("commonEnemy", {
+    	added: function() {
+        	var entity = this.entity;
+            entity.on("bump.left,bump.right,bump.bottom",function(collision) {
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {                   
+                	collision.obj.damage();
+                }
+            });
+				
+            entity.on("bump.top",function(collision) {
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+                	collision.obj.p.vy = -100;
+                    this.destroy();
+                }
+            });
+        },        
+    });
