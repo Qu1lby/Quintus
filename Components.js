@@ -253,14 +253,31 @@
 			this.add("2d2, cube");
         }
     });
-	
+	/*
+	Q.sheet("gril_140",
+        "grille140sprite.png",
+        {
+          tilew: 65,  // Each tile is 40 pixels wide
+          tileh: 130,  // and 40 pixels tall
+          sx: 0,   // start the sprites at x=0
+          sy: 0    // and y=0
+         });
+	*/
 	Q.Sprite.extend("grille140", {
     	init: function(p) {
-        	this._super(p,  {gravity : 0, asset : "grille140.png"});
+        	this._super(p,  {gravity : 0, asset : "grille140.png" });
 			this.variable = 1;
 			this.add("2d2, cube");
+			// this.add("animation");
+            //this.play("run");
         }
     });
+	
+	/*
+	Q.animations("grille140", {
+        run: {frames:[0,1,2,3,4,5], rate: 1/8}
+    });
+	*/
 	
 	Q.Sprite.extend("grille70", {
     	init: function(p) {
