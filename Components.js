@@ -240,7 +240,7 @@
 	
 			Q.Sprite.extend("test", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "banane.png"});
+            this._super(p,  {gravity : 0, asset : "grille140.png"});
 			this.variable = 1;
 			this.add("2d2, Button");
         }
@@ -286,3 +286,11 @@
 			this.add("2d2, cube");
         }
     });
+	
+	/*	Q.Sprite.extend("grille200", {
+    	init: function(p) {
+        	this._super(p,  {gravity : 0, asset : "grille200.png"});
+			this.variable = 1;
+			this.add("2d2, cube");
+        }
+    });*/

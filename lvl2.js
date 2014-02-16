@@ -82,7 +82,9 @@
 				["Sol_pierre2_D", {x: 1225, y : 945}],
 				["Sol_pierre2_D", {x: 1155, y : 945}],		
 
-				["Sol_pierre1_DB", {x: 875, y : 105}],					
+				["Sol_pierre1_DB", {x: 875, y : 105}],		
+
+				//["grille200", {x: 840, y : 1435}],					
 
             ];
               stage.loadAssets(levelAssets);  
