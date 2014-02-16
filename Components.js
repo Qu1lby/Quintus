@@ -184,7 +184,7 @@
 		
 	Q.Sprite.extend("Sol_pierre1_D", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
 			this.variable = 1;
 			this.add("2d2, AutoCube");
         }

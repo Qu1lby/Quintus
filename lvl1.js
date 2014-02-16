@@ -26,21 +26,24 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_D", {x: 665 , y : 245}],
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
+			["Sol_5", {x: 1085 , y : 245}],
+			["Sol_5", {x: 1015 , y : 245}],
 			
-			["Sol_2n", {x: 1085 , y : 245}],
+			/*["Sol_2n", {x: 1085 , y : 245}],
 			["Sol_2n", {x: 1015 , y : 245}],
 			["Sol_2n", {x: 1085 , y : 315}],
 			["Sol_2n", {x: 1155 , y : 245}],
 			["Sol_2n", {x: 1155 , y : 315}],
 			["Sol_2n", {x: 1155 , y : 385}],
+			*/
 
-			["Sol_pierre1_D", {x: 1295 , y : 175}],
-			["Sol_pierre1_D", {x: 1505 , y : 175}],
-			["Sol_5", {x: 1645 , y : 315}],
+			["Sol_jump", {x: 1295 , y : 315}],
+			["Sol_jump", {x: 1505 , y : 245}],
+			["Sol_5", {x: 1715 , y : 315}],
 
 			["Sol_pierre3_D", {x: 1855 , y : 665}],			
 							
-			["GroundEnemy", {x: 1640 , y : 245, asset: "slime2.png"}],
+			["GroundEnemy", {x: 1710 , y : 245, asset: "slime2.png"}],
 				
             ];
             
