@@ -87,7 +87,7 @@
 	
 		Q.Sprite.extend("Fraise",{
         init: function(p) {
-       		this._super(p, { asset: "orange.png", x: 100, y: 200, jumpSpeed: -400, lives: 1});
+       		this._super(p, { asset: "orange.png", x: 17*70, y: 10*70, jumpSpeed: -400, lives: 1});
         	this.add("2d, platformerControls"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube

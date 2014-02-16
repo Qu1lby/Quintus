@@ -12,7 +12,7 @@
             var levelAssets = [
 			
 		
-				["Sol_5", {x: 105 , y : 245}],
+			/*	["Sol_5", {x: 105 , y : 245}],
 				["Sol_5", {x: 175 , y : 245}],
 				["Sol_5", {x: 245 , y : 245}],
 				["Sol_pierre1_D", {x: 315 , y : 245}],
@@ -37,7 +37,7 @@
 								
 								
 				["GroundEnemy", {x: 1640 , y : 245, asset: "slime2.png"}],
-				
+				*/
 				
 			
           /*      ["GroundEnemy", {x: 18*70, y: 6*70, asset: "slime2.png"}],
