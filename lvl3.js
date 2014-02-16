@@ -12,7 +12,7 @@
             var levelAssets = [
 							
 				["Sol_pierre1_D", {x: 2135 , y : 805 }],
-				// ["GroundEnemy", {x: 20*70+30, y : 11*70+30, asset: "slime2.png"}],
+				["GroundEnemy", {x: 2000, y :  750, asset: "slime3.png"}],
 	
             ];
               stage.loadAssets(levelAssets);  
