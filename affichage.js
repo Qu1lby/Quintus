@@ -193,6 +193,7 @@
       			Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
 				Q.audio.play('lvl2.mp3',{ loop: true });
+				music = true;
 				
 				scene_courante = "lvl2";
 				scene_prec = "niveau";
@@ -237,6 +238,9 @@
 		type: Q.SPRITE_NONE });
         
 		stage.insert(background);
+		
+		Q.audio.stop();
+		music = false;
 		
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(160,160,160)",
