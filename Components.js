@@ -267,7 +267,7 @@
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "grille140.png" });
 			this.variable = 1;
-			this.add("2d2, cube");
+			this.add("2d2, AutoCube");
 			// this.add("animation");
             //this.play("run");
         }
@@ -283,7 +283,7 @@
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "grille70.png"});
 			this.variable = 1;
-			this.add("2d2, cube");
+			this.add("2d2, AutoCube");
         }
     });
 	
@@ -291,6 +291,6 @@
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "grille200.png"});
 			this.variable = 1;
-			this.add("2d2, cube");
+			this.add("2d2, AutoCube");
         }
     });

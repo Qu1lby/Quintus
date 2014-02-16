@@ -10,7 +10,7 @@
             
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
-				["Sol_pierre3_D", {x: 1225 , y : 1155}],
+
 				["Sol_pierre2_D", {x: 1295 , y : 1155}],
 				["Sol_5", {x: 1365 , y : 1155}],
 				["Sol_5", {x: 1435 , y : 1155}],
@@ -60,9 +60,12 @@
 				["Sol_jump", {x: 735 , y : 315}],	
 				["Sol_jump", {x: 875 , y : 315}],				
 
-				["Sol_jump", {x: 2415 , y : 1155}],		
+				["Sol_jump", {x: 2415 , y : 1225}],		
 				["Sol_jump", {x: 2625 , y : 1085}],	
 				["Sol_jump", {x: 2695 , y : 875}],	
+				["Sol_jump", {x: 2625 , y : 1085}],	
+				
+				["Sol_jump", {x: 2485 , y : 1435}],
 
 				["Sol_pierre2_D", {x: 1085, y : 455}],
 				["Sol_pierre2_D", {x: 1225, y : 525}],
@@ -80,13 +83,14 @@
 				["Sol_pierre2_D", {x: 1225, y : 875}],
 				["Sol_pierre2_D", {x: 1155, y : 875}],	
 				["Sol_pierre2_D", {x: 1225, y : 945}],
-				["Sol_pierre2_D", {x: 1155, y : 945}],		
+	
 
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 				
-				["grille70", {x: 1925, y : 1015}],				
-
-				//["grille200", {x: 840, y : 1435}]					
+				["grille70", {x: 1925, y : 1015}],		
+				["grille140", {x: 1365 , y : 1335}],				
+				["grille140", {x: 1680 , y : 1335}],
+				["grille200", {x: 840, y : 1365}]					
 
             ];
               stage.loadAssets(levelAssets);  
