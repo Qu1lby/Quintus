@@ -214,9 +214,17 @@
         }
     });
 	
-			Q.Sprite.extend("Sol_jump", {
+	Q.Sprite.extend("Sol_jump", {
         init: function(p) {
             this._super(p,  {vx : -500, gravity : 0, asset : "jump.png"});
+			this.variable = 2;
+			this.add("2d2, aiBounce, CaseJump");
+        }
+    });
+	
+	Q.Sprite.extend("Sol_jump_neige", {
+        init: function(p) {
+            this._super(p,  {vx : -500, gravity : 0, asset : "jumpn.png"});
 			this.variable = 2;
 			this.add("2d2, aiBounce, CaseJump");
         }
