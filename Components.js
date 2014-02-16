@@ -245,3 +245,27 @@
 			this.add("2d2, Button");
         }
     });
+	
+	Q.Sprite.extend("mur", {
+    	init: function(p) {
+        	this._super(p,  {gravity : 0, asset : "fond_pierre.png"});
+			this.variable = 1;
+			this.add("2d2, cube");
+        }
+    });
+	
+	Q.Sprite.extend("grille140", {
+    	init: function(p) {
+        	this._super(p,  {gravity : 0, asset : "grille140.png"});
+			this.variable = 1;
+			this.add("2d2, cube");
+        }
+    });
+	
+	Q.Sprite.extend("grille70", {
+    	init: function(p) {
+        	this._super(p,  {gravity : 0, asset : "grille70.png"});
+			this.variable = 1;
+			this.add("2d2, cube");
+        }
+    });

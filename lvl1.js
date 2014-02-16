@@ -26,6 +26,8 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_D", {x: 665 , y : 245}],
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
+			["grille140", {x: 945 , y : 145}],
+			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
 			
