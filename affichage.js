@@ -192,6 +192,7 @@
 				Q.clearStages();
       			Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
+				Q.audio.play('lvl2.mp3',{ loop: true });
 				
 				scene_courante = "lvl2";
 				scene_prec = "niveau";
