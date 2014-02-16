@@ -10,6 +10,8 @@
  }
  
  #loading {
+ font-family:arial, sans-serif;
+
  margin-left: auto;
  position:fixed;
  width:100%;
