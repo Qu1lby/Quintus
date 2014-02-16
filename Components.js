@@ -158,7 +158,7 @@
         }
     });
 		
-	Q.Sprite.extend("Sol_2", {
+	Q.Sprite.extend("Sol_2n", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "neige.png"});
 			this.variable = 2;
