@@ -237,19 +237,11 @@
 			this.add("2d2, AutoDestruc");
         }
     });
-
+	
+	
 	Q.Sprite.extend("bouton", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "push.png"});
-			this.variable = 1;
-			this.add("2d2");
-        }
-    });
-	
-	
-	Q.Sprite.extend("bouton2", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "push.png"});
+            this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.variable = 1;
 			this.add("2d2, Button");
         }
