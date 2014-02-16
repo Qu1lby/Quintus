@@ -93,9 +93,9 @@
 				["grille140", {x: 1680 , y : 1335}],
 				["grille200", {x: 840, y : 1365}],
 				
-				["bouton", {x: 455, y : 1015}],	
-				["bouton", {x: 525, y : 1435}],				
-				["bouton", {x: 665, y : 1435}],					
+				["bouton", {x: 455, y : 1040}],	
+				["bouton", {x: 525, y : 1470}],				
+				["bouton", {x: 665, y : 1470}],					
 
             ];
               stage.loadAssets(levelAssets);  
