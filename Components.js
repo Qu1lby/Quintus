@@ -230,7 +230,7 @@
         }
     });
 	
-		Q.Sprite.extend("Destruc_double", {
+	Q.Sprite.extend("Destruc_double", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
 			this.variable = 1;
@@ -238,9 +238,9 @@
         }
     });
 	
-			Q.Sprite.extend("test", {
+	Q.Sprite.extend("bouton", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "grille140.png"});
+            this._super(p,  {gravity : 0, asset : "push.png"});
 			this.variable = 1;
 			this.add("2d2, Button");
         }
