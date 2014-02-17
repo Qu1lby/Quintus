@@ -92,8 +92,8 @@
 	});
 	
 		
-// VerticalPlatform ( probleme s'arrete quand percute le joueur)
-	Q.Sprite.extend("VerticalPlatform", {
+// HorizontalPlatform ( probleme s'arrete quand percute le joueur)
+	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left", asset: "fond_pierre_haut2.png" });
             this.add("2d");
@@ -112,8 +112,8 @@
 	});
 	
 	
-// Horizontal platform 
-	Q.Sprite.extend("HorizontalPlatform", {
+// VerticalPlatform
+	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
        		this._super(p, {gravity: 0, asset: "tomates.png" });
