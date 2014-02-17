@@ -46,15 +46,33 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre3_D", {x: 1855 , y : 665}],			
 							
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
-				
-				
+			
+			// Second niveau
+			["Sol_pierre2_D", {x: 105 , y : 875}],	
 			["Sol_pierre2_D", {x: 175 , y : 875}],
 			["Sol_pierre2_D", {x: 245 , y : 875}],
 			
 			["Sol_pierre1_P", {x: 105 , y : 945}],
 			["Sol_pierre1_P", {x: 175 , y : 945}],
 			["Sol_pierre1_P", {x: 245 , y : 945}],
-			
+			["Sol_pierre1_P", {x: 105 , y : 1015}],
+			["Sol_pierre1_P", {x: 175 , y : 1015}],
+			["Sol_pierre1_P", {x: 245 , y : 1015}],
+			["Sol_pierre1_P", {x: 105 , y : 1085}],
+			["Sol_pierre1_P", {x: 175 , y : 1085}],
+			["Sol_pierre1_P", {x: 245 , y : 1085}],
+			["Sol_pierre1_P", {x: 105 , y : 1155}],
+			["Sol_pierre1_P", {x: 175 , y : 1155}],
+			["Sol_pierre1_P", {x: 245 , y : 1155}],
+			["Sol_pierre1_P", {x: 105 , y : 1225}],
+			["Sol_pierre1_P", {x: 175 , y : 1225}],
+			["Sol_pierre1_P", {x: 245 , y : 1225}],
+			["Sol_pierre1_P", {x: 105 , y : 1295}],
+			["Sol_pierre1_P", {x: 175 , y : 1295}],
+			["Sol_pierre1_P", {x: 245 , y : 1295}],
+			["Sol_pierre1_P", {x: 105 , y : 1365}],
+			["Sol_pierre1_P", {x: 175 , y : 1365}],
+			["Sol_pierre1_P", {x: 245 , y : 1365}],
             ];
             
 			stage.loadAssets(levelAssets);  
