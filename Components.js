@@ -118,15 +118,15 @@
 			// parametre {vx: , rangeX: }
        		this._super(p, {gravity: 0, asset: "tomates.png" });
             this.add("2d, aiBounce");
-            this.p.initialX = this.p.x;
+            this.p.initialY = this.p.y;
         },
         
 		step: function(dt) {                
-            if(this.p.x - this.p.initialx >= this.p.rangex && this.p.vx > 0) {
-        	    this.p.vx = -this.p.vx;
+            if(this.p.y - this.p.initialy >= this.p.rangey && this.p.vy > 0) {
+        	    this.p.vy = -this.p.vy;
             } 
-            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
-                 	this.p.vx = -this.p.vx;
+            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
+                 	this.p.vy = -this.p.vy;
         	} 
 		}
 	});
