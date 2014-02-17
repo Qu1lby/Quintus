@@ -1,8 +1,6 @@
 // Fenetre Menu Principal
 	Q.scene("Debut", function(stage) {
 		
-		scene_courante="menu";
-		
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
 		layerIndex: 0,
@@ -11,68 +9,67 @@
 		type: Q.SPRITE_NONE });
 		
         stage.insert(background);
-		
+		scene_courante="menu";
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "rgb(162,205,90)",
-                x: wi/2,
-                y: hi-(hi/6)-130,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/4.5,
-                h: 50
+			fill: "rgb(162,205,90)",
+            x: wi/2,
+            y: hi-(hi/6)-130,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/4.5,
+            h: 50
 		    })
-            );
+        );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
 		    fill: "rgb(246,163,19)",
-                x: wi/2,
-                y: hi-(hi/6)-50,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/4.5,
-                h: 50	
+            x: wi/2,
+            y: hi-(hi/6)-50,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/4.5,
+            h: 50	
 		    })
-            );
+        );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
 		    fill: "rgb(160,160,160)",
-                x: wi/2,
-                y: hi-(hi/6)+30,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/4.5,
-                h: 50
+            x: wi/2,
+            y: hi-(hi/6)+30,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/4.5,
+            h: 50
 		    })
-            );
+        );
 		
 		var men = stage.insert(new Q.UI.Button({ 
-                    label: "Jouer",
-                    x: 0,
-					y: 0,
-                }),Menu);
+        	label: "Jouer",
+            x: 0,
+			y: 0,
+        }),Menu);
 				
 		var sco = stage.insert(new Q.UI.Button({ 
-                    label: "Scores",
-                    x: 0,
-					y: 0,
-                }),Menu2);
+        	label: "Scores",
+            x: 0,
+			y: 0,
+        }),Menu2);
 				
 		var cred = stage.insert(new Q.UI.Button({ 
-                    label: "Crédits",
-                    x: 0,
-					y: 0,
-                }),Menu3);
+        	label: "Crédits",
+            x: 0,
+			y: 0,
+        }),Menu3);
 							
 		men.on("click",function() {
 			Q.clearStages();
       		Q.stageScene('niveau');
 			scene_courante = "niveau";
 			scene_prec = "menu";
-		
      	});	
 	});
 		
@@ -91,93 +88,93 @@
 			
 		var Menu = stage.insert(new Q.UI.Container({
 		    fill: "rgb(160,160,160)",
-                x: wi/2 - wi/10,
-                y: hi-(hi/6)-190,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/6.5,
-                h: 50
+            x: wi/2 - wi/10,
+            y: hi-(hi/6)-190,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/6.5,
+            h: 50
 		    })
-            );
+        );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
 		    fill: "rgb(160,160,160)",
-                x: wi/2 + wi/10,
-                y: hi-(hi/6)-190,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/6.5,
-                h: 50	
+            x: wi/2 + wi/10,
+            y: hi-(hi/6)-190,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/6.5,
+            h: 50	
 		    })
-            );
+        );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
 		    fill: "rgb(160,160,160)",
-                x: wi/2 - wi/10,
-                y: hi-(hi/6)-110,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/6.5,
-                h: 50
+            x: wi/2 - wi/10,
+            y: hi-(hi/6)-110,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/6.5,
+            h: 50
 		    })
-            );
+        );
 			
 		var Menu4 = stage.insert(new Q.UI.Container({
 			fill: "rgb(160,160,160)",
-                x: wi/2 + wi/10,
-                y: hi-(hi/6)-110,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/6.5,
-                h: 50
+            x: wi/2 + wi/10,
+            y: hi-(hi/6)-110,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/6.5,
+            h: 50
 		    })
-            );
+        );
 			
 		var Menu5 = stage.insert(new Q.UI.Container({
 			fill: "rgb(160,160,160)",
-                x: wi/2,
-                y: hi-(hi/6)+30,
-                border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi/4.5,
-                h: 50
+            x: wi/2,
+            y: hi-(hi/6)+30,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/4.5,
+            h: 50
 		    })
-            );
+        );
 		
 		var un = stage.insert(new Q.UI.Button({ 
-                    label: "LvL 1",
-                    x: 0,
-					y: 0,
-                }),Menu);
+        	label: "LvL 1",
+            x: 0,
+			y: 0,
+        }),Menu);
 				
 		var deux = stage.insert(new Q.UI.Button({ 
-                    label: "LvL 2",
-                    x: 0,
-					y: 0,
-                }),Menu2);
+        	label: "LvL 2",
+         	x: 0,
+			y: 0,
+        }),Menu2);
 				
 		var trois = stage.insert(new Q.UI.Button({ 
-                    label: "LvL 3",
-                    x: 0,
-					y: 0,
-                }),Menu3);
+        	label: "LvL 3",
+            x: 0,
+			y: 0,
+        }),Menu3);
 				
 		var quatre = stage.insert(new Q.UI.Button({ 
-                    label: "LvL 4",
-                    x: 0,
-					y: 0,
-                }),Menu4);
+            label: "LvL 4",
+            x: 0,
+			y: 0,
+        }),Menu4);
 				
 		var cinq = stage.insert(new Q.UI.Button({ 
-                    label: "Retour",
-                    x: 0,
-					y: 0,
-                }),Menu5);
+        	label: "Retour",
+            x: 0,
+			y: 0,
+        }),Menu5);
 		
 			un.on("click",function() {
 				Q.clearStages();
@@ -293,23 +290,23 @@
                 shadowColor: "rgb(160,160,160)",
                 w: wi,
                 h: 40
-                })
-            );
+            })
+        );
 
- 			var lives = stage.insert(new Q.UI.Text({ 
-                    label: "Lives x 2",
-                    x: -wi/3,
-                    y: 0
-                }),statsContainer);
+ 		var lives = stage.insert(new Q.UI.Text({ 
+                label: "Lives x 2",
+                x: -wi/3,
+                y: 0
+        }),statsContainer);
 				
-			 var temps = stage.insert(new Q.UI.Text({ 
-                    label: "Temps : 00:00",
-                    x: wi/3.5,
-                    y: 0,
-                }),statsContainer);	
-			});
+		var temps = stage.insert(new Q.UI.Text({ 
+                label: "Temps : 00:00",
+                x: wi/3.5,
+                y: 0,
+            }),statsContainer);	
+		});
 			
-
+/*
 	Q.scene("Pau_bouton", function(stage) {
  	   var Pause = stage.insert(new Q.UI.Button({
 			fill: "transparent",
@@ -339,7 +336,9 @@
 			Q.stage().unpause() ; 
 		});
 	});           
+*/
 
+// Pause
 	Q.scene("PauseAff", function(stage) {
  	 	
 		var Opacite = stage.insert(new Q.UI.Container({
@@ -369,17 +368,8 @@
                 }),Container);
 	});
 	
+// Touche echap
 	Q.scene("Echp", function(stage) {
- 	 	
-		var Opacite = stage.insert(new Q.UI.Container({
-        		fill: "rgb(160,160,160)",
-				opacity : 0.5,
-                x: 0,
-                y: 0,
-                w: wi*2,
-                h: hi*2
-                })
-            );
 			
 		var Choix = stage.insert(new Q.UI.Container({
                 fill: "rgb(160,160,160)",
@@ -393,12 +383,33 @@
                 })
             );
 			
-		var msg = stage.insert(new Q.UI.Text({ 
+		var msg = stage.insert(new Q.UI.Button({ 
                 label: "Menu principal",
                 x: 0,
                 y: -30
         }),Choix);
+		
+		var msg2 = stage.insert(new Q.UI.Button({ 
+                label: "Retour",
+                x: 0,
+                y: 30
+        }),Choix);
+		
+		msg.on("click",function() {
+       		Q.clearStages();
+   			Q.stageScene('niveau');
+				
+			scene_prec = scene_courante
+			scene_courante = "niveau";
+			echap = !echap;
+		});
+		
+		msg2.on("click",function() {
+       		Q.stageScene('PauseFin',2);	
+			echap = !echap;
+		});
 	});
 	
-	Q.scene("PauseFin", function(stage) 	{
+// Reinitialiser un stage
+	Q.scene("PauseFin", function(stage){
 	});
