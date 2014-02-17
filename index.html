@@ -35,15 +35,17 @@
 	<canvas id='Quintus' width='960' height='610' style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
 	<canvas id='Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
 
+<script>
+	var widt = ((document.documentElement.clientWidth -960)/2)-1;
+	var obj = document.getElementById('Jquery');
+	obj.style.left = widt+"px";
+</script>
+
 
 <script>	
 	
 	var wi = 960;
 	var hi = 610;
-	//var wi = document.documentElement.clientWidth * 0.9;
-	//if (wi>960){wi=960;}
-	//var hi = document.documentElement.clientHeight -40 ;
-	//if (hi>610){hi=610;}
 	
 	// Initialisation du moteur de jeu
         var Q = Quintus()
