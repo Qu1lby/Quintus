@@ -21,7 +21,7 @@
 			
 			//Petit ilot a gauche (rdc)
 			["Sol_pierre1_D", {x: 315 , y : 1505}],
-			["Sol_pierre1_D", {x: 385 , y : 1505}],
+			["Sol_pierre1", {x: 385 , y : 1505}],
 			["Sol_pierre1_D", {x: 385 , y : 1435}],
 			["Sol_pierre1_D", {x: 455 , y : 1365}],
 			["Sol_pierre1_D", {x: 455 , y : 1435}],
