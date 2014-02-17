@@ -99,8 +99,27 @@
 			["Sol_pierre1_D", {x: 1085 , y : 525}],
 			["Sol_pierre2_D", {x: 1155 , y : 525}],
 			["Sol_pierre1_D", {x: 1225 , y : 525}],
+			
+			
 			["Sol_pierre4_D", {x: 1295 , y : 595}],
-			//........ Mass sol pierre 4d
+			["Sol_pierre4_D", {x: 1365 , y : 595}],
+			["Sol_pierre4_D", {x: 1435 , y : 595}],
+			["Sol_pierre4_D", {x: 1505 , y : 595}],
+			["Sol_pierre4_D", {x: 1575 , y : 595}],
+			["Sol_pierre4_D", {x: 1645 , y : 595}],
+			["Sol_pierre4_D", {x: 1715 , y : 595}],
+			["Sol_pierre4_D", {x: 1785 , y : 595}],
+			["Sol_pierre4_D", {x: 1855 , y : 595}],
+			["Sol_pierre4_D", {x: 1925 , y : 595}],
+			["Sol_pierre4_D", {x: 1995 , y : 595}],
+			["Sol_pierre4_D", {x: 2065 , y : 595}],
+			["Sol_pierre4_D", {x: 2135 , y : 595}],
+			["Sol_pierre4_D", {x: 2205 , y : 595}],
+			["Sol_pierre4_D", {x: 2275 , y : 595}],
+			["Sol_pierre4_D", {x: 2345 , y : 595}],
+			["Sol_pierre4_D", {x: 2415 , y : 595}],
+			["Sol_pierre4_D", {x: 2485 , y : 595}],
+			["Sol_pierre4_D", {x: 2555 , y : 595}],
 			["Sol_pierre4_D", {x: 2625 , y : 595}],
 			
 			//sous sol deuxieme etage
