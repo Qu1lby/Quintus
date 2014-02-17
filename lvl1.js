@@ -55,11 +55,21 @@ Q.scene("level1",function(stage) {
 			
 			
 			var $canvas = $('#Jquery'); 
-			$canvas.drawArc({
-			fillStyle: 'black',
-  			x: 100, y: 100,
-  			radius: 50
-			});
+			$canvas.html('This text will dissapear after 3 seconds.');
+timeout = setTimeout(function () {
+   $canvas.fadeOut();
+}, 3000);
+			
+			/*$canvas.drawText({
+			fillStyle: '#9cf',
+			strokeStyle: '#25a',
+			strokeWidth: 2,
+			x: 150, y: 100,
+			fontSize: 48,
+			fontFamily: 'Verdana, sans-serif',
+			text: 'Hello'
+			});*/
+			
 		
 			//Canvas.SetZIndex(image1, 2);
 		   
