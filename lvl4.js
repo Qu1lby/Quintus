@@ -21,15 +21,15 @@
 			
 			//Petit ilot a gauche (rdc)
 			["Sol_pierre1_D", {x: 315 , y : 1505}],
-			["Sol_pierre1", {x: 385 , y : 1505}],
+			["Sol_pierre1_P", {x: 385 , y : 1505}],
 			["Sol_pierre1_D", {x: 385 , y : 1435}],
 			["Sol_pierre1_D", {x: 455 , y : 1365}],
-			["Sol_pierre1_D", {x: 455 , y : 1435}],
-			["Sol_pierre1_D", {x: 525 , y : 1365}],
+			["Sol_pierre1_P", {x: 455 , y : 1435}],
+			["Sol_pierre1_P", {x: 525 , y : 1365}],
 			["Sol_pierre1_D", {x: 525 , y : 1295}],
 			["Sol_pierre1_D", {x: 595 , y : 1365}],
-			["Sol_pierre1_D", {x: 595 , y : 1435}],
-			["Sol_pierre1_D", {x: 595 , y : 1505}],
+			["Sol_pierre1_P", {x: 595 , y : 1435}],
+			["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			["Sol_pierre1_D", {x: 805 , y : 1575}],
 			
@@ -64,7 +64,7 @@
 			["Sol_pierre1_D", {x: 1015 , y : 1085}],
 			//["WHATTTTTTT", {x: 945 , y : 1155}],
 			["Sol_pierre1_D", {x: 875 , y : 1085}],
-			["Sol_pierre2_D", {x: 805 , y : 1085}],
+			//["Sol_pierre2_D", {x: 805 , y : 1085}],
 			["Sol_pierre1_D", {x: 805 , y : 1015}],
 			["Sol_pierre1_D", {x: 735 , y : 1015}],
 			["Sol_pierre2_D", {x: 665 , y : 1015}],
@@ -74,7 +74,7 @@
 			["Sol_pierre1_D", {x: 465 , y : 1015}],
 			["Sol_pierre2_D", {x: 395 , y : 1015}],
 			
-			// a supprimer
+			// a supprimer 
 			
 			
 			["Sol_jump", {x: 315 , y : 1015}],
@@ -82,13 +82,13 @@
 			["Sol_jump", {x: 175 , y : 595}],
 			
 			//Deuxieme etage 
-			["Sol_pierre1_D", {x: 805 , y : 525}],
-			["Sol_pierre1_D", {x: 805 , y : 455}],
-			["Sol_pierre1_D", {x: 805 , y : 385}],
+			["Sol_pierre1_P", {x: 805 , y : 525}],
+			["Sol_pierre1_P", {x: 805 , y : 455}],
+			["Sol_pierre1_P", {x: 805 , y : 385}],
 			["Sol_pierre1_D", {x: 805 , y : 315}],
-			["Sol_pierre1_D", {x: 735 , y : 455}],
+			["Sol_pierre1_P", {x: 735 , y : 455}],
 			["Sol_pierre1_D", {x: 735 , y : 385}],
-			["Sol_pierre1_D", {x: 665 , y : 525}],
+			["Sol_pierre1_P", {x: 665 , y : 525}],
 			["Sol_pierre1_D", {x: 665 , y : 455}],
 			["Sol_pierre1_D", {x: 595 , y : 525}],
 			["Sol_pierre1_D", {x: 525 , y : 525}],
@@ -107,7 +107,15 @@
 			["Sol_pierre1_D", {x: 455 , y : 525}],
 			
 			["Sol_pierre1_D", {x: 1715 , y : 805}],
-			//........  Mass sol pierre 1d
+			["Sol_pierre1_D", {x: 1785 , y : 805}],
+			["Sol_pierre1_D", {x: 1855 , y : 805}],
+			["Sol_pierre1_D", {x: 1925 , y : 805}],
+			["Sol_pierre1_D", {x: 1995 , y : 805}],
+			["Sol_pierre1_D", {x: 2065 , y : 805}],
+			["Sol_pierre1_D", {x: 2135 , y : 805}],
+			["Sol_pierre1_D", {x: 2205 , y : 805}],
+			["Sol_pierre1_D", {x: 2275 , y : 805}],
+			["Sol_pierre1_D", {x: 2345 , y : 805}],
 			["Sol_pierre1_D", {x: 2695 , y : 805}],
 			
 			
