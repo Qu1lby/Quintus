@@ -257,7 +257,7 @@
 	
 	Q.Sprite.extend("Ananas",{
         init: function(p) {
-        	this._super(p, { asset: "ananas.png", x: 105, y: 1575, jumpSpeed: -400, lives: 2});
+        	this._super(p, { asset: "ananas.png", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
         	this.add("2d, platformerControls"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
