@@ -222,7 +222,13 @@
         }
     });
 	
-	
+	Q.Sprite.extend("Sol_pierre4_D", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
+			this.variable = 4;
+			this.add("2d2, AutoCube");
+        }
+    });	
 	
 	Q.Sprite.extend("Sol_jump", {
         init: function(p) {
