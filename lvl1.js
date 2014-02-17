@@ -47,6 +47,14 @@ Q.scene("level1",function(stage) {
 							
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 				
+				
+			["Sol_pierre2_D", {x: 175 , y : 875}],
+			["Sol_pierre2_D", {x: 245 , y : 875}],
+			
+			["Sol_pierre1_P", {x: 105 , y : 945}],
+			["Sol_pierre1_P", {x: 175 , y : 945}],
+			["Sol_pierre1_P", {x: 245 , y : 945}],
+			
             ];
             
 			stage.loadAssets(levelAssets);  
