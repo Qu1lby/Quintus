@@ -23,7 +23,6 @@
  <script src="lib/quintus_touch.js"></script>
  <script src="lib/quintus_ui.js"></script>
  
- 
 	<div id='loading'>
 		<div id='loading_container'>
         	Loading...
@@ -122,7 +121,7 @@
 		});﻿	
 		
 		var music = false;
-			Q.input.on("musique", function () {  
+		Q.input.on("musique", function () {  
 			if (scene_courante != null && !pause && !music){	
 				if (scene_courante == "lvl1"){
 				}
@@ -137,6 +136,23 @@
 			}else{
 				Q.audio.stop(); 
 				music = false;
+			}
+		});﻿	
+		
+		var echap = false
+		Q.input.on("echap", function () {  
+			if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
+			    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
+				if (!pause){
+					Q.stageScene('Echp',2);
+					Q.stage().pause();
+					
+				}else{
+					Q.stageScene('PauseFin',2);
+					Q.stage().unpause();
+					
+				}
+				pause = !pause;
 			}
 		});﻿	
 		

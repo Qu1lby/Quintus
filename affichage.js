@@ -254,32 +254,32 @@
                 })
             );
 			
-			var msg = stage.insert(new Q.UI.Text({ 
-                    label: "Game Over",
-                    x: 0,
-                    y: -30
-                }),GameoV);
+		var msg = stage.insert(new Q.UI.Text({ 
+                label: "Game Over",
+                x: 0,
+                y: -30
+        }),GameoV);
         
-			var msg = stage.insert(new Q.UI.Button({ 
-                    label: "Try again",
-                    color: "white",
-					border: 1,
-                	shadow: 3,
-                	shadowColor: "rgb(160,160,160)",
-                    x: 0,
-                    y: 30,
-					fill: "rgb(160,160,160)"
-                }),GameoV);
+		var msg = stage.insert(new Q.UI.Button({ 
+                label: "Try again",
+                color: "white",
+				border: 1,
+                shadow: 3,
+                shadowColor: "rgb(160,160,160)",
+                x: 0,
+                y: 30,
+				fill: "rgb(160,160,160)"
+        }),GameoV);
 		
-			msg.on("click",function() {
-        		Q.clearStages();
-      			Q.stageScene('niveau');
+		msg.on("click",function() {
+       		Q.clearStages();
+   			Q.stageScene('niveau');
 				
-				scene_prec = scene_courante
-				scene_courante = "niveau";
-				
-     		 });
+			scene_prec = scene_courante
+			scene_courante = "niveau";
+		
 		});
+	});
 		
 		
 // Fenêtre des scores / vies
@@ -367,6 +367,37 @@
                 x: 0,
                 y: 0
                 }),Container);
+	});
+	
+	Q.scene("Echp", function(stage) {
+ 	 	
+		var Opacite = stage.insert(new Q.UI.Container({
+        		fill: "rgb(160,160,160)",
+				opacity : 0.5,
+                x: 0,
+                y: 0,
+                w: wi*2,
+                h: hi*2
+                })
+            );
+			
+		var Choix = stage.insert(new Q.UI.Container({
+                fill: "rgb(160,160,160)",
+                x: wi/2,
+                y: hi-(hi/6)-50,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgb(160,160,160)",
+                w: wi/4,
+                h: 150
+                })
+            );
+			
+		var msg = stage.insert(new Q.UI.Text({ 
+                label: "Menu principal",
+                x: 0,
+                y: -30
+        }),Choix);
 	});
 	
 	Q.scene("PauseFin", function(stage) 	{
