@@ -26,7 +26,7 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_D", {x: 665 , y : 245}],
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
-			["grille140", {x: 945 , y : 145}],
+			["grille140", {x: 975 , y : 145}],
 			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
@@ -55,12 +55,12 @@ Q.scene("level1",function(stage) {
 			
 			
 			var $canvas = $('#Jquery'); 
-			$canvas.html('This text will dissapear after 3 seconds.');
+			/*$canvas.html('This text will dissapear after 3 seconds.');
 timeout = setTimeout(function () {
    $canvas.fadeOut();
-}, 3000);
+}, 3000);*/
 			
-			/*$canvas.drawText({
+			$canvas.drawText({
 			fillStyle: '#9cf',
 			strokeStyle: '#25a',
 			strokeWidth: 2,
@@ -68,8 +68,7 @@ timeout = setTimeout(function () {
 			fontSize: 48,
 			fontFamily: 'Verdana, sans-serif',
 			text: 'Hello'
-			});*/
-			
+			});			
 		
 			//Canvas.SetZIndex(image1, 2);
 		   
