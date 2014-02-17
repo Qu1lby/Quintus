@@ -95,17 +95,18 @@
 // VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
-       		this._super(p, { gravity: 0, asset: "tomates.png" });
+       		this._super(p, { vx : 100 , gravity : 0, defaultDirection: "left", asset: "fond_pierre_haut2.png" });
             this.add("2d");
             this.p.initialY = this.p.y;
+			this.p.initialX = this.p.x;
         },
         
-		step: function(dt) {                
-            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
-        	    this.p.vy = -this.p.vy;
+		  step: function(dt) {                
+          if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
+        	    this.p.vx = -this.p.vx;
             } 
-            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
-                 	this.p.vy = -this.p.vy;
+            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
+                 	this.p.vx = -this.p.vx;
         	} 
 		}
 	});
@@ -150,7 +151,7 @@
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
    
-	Q.Sprite.extend("Sol_1", {
+	Q.Sprite.extend("Sol_pierre1_D", {
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
 			this.variable = 1;
