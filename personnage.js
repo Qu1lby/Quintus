@@ -1,7 +1,7 @@
 		//init : à la création
 		//step : à chaque instant
 		//damage : à chaque dommage
-		
+		//Orange qui a le nom fraise nimp ------------------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Orange",{
         init: function(p) {
     	    this._super(p, { asset: "orange.png", x: 200, y: 100, jumpSpeed: -400, lives: 2});
@@ -170,7 +170,7 @@
         },
     });
 	
-	
+// BANANE -------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	Q.Sprite.extend("Banane",{
         init: function(p) {
        		this._super(p, { asset: "banane.png", x: 1505, y: 1085, jumpSpeed: -530, lives: 2});
@@ -254,7 +254,7 @@
         },
     });
 	
-	
+	// ANANAS ------------------------------------------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Ananas",{
         init: function(p) {
         	this._super(p, { asset: "ananas.png", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
