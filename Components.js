@@ -132,7 +132,7 @@
 		}
 	});
 	
-	
+/*	
 // Bouton qui detruit une case
 	Q.component("Button", {
     	added: function() {
@@ -164,6 +164,7 @@
         },
 	});
 	
+	*/
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
@@ -317,16 +318,42 @@
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.variable = 1;
-			this.destroy("2d2, Button");
-        }
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.add("2d2");
+        },
+
+		step: function(dt) {	
+			var passage = 0;
+            this.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					if(passage == 0){
+						Q.stage().locate(this.coox,this.cooy).destroy();
+						passage += 1;}
+					}
+            });
+		}
     });
 	
 		Q.Sprite.extend("bouton2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.variable = 1;
-			this.add("2d2, Button2");
-        }
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.add("2d2");
+        },
+		
+		step: function(dt) {	
+			var passage = 0;		
+            this.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					if(passage == 0){
+						Q.stage().locate(this.coox,this.cooy).destroy();
+						passage += 1;}
+					}
+            });
+		}
     });
 	
 	Q.Sprite.extend("mur", {
