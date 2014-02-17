@@ -88,14 +88,14 @@
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 				
 				["grille70", {x: 1925, y : 1015}],		
-				["grille70", {x: 2765, y : 770}],
+				["grille70", {x: 2345, y : 734}],
 				["grille140", {x: 1365 , y : 1335}],				
 				["grille140", {x: 1680 , y : 1335}],
 				["grille200", {x: 840, y : 1365}],
 				
-				["bouton", {x: 455, y : 1040}],	
-				["bouton", {x: 525, y : 1470}],				
-				["bouton", {x: 665, y : 1470}],					
+				//["bouton", {x: 455, y : 1040}],	
+				//["bouton", {x: 525, y : 1470}],				
+				//["bouton", {x: 665, y : 1470}],					
 
             ];
               stage.loadAssets(levelAssets);  
