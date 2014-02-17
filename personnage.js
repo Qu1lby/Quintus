@@ -1,7 +1,7 @@
-		//init : à la création
+	//init : à la création
 		//step : à chaque instant
 		//damage : à chaque dommage
-		//Orange qui a le nom fraise nimp ------------------------------------------------------------------------------------------------------------------------------
+
 	Q.Sprite.extend("Orange",{
         init: function(p) {
     	    this._super(p, { asset: "orange.png", x: 200, y: 100, jumpSpeed: -400, lives: 2});
@@ -9,14 +9,14 @@
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-				
+
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
         },
-			
+
 		// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt) {	
 			if(this.p.timeInvincible == 0) {
@@ -31,7 +31,7 @@
 						this.p.minute ++; 
 					}
 				}
-					
+
 				this.p.date_prec = encoretjrs;
 				this.p.seconde = this.p.secondeabs;
 				if((this.p.secondeabs<10) && (this.p.once == false)){
@@ -46,7 +46,7 @@
         		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
 				}
 			}
-				
+
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
             }
@@ -54,7 +54,7 @@
             if(Q.inputs["right"]&& this.p.direction == "left") {
 				this.p.flip = false;                    
             }
-				
+
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
@@ -65,16 +65,16 @@
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
 			}
-		
+
 		// Détruit le personnage s'il tombe second niveau
-		
+
 		// Détruit le personnage s'il tombe troisième niveau
-		
+
 		// Tutoriel
-		
-		
+
+
         },
-			
+
         damage: function() {
             if(!this.p.timeInvincible) {
                 this.p.lives--;
@@ -92,7 +92,7 @@
             }
         },
     });
-	
+
 		Q.Sprite.extend("Fraise",{
         init: function(p) {
        		this._super(p, { asset: "orange.png", x: 17*70+35, y: 11*70+35, jumpSpeed: -400, lives: 1});
@@ -100,14 +100,14 @@
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-				
+
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
         },
-			
+
 		// Gère le temps que le personnage est en vie -> fin du lvl
  		step: function(dt) {	
 			if(this.p.timeInvincible == 0) {	
@@ -122,7 +122,7 @@
 						this.p.minute ++; 
 					}
 				}
-					
+
 				this.p.date_prec = encoretjrs;
 				this.p.seconde = this.p.secondeabs;
 				if((this.p.secondeabs<10) && (this.p.once == false)){
@@ -137,8 +137,8 @@
         		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
 				}
 			}
-		
-				
+
+
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
             }
@@ -146,12 +146,12 @@
             if(Q.inputs["right"]&& this.p.direction == "left") {
 				this.p.flip = false;                    
             }
-				
+
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
         },
-			
+
         damage: function() {
             if(!this.p.timeInvincible) {
                 this.p.lives--;
@@ -169,8 +169,8 @@
             }
         },
     });
-	
-// BANANE -------------------------------------------------------------------------------------------------------------------------------------------------------------	
+
+
 	Q.Sprite.extend("Banane",{
         init: function(p) {
        		this._super(p, { asset: "banane.png", x: 1505, y: 1085, jumpSpeed: -530, lives: 2});
@@ -184,7 +184,7 @@
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
         },
-			
+
 		// Gère le temps que le personnage est en vie -> fin du lvl
    		step: function(dt) {	
 			if(this.p.timeInvincible == 0) {
@@ -199,7 +199,7 @@
 						this.p.minute ++; 
 						}
 				}
-					
+
 				this.p.date_prec = encoretjrs;
 				this.p.seconde = this.p.secondeabs;
 				if((this.p.secondeabs<10) && (this.p.once == false)){
@@ -214,8 +214,8 @@
         		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
 				}
 			}
-		
-				
+
+
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
             }
@@ -223,7 +223,7 @@
             if(Q.inputs["right"]&& this.p.direction == "left") {
 				this.p.flip = false;                    
             }
-				
+
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
@@ -235,7 +235,7 @@
 			}
 
         },
-			
+
         damage: function() {
             if(!this.p.timeInvincible) {
                 this.p.lives--;
@@ -253,8 +253,8 @@
             }
         },
     });
-	
-	// ANANAS ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 	Q.Sprite.extend("Ananas",{
         init: function(p) {
         	this._super(p, { asset: "ananas.png", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
@@ -262,14 +262,14 @@
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-				
+
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
         },
-			
+
 		// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt) {	
 			if(this.p.timeInvincible == 0) {
@@ -284,7 +284,7 @@
 						this.p.minute ++; 
 						}
 				}
-					
+
 				this.p.date_prec = encoretjrs;
 				this.p.seconde = this.p.secondeabs;
 				if((this.p.secondeabs<10) && (this.p.once == false)){
@@ -299,8 +299,8 @@
         		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
 				}
 			}
-		
-				
+
+
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
             }
@@ -308,7 +308,7 @@
             if(Q.inputs["right"]&& this.p.direction == "left") {
 				this.p.flip = false;                    
             }
-				
+
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
@@ -320,7 +320,7 @@
 			}
 
         },
-			
+
         damage: function() {
             if(!this.p.timeInvincible) {
                 this.p.lives--;
