@@ -201,12 +201,44 @@
 		
 	Q.Sprite.extend("Sol_pierre1_P", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre.png"});
+            this._super(p,  {gravity : 0, asset : "fond_pierre2.png"});
 			this.variable = 1;
 			this.add("2d2, AutoCube");
         }
     });		
-		
+	
+	Q.Sprite.extend("Sol_pierre1_H", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
+			this.variable = 1;
+			this.add("2d2, AutoCube");
+        }
+    });	
+
+	Q.Sprite.extend("Sol_pierre2_H", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
+			this.variable = 2;
+			this.add("2d2, AutoCube");
+        }
+    });
+	
+	Q.Sprite.extend("Sol_pierre3_H", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
+			this.variable = 3;
+			this.add("2d2, AutoCube");
+        }
+    });
+	
+	Q.Sprite.extend("Sol_pierre4_H", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
+			this.variable = 4;
+			this.add("2d2, AutoCube");
+        }
+    });	
+	
 	Q.Sprite.extend("Sol_pierre2_D", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "fond_pierre_haut.png"});
