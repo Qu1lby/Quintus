@@ -59,12 +59,20 @@
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
 
-		// Détruit le personnage s'il tombe
+		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 450 && this.p.y<500 && this.p.x<1870){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
 			}
+		
+		// Détruit le personnage s'il tombe second niveau
+		
+		// Détruit le personnage s'il tombe troisième niveau
+		
+		// Tutoriel
+		
+		
         },
 			
         damage: function() {
