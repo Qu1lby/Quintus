@@ -11,7 +11,7 @@
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
 
-				["Sol_pierre2_D", {x: 1295 , y : 1155}],
+				["Sol_5", {x: 1295 , y : 1155}],
 				["Sol_5", {x: 1365 , y : 1155}],
 				["Sol_5", {x: 1435 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1155}],
@@ -23,18 +23,21 @@
 				["bouton", {x: 525 , y : 1435, coox : 875, cooy :1505}],
 				["bouton", {x: 525 , y : 1435, coox : 945, cooy :1505}],
 				
-				["bouton", {x: 2625 , y : 665, coox : 1898, cooy :1015}],
-
+				["bouton", {x: 2625 , y : 665, coox : 2415, cooy :665}],
+				["bouton", {x: 2485 , y : 665, coox : 1260, cooy :1085}],
+				
+				["bouton", {x: 2135 , y : 1015, coox : 1715, cooy :1225}],
+				["bouton", {x: 2135 , y : 1015, coox : 1715, cooy :1295}],
 				
 				
-				["Sol_jump", {x: 1785 , y : 1295}],
+				["Sol_jump", {x: 1715 , y : 1365}],
 				
 				["Sol_jump", {x: 1015 , y : 1365}],
 				
 				["Sol_pierre2_D", {x: 1785 , y : 1085}],
 				["Sol_pierre2_D", {x: 1855 , y : 1085}],
 				["Sol_pierre2_D", {x: 1925 , y : 1085}],
-				["Sol_pierre2_D", {x: 1995 , y : 1085}],
+				["Sol_pierre1_DB", {x: 1995 , y : 1085}],
 				["Sol_pierre2_D", {x: 2065 , y : 1085}],
 				["Sol_pierre2_D", {x: 2275 , y : 1155}],
 				["Sol_pierre2_D", {x: 2345 , y : 1155}],
@@ -58,7 +61,8 @@
 				["Sol_pierre2_D", {x: 735 , y : 1085}],
 				["Sol_pierre2_D", {x: 665 , y : 1085}],
 				
-				["Sol_pierre2_D", {x: 1785 , y : 1225}],
+				["Sol_pierre2_D", {x: 1715 , y : 1295}],
+				["Sol_5", {x: 1715 , y : 1225}],
 				
 				["Sol_jump", {x: 875 , y : 1015}],
 				["Sol_jump", {x: 945 , y : 805}],
@@ -70,7 +74,7 @@
 				["Sol_jump", {x: 875 , y : 315}],				
 
 				
-				["Sol_jump", {x: 1995 , y : 1365}],	
+				["Sol_jump", {x: 1995 , y : 1295}],	
 				["Sol_jump", {x: 2415 , y : 1225}],		
 				["Sol_jump", {x: 2625 , y : 1085}],	
 				["Sol_jump", {x: 2695 , y : 875}],	
@@ -97,19 +101,13 @@
 	
 
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
-				
-				["grille70", {x: 1898, y : 1015}],		
-				["grille70", {x: 2345, y : 734}],
-				["grille70", {x: 2555, y : 665}],
-				["grille70", {x: 2415, y : 665}],
+				["Sol_pierre1_DB", {x: 2415, y : 595}],	
+				["Sol_pierre1_DB", {x: 2415, y : 525}],	
+						
+				["grille70", {x: 2390, y : 665}],
+				["grille70", {x: 1260 , y : 1085}],
 				["grille140", {x: 1335 , y : 1335}],				
-				["grille140", {x: 1675 , y : 1335}],
 				//["grille200", {x: 830, y : 1382}],
-				
-				//["bouton2", {x: 560, y : 1382}],
-				//["bouton", {x: 455, y : 1040}],	
-				//["bouton", {x: 525, y : 1470}],				
-				//["bouton", {x: 665, y : 1470}],	
 	
 
             ];
