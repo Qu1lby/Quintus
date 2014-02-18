@@ -294,7 +294,7 @@
         );
 
  		var lives = stage.insert(new Q.UI.Text({ 
-                label: "Lives x 2",
+                label: "Lives x ",
                 x: -wi/3,
                 y: 0
         }),statsContainer);
