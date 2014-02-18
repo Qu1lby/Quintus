@@ -83,16 +83,11 @@ Q.scene("level1",function(stage) {
 			
 			
 			var $canvas = $('#Jquery'); 
-			/*$canvas.html('This text will dissapear after 3 seconds.');
-timeout = setTimeout(function () {
-   $canvas.fadeOut();
-}, 3000);*/
-			
 			$canvas.drawText({
 			fillStyle: '#9cf',
 			strokeStyle: '#25a',
 			strokeWidth: 2,
-			x: 150, y: 100,
+			x: 300, y: 50,
 			fontSize: 48,
 			fontFamily: 'Verdana, sans-serif',
 			text: 'Level 1'
