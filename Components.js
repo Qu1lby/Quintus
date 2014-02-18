@@ -96,7 +96,7 @@
 // HorizontalPlatform ( probleme s'arrete quand percute le joueur)
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left", asset: "fond_pierre_haut2.png" });
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left", asset: "plateforme.png" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
