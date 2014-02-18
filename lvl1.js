@@ -45,7 +45,7 @@ Q.scene("level1",function(stage) {
 			["Sol_jump_neige", {x: 1505 , y : 245}],
 			["Sol_5", {x: 1715 , y : 315}],
 		
-			["HorizontalPlatform", {x: 1855, y : 650, rangeX:1400 }],	
+			["HorizontalPlatform", {x: 1855, y : 650, rangeX:1400, asset: "plateforme2.png"  }],	
 			
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 			
