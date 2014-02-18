@@ -15,6 +15,7 @@
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
+			
         },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
@@ -63,17 +64,19 @@
 			if(this.p.y> 450 && this.p.y<500 && this.p.x<1870){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1)
 			}
 
 		// Détruit le personnage s'il tombe second niveau
 			if(this.p.y> 1000 && this.p.y<1100 && this.p.x>300){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1)
 			}
 
-
+			var livesLabel = Q("UI.Text",1).first();
+            livesLabel.p.label = "Lives x "+this.p.lives;
+			
 		// Détruit le personnage s'il tombe troisième niveau
 
 		// Tutoriel
@@ -89,7 +92,7 @@
                 if(this.p.lives<0) {
                     this.destroy();
 					Q.clearStages();
-                    Q.stageScene("endGame",1, { label: "Game Over" }); 
+                    Q.stageScene("endGame",1); 
                 }
                 else {
                     var livesLabel = Q("UI.Text",1).first();
@@ -144,6 +147,8 @@
 				}
 			}
 
+			var livesLabel = Q("UI.Text",1).first();
+            livesLabel.p.label = "Lives x "+this.p.lives;
 
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
@@ -221,6 +226,8 @@
 				}
 			}
 
+			var livesLabel = Q("UI.Text",1).first();
+            livesLabel.p.label = "Lives x "+this.p.lives;
 
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
@@ -237,7 +244,7 @@
 			if(this.p.y>1645){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1)
+				Q.stageScene("endGame",1, {label: "Game Over"})
 			}
 
         },
@@ -306,6 +313,8 @@
 				}
 			}
 
+			var livesLabel = Q("UI.Text",1).first();
+            livesLabel.p.label = "Lives x "+this.p.lives;
 
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
