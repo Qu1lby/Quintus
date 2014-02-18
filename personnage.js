@@ -60,11 +60,11 @@
             }
 
 		// Détruit le personnage s'il tombe premier niveau
-			/*if(this.p.y> 450 && this.p.y<500 && this.p.x<1870){
+			if(this.p.y> 450 && this.p.y<500 && this.p.x<1870){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
-			}*/
+			}
 
 		// Détruit le personnage s'il tombe second niveau
 			if(this.p.y> 1000 && this.p.y<1100 && this.p.x>300){
@@ -237,7 +237,7 @@
 			if(this.p.y>1645){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1)
 			}
 
         },
