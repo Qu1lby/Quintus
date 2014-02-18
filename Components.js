@@ -324,18 +324,18 @@
         },
 
 		step: function(dt) {	
-			var passage = 0;
+
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					if(passage == 0){
+						this.destroy();
 						Q.stage().locate(this.coox,this.cooy).destroy();
-						passage += 1;}
+
 					}
             });
 		}
     });
 	
-		Q.Sprite.extend("bouton2", {
+		/*Q.Sprite.extend("bouton2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.variable = 1;
@@ -354,7 +354,7 @@
 					}
             });
 		}
-    });
+    });*/
 	
 	Q.Sprite.extend("mur", {
     	init: function(p) {
