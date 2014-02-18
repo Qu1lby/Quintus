@@ -27,6 +27,8 @@ Q.scene("level1",function(stage) {
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
 			["grille140", {x: 975 , y : 145}],
+			["bouton", {x: 805 , y : 205, coox : 975, cooy :145}],
+
 			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
@@ -42,9 +44,9 @@ Q.scene("level1",function(stage) {
 			["Sol_jump_neige", {x: 1295 , y : 315}],
 			["Sol_jump_neige", {x: 1505 , y : 245}],
 			["Sol_5", {x: 1715 , y : 315}],
-
-			["Sol_pierre3_D", {x: 1855 , y : 665}],			
-							
+		
+			["HorizontalPlatform", {x: 1855, y : 650, rangeX:1400 }],	
+			
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 			
 			// Second niveau
@@ -93,7 +95,7 @@ timeout = setTimeout(function () {
 			x: 150, y: 100,
 			fontSize: 48,
 			fontFamily: 'Verdana, sans-serif',
-			text: 'Hello'
+			text: 'Level 1'
 			});			
 		
 			//Canvas.SetZIndex(image1, 2);
