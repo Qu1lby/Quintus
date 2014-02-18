@@ -12,7 +12,10 @@
             var levelAssets = [
 							
 				["Sol_pierre1_D", {x: 2135 , y : 805 }],
+				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :175, rangeX : 200 ,asset : "plateforme.png"}],
+				["HorizontalPlatform", {x: 47*70+15, y : 10*70+20,vx :175, rangeX : 120 ,asset : "plateforme.png"}],
+				
 				["GroundEnemy", {x: 44*70, y :  12*70,vx : 400, asset: "slime3.png"}],
 				["GroundEnemy", {x: 24*70, y :  14*70,vx : 600, asset: "slime3.png"}],
 	
