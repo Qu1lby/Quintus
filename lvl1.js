@@ -28,8 +28,9 @@ Q.scene("level1",function(stage) {
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
 			["grille140", {x: 975 , y : 145}],
-			["bouton", {x: 805 , y : 205, coox : 975, cooy :145}],
-
+			["bouton", {x: 805 , y : 205, coox : 975, cooy : 145}],
+			["HorizontalPlatform", {x: 400, y : 1090, rangeX : 1800, vx : 100, asset: "cabine.png"  }],	
+			
 			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
