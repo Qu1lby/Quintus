@@ -1,4 +1,3 @@
-
 // Comportement des cubes du sol  
 	Q.component("cube", {
     	added: function() {
@@ -45,6 +44,7 @@
         },
 	});
 	
+	// Destruction quand les cubes sont détruits par le bas
 	Q.component("AutoCubeBas", {
     	added: function() {
         	var entity = this.entity;				
@@ -112,7 +112,7 @@
 		}
 	});
 	
-	
+/*	Is it working ?
 // VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
@@ -131,7 +131,7 @@
         	} 
 		}
 	});
-	
+*/
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
@@ -280,7 +280,7 @@
         }
     });
 	
-	
+// Bouton destroy une case
 	Q.Sprite.extend("bouton", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
@@ -290,21 +290,16 @@
         },
 
 		step: function(dt) {	
-
             this.on("bump.top,bump.bottom", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-						this.destroy();
-						Q.stage().locate(this.coox,this.cooy).destroy();
-
-					}
+					this.destroy();
+					Q.stage().locate(this.coox,this.cooy).destroy();
+				}
             });		
 		}
     });
 
-
-
-	
-		/*Q.Sprite.extend("bouton2", {
+	/*Q.Sprite.extend("bouton2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.coox = p.coox;
@@ -315,11 +310,8 @@
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-						Q.stage().insert(new Q.AutoCube({ asset: "grille200.png",
-														x: 455,
-														y: 1460});
-
-					}
+					Q.stage().insert(new Q.AutoCube({ asset: "grille200.png", x: 455, y: 1460});
+				}
             });
 		}
     });*/
