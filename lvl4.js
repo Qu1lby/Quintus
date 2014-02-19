@@ -18,6 +18,7 @@
 			["Sol_G5", {x: 175 , y : 1575}],
 			["Sol_G5", {x: 245 , y : 1575}],
 			
+			//["bouton2", {x: 245 , y : 1505}],
 			
 			//Petit ilot a gauche (rdc)
 			["Sol_pierre1_H", {x: 315 , y : 1505}],

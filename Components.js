@@ -311,7 +311,7 @@
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					Q.stage().insert(new Q.AutoCube({ asset: "grille200.png", x: 455, y: 1460});
+					Q.stage().insert(new Q.AutoCube({ asset: "grille200.png", x:175, y: 1435});
 				}
             });
 		}
