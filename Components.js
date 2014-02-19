@@ -317,7 +317,6 @@
 	Q.Sprite.extend("bouton", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
-			this.variable = 1;
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d2");
@@ -334,23 +333,43 @@
             });
 		}
     });
+
+	Q.Sprite.extend("bouton3", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "push.png"});
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.add("2d2");
+        },
+
+		step: function(dt) {	
+
+            this.on("bump.bottom",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+						this.destroy();
+						Q.stage().locate(this.coox,this.cooy).destroy();
+
+					}
+            });
+		}
+    });
+
 	
 		/*Q.Sprite.extend("bouton2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
-			this.variable = 1;
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d2");
         },
 		
-		step: function(dt) {	
-			var passage = 0;		
+		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					if(passage == 0){
-						Q.stage().locate(this.coox,this.cooy).destroy();
-						passage += 1;}
+						Q.stage().insert(new Q.AutoCube({ asset: "grille200.png",
+														x: 455,
+														y: 1460});
+
 					}
             });
 		}
