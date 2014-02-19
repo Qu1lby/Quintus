@@ -324,35 +324,25 @@
 
 		step: function(dt) {	
 
-            this.on("bump.top",function(collision) {
+            this.on("bump.top", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 						this.destroy();
 						Q.stage().locate(this.coox,this.cooy).destroy();
 
 					}
             });
-		}
-    });
-
-	Q.Sprite.extend("bouton3", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "push.png"});
-			this.coox = p.coox;
-			this.cooy = p.cooy;
-			this.add("2d2");
-        },
-
-		step: function(dt) {	
-
-            this.on("bump.bottom",function(collision) {
+		            this.on("bump.bottom", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 						this.destroy();
 						Q.stage().locate(this.coox,this.cooy).destroy();
 
 					}
             });
+		
 		}
     });
+
+
 
 	
 		/*Q.Sprite.extend("bouton2", {

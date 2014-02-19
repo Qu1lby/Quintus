@@ -38,7 +38,7 @@
 				
 				["bouton", {x: 1505, y : 550, coox: 1335, cooy :1335}],
 				
-				["bouton3", {x: 875, y : 20, coox: 1274, cooy :525}],
+				["bouton", {asset: "push.png", x: 875, y : 20, coox: 1274, cooy :525}],
 				
 
 				
@@ -123,7 +123,7 @@
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 						
 				["grille140", {x: 2325, y : 630}],
-				//["grille70", {x: 1260 , y : 1085}],
+				["grille70", {x: 1260 , y : 1085}],
 				["grille70", {x: 1274 , y : 525}],
 				["grille140", {x: 1335 , y : 1335}],
 				["grille140", {x: 2615 , y : 1330}],				
