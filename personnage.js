@@ -70,7 +70,7 @@
 			}
 
 		// Détruit le personnage s'il tombe second niveau
-			if(this.p.y> 1000 && this.p.y<1100 && this.p.x>300){
+			if(this.p.y> 1100 && this.p.y<1200 && this.p.x>300){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1)
