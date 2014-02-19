@@ -15,6 +15,7 @@ Q.scene("level1",function(stage) {
           
         var levelAssets = [
 			
+			// Premier niveau
 			["Sol_5", {x: 105 , y : 245}],
 			["Sol_5", {x: 175 , y : 245}],
 			["Sol_5", {x: 245 , y : 245}],
@@ -32,20 +33,12 @@ Q.scene("level1",function(stage) {
 			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
-			
-			/*["Sol_2n", {x: 1085 , y : 245}],
-			["Sol_2n", {x: 1015 , y : 245}],
-			["Sol_2n", {x: 1085 , y : 315}],
-			["Sol_2n", {x: 1155 , y : 245}],
-			["Sol_2n", {x: 1155 , y : 315}],
-			["Sol_2n", {x: 1155 , y : 385}],
-			*/
-
+		
 			["Sol_jump_neige", {x: 1295 , y : 315}],
 			["Sol_jump_neige", {x: 1505 , y : 245}],
 			["Sol_5", {x: 1715 , y : 315}],
 		
-			["HorizontalPlatform", {x: 1855, y : 650, rangeX:1400, vx : 150, asset: "plateforme2.png"  }],	
+			["HorizontalPlatform", {x: 1715, y : 650, rangeX:1300, vx : 150, asset: "plateforme2.png"  }],	
 			
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 			
@@ -54,6 +47,7 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre2_D", {x: 175 , y : 875}],
 			["Sol_pierre2_D", {x: 245 , y : 875}],
 			
+			//Colone de gauches
 			["Sol_pierre1_P", {x: 105 , y : 945}],
 			["Sol_pierre1_P", {x: 175 , y : 945}],
 			["Sol_pierre1_P", {x: 245 , y : 945}],
@@ -81,7 +75,7 @@ Q.scene("level1",function(stage) {
 
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
 			
-			
+			/*
 			var $canvas = $('#Jquery'); 
 			$canvas.drawText({
 			fillStyle: '#9cf',
@@ -92,7 +86,7 @@ Q.scene("level1",function(stage) {
 			fontFamily: 'Verdana, sans-serif',
 			text: 'Level 1'
 			});			
-		
+			*/
 			//Canvas.SetZIndex(image1, 2);
 		   
 	});

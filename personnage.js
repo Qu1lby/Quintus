@@ -1,21 +1,20 @@
 	//init : à la création
-		//step : à chaque instant
-		//damage : à chaque dommage
+	//step : à chaque instant
+	//damage : à chaque dommage
 
 	Q.Sprite.extend("Orange",{
         init: function(p) {
-    	    this._super(p, { asset: "orange.png", x: 200, y: 100, jumpSpeed: -400, lives: 2});
+    	    this._super(p, {asset: "orange.png", x: 200, y: 100, jumpSpeed: -400, lives: 2});
     	    this.add("2d, platformerControls"); 
     	    this.p.timeInvincible = 0;
-			this.p.sol = 0; 	 // Retiens le dernier cube
-			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-
+			this.p.sol = 0;
+			this.p.first = 1;
+			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
-			
         },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
@@ -47,6 +46,9 @@
         		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
 				}
 			}
+			
+			var livesLabel = Q("UI.Text",1).first();
+			livesLabel.p.label = "Lives x "+this.p.lives;
 
         	if(Q.inputs["left"]) {
             	this.p.flip = "x";
@@ -61,7 +63,7 @@
             }
 
 		// Détruit le personnage s'il tombe premier niveau
-			if(this.p.y> 450 && this.p.y<500 && this.p.x<1870){
+			if(this.p.y> 420 && this.p.y<470 && this.p.x<1100){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1)
@@ -74,13 +76,19 @@
 				Q.stageScene("endGame",1)
 			}
 
-			var livesLabel = Q("UI.Text",1).first();
-            livesLabel.p.label = "Lives x "+this.p.lives;
-			
+		
 		// Détruit le personnage s'il tombe troisième niveau
-
+			if(this.p.y> 1800){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1)
+			}
+			
 		// Tutoriel
 
+		
+		
+			
 
         },
 
@@ -92,7 +100,7 @@
                 if(this.p.lives<0) {
                     this.destroy();
 					Q.clearStages();
-                    Q.stageScene("endGame",1); 
+                    Q.stageScene("endGame",1, { label: "Game Over" }); 
                 }
                 else {
                     var livesLabel = Q("UI.Text",1).first();
