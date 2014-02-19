@@ -132,39 +132,6 @@
 		}
 	});
 	
-/*	
-// Bouton qui detruit une case
-	Q.component("Button", {
-    	added: function() {
-		var passage = 0;
-		var x, y;
-        	var entity = this.entity;				
-            entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					if(passage == 0){
-						Q.stage().locate(1435,1155).destroy();
-						passage += 1;}
-					}
-            });
-        },
-	});
-	
-	// Bouton bouton qui spawn une grille
-	Q.component("Button2", {
-    	added: function() {
-		var passage = 0;
-        	var entity = this.entity;				
-            entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					if(passage == 0){
-						  stage.insert(new Q.AutoCube({x: 830, y: 1382, asset: "grille200.png" }));
-						passage += 1;}
-					}
-            });
-        },
-	});
-	
-	*/
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
@@ -324,21 +291,13 @@
 
 		step: function(dt) {	
 
-            this.on("bump.top", function(collision) {
+            this.on("bump.top,bump.bottom", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 						this.destroy();
 						Q.stage().locate(this.coox,this.cooy).destroy();
 
 					}
-            });
-		            this.on("bump.bottom", function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-						this.destroy();
-						Q.stage().locate(this.coox,this.cooy).destroy();
-
-					}
-            });
-		
+            });		
 		}
     });
 
