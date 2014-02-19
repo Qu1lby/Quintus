@@ -46,9 +46,11 @@
 			 ["Sol_G5", {x: 945 , y : 1575}],
 			 
 			 // A supprimer
-			 ["Sol_jump", {x: 1365 , y : 1575}],
-			 ["Sol_jump", {x: 1295 , y : 1365}],
-			 ["Sol_jump", {x: 1225 , y : 1155}],
+			// ["Sol_jump", {x: 1365 , y : 1575}],
+			// ["Sol_jump", {x: 1295 , y : 1365}],
+			 //["Sol_jump", {x: 1225 , y : 1155}],
+			 
+			 ["VerticalPlatform", {x: 1365, y : 1505,vy :175, rangeY : 200 ,asset : "plateforme.png"}],
 			
 			
 			// Apres le pont a gauche (rdc)
@@ -71,8 +73,8 @@
 			["Sol_pierre1_H", {x: 595 , y : 1015}],
 			["Sol_pierre1_H", {x: 595 , y : 1015}],
 			["Sol_pierre2_H", {x: 525 , y : 1015}],
-			["Sol_pierre1_H", {x: 465 , y : 1015}],
-			["Sol_pierre2_H", {x: 395 , y : 1015}],
+			["Sol_pierre1_H", {x: 455 , y : 1015}],
+			["Sol_pierre2_H", {x: 385 , y : 1015}],
 			
 			// a supprimer 
 			

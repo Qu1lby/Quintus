@@ -112,18 +112,19 @@
 		}
 	});
 	
-/*	Is it working ?
+	
 // VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
-       		this._super(p, {gravity: 0, asset: "tomates.png" });
+       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
+			this.p.initialY = this.p.y;
         },
         
 		step: function(dt) {                
-            if(this.p.y - this.p.initialy >= this.p.rangey && this.p.vy > 0) {
+            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
         	    this.p.vy = -this.p.vy;
             } 
             else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
@@ -131,7 +132,7 @@
         	} 
 		}
 	});
-*/
+
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
