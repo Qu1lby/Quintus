@@ -28,12 +28,14 @@
 						
 				//["Mal", {x: 1295 , y : 1085}],
 				["Mal", {x: 2415 , y : 945}],
-				
+				["Mal", {x: 735 , y : 385}],				
 				// -25 y pour tous les boutons
 				["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
 				["bouton", {x: 455 , y : 1460, coox : 945, cooy :1505}],
 				["bouton", {x: 455 , y : 1460, coox : 805, cooy :1505}],
 				["bouton", {x: 455 , y : 1460, coox : 735, cooy :1505}],
+				
+				["HorizontalPlatform", {x: 245, y : 1460,vx :175, rangeX : 155 ,asset : "Boule.png"}],
 				
 				//["bouton2", {x: 595 , y : 1460, coox : 600, cooy :1460}],
 				
