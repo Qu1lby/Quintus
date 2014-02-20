@@ -77,7 +77,7 @@
 							scene_prec = scene_courante;
 							scene_courante = "pause";
 						}else{
-							Q.stageScene('PauseFin',2);
+							Q.stageScene('Blanc',2);
 							Q.stage().unpause();
 							scene_courante=scene_prec;
 							scene_prec = "pause";
@@ -149,7 +149,7 @@
 					if (!echap){
 						Q.stageScene('Echp',2);
 					}else{
-						Q.stageScene('PauseFin',2);	
+						Q.stageScene('Blanc',2);	
 					}
 					echap = !echap;
 				}

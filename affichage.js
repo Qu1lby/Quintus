@@ -340,10 +340,9 @@
 
 // Pause
 	Q.scene("PauseAff", function(stage) {
- 	 	
 		var Opacite = stage.insert(new Q.UI.Container({
-        		fill: "rgb(160,160,160)",
-				opacity : 0.5,
+        		fill: "rgb(0,0,0)",
+				opacity : 0.7,
                 x: 0,
                 y: 0,
                 w: wi*2,
@@ -360,56 +359,67 @@
                 })
             );
 			
+		var Fond = stage.insert(new Q.UI.Container({
+                fill: "rgb(255,178,102)",
+                x: wi/2,
+                y: hi/2,
+                border: 1,
+                w: wi/3.5,
+                h: 100
+                })
+            );
+			
 		var lives = stage.insert(new Q.UI.Text({ 
                 label: "P A U S E",
 				size : 40,
                 x: 0,
                 y: 0
-                }),Container);
+                }),Fond);
 	});
 	
 // Touche echap
 	Q.scene("Echp", function(stage) {
 			
 		var Choix = stage.insert(new Q.UI.Container({
-                fill: "rgb(160,160,160)",
+                fill: "rgb(204,255,153)",
                 x: wi/2,
                 y: hi-(hi/6)-50,
                 border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
                 w: wi/4,
-                h: 150
+                h: 120
                 })
             );
 			
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Menu principal",
+                label: "Menu Principal",
                 x: 0,
-                y: -30
+                y: -25,
         }),Choix);
 		
 		var msg2 = stage.insert(new Q.UI.Button({ 
                 label: "Retour",
                 x: 0,
-                y: 30
+                y: 25
         }),Choix);
 		
 		msg.on("click",function() {
        		Q.clearStages();
    			Q.stageScene('niveau');
-				
+			
+			Q.audio.stop();
+			music = false;
+			
 			scene_prec = scene_courante
 			scene_courante = "niveau";
 			echap = !echap;
 		});
 		
 		msg2.on("click",function() {
-       		Q.stageScene('PauseFin',2);	
+       		Q.stageScene('Blanc',2);	
 			echap = !echap;
 		});
 	});
 	
 // Reinitialiser un stage
-	Q.scene("PauseFin", function(stage){
+	Q.scene("Blanc", function(stage){
 	});
