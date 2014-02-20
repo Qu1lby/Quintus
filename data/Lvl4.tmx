@@ -1210,7 +1210,7 @@
    <tile gid="6"/>
   </data>
  </layer>
- <layer name="collision" width="50" height="24" visible="0">
+ <layer name="collision" width="50" height="24">
   <data>
    <tile gid="6"/>
    <tile gid="0"/>

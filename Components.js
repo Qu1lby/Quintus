@@ -126,7 +126,7 @@
 		step: function(dt) {                
             if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
         	    this.p.vy = -this.p.vy;
-            } 
+            }
             else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
                  	this.p.vy = -this.p.vy;
         	} 
