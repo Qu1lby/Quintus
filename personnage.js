@@ -169,6 +169,13 @@
             if(this.p.timeInvincible > 0) {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
+			
+			
+			if(this.p.y>30*70){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1, {label: "Game Over"})
+			}
         },
 
         damage: function() {
