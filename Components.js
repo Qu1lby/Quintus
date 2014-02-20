@@ -305,7 +305,7 @@
         },
 
 		step: function(dt) {	
-            this.on("bump.top,bump.bottom", function(collision) {
+            this.on("bump.top,bump.bottom,bump.right", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 					this.destroy();
 					Q.stage().locate(this.coox,this.cooy).destroy();

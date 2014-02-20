@@ -34,7 +34,7 @@
 				["bouton", {x: 455 , y : 1460, coox : 805, cooy :1505}],
 				["bouton", {x: 455 , y : 1460, coox : 735, cooy :1505}],
 				
-				["bouton2", {x: 595 , y : 1460, coox : 600, cooy :1460}],
+				//["bouton2", {x: 595 , y : 1460, coox : 600, cooy :1460}],
 				
 				["bouton", {x: 2555 , y : 690, coox : 2320, cooy :665}],
 				["bouton", {x: 2415 , y : 690, coox : 2625, cooy :1365}],
@@ -118,8 +118,8 @@
 				["Sol_pierre2_D", {x: 1155, y : 455}],
 				["Sol_pierre2_D", {x: 1225, y : 595}],
 				["Sol_pierre2_D", {x: 1155, y : 595}],
-				["Sol_pierre2_D", {x: 1225, y : 665}],
-				["Sol_pierre2_D", {x: 1155, y : 665}],
+				//["Sol_pierre2_D", {x: 1225, y : 665}],
+				//["Sol_pierre2_D", {x: 1155, y : 665}],
 				["Sol_pierre2_D", {x: 1225, y : 735}],
 				["Sol_pierre2_D", {x: 1155, y : 735}],		
 				["Sol_pierre2_D", {x: 1225, y : 805}],
