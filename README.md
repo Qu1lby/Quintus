@@ -4,7 +4,7 @@ Quintus
 Projet tutoré création du jeu HTML5/JS 
 
 étudiants:
-  - Le clouërec Pierrick
+  - Cuny Kilian
   - Joly Nicolas
   - Chaboissier Maxime
-  - Cuny Killian
+  - Leclouërec Pierrick
