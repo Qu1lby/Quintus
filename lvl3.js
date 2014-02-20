@@ -18,6 +18,13 @@
 				
 				["GroundEnemy", {x: 44*70, y :  12*70,vx : 400, asset: "slime3.png"}],
 				["GroundEnemy", {x: 24*70, y :  14*70,vx : 600, asset: "slime3.png"}],
+				
+				["Sol_jump", {x: 54*70+35 , y : 16*70+35}],
+				["Sol_jump", {x: 55*70+35 , y : 16*70+35}],
+				
+				["Sol_jump", {x: 40*70+35 , y : 28*70+35}],
+				["Sol_jump", {x: 44*70+35 , y : 28*70+35}],
+				["Sol_jump", {x: 47*70+35 , y : 28*70+35}],
 	
             ];
               stage.loadAssets(levelAssets);  

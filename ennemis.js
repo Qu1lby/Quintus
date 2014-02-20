@@ -53,7 +53,7 @@
     	added: function() {
         	var entity = this.entity;
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {                   
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {                   
                 	collision.obj.damage();
                 }
             });

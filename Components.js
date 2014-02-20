@@ -3,7 +3,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) ||  (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
                   	if (collision.obj.first == 1){
 						collision.obj.first = 0 ;
 						collision.obj.sol = this;
@@ -32,7 +32,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -49,7 +49,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.bottom",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -68,7 +68,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))  || (collision.obj.isA("tomate"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -86,7 +86,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("tomate"))) {  
 					collision.obj.p.vy = -650;}
             });
         },
