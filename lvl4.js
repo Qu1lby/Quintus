@@ -156,6 +156,10 @@
 			["Sol_pierre1_H", {x: 2905 , y : 665}],
 			["Sol_pierre1_H", {x: 2835 , y : 595}],
 			
+			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
+			
+			["grille200", {asset: "grille200H.png", x: 3330, y: 945}],
+			
 			            ];
               stage.loadAssets(levelAssets);  
 			  
