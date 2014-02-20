@@ -89,8 +89,9 @@
 				["Sol_pierre2_D", {x: 735 , y : 1085}],
 				["Sol_pierre2_D", {x: 665 , y : 1085}],
 				
-				["Sol_pierre2_D", {x: 1715 , y : 1295}],
-				["Sol_5", {x: 1715 , y : 1225}],
+				
+				["Sol_5", {asset: "fond_pierre.png",x: 1715 , y : 1295}],
+				["Sol_5", {asset: "fond_pierre.png",x: 1715 , y : 1225}],
 				
 				["Sol_jump", {x: 875 , y : 1015}],
 				["Sol_jump", {x: 945 , y : 805}],
