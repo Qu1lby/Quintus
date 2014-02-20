@@ -27,6 +27,7 @@
 				["Sol_5", {asset: "fond_pierre.png",x: 1505 , y : 805}],
 						
 				//["Mal", {x: 1295 , y : 1085}],
+				["Mal", {x: 2415 , y : 945}],
 				
 				// -25 y pour tous les boutons
 				["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
@@ -103,7 +104,7 @@
 				["Sol_jump", {x: 1995 , y : 1295}],	
 				["Sol_jump", {x: 2415 , y : 1225}],		
 				["Sol_jump", {x: 2625 , y : 1085}],	
-				["Sol_jump", {x: 2695 , y : 875}],	
+				["Sol_jump", {x: 2695 , y : 875}],					
 				["Sol_jump", {x: 2625 , y : 1085}],	
 				
 				["Sol_jump", {x: 2485 , y : 1435}],
