@@ -21,8 +21,6 @@
 			
 			//["bouton2", {x: 245 , y : 1505, coox : 245, cooy :1365}],
 			
-			["Sol_pierre1_H", {x: 245 , y : 1365}],
-			["bouton", {x: 245 , y : 1505, coox : 245, cooy :1365}],
 			
 			//Petit ilot a gauche (rdc)
 			["Sol_pierre1_H", {x: 315 , y : 1505}],
@@ -37,10 +35,8 @@
 			["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			["Sol_pierre1_H", {x: 805 , y : 1575}],
+			["bouton", {x: 525, y: 1525}],
 			
-			["casedestruc", {x: 805 , y : 1345}],
-			["Sol_pierre3_H", {x: 735 , y : 1345}],
-			["Sol_pierre3_H", {x: 875 , y : 1345}],
 			
 			//["UN PONT ICI", {x: 735 , y : 1645}],
 			//["UN PONT ICI", {x: 805 , y : 1645}],
@@ -55,11 +51,11 @@
 			 ["Sol_G5", {x: 945 , y : 1575}],
 			 
 			 // A supprimer
-			// ["Sol_jump", {x: 1365 , y : 1575}],
-			// ["Sol_jump", {x: 1295 , y : 1365}],
-			 //["Sol_jump", {x: 1225 , y : 1155}],
+			 ["Sol_jump", {x: 1365 , y : 1575}],
+			 ["Sol_jump", {x: 1295 , y : 1365}],
+			 ["Sol_jump", {x: 1225 , y : 1155}],
 			 
-			 ["VerticalPlatform", {x: 1365, y : 1505,vy :175, rangeY : 200 ,asset : "plateforme.png"}],
+			 //["VerticalPlatform", {x: 1365, y : 1505,vy :175, rangeY : 200 ,asset : "plateforme.png"}],
 			
 			
 			// Apres le pont a gauche (rdc)
@@ -72,9 +68,9 @@
 			
 			["Sol_pierre2_H", {x: 1155 , y : 1085}],
 			["Sol_pierre1_H", {x: 1085 , y : 1085}],
-			["Sol_pierre1_H", {x: 1015 , y : 1085}],
-			//["WHATTTTTTT", {x: 945 , y : 1155}],
-			["Sol_pierre1_H", {x: 875 , y : 1085}],
+			["Sol_5", {asset: "pierre_haut.png",x: 1015 , y : 1085}],
+			["casedestruc", {x: 945 , y : 1085}],
+			["Sol_5", {asset: "pierre_haut.png",x: 875 , y : 1085}],
 			//["Sol_pierre2_H", {x: 805 , y : 1085}],
 			["Sol_pierre1_H", {x: 805 , y : 1015}],
 			["Sol_pierre1_H", {x: 735 , y : 1015}],
