@@ -240,9 +240,9 @@
 		music = false;
 		
 		var GameoV = stage.insert(new Q.UI.Container({
-                fill: "rgb(160,160,160)",
+                fill: "rgb(255,255,255)",
                 x: wi/2,
-                y: hi-(hi/6)-50,
+                y: hi-(hi/6),
                 border: 1,
                 shadow: 3,
                 shadowColor: "rgb(160,160,160)",
@@ -250,6 +250,14 @@
                 h: 150
                 })
             );
+			
+		var mort = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+			asset: "tetedemort.png",
+        	x: wi/2,
+        	y: hi-(hi/6)-200,
+   		}));
+		
 			
 		var msg = stage.insert(new Q.UI.Text({ 
                 label: "Game Over",
