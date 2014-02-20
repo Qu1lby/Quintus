@@ -68,7 +68,7 @@
 	Q.component("CaseMal", {
     	added: function() {
         	var entity = this.entity;				
-            entity.on("bump.top",function(collision) {
+            entity.on("bump.top,bump.bottom",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
 					collision.obj.damage();}
             });

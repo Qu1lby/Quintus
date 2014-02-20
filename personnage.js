@@ -40,10 +40,10 @@
 				}
 				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
 				}else{
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
 				}
 			}
 			
@@ -148,10 +148,10 @@
 				}
 				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
 				}else{
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
 				}
 			}
 
@@ -227,10 +227,10 @@
 				}
 				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
 				}else{
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
 				}
 			}
 
@@ -314,10 +314,10 @@
 				}
 				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
 				}else{
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+" : "+this.p.secondeabs;	
+        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
 				}
 			}
 

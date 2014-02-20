@@ -282,13 +282,11 @@
 // Fenêtre des scores / vies
 	Q.scene("gameStats", function(stage) {
     	var statsContainer = stage.insert(new Q.UI.Container({
-        		fill: "rgb(160,160,160)",
+        		fill: "rgb(192,192,192)",
                 x: wi/2,
-                y: hi-20,
+                y: hi-21,
                 border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                w: wi,
+                w: wi-2,
                 h: 40
             })
         );
@@ -296,47 +294,19 @@
  		var lives = stage.insert(new Q.UI.Text({ 
                 label: "Lives x ",
                 x: -wi/3,
-                y: 0
+                y: 3,
+				family : "comic sans ms",
+				size : 21
         }),statsContainer);
 				
 		var temps = stage.insert(new Q.UI.Text({ 
                 label: "Temps : 00:00",
                 x: wi/3.5,
-                y: 0,
+                y: 3,
+				family : "comic sans ms",
+				size : 21
             }),statsContainer);	
 		});
-			
-/*
-	Q.scene("Pau_bouton", function(stage) {
- 	   var Pause = stage.insert(new Q.UI.Button({
-			fill: "transparent",
- 	       asset: "pause.png",
-        	x: wi-20,
-        	y: 20,
-        	w: 29,
-        	h: 28
-   		}));
-			
-		Pause.on("click",function() {
-			Q.stage().pause(); 			
-		});
-	});
-			
-	Q.scene("Pla_bouton", function(stage) {
-	    var Play = stage.insert(new Q.UI.Button({
-			fill: "transparent",
-	        asset: "play.png",
-	        x: wi-20,
-	        y: 20,
-	        w: 32,
-	        h: 32
-   		}));
-			
-		Play.on("click",function() {
-			Q.stage().unpause() ; 
-		});
-	});           
-*/
 
 // Pause
 	Q.scene("PauseAff", function(stage) {
@@ -373,7 +343,7 @@
                 label: "P A U S E",
 				size : 40,
                 x: 0,
-                y: 0
+                y: 0,
                 }),Fond);
 	});
 	
@@ -423,3 +393,35 @@
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){
 	});
+	
+/*
+	Q.scene("Pau_bouton", function(stage) {
+ 	   var Pause = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+ 	       asset: "pause.png",
+        	x: wi-20,
+        	y: 20,
+        	w: 29,
+        	h: 28
+   		}));
+			
+		Pause.on("click",function() {
+			Q.stage().pause(); 			
+		});
+	});
+			
+	Q.scene("Pla_bouton", function(stage) {
+	    var Play = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+	        asset: "play.png",
+	        x: wi-20,
+	        y: 20,
+	        w: 32,
+	        h: 32
+   		}));
+			
+		Play.on("click",function() {
+			Q.stage().unpause() ; 
+		});
+	});           
+*/
