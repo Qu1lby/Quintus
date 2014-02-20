@@ -29,14 +29,18 @@
 				//["Mal", {x: 1295 , y : 1085}],
 				["Mal", {x: 2415 , y : 945}],
 				["Mal", {x: 735 , y : 385}],				
-				// -25 y pour tous les boutons
-				// ["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
-				// ["bouton", {x: 455 , y : 1460, coox : 945, cooy :1505}],
-				// ["bouton", {x: 455 , y : 1460, coox : 805, cooy :1505}],
-				// ["bouton", {x: 455 , y : 1460, coox : 735, cooy :1505}],
 				
-				["HorizontalPlatform", {x: 300, y : 1310,vx :175, rangeX : 50 ,asset : "boule.png"}],			
-			
+				// -25 y pour tous les boutons
+				["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
+				["bouton", {x: 455 , y : 1460, coox : 945, cooy :1505}],
+				["bouton", {x: 455 , y : 1460, coox : 805, cooy :1505}],
+				["bouton", {x: 455 , y : 1460, coox : 735, cooy :1505}],
+				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1435}],
+				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1365}],
+				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1295}],
+				
+				["BallTrap", {x:150, y : 1460,vx :175, rangeX : 500 ,asset : "boule.png"}],
+				
 				//["bouton2", {x: 595 , y : 1460, coox : 600, cooy :1460}],
 				
 				["bouton", {x: 2555 , y : 690, coox : 2320, cooy :665}],
@@ -63,6 +67,10 @@
 				["Sol_pierre2_D", {x: 1925 , y : 1085}],
 				["Sol_pierre1_DB", {x: 1995 , y : 1085}],
 				["Sol_pierre2_D", {x: 2065 , y : 1085}],
+				
+				["Sol_pierre2_D", {asset: "fond_pierre.png", x: 315 , y : 1435}],
+				["Sol_pierre2_D", {asset: "fond_pierre.png", x: 315 , y : 1365}],
+				["Sol_pierre2_D", {asset: "fond_pierre.png", x: 315 , y : 1295}],
 				
 				["Sol_pierre2_D", {x: 1295 , y : 1505}],	
 				["Sol_pierre2_D", {x: 1225 , y : 1505}],			

@@ -126,6 +126,30 @@
 		}
 	});
 	
+	// Piege de la boule qui roule et qui n'amasse pas mousse
+	Q.Sprite.extend("BallTrap", {
+    	init: function(p) {
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
+            this.add("2d, madBounce");
+            this.p.initialY = this.p.y;
+			this.p.initialX = this.p.x;
+        },
+        
+		  step: function(dt) {                
+          if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
+        	    this.p.vx = -this.p.vx;
+            } 
+            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
+                 	this.p.vx = -this.p.vx;
+        	} 
+			
+				this.on("bump.top, bump.right, bump.left",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("tomate"))) {  
+					collision.obj.p.vx = 150;
+			}
+            });
+		}
+	});
 	
 // VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
