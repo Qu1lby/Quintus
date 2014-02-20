@@ -63,6 +63,19 @@
 	
 		
 	
+// Case qui fait sauter le personnage
+	Q.component("CaseMal", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+					collision.obj.damage();}
+            });
+        },
+	});
+	
+
+		
 // Cases qui détruisent autour d'eux
 		Q.component("AutoDestruc", {
     	added: function() {
@@ -300,7 +313,7 @@
 		}
     });
 
-	/*Q.Sprite.extend("bouton2", {
+	Q.Sprite.extend("bouton2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.coox = p.coox;
@@ -311,11 +324,14 @@
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					Q.stage().insert(new Q.AutoCube({ asset: "grille200.png", x:this.coox, y: this.cooy});
+
+					Q.stage(0).insert(new Q.Sprite( {x:this.coox, y: this.cooy}));
+					this.destroy();
+					//stage().insert(new Q.Sprite({x:this.coox, y: this.cooy});
 				}
             });
 		}
-    });*/
+    });
 	
 	Q.Sprite.extend("mur", {
     	init: function(p) {
@@ -348,3 +364,10 @@
 			this.add("2d2, AutoCube");
         }
     });
+	
+		Q.Sprite.extend("Mal", {
+   	init: function(p) {
+       	this._super(p,  {gravity : 0, asset : "fly.png"});
+		this.variable = 10;			this.add("2d2, CaseMal");
+        }
+    }); 
