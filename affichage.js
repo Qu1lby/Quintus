@@ -240,9 +240,9 @@
 		music = false;
 		
 		var GameoV = stage.insert(new Q.UI.Container({
-                fill: "rgb(255,255,255)",
+                fill: "rgb(225,225,225)",
                 x: wi/2,
-                y: hi-(hi/6),
+                y: hi-(hi/6)-20,
                 border: 1,
                 shadow: 3,
                 shadowColor: "rgb(160,160,160)",
@@ -258,8 +258,7 @@
         	y: hi-(hi/6)-200,
    		}));
 		
-			
-		var msg = stage.insert(new Q.UI.Text({ 
+		var msge = stage.insert(new Q.UI.Text({ 
                 label: "Game Over",
                 x: 0,
                 y: -30
@@ -272,7 +271,7 @@
                 shadow: 3,
                 shadowColor: "rgb(160,160,160)",
                 x: 0,
-                y: 30,
+                y: 28,
 				fill: "rgb(160,160,160)"
         }),GameoV);
 		

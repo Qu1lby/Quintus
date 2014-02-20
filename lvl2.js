@@ -35,7 +35,7 @@
 				// ["bouton", {x: 455 , y : 1460, coox : 805, cooy :1505}],
 				// ["bouton", {x: 455 , y : 1460, coox : 735, cooy :1505}],
 				
-				["HorizontalPlatform", {x: 300, y : 1310,vx :175, rangeX : 50 ,asset : "Cabine.png"}],			
+				["HorizontalPlatform", {x: 300, y : 1310,vx :175, rangeX : 50 ,asset : "boule.png"}],			
 			
 				//["bouton2", {x: 595 , y : 1460, coox : 600, cooy :1460}],
 				

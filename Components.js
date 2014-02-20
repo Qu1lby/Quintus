@@ -392,6 +392,6 @@
 		Q.Sprite.extend("Mal", {
    	init: function(p) {
        	this._super(p,  {gravity : 0, asset : "mort.png"});
-		this.variable = 10;			this.add("2d2, CaseMal");
+		this.variable = 10;	this.add("2d2, CaseMal");
         }
     }); 
