@@ -38,6 +38,10 @@
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			["Sol_pierre1_H", {x: 805 , y : 1575}],
 			
+			["casedestruc", {x: 805 , y : 1345}],
+			["Sol_pierre3_H", {x: 735 , y : 1345}],
+			["Sol_pierre3_H", {x: 875 , y : 1345}],
+			
 			//["UN PONT ICI", {x: 735 , y : 1645}],
 			//["UN PONT ICI", {x: 805 , y : 1645}],
 			//["UN PONT ICI", {x: 875 , y : 1645}],

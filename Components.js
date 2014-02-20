@@ -43,6 +43,7 @@
             });
         },
 	});
+		
 	
 	// Destruction quand les cubes sont détruits par le bas
 	Q.component("AutoCubeBas", {
@@ -309,6 +310,29 @@
 					this.destroy();
 					Q.stage().locate(this.coox,this.cooy).destroy();
 				}
+            });		
+		}
+    });
+	
+// Bouton qui detruit les cases adjacentes
+		Q.Sprite.extend("casedestruc", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
+			this.add("2d2");
+        },
+
+		step: function(dt) {	
+            this.on("bump.top", function(collision) {
+			var pass = 0;
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {
+					if(pass == 0){
+					Q.stage().locate(this.p.x+70, this.p.y).destroy();
+					Q.stage().locate(this.p.x-70, this.p.y).destroy();
+					this.destroy();	
+					
+				}
+				}
+				pass = pass +1;
             });		
 		}
     });
