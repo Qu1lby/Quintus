@@ -59,7 +59,7 @@
             });
 				
             entity.on("bump.top",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
                 	collision.obj.p.vy = -100;
                     this.destroy();
                 }
