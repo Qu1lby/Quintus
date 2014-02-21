@@ -45,10 +45,10 @@ Q.scene("level1",function(stage) {
 		
 			["HorizontalPlatform", {x: 1715, y : 650, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],		
 			["HorizontalPlatform", {x: 1300, y : 850, rangeX: 400, vx : 200, asset: "plateforme2.png"  }],	
-			["HorizontalPlatform", {x: 700, y : 800, rangeX: 200, vx : 100, asset: "plateforme2.png"  }],
+			["HorizontalPlatform", {x: 700, y : 730, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],
 			
 
-			["HorizontalPlatform", {x: 400, y : 1090, rangeX : 200, vx : 100, asset: "cabine.png"  }],
+			["HorizontalPlatform", {x: 400, y : 1090, rangeX : 1600, vx : 100, asset: "cabine.png"  }],
 			
 			
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],

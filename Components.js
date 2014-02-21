@@ -68,7 +68,7 @@
 	Q.component("CaseMal", {
     	added: function() {
         	var entity = this.entity;				
-            entity.on("bump.top,bump.bottom",function(collision) {
+            entity.on("bump.top,bump.bottom,bump.right,bump.left",function(collision) {
   			if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
 				collision.obj.damage();}
             });
@@ -183,7 +183,7 @@
         	} 
 			
 				this.on("bump.top, bump.right, bump.left",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vx = 150;
 			}
             });
@@ -337,26 +337,7 @@
         }
     });
 	
-// Bouton destroy une case
-	Q.Sprite.extend("bouton", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "push2.png"});
-			this.coox = p.coox;
-			this.cooy = p.cooy;
-			this.add("2d2");
-        },
-
-		step: function(dt) {	
-            this.on("bump.top,bump.bottom,bump.right", function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
-					this.destroy();
-					Q.stage().locate(this.coox,this.cooy).destroy();
-				}
-            });		
-		}
-    });
-	
-// Bouton qui detruit les cases adjacentes
+// Case qui detruit les cases adjacentes
 		Q.Sprite.extend("casedestruc", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
@@ -378,25 +359,13 @@
             });		
 		}
     });
-
-	Q.Sprite.extend("bouton2", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "push2.png"});
-			this.coox = p.coox;
-			this.cooy = p.cooy;
-			this.add("2d2");
-        },
-		
-		step: function(dt) {			
-            this.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
-					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
-					Q.stage().insert(nouvelle_case);
-					this.destroy();
-				}
-            });
-		}
-    });
+	
+	Q.Sprite.extend("Mal", {
+   	init: function(p) {
+       	this._super(p,  {gravity : 0, asset : "mort.png"});
+		this.variable = 10;	this.add("2d2, CaseMal");
+        }
+    }); 
 	
 	Q.Sprite.extend("mur", {
     	init: function(p) {
@@ -429,10 +398,3 @@
 			this.add("2d2, AutoCube");
         }
     });
-	
-		Q.Sprite.extend("Mal", {
-   	init: function(p) {
-       	this._super(p,  {gravity : 0, asset : "mort.png"});
-		this.variable = 10;	this.add("2d2, CaseMal");
-        }
-    }); 
