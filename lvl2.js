@@ -67,7 +67,7 @@
 				["Sol_pierre2_D", {x: 1785 , y : 1085}],
 				["Sol_pierre2_D", {x: 1855 , y : 1085}],
 				["Sol_pierre2_D", {x: 1925 , y : 1085}],
-				["Sol_pierre1_DB", {x: 1995 , y : 1085}],
+				["Sol_pierre1_DB", {x: 1995 , y : 1085, asset: "dessous_neige.png"}],
 				["Sol_pierre2_D", {x: 2065 , y : 1085}],
 				
 				["Sol_pierre2_D", {asset: "fond_pierre.png", x: 315 , y : 1435}],
