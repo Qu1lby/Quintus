@@ -134,7 +134,6 @@
        		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
-			this.p.initialY = this.p.y;
         },
         
 		step: function(dt) {                
@@ -147,6 +146,24 @@
 		}
 	});
 	
+	//VerticalPlatform
+	Q.Sprite.extend("VerticalPlatform", {
+    	init: function(p) {
+			// parametre {vx: , rangeX: }
+       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0 });
+            this.add("2d");
+            this.p.initialY = this.p.y;
+        },
+        
+		step: function(dt) {                
+            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
+        	    this.p.vy = -this.p.vy;
+            }
+            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
+                 	this.p.vy = -this.p.vy;
+        	} 
+		}
+	});
 	
 	// Piege de la boule qui roule et qui n'amasse pas mousse
 	Q.Sprite.extend("BallTrap", {
