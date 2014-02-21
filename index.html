@@ -42,7 +42,6 @@
 
 
 <script>	
-	
 	var wi = 960;
 	var hi = 610;
 	
@@ -62,104 +61,11 @@
 			.enableSound()
 			.controls()
 			.touch();
-	
-		var scene_courante = null;
-		var scene_prec = null;
-		
-	    var pause = false;
-		Q.input.on("pause", function () {  
-			if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
-			    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
-					if (!echap){
-						if (!pause){
-							Q.stageScene('PauseAff',2);
-							Q.stage().pause();
-							scene_prec = scene_courante;
-							scene_courante = "pause";
-						}else{
-							Q.stageScene('Blanc',2);
-							Q.stage().unpause();
-							scene_courante=scene_prec;
-							scene_prec = "pause";
-						}
-						pause = !pause;
-					}
-			}
-		});﻿	
-		
-		
-		Q.input.on("replay", function () {  
-			if (scene_courante != null && !pause){	
-				if (scene_courante == "lvl1"){
-					Q.clearStages();
-      				Q.stageScene('level1');
-					Q.stageScene("gameStats",1);
-					music = true;
-				}
-				if (scene_courante == "lvl2"){
-					Q.clearStages();
-					
-					Q.audio.stop('lvl2.mp3');
-					music = false;
-					
-      				Q.stageScene('level2');
-					Q.stageScene("gameStats",1);
-					Q.audio.play('lvl2.mp3',{ loop: true });
-					music = true;
-				}
-				if (scene_courante == "lvl3"){
-					Q.clearStages();
-      				Q.stageScene('level3');
-					Q.stageScene("gameStats",1);
-					music = true;
-				}
-				if (scene_courante == "lvl4"){
-					Q.clearStages();
-      				Q.stageScene('level4');
-					Q.stageScene("gameStats",1);
-					music = true;
-				}
-			}
-		});﻿	
-		
-		var music = false;
-		Q.input.on("musique", function () {  
-			if (scene_courante != null && !pause && !music){	
-				if (scene_courante == "lvl1"){
-				}
-				if (scene_courante == "lvl2"){
-					Q.audio.play('lvl2.mp3',{ loop: true });
-					music = true;
-				}
-				if (scene_courante == "lvl3"){
-				}
-				if (scene_courante == "lvl4"){
-				}
-			}else{
-				Q.audio.stop(); 
-				music = false;
-			}
-		});﻿	
-		
-		var echap = false
-		Q.input.on("echap", function () {  
-			if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
-			    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
-				if (!pause){
-					if (!echap){
-						Q.stageScene('Echp',2);
-					}else{
-						Q.stageScene('Blanc',2);	
-					}
-					echap = !echap;
-				}
-			}
-		});﻿	
 		
 		Q.audio.enableWebAudioSound();
 
-
-    // Création des Personnages / Ennemis / Composants / Affichage
+    // Création 
+		include ('bind.js');
 		include ('personnage.js');
         include ('ennemis.js');
 		include ('components.js');
@@ -178,10 +84,11 @@
 			"banane.png", "ananas.png", "slime3.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx",
 			"Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png",
 			"fond_pierre_haut2.png", "htmltiles.jpg", "pause.png", "play.png",
-			"jumpn.png", "lvl2.mp3", "grille70.png", "grille200.png","grille140.png", "push.png",
-			"push2.png", "fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png",
+			"jumpn.png", "lvl2.mp3", "grille70.png", "grille200.png","grille140.png", 
+			"push.png",	"push2.png", "fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png",
 			"plateforme.png","plateforme2.png","cabine.png","bouletr.png","mort.png","boule.png",
 			"grille200H.png","tetedemort.png"
+			
 			]
 		, function() {
  			
