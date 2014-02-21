@@ -29,8 +29,13 @@
 		if (scene_courante != null && !pause){	
 			if (scene_courante == "lvl1"){
 				Q.clearStages();
+				
+				Q.audio.stop('lvl1.mp3');
+				music = false;
+				
    				Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				Q.audio.play('lvl1.mp3');
 				music = true;
 			}
 			if (scene_courante == "lvl2"){
@@ -64,6 +69,8 @@
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
+				Q.audio.play('lvl1.mp3');
+				music = true;
 			}
 			if (scene_courante == "lvl2"){
 				Q.audio.play('lvl2.mp3',{ loop: true });

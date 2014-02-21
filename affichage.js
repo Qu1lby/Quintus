@@ -180,6 +180,7 @@
 				Q.clearStages();
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				Q.audio.play('lvl1.mp3');
 				
 				scene_courante = "lvl1";
 				scene_prec = "niveau";
@@ -284,7 +285,7 @@
 		});
 		
 		mort.on("click",function()  {
-			Q.audio.play("0490.mp3");
+			Q.audio.play("rire.mp3");
 		});
 	});
 		
