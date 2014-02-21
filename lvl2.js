@@ -39,10 +39,11 @@
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1435}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1365}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1295}],
+				["bouton_pasteque", {x: 455 , y : 1460, coox : 150, cooy :1295}],
 				
-				["BallTrap", {x:150, y : 1460,vx :175, rangeX : 500 ,asset : "boule.png"}],
+				//["BallTrap", {x:150, y : 1460,vx :175, rangeX : 500 ,asset : "boule.png"}],
 				
-				["bouton2", {x: 1435 , y : 1085, coox: 1645, cooy: 1085}],
+				["bouton_bouton", {x: 1435 , y : 1085, coox: 1645, cooy: 1085}],
 				
 				["bouton", {x: 2555 , y : 690, coox : 2320, cooy :665}],
 				["bouton", {x: 2415 , y : 690, coox : 2625, cooy :1365}],
@@ -141,7 +142,7 @@
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 						
 				["grille140", {x: 2325, y : 630}],
-				["grille70", {x: 1260 , y : 1085}],
+				//["grille70", {x: 1260 , y : 1085}],
 				["grille70", {x: 1274 , y : 525}],
 				["grille140", {x: 1335 , y : 1335}],
 				["grille140", {x: 2615 , y : 1330}],				
