@@ -304,7 +304,7 @@
  		var lives = stage.insert(new Q.UI.Text({ 
                 label: "Lives x ",
                 x: -wi/3,
-                y: 3,
+                y: 1,
 				family : "comic sans ms",
 				size : 21
         }),statsContainer);
@@ -312,7 +312,7 @@
 		var temps = stage.insert(new Q.UI.Text({ 
                 label: "Temps : 00:00",
                 x: wi/3.5,
-                y: 3,
+                y: 1,
 				family : "comic sans ms",
 				size : 21
             }),statsContainer);	

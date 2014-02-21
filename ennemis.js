@@ -56,6 +56,7 @@
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
             	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
                 	collision.obj.damage();
+					Q.audio.play("creature.mp3");
                 }
             });
 				
