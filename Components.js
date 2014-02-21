@@ -127,8 +127,8 @@
 	});
 
 	
-// VerticalPlatform
-	Q.Sprite.extend("VerticalPlatform", {
+//StrangePlatform
+	Q.Sprite.extend("StrangePlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
        		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });

@@ -15,7 +15,20 @@
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
-        },
+			this.on("bump.bottom",this,"stomp");
+			},
+
+				stomp: function(collision) {
+				if(collision.obj.isA("HorizontalPlatform")) {
+			
+				  this.p.x = collision.obj.p.x; // make the player stay on the platform
+				}
+				
+				if(collision.obj.isA("VerticalPlatform")) {
+			
+				  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+				}
+			  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt){	
@@ -220,7 +233,20 @@
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
+			this.on("bump.bottom",this,"stomp");
         },
+
+			stomp: function(collision) {
+			if(collision.obj.isA("HorizontalPlatform")) {
+		
+			  this.p.x = collision.obj.p.x; // make the player stay on the platform
+			}
+			
+			if(collision.obj.isA("VerticalPlatform")) {
+		
+			  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+			}
+		  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
    		step: function(dt){	
@@ -306,7 +332,20 @@
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
+			this.on("bump.bottom",this,"stomp");
         },
+
+			stomp: function(collision) {
+			if(collision.obj.isA("HorizontalPlatform")) {
+		
+			  this.p.x = collision.obj.p.x; // make the player stay on the platform
+			}
+			
+			if(collision.obj.isA("VerticalPlatform")) {
+		
+			  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+			}
+		  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt){	
