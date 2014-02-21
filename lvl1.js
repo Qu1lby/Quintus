@@ -43,7 +43,7 @@ Q.scene("level1",function(stage) {
 			["Sol_jump_neige", {x: 1505 , y : 245}],
 			["Sol_5", {x: 1715 , y : 315}],
 		
-			["HorizontalPlatform", {x: 1715, y : 650, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],		
+			["HorizontalPlatform", {x: 1715, y : 650, rangeX: 300, vx : 150, asset: "plateforme2.png"  }],		
 			["HorizontalPlatform", {x: 1300, y : 800, rangeX: 400, vx : 200, asset: "plateforme2.png"  }],	
 			["HorizontalPlatform", {x: 670, y : 750, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],
 			
