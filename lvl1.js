@@ -86,8 +86,21 @@ Q.scene("level1",function(stage) {
 
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
 			
-			/*
-			var $canvas = $('#Jquery'); 
+			setTimeout(function() {
+				var $canvas = $('#Jquery'); 
+			$canvas.drawText({
+			fillStyle: '#9cf',
+			strokeStyle: '#25a',
+			strokeWidth: 2,
+			x: 300, y: 50,
+			fontSize: 48,
+			fontFamily: 'Verdana, sans-serif',
+			text: 'Level 1'
+			});			
+				
+				}, 2000);
+				
+			/*var $canvas = $('#Jquery'); 
 			$canvas.drawText({
 			fillStyle: '#9cf',
 			strokeStyle: '#25a',
@@ -98,6 +111,9 @@ Q.scene("level1",function(stage) {
 			text: 'Level 1'
 			});			
 			*/
+		
 			//Canvas.SetZIndex(image1, 2);
+			
+			//$canvas.jQuery('Hello').textEffect('worg');
 		   
 	});

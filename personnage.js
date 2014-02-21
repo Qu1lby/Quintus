@@ -18,17 +18,15 @@
 			this.on("bump.bottom",this,"stomp");
 			},
 
-				stomp: function(collision) {
-				if(collision.obj.isA("HorizontalPlatform")) {
-			
-				  this.p.x = collision.obj.p.x; // make the player stay on the platform
-				}
+		stomp: function(collision) {
+			if(collision.obj.isA("HorizontalPlatform")) {
+				this.p.x = collision.obj.p.x; // make the player stay on the platform
+			}
 				
-				if(collision.obj.isA("VerticalPlatform")) {
-			
-				  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
-				}
-			  },
+			if(collision.obj.isA("VerticalPlatform")) {
+				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+			}
+		},
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt){	
@@ -75,7 +73,7 @@
             }
 
 		// Détruit le personnage s'il tombe premier niveau
-			if(this.p.y> 420 && this.p.y<470 && this.p.x<1100){
+			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1)
