@@ -390,10 +390,9 @@
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
-
-					Q.stage(0).insert(new Q.Sprite( {x:this.coox, y: this.cooy}));
+					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
+					Q.stage().insert(nouvelle_case);
 					this.destroy();
-					//stage().insert(new Q.Sprite({x:this.coox, y: this.cooy});
 				}
             });
 		}
