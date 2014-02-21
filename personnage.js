@@ -111,7 +111,7 @@
 // ------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Fraise",{
         init: function(p){
-       		this._super(p, { asset: "orange.png", x: 17*70+35, y: 11*70+35, speed : 600,jumpSpeed: -800, lives: 1 });
+       		this._super(p, { asset: "orange.png", x: 17*70+35, y: 11*70+35, speed : 400,jumpSpeed: -600, lives: 1 });
         	this.add("2d, platformerControls"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
@@ -122,8 +122,17 @@
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
+			
+			this.on("bump.bottom",this,"stomp");
         },
 
+			stomp: function(collision) {
+			if(collision.obj.isA("HorizontalPlatform")) {
+		
+			  this.p.x = collision.obj.p.x; // make the player stay on the platform
+			}
+		  },
+		  
 		// Gère le temps que le personnage est en vie -> fin du lvl
  		step: function(dt){	
 			if(this.p.timeInvincible == 0){	
