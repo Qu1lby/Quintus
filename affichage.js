@@ -255,7 +255,7 @@
 			fill: "transparent",
 			asset: "tetedemort.png",
         	x: wi/2,
-        	y: hi-(hi/6)-200,
+        	y: hi-(hi/6)-175,
    		}));
 		
 		var msge = stage.insert(new Q.UI.Text({ 
@@ -281,7 +281,10 @@
 				
 			scene_prec = scene_courante
 			scene_courante = "niveau";
+		});
 		
+		mort.on("click",function()  {
+			Q.audio.play("0490.mp3");
 		});
 	});
 		

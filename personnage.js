@@ -108,7 +108,7 @@
                 this.p.lives--;
                 this.p.timeInvincible = 1;
                     
-                if(this.p.lives<0) {
+                if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
@@ -208,7 +208,7 @@
                 this.p.lives--;
                 this.p.timeInvincible = 1;
                     
-                if(this.p.lives==0){
+                if(this.p.lives == 0){
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
@@ -306,7 +306,7 @@
                 this.p.lives--;
                 this.p.timeInvincible = 1;
                     
-                if(this.p.lives==0) {
+                if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
@@ -406,7 +406,7 @@
                 this.p.lives--;
                 this.p.timeInvincible = 1;
                     
-                if(this.p.lives==0){
+                if(this.p.lives == 0){
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
