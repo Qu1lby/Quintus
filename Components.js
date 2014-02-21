@@ -3,7 +3,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) ||  (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) ||  (collision.obj.isA("Ananas"))) {  
                   	if (collision.obj.first == 1){
 						collision.obj.first = 0 ;
 						collision.obj.sol = this;
@@ -32,7 +32,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -50,7 +50,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.bottom",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -64,13 +64,13 @@
 	
 		
 	
-// Case qui fait sauter le personnage
+// Case qui fait mal au personnage
 	Q.component("CaseMal", {
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top,bump.bottom",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
-					collision.obj.damage();}
+  			if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
+				collision.obj.damage();}
             });
         },
 	});
@@ -82,7 +82,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))  || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -100,7 +100,7 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vy = -650;}
             });
         },
@@ -125,6 +125,28 @@
         	} 
 		}
 	});
+
+	
+// VerticalPlatform
+	Q.Sprite.extend("VerticalPlatform", {
+    	init: function(p) {
+			// parametre {vx: , rangeX: }
+       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });
+            this.add("2d, aiBounce");
+            this.p.initialY = this.p.y;
+			this.p.initialY = this.p.y;
+        },
+        
+		step: function(dt) {                
+            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
+        	    this.p.vy = -this.p.vy;
+            }
+            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
+                 	this.p.vy = -this.p.vy;
+        	} 
+		}
+	});
+	
 	
 	// Piege de la boule qui roule et qui n'amasse pas mousse
 	Q.Sprite.extend("BallTrap", {
@@ -150,27 +172,6 @@
             });
 		}
 	});
-	
-// VerticalPlatform
-	Q.Sprite.extend("VerticalPlatform", {
-    	init: function(p) {
-			// parametre {vx: , rangeX: }
-       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });
-            this.add("2d, aiBounce");
-            this.p.initialY = this.p.y;
-			this.p.initialY = this.p.y;
-        },
-        
-		step: function(dt) {                
-            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
-        	    this.p.vy = -this.p.vy;
-            }
-            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
-                 	this.p.vy = -this.p.vy;
-        	} 
-		}
-	});
-
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
@@ -330,7 +331,7 @@
 
 		step: function(dt) {	
             this.on("bump.top,bump.bottom,bump.right", function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
 					this.destroy();
 					Q.stage().locate(this.coox,this.cooy).destroy();
 				}
@@ -348,7 +349,7 @@
 		step: function(dt) {	
             this.on("bump.top", function(collision) {
 			var pass = 0;
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {
 					if(pass == 0){
 					Q.stage().locate(this.p.x+70, this.p.y).destroy();
 					Q.stage().locate(this.p.x-70, this.p.y).destroy();
@@ -371,7 +372,7 @@
 		
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
 
 					Q.stage(0).insert(new Q.Sprite( {x:this.coox, y: this.cooy}));
 					this.destroy();
