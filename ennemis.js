@@ -1,5 +1,6 @@
 // Initialise les deux type d'ennemis (sol et vol)
 
+//Comportement for ground enemy behaviors
 	Q.Sprite.extend("GroundEnemy", {
     	init: function(p) {
         	this._super(p, {vx: -100, defaultDirection: "left"});
@@ -30,7 +31,7 @@
         }
         });
         
-		
+//Comportement for vertical enemy behaviors	
 	Q.Sprite.extend("VerticalEnemy", {
     	init: function(p) {
        		this._super(p, {vy: -100, rangeY: 100, gravity: 0, asset: "fly.png" });
@@ -53,13 +54,13 @@
     	added: function() {
         	var entity = this.entity;
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {                   
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
                 	collision.obj.damage();
                 }
             });
 				
             entity.on("bump.top",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("tomate"))) {  
+            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
                 	collision.obj.p.vy = -100;
                     this.destroy();
                 }
