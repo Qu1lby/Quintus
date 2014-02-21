@@ -44,14 +44,18 @@
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d2");
+			this.booleen = true;
         },
 		
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+					if(this.booleen){
 					pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 500 ,asset : "boule.png"});
 					Q.stage().insert(pasteque);
 					this.destroy();
+					this.booleen = false;
+					}
 				}
             });
 		}
