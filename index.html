@@ -10,6 +10,7 @@
  <script src="script/jquery.js"></script>
  <script src="script/textEffect.js"></script>
  <script src="script/jcanvas.min.js"></script>
+ <script src="script/novacancy.js"></script>
  
  <script src="lib/quintus.js"></script>
  <script src="lib/quintus_2d.js"></script>
@@ -31,13 +32,20 @@
     </div>
     
 	<canvas id='Quintus' width='960' height='610' style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
-	<canvas id='Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+	<!--<canvas id='Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>-->
+    <div id = 'Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></div>
 
 <script>
 	var widt = ((document.documentElement.clientWidth -960)/2)-1;
 	var obj = document.getElementById('Jquery');
 	obj.style.left = widt+"px";
 </script>
+
+<!--
+<script>
+	$('#Jquery').novacancy();
+</script>
+	*/	-->		
 
 
 <script>	
@@ -81,13 +89,14 @@
 		
 	// Charge tous les éléments
         Q.load(["tiles_map.png", "dessous.png", "jump.png", "orange.png", "tomate.png",
-			"banane.png", "ananas.png", "slime3.png", "fly.png", "Lvl1.tmx", "Lvl2.tmx",
+			"banane.png", "ananas.png", "slime3.png", "Lvl1.tmx", "Lvl2.tmx",
 			"Lvl3.tmx", "Lvl4.tmx", "men.tmx", "fond_pierre.png","fond_pierre_haut.png",
 			"fond_pierre_haut2.png", "htmltiles.jpg", "pause.png", "play.png",
 			"jumpn.png", "lvl2.mp3", "grille70.png", "grille200.png","grille140.png", 
 			"push.png",	"push2.png", "fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png",
 			"plateforme.png","plateforme2.png","cabine.png","bouletr.png","mort.png","boule.png",
-			"grille200H.png","tetedemort.png","rire.mp3","dessous_neige.png","creature.mp3","lvl1.mp3"
+			"grille200H.png","tetedemort.png","rire.mp3","dessous_neige.png","creature.mp3","lvl1.mp3",
+			"boss.mp3"
 			
 			]
 		, function() {
