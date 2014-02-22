@@ -29,7 +29,10 @@
 						
 				//["Mal", {x: 1295 , y : 1085}],
 				["Mal", {x: 2415 , y : 945}],
-				["Mal", {x: 735 , y : 385}],				
+				["Mal", {x: 735 , y : 385}],			
+
+				["GroundEnemy", {x: 1995 , y : 1040, asset: "slime3.png"}],	
+				["GroundEnemy", {x: 1300 , y : 525, asset: "slime3.png"}],					
 				
 				// -25 y pour tous les boutons
 				["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
@@ -39,17 +42,16 @@
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1435}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1365}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1295}],
-				["bouton_pasteque", {x: 455 , y : 1460, coox : 150, cooy :1295}],
 				
-				//["BallTrap", {x:150, y : 1460,vx :175, rangeX : 500 ,asset : "boule.png"}],
+				["bouton_pasteque", {x: 455 , y : 1460, coox : 150, cooy :1400}],
 				
-				["bouton_bouton", {x: 1435 , y : 1085, coox: 1645, cooy: 1085}],
+				//["bouton_bouton", {x: 1435 , y : 1085, coox: 1645, cooy: 1085}],
 				
 				["bouton", {x: 2555 , y : 690, coox : 2320, cooy :665}],
 				["bouton", {x: 2415 , y : 690, coox : 2625, cooy :1365}],
 				
-				["bouton", {x: 2135 , y : 1040, coox : 1715, cooy :1225}],
-				["bouton", {x: 2135 , y : 1040, coox : 1715, cooy :1295}],
+				["bouton", {x: 2275 , y : 1040, coox : 1715, cooy :1225}],
+				["bouton", {x: 2275 , y : 1040, coox : 1715, cooy :1295}],
 				
 				["bouton", {x: 2695 , y : 1390, coox : 1260, cooy :1085}],
 				
