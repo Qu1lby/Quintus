@@ -88,7 +88,10 @@ Q.scene("level1",function(stage) {
 
 			
 		/*	setTimeout(function() {
+			
 				document.getElementById("Jquery").innerHTML =  "Level 1";
+				
+				
 				var $canvas = $('#Jquery'); 
 				$canvas.drawText({
 				fillStyle: '#9cf',

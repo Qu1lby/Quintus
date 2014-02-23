@@ -9,6 +9,7 @@ Q.scene("tut1", function(stage) {
                 h: hi*2
         }));
 		
+		
 		var Menu = stage.insert(new Q.UI.Container({
 				fill: "rgb(255,255,153)",
 				x: wi/2,
@@ -16,6 +17,7 @@ Q.scene("tut1", function(stage) {
 				w: wi/2,
                 h: 200
 		}));
+		
 			
 		var mort = stage.insert(new Q.UI.Button({
 			fill: "transparent",
@@ -24,11 +26,31 @@ Q.scene("tut1", function(stage) {
         	y: hi-160,
    		}));
 		
+		
+		var msg = stage.insert(new Q.UI.Button({ 
+                label: "Jouer",
+                x: 15,
+                y: 70,
+				border: 1,
+				fill: "rgb(225,225,225)"
+        }),Menu);
+		
+			var tuto = stage.insert(new Q.UI.Text({ 
+                label: "Bienvenue jeune fruit ! Je m'appelle ???\n",
+                x: 10,
+                y: -30,
+				size: 18
+        }),Menu);
+		
+		var tuto = stage.insert(new Q.UI.Text({ 
+                label: "C'est moi qui vais t'apprendre à jouer à Traps & Fruits !",
+                x: 0,
+                y: 0,
+				size: 18
+        }),Menu);
 							
-		/*men.on("click",function() {
-			Q.clearStages();
-      		Q.stageScene('niveau');
-			scene_courante = "niveau";
-			scene_prec = "menu";
-     	});	*/
+							
+		msg.on("click",function() {
+      		Q.stageScene('Blanc',2);
+     	});	
 	});
