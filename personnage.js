@@ -95,7 +95,11 @@
 			
 		// Tutoriel
 
-		
+		/*if(this.p.x ==  && ){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1)
+			}*/
 		
 			
 

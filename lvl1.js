@@ -85,6 +85,7 @@ Q.scene("level1",function(stage) {
 			stage.loadAssets(levelAssets);  
 
             stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
+
 			
 		/*	setTimeout(function() {
 				document.getElementById("Jquery").innerHTML =  "Level 1";
