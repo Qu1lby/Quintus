@@ -180,6 +180,7 @@
 				Q.clearStages();
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				Q.stageScene('tut1',2);
 				Q.audio.play('lvl1.mp3');
 				
 				scene_courante = "lvl1";

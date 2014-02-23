@@ -35,6 +35,7 @@
 				
    				Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
+				Q.stageScene('tut1',2);
 				Q.audio.play('lvl1.mp3');
 				music = true;
 			}
@@ -65,7 +66,7 @@
 	});﻿	
 	
 	
-	var music = false;
+	var music = true;
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
