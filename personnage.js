@@ -95,14 +95,10 @@
 			
 		// Tutoriel
 
-		/*if(this.p.x ==  && ){
-				this.destroy();
-				Q.clearStages();
-				Q.stageScene("endGame",1)
-			}*/
+		if(this.p.x >= 600 && this.p.x <= 700){
+			Q.stageScene('Blanc',2);
+		}
 		
-			
-
         },
 
         damage: function(){
