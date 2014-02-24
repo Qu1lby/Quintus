@@ -245,6 +245,12 @@
 		
 			  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
 			}
+			
+			if(collision.obj.isA("Fin")){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("GoodendGame",1, {label: "Victory"})
+			}
 		  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
@@ -296,6 +302,10 @@
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
 			}
+			
+
+			
+			
 
         },
 

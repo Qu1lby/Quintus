@@ -16,9 +16,10 @@
 				["Sol_5", {x: 1435 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1155}],
 				["Sol_5", {x: 1575 , y : 1155}],
-				["Sol_5", {x: 1645 , y : 1155}],	
+				["Sol_5", {x: 1645 , y : 1155}],
+				["Sol_5", {x: 1505 , y : 1225, asset: "fond_pierre.png"}],					
 
-				//["Sol_5", {x: 1435 , y : 1335, asset: "Ananas.png"}],					
+				["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],					
 				
 				["Sol_5", {x: 875 , y : 1505}],
 				["Sol_5", {x: 945 , y : 1505}],
@@ -26,6 +27,7 @@
 				["Sol_5", {x: 735 , y : 1505}],
 				
 				["Sol_5", {asset: "fond_pierre.png", x: 1225 , y : 1015}],
+				
 				
 				["Sol_5", {asset: "fond_pierre.png",x: 1365 , y : 805}],
 				["Sol_5", {asset: "fond_pierre.png",x: 1435 , y : 805}],
@@ -62,7 +64,8 @@
 				
 				["bouton", {x: 2695 , y : 1390, coox : 1260, cooy :1085}],
 				
-				["bouton", {x: 1505, y : 550, coox: 1435, cooy :805}],
+				["bouton", {x: 1505, y : 550, coox: 1505, cooy :1225}],
+				["bouton", {x: 1505, y : 550, coox: 1505, cooy :1155}],
 				
 				["bouton", {asset: "push.png", x: 875, y : 20, coox: 1274, cooy :525}],
 				
@@ -161,7 +164,7 @@
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 						
 				["grille140", {x: 2325, y : 630}],
-				//["grille70", {x: 1260 , y : 1085}],
+				["grille70", {x: 1260 , y : 1085}],
 				["grille70", {x: 1274 , y : 525}],
 				//["grille140", {x: 1335 , y : 1335}],
 				["grille140", {x: 2615 , y : 1330}],				

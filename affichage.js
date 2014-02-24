@@ -230,7 +230,7 @@
 		});
 		
 
-// Fenêtre de fin
+// Fenêtre de fin mais mort
 	Q.scene("endGame",function(stage) {
 					
 		var background = new Q.TileLayer({
@@ -287,6 +287,74 @@
 				
 			scene_prec = scene_courante
 			scene_courante = "niveau";
+		});
+		
+		mort.on("click",function()  {
+			Q.audio.play("rire.mp3");
+		});
+	});
+	
+	// Fenêtre de fin mais victoire
+	Q.scene("GoodendGame",function(stage) {
+					
+		var background = new Q.TileLayer({
+		dataAsset: "men.tmx",
+		layerIndex: 0,
+		sheet: "tilesmenu",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+        
+		stage.insert(background);
+		
+		Q.audio.stop();
+		music = false;
+		
+		var GameoV = stage.insert(new Q.UI.Container({
+                fill: "rgb(225,225,225)",
+                x: wi/2,
+                y: hi-(hi/6)-20,
+                border: 1,
+                shadow: 3,
+                shadowColor: "rgb(160,160,160)",
+                w: wi/4,
+                h: 150
+                })
+            );
+			
+		var mort = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+			asset: "Autruche.jpg",
+        	x: wi/2,
+        	y: hi-(hi/6)-175,
+   		}));
+		
+		var msge = stage.insert(new Q.UI.Text({ 
+                label: "Victory",
+                x: 0,
+                y: -30
+        }),GameoV);
+        
+		var msg = stage.insert(new Q.UI.Button({ 
+                label: "Continue",
+                color: "white",
+				border: 1,
+                shadow: 3,
+                shadowColor: "rgb(160,160,160)",
+                x: 0,
+                y: 28,
+				fill: "rgb(160,160,160)"
+        }),GameoV);
+		
+		msg.on("click",function() {
+       		Q.clearStages();
+   			Q.stageScene('niveau');
+			
+			Q.audio.stop();
+			music = false;
+			
+			scene_prec = scene_courante
+			scene_courante = "niveau";
+			echap = !echap;
 		});
 		
 		mort.on("click",function()  {

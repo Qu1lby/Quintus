@@ -400,3 +400,11 @@
 			this.add("2d2, AutoCube");
         }
     });
+	
+		Q.Sprite.extend("Fin", {
+    	init: function(p) {
+        	this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
+			this.variable = 3;
+			this.add("2d2, cube");
+        }
+    });	
