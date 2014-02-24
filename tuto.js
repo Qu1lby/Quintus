@@ -13,7 +13,7 @@ Q.scene("tut1", function(stage) {
 		
 		
 		var Menu = stage.insert(new Q.UI.Container({
-				fill: "rgb(255,255,153)",
+				fill: "rgb(243,107,107)",
 				x: wi/2,
 				y: hi/2,
 				w: wi/2,
@@ -30,9 +30,9 @@ Q.scene("tut1", function(stage) {
 		
 		
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Next",
+                label: "Jouer",
                 x: 0,
-                y: 70,
+                y: 60,
 				border: 1,
 				w: 100,
 				fill: "rgb(225,225,225)"
