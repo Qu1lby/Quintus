@@ -28,16 +28,17 @@ Q.scene("tut1", function(stage) {
 		
 		
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Jouer",
-                x: 15,
+                label: "Next",
+                x: 0,
                 y: 70,
 				border: 1,
+				w: 100,
 				fill: "rgb(225,225,225)"
         }),Menu);
 		
 			var tuto = stage.insert(new Q.UI.Text({ 
-                label: "Bienvenue jeune fruit ! Je m'appelle ???\n",
-                x: 10,
+                label: "Bienvenue jeune fruit ! Je suis Walter Bishop\n",
+                x: 0,
                 y: -30,
 				size: 18
         }),Menu);
@@ -46,7 +47,7 @@ Q.scene("tut1", function(stage) {
                 label: "C'est moi qui vais t'apprendre à jouer à Traps & Fruits !",
                 x: 0,
                 y: 0,
-				size: 18
+				size: 16
         }),Menu);
 							
 							

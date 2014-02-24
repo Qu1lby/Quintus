@@ -87,7 +87,7 @@
         stage.insert(background);
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		    fill: "rgb(160,160,160)",
+		    fill: "rgb(255,153,0)",
             x: wi/2 - wi/10,
             y: hi-(hi/6)-190,
             border: 1,
@@ -99,7 +99,7 @@
         );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
-		    fill: "rgb(160,160,160)",
+		    fill: "rgb(255,255,102)",
             x: wi/2 + wi/10,
             y: hi-(hi/6)-190,
             border: 1,
@@ -111,7 +111,7 @@
         );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
-		    fill: "rgb(160,160,160)",
+		    fill: "rgb(255,0,24)",
             x: wi/2 - wi/10,
             y: hi-(hi/6)-110,
             border: 1,
@@ -123,7 +123,7 @@
         );
 			
 		var Menu4 = stage.insert(new Q.UI.Container({
-			fill: "rgb(160,160,160)",
+			fill: "rgb(139,90,43)",
             x: wi/2 + wi/10,
             y: hi-(hi/6)-110,
             border: 1,
