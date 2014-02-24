@@ -16,7 +16,7 @@
 				["Sol_5", {x: 1435 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1155}],
 				["Sol_5", {x: 1575 , y : 1155}],
-				["Sol_5", {x: 1645 , y : 1155}],	
+				["Sol_5", {x: 1645 , y : 1155}],			
 				
 				["Sol_5", {x: 875 , y : 1505}],
 				["Sol_5", {x: 945 , y : 1505}],
@@ -35,6 +35,7 @@
 
 				["GroundEnemy", {x: 1995 , y : 1040, asset: "slime3.png"}],	
 				["GroundEnemy", {x: 1300 , y : 525, asset: "slime3.png"}],					
+				["GroundEnemy", {x: 525 , y : 1040, asset: "slime3.png"}],	
 				
 				// -25 y pour tous les boutons
 				["bouton", {x: 455 , y : 1460, coox : 875, cooy :1505}],
@@ -44,6 +45,8 @@
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1435}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1365}],
 				["bouton", {x: 455 , y : 1460, coox : 315, cooy :1295}],
+				
+				["bouton", {x: 385 , y : 1040, coox : 1065, cooy : 330}],
 				
 				["bouton_pasteque", {x: 455 , y : 1460, coox : 150, cooy :1400}],
 				
@@ -151,6 +154,7 @@
 				//["grille140", {x: 1335 , y : 1335}],
 				["grille140", {x: 2615 , y : 1330}],				
 				//["grille200", {x: 830, y : 1382}],
+				["grille200", {x: 1065 , y : 330}],
 	
 
             ];
