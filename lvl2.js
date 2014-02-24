@@ -19,7 +19,8 @@
 				["Sol_5", {x: 1645 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1225, asset: "fond_pierre.png"}],					
 
-				["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],					
+				["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],		
+				["Sol_5", {x: 1505 , y : 1364, asset: "cage.png"}],				
 				
 				["Sol_5", {x: 875 , y : 1505}],
 				["Sol_5", {x: 945 , y : 1505}],
