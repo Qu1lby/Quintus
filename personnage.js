@@ -102,7 +102,7 @@
 			if(this.p.y>= 1700 && !this.p.changeMusic){
 				if (music){
 				Q.audio.stop();}
-				Q.audio.play("boss.mp3");
+				Q.audio.play("boss.mp3",{ loop: true });
 				this.p.changeMusic = true;
 			}
 			
