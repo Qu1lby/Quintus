@@ -249,6 +249,7 @@
 			if(collision.obj.isA("Fin")){
 				this.destroy();
 				Q.clearStages();
+				setCookie('fini','fin du lvl2',time()+24*3600);
 				Q.stageScene("GoodendGame",1, {label: "Victory"})
 			}
 		  },

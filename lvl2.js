@@ -98,8 +98,8 @@
 				
 				["Sol_pierre2_D", {x: 1715 , y : 1505}],
 				["Sol_pierre2_D", {x: 1785 , y : 1505}],
-				["Sol_jump", {x: 1855 , y : 1505}],
-				["Sol_jump", {x: 2065 , y : 1505}],
+				["Sol_jump", {x: 1855 , y : 1505, asset: "jumpn.png"}],
+				["Sol_jump", {x: 2065 , y : 1505, asset: "jumpn.png"}],
 				
 				["Sol_pierre2_D", {x: 2135 , y : 1505}],
 				["Sol_pierre2_D", {x: 2205 , y : 1505}],
@@ -131,7 +131,7 @@
 				["Sol_jump", {x: 2695 , y : 875}],					
 				["Sol_jump", {x: 2625 , y : 1085}],	
 				
-				["Sol_jump", {x: 2485 , y : 1435}],
+				["Sol_jump", {x: 2485 , y : 1435, asset: "jumpn.png"}],
 
 				["Sol_pierre2_D", {x: 1085, y : 455}],
 				["Sol_pierre2_D", {x: 1225, y : 525}],
