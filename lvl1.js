@@ -80,6 +80,30 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_P", {x: 105 , y : 1365}],
 			["Sol_pierre1_P", {x: 175 , y : 1365}],
 			["Sol_pierre1_P", {x: 245 , y : 1365}],
+			
+			["Sol_pierre1_D", {x: 385 , y : 1855}],
+			["Sol_pierre1_D", {x: 455 , y : 1855}],
+			["Sol_pierre1_D", {x: 525 , y : 1855}],
+			["Sol_pierre1_D", {x: 595 , y : 1855}],
+			["Sol_pierre1_D", {x: 665 , y : 1855}],
+			["Sol_pierre1_D", {x: 735 , y : 1855}],
+			
+			
+			["Sol_pierre2_T", {x: 1015 , y : 1855}],
+			["Sol_pierre2_T", {x: 1085 , y : 1855}],
+			["Sol_pierre2_T", {x: 1155 , y : 1855}],
+			["Sol_pierre2_T", {x: 1225 , y : 1855}],
+			["Sol_pierre2_T", {x: 1295 , y : 1855}],
+			["Sol_pierre2_T", {x: 1365 , y : 1855}],
+			["Sol_pierre2_T", {x: 1435 , y : 1855}],
+			
+			["Mal", {x: 1015 , y : 1925}],
+			["Mal", {x: 1085 , y : 1925}],
+			["Mal", {x: 1155 , y : 1925}],
+			["Mal", {x: 1225 , y : 1925}],
+			["Mal", {x: 1295 , y : 1925}],
+			["Mal", {x: 1365 , y : 1925}],
+			["Mal", {x: 1435 , y : 1925}],
             ];
             
 			stage.loadAssets(levelAssets);  

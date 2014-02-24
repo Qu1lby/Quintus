@@ -10,7 +10,9 @@
 
 		step: function(dt) {	
             this.on("bump.top,bump.bottom,bump.right", function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+					Q.audio.play('pop.mp3');
 					this.destroy();
 					Q.stage().locate(this.coox,this.cooy).destroy();
 				}
@@ -29,7 +31,9 @@
 		
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				    Q.audio.play('pop.mp3');
 					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
 					Q.stage().insert(nouvelle_case);
 					this.destroy();
@@ -49,7 +53,9 @@
 		
 		step: function(dt) {			
             this.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
+					Q.audio.play('pop.mp3');
 					if(this.booleen){
 					pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
 					Q.stage().insert(pasteque);

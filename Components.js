@@ -277,6 +277,14 @@
         }
     });
 	
+	Q.Sprite.extend("Sol_pierre2_T", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_terre.png"});
+			this.variable = 2;
+			this.add("2d2, AutoCube");
+        }
+    });
+	
 	Q.Sprite.extend("Sol_pierre3_H", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut.png"});

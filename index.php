@@ -99,7 +99,7 @@
 			"plateforme.png","plateforme2.png","cabine.png","bouletr.png","mort.png","boule.png",
 			"grille200H.png","tetedemort.png","rire.mp3","dessous_neige.png","creature.mp3","lvl1.mp3",
 			"boss.mp3","prof.png","bienvenue.mp3","pop.mp3", "Autruche.jpg", "pastequeSP.png", "canon.mp3",
-			"saut.mp3","fin.mp3"
+			"saut.mp3","fin.mp3","tut.mp3","pierre_terre.png"
 			
 			]
 		, function() {

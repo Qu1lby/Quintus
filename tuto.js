@@ -57,7 +57,7 @@ Q.scene("tut1", function(stage) {
 							
 		msg.on("click",function() {
       		Q.stageScene('tut2',2);
-			Q.audio.play("pop.mp3");
+			Q.audio.play("tut.mp3");
      	});	
 	});
 
@@ -83,7 +83,7 @@ Q.scene("tut1", function(stage) {
 		
 		
 		var tuto = stage.insert(new Q.UI.Text({ 
-                label: "Tu vois ces cases grisés ?",
+                label: "Tu vois ces cases grisées ?",
                 x: 0,
                 y: -15,
 				family : "comic sans ms",
