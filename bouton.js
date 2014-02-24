@@ -51,7 +51,7 @@
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					if(this.booleen){
-					pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
+					pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "pastequeSP.png"});
 					Q.stage().insert(pasteque);
 					this.destroy();
 					this.booleen = false;

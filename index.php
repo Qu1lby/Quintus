@@ -56,7 +56,7 @@
 	
 	// Initialisation du moteur de jeu
         var Q = Quintus()
-            .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI")
+            .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI, Anim")
 			.setup("Quintus", {
                 width: 960,
                 height: 610,
