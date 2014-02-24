@@ -144,16 +144,25 @@
 				["Sol_pierre2_D", {x: 1225, y : 875}],
 				["Sol_pierre2_D", {x: 1155, y : 875}],	
 				["Sol_pierre2_D", {x: 1225, y : 945}],
-	
+				
+				["Sol_pierre2_D", {x: 385 , y : 805}],
+				["Sol_pierre2_D", {x: 385 , y : 945}],
+				["Mal", {x: 455 , y : 804}],
+				["Sol_5", {x: 455 , y : 945}],
+				["Sol_pierre2_D", {x: 455 , y : 1015, asset : "fond_pierre.png"}],
+				["Sol_pierre2_D", {x: 525 , y : 805}],
+				["Mal", {x: 595 , y : 944}],
+				["Sol_5", {x: 595 , y : 875, asset : "fond_pierre.png"}],
+				["Sol_pierre2_D", {x: 595 , y : 805}],
+				["Mal", {x: 665 , y : 944}],
 
 				["Sol_pierre1_DB", {x: 875, y : 105}],	
 						
 				["grille140", {x: 2325, y : 630}],
-				//["grille70", {x: 1260 , y : 1085}],
+				["grille70", {x: 1260 , y : 1085}],
 				["grille70", {x: 1274 , y : 525}],
 				//["grille140", {x: 1335 , y : 1335}],
 				["grille140", {x: 2615 , y : 1330}],				
-				//["grille200", {x: 830, y : 1382}],
 				["grille200", {x: 1065 , y : 330}],
 	
 
