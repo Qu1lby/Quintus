@@ -307,7 +307,8 @@
 		
 		Q.audio.stop();
 		music = false;
-		
+		Q.audio.play("fin.mp3");
+			
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
                 x: wi/2,
@@ -355,10 +356,7 @@
 			scene_courante = "niveau";
 			echap = !echap;
 		});
-		
-		mort.on("click",function()  {
-			Q.audio.play("rire.mp3");
-		});
+
 	});
 		
 		
