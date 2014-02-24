@@ -1,5 +1,7 @@
 Q.scene("tut1", function(stage) {
 		
+		Q.audio.play("bienvenue.mp3");
+		
 		var Opacite = stage.insert(new Q.UI.Container({
         		fill: "rgb(0,0,0)",
 				opacity : 0.7,

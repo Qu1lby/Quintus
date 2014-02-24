@@ -98,7 +98,7 @@
 			"push.png",	"push2.png", "fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png",
 			"plateforme.png","plateforme2.png","cabine.png","bouletr.png","mort.png","boule.png",
 			"grille200H.png","tetedemort.png","rire.mp3","dessous_neige.png","creature.mp3","lvl1.mp3",
-			"boss.mp3","prof.png"
+			"boss.mp3","prof.png","bienvenue.mp3"
 			
 			]
 		, function() {
