@@ -108,6 +108,7 @@ Q.scene("level1",function(stage) {
 			["Mal", {x: 1575 , y : 1925}],
 			
 			["Fin", {x: 1900 , y : 1785, asset: "banane.png"}],	
+			["Fin", {x: 1900 , y : 1785, asset: "cage.png"}],	
             ];
             
 			stage.loadAssets(levelAssets);  
