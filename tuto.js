@@ -85,7 +85,7 @@ Q.scene("tut1", function(stage) {
 		var tuto = stage.insert(new Q.UI.Text({ 
                 label: "Tu vois ces cases grisés ?",
                 x: 0,
-                y: -10,
+                y: -15,
 				family : "comic sans ms",
 				size: 17
         }),Menu);
@@ -93,7 +93,7 @@ Q.scene("tut1", function(stage) {
 		var tuto = stage.insert(new Q.UI.Text({ 
                 label: "Elles disparaitront si tu passes trop souvent dessus !",
                 x: 0,
-                y: 20,
+                y: 15,
 				family : "comic sans ms",
 				size: 15
         }),Menu);
