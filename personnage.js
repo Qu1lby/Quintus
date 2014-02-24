@@ -95,7 +95,7 @@
 			
 		// Tutoriel
 
-		if(this.p.x >= 600 && this.p.x <= 700){
+		if(this.p.x >= 700 && this.p.x <= 800){
 			Q.stageScene('Blanc',2);
 		}
 		
@@ -106,6 +106,8 @@
                 this.p.lives--;
                 this.p.timeInvincible = 1;
                     
+				Q.audio.play("canon.mp3");
+				
                 if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
