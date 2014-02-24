@@ -9,6 +9,7 @@
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
+			this.p.changeMusic = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -76,7 +77,7 @@
             if(this.p.timeInvincible > 0){
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
-
+/*
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -92,10 +93,17 @@
 			}
 		
 		// Détruit le personnage s'il tombe troisième niveau
-			if(this.p.y> 1800){
+			if(this.p.y> 2000){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1)
+			}*/
+			
+			if(this.p.y>= 1700 && !this.p.changeMusic){
+				if (music){
+				Q.audio.stop();}
+				Q.audio.play("boss.mp3");
+				this.p.changeMusic = true;
 			}
 			
 		// Tutoriel

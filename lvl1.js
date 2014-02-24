@@ -81,6 +81,10 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_P", {x: 175 , y : 1365}],
 			["Sol_pierre1_P", {x: 245 , y : 1365}],
 			
+			["Sol_1", {x: 105 , y : 1435}],
+			["casedestruc", {x: 175 , y : 1435, asset:"fond_pierre2.png"}],
+			["Sol_1", {x: 245 , y : 1435}],
+			
 			["Sol_pierre1_D", {x: 385 , y : 1855}],
 			["Sol_pierre1_D", {x: 455 , y : 1855}],
 			["Sol_pierre1_D", {x: 525 , y : 1855}],
@@ -88,7 +92,7 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_D", {x: 665 , y : 1855}],
 			["Sol_pierre1_D", {x: 735 , y : 1855}],
 			
-			["Sol_5", {x: 805 , y : 1855, asset: "fond_pierre_haut2.png"}],
+			["Sol_5", {x: 805 , y : 1855, asset: "pierre_terre.png"}],
 			
 			["Sol_pierre2_T", {x: 1155 , y : 1855}],
 			["Sol_pierre2_T", {x: 1225 , y : 1855}],

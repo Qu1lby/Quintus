@@ -204,6 +204,14 @@
 			this.add("2d2, cube");
         }
     });
+	
+	Q.Sprite.extend("Sol_1", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre2.png"});
+			this.variable = 0;
+			this.add("2d2, AutoCube");
+        }
+    });		
 		
 	Q.Sprite.extend("Sol_2n", {
         init: function(p) {
