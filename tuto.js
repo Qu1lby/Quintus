@@ -39,7 +39,7 @@ Q.scene("tut1", function(stage) {
         }),Menu);
 		
 			var tuto = stage.insert(new Q.UI.Text({ 
-                label: "Bienvenue jeune fruit ! Je suis Walter Bishop\n",
+                label: "Bienvenue jeune fruit ! Je m'appelle Franck\n",
                 x: 0,
                 y: -30,
 				family : "comic sans ms",
@@ -47,7 +47,7 @@ Q.scene("tut1", function(stage) {
         }),Menu);
 		
 		var tuto = stage.insert(new Q.UI.Text({ 
-                label: "C'est moi qui vais t'apprendre à jouer à Traps & Fruits !",
+                label: "C'est moi qui vais t'apprendre à jouer, allons-y !",
                 x: 0,
                 y: 0,
 				family : "comic sans ms",

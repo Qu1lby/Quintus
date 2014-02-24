@@ -70,7 +70,9 @@
         	var entity = this.entity;				
             entity.on("bump.top,bump.bottom,bump.right,bump.left",function(collision) {
   			if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
-				collision.obj.damage();}
+				collision.obj.damage();
+				Q.audio.play('canon.mp3');
+				}
             });
         },
 	});
@@ -102,7 +104,7 @@
             entity.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vy = -650;
-					//Q.audio.play("saut.mp3");
+					Q.audio.play("saut.mp3");
 					}
             });
         },
