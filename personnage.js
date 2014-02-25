@@ -1,6 +1,6 @@
-//init : à la création
-//step : à chaque instant
-//damage : à chaque dommage
+// init : à la création
+// step : à chaque instant
+// damage : à chaque dommage
 
 	Q.Sprite.extend("Orange",{
         init: function(p){
@@ -21,20 +21,22 @@
 
 		stomp: function(collision) {
 			if(collision.obj.isA("HorizontalPlatform")) {
-				this.p.x = collision.obj.p.x; // make the player stay on the platform
+			// make the player stay on the platform
+				this.p.x = collision.obj.p.x; 
 			}
 				
 			if(collision.obj.isA("VerticalPlatform")) {
-				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+			// make the player stay on the platform
+				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
 			if(collision.obj.isA("Fin")){
 				Q.clearStages();
-				Q.stageScene("GoodendGame",1, {label: "Victory"})
+				Q.stageScene("GoodGame",1, {label: "Victory"})
 			}
 		},
 
-		// Gère le temps que le personnage est en vie -> fin du lvl
+	// Gère le temps que le personnage est en vie -> fin du lvl
   		step: function(dt){	
 			if(this.p.timeInvincible == 0) {
        			var encoretjrs = new Date();				
@@ -99,20 +101,21 @@
 				Q.stageScene("endGame",1)
 			}
 			
+		// Changement de la musique pour le boss
 			if(this.p.y>= 1700 && !this.p.changeMusic){
 				if (music){
-				Q.audio.stop();
-				Q.audio.play("boss.mp3",{ loop: true });
-				this.p.changeMusic = true;}
+					Q.audio.stop();
+					Q.audio.play("boss.mp3",{ loop: true });
+					this.p.changeMusic = true;
+				}
 			}
 			
 		// Tutoriel
-
 		if(this.p.x >= 700 && this.p.x <= 800){
 			Q.stageScene('Blanc',2);
 		}
         },
-
+		
         damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
@@ -122,8 +125,7 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
-                }
-                else {
+                }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
                 }
@@ -239,6 +241,8 @@
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
+			this.p.changeMusic = false;		// True : music du boss est changé
+			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
@@ -247,22 +251,22 @@
 			this.on("bump.bottom",this,"stomp");
         },
 
-			stomp: function(collision) {
+		stomp: function(collision) {
 			if(collision.obj.isA("HorizontalPlatform")) {
-		
-			  this.p.x = collision.obj.p.x; // make the player stay on the platform
+			// make the player stay on the platform
+				this.p.x = collision.obj.p.x; 
 			}
-			
+				
 			if(collision.obj.isA("VerticalPlatform")) {
-		
-			  this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); // make the player stay on the platform
+			// make the player stay on the platform
+				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
 			if(collision.obj.isA("Fin")){
 				this.destroy();
 				Q.clearStages();
 				//setCookie('fini','fin du lvl2',time()+24*3600);
-				Q.stageScene("GoodendGame",1, {label: "Victory"})
+				Q.stageScene("GoodGame",1, {label: "Victory"})
 			}
 		  },
 
@@ -315,11 +319,6 @@
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
 			}
-			
-
-			
-			
-
         },
 
         damage: function(){

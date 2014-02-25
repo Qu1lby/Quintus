@@ -299,7 +299,7 @@
 	});
 	
 	// Fenêtre de fin mais victoire
-	Q.scene("GoodendGame",function(stage) {
+	Q.scene("GoodGame",function(stage) {
 					
 		var background = new Q.TileLayer({
 		dataAsset: "men.tmx",
