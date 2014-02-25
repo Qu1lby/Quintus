@@ -109,7 +109,8 @@
 			]
 		, function() {
 			Q.sheet("tiles","tiles_map.png", {tilew: 70, tileh: 70});  
-			Q.sheet("tilesmenu","htmltiles.jpg", {tilew: 70, tileh: 70});   			
+			Q.sheet("tilesmenu","htmltiles.jpg", {tilew: 70, tileh: 70}); 
+			//Q.sheet("pastequeSP","pastequeSP.png", { "tilew": 201, "tileh": 300,"sx": 0,"sy": 0});  			
 			Q.stageScene("Debut");
 			
 		}, { 

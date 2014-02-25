@@ -171,11 +171,18 @@
 		}
 	});
 	
+	/*Q.animations('pastequeSP', {
+        run_left: { frames: [1,2,3,4,5,6,7,8,9], next: 'stand_left', rate: 1/5},
+        run_right: { frames: [1,2,3,4,5,6,7,8,9], next: 'stand_right', rate: 1/5},
+        stand_left: { frames: [0]},
+        stand_right: { frames: [0]},
+    });*/
+	
 	// Piege de la boule qui roule et qui n'amasse pas mousse
-	Q.Sprite.extend("BallTrap", {
+	Q.Sprite.extend("pastequeSP", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
-            this.add("2d, madBounce");
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left", sheet: "pastequeSP", sprite: "pastequeSP",});
+            this.add("2d, madBounce, animation");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
         },
@@ -183,18 +190,23 @@
 		  step: function(dt) {                
           if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
         	    this.p.vx = -this.p.vx;
+				//this.play("run_right", 1);
             } 
             else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
                  	this.p.vx = -this.p.vx;
+					//this.play("run_right");
         	} 
 			
 				this.on("bump.top, bump.right, bump.left",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vx = 150;
+					//this.play("run_right", 1);
 			}
             });
 		}
 	});
+	
+
 	
 // Differents sprites de cubes...	
 // variable = nb fois que l'on peut marcher sur le cube
