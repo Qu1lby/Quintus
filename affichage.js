@@ -186,7 +186,7 @@
 				Q.stageScene("gameStats",1);
 				Q.stageScene('tut1',2);
 				
-				Q.audio.play('lvl1.mp3');
+				Q.audio.play('lvl1.mp3',{ loop: true });
 				music = true;
 				
 				scene_courante = "lvl1";

@@ -6,15 +6,20 @@
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d2");
+			this.booleen = true;
         },
 
 		step: function(dt) {	
             this.on("bump.top,bump.bottom,bump.right", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
-					Q.audio.play('pop.mp3');
-					this.destroy();
-					Q.stage().locate(this.coox,this.cooy).destroy();
+				   	Q.audio.play('pop.mp3');
+					if(this.booleen){
+						this.booleen = false;
+						this.destroy();
+						Q.stage(0).locate(this.coox,this.cooy).destroy();
+						
+					}
 				}
             });		
 		}

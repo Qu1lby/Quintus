@@ -110,6 +110,9 @@
 
 		if(this.p.x >= 700 && this.p.x <= 800){
 			Q.stageScene('Blanc',2);
+			nouvelle = new Q.bouton({x: 200 , y : 205, coox : 975, cooy : 145}),
+			Q.stage().insert(nouvelle);
+			
 		}
 		
 		
