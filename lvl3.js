@@ -15,8 +15,8 @@
 				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
-				["StrangePlatform", {x: 62*70+15, y : 10*70+35,vx :175, rangeX : 50 ,asset : "plateforme.png"}],
-				// ["VerticalPlatform", {x: 62*70+15, y : 10*70+35,vx :175, rangeX : 50 ,asset : "plateforme.png"}],
+				// ["StrangePlatform", {x: 62*70+15, y : 10*70+35,vx :175, rangeX : 50 ,asset : "plateforme.png"}],
+				["VerticalPlatform", {x: 62*70+15, y : 10*70+35,vx :175, rangeX : 50 ,asset : "plateforme.png"}],
 				
 				["GroundEnemy", {x: 44*70, y :  12*70,vx : 400, asset: "slime3.png"}],
 				["GroundEnemy", {x: 24*70, y :  14*70,vx : 600, asset: "slime3.png"}],
