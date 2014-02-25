@@ -71,7 +71,9 @@
             entity.on("bump.top,bump.bottom,bump.right,bump.left",function(collision) {
   			if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
 				collision.obj.damage();
+				if(music){
 				Q.audio.play('canon.mp3');
+				}
 				}
             });
         },

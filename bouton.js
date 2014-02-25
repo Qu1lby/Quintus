@@ -20,8 +20,8 @@
 					
 					if(this.booleen){
 						this.booleen = false;
-						this.destroy();
-						Q.stage(0).locate(this.coox,this.cooy).destroy();
+						Q.stage().locate(this.coox,this.cooy).destroy();
+						Q.stage().locate(this.x,this.y).destroy();
 						
 					}
 				}

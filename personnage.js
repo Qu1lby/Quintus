@@ -111,7 +111,7 @@
 		if(this.p.x >= 700 && this.p.x <= 800){
 			Q.stageScene('Blanc',2);
 			nouvelle = new Q.bouton({x: 200 , y : 205, coox : 975, cooy : 145}),
-			Q.stage().insert(nouvelle);
+			Q.stage(0).insert(nouvelle);
 		}
         },
 
@@ -119,10 +119,6 @@
             if(!this.p.timeInvincible){
                 this.p.lives--;
                 this.p.timeInvincible = 1;
-                
-				if (music){				
-					Q.audio.play("canon.mp3");
-				}
 				
                 if(this.p.lives == 0) {
                     this.destroy();
