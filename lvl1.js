@@ -1,4 +1,5 @@
 // Setup level 1
+
 Q.scene("level1",function(stage) {		
 	var background = new Q.TileLayer({
 		dataAsset: "Lvl1.tmx",
@@ -7,15 +8,20 @@ Q.scene("level1",function(stage) {
 		tileW: 70, tileH: 70,
 		type: Q.SPRITE_NONE });
 		
-        stage.insert(background);
+    stage.insert(background);
            
-        stage.collisionLayer(new Q.TileLayer({ dataAsset: "Lvl1.tmx", layerIndex:1,  sheet: "tiles", tileW: 70, tileH: 70, type: Q.SPRITE_DEFAULT }));
+    stage.collisionLayer(new Q.TileLayer({ 
+		dataAsset: "Lvl1.tmx",
+		layerIndex:1,
+		sheet: "tiles",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_DEFAULT }));
             
-        var player = stage.insert(new Q.Orange());
+    var player = stage.insert(new Q.Orange());
           
-        var levelAssets = [
-			
-			// Premier niveau
+    var levelAssets = [
+		
+		// Premier niveau
 			["Sol_5", {x: 105 , y : 245}],
 			["Sol_5", {x: 175 , y : 245}],
 			["Sol_5", {x: 245 , y : 245}],
@@ -46,18 +52,16 @@ Q.scene("level1",function(stage) {
 			["HorizontalPlatform", {x: 1300, y : 800, rangeX: 400, vx : 200, asset: "plateforme2.png"  }],	
 			["HorizontalPlatform", {x: 670, y : 750, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],
 			
-
 			["HorizontalPlatform", {x: 400, y : 1020, rangeX : 1600, vx : 100, asset: "cabine.png"  }],
-			
-			
+				
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 			
-			// Second niveau
+		// Second niveau
 			["Sol_pierre2_D", {x: 105 , y : 875}],	
 			["Sol_pierre2_D", {x: 175 , y : 875}],
 			["Sol_pierre2_D", {x: 245 , y : 875}],
 			
-			//Colone de gauches
+		// Colone de gauches
 			["Sol_pierre1_P", {x: 105 , y : 945}],
 			["Sol_pierre1_P", {x: 175 , y : 945}],
 			["Sol_pierre1_P", {x: 245 , y : 945}],
@@ -84,6 +88,7 @@ Q.scene("level1",function(stage) {
 			["casedestruc", {x: 175 , y : 1435, asset:"fond_pierre2.png"}],
 			["Sol_1", {x: 245 , y : 1435}],
 			
+		// Troisème niveau
 			["Sol_pierre1_D", {x: 385 , y : 1855}],
 			["Sol_pierre1_D", {x: 455 , y : 1855}],
 			["Sol_pierre1_D", {x: 525 , y : 1855}],
@@ -101,7 +106,6 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre2_T", {x: 1505 , y : 1855}],
 			["Sol_pierre2_T", {x: 1575 , y : 1855}],
 			
-			
 			["Mal", {x: 1155 , y : 1925}],
 			["Mal", {x: 1225 , y : 1925}],
 			["Mal", {x: 1295 , y : 1925}],
@@ -112,32 +116,29 @@ Q.scene("level1",function(stage) {
 			
 			["Fin", {x: 1900 , y : 1785, asset: "banane.png"}],	
 			["Fin", {x: 1900 , y : 1785, asset: "cage.png"}],	
-            ];
+    ];
             
-			stage.loadAssets(levelAssets);  
+	stage.loadAssets(levelAssets);  
 
-            stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
-
-			
-		/*	setTimeout(function() {
-			
-				document.getElementById("Jquery").innerHTML =  "Level 1";
+    stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
+	
+/*	setTimeout(function() {	
+		document.getElementById("Jquery").innerHTML =  "Level 1";
 				
+		var $canvas = $('#Jquery'); 
+		$canvas.drawText({
+			fillStyle: '#9cf',
+			strokeStyle: '#25a',
+			strokeWidth: 2,
+			x: 300, y: 50,
+			fontSize: 48,
+			fontFamily: 'Verdana, sans-serif',
+			text: 'Level 1'
+		});			
 				
-				var $canvas = $('#Jquery'); 
-				$canvas.drawText({
-				fillStyle: '#9cf',
-				strokeStyle: '#25a',
-				strokeWidth: 2,
-				x: 300, y: 50,
-				fontSize: 48,
-				fontFamily: 'Verdana, sans-serif',
-				text: 'Level 1'
-				});			
-				
-				}, 2000);
+	}, 2000);
 		
-			Canvas.SetZIndex(image1, 2);
-		*/
+	Canvas.SetZIndex(image1, 2);
+*/
 		   
-	});
+});
