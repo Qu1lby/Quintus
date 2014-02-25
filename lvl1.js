@@ -22,16 +22,15 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre1_D", {x: 315 , y : 245}],
 			["Sol_pierre3_D", {x: 385 , y : 245}],
 			["Sol_pierre2_D", {x: 455 , y : 245}],
-			["Sol_pierre3_D", {x: 525 , y : 245}],
-			["Sol_pierre2_D", {x: 595 , y : 245}],
+			["Sol_pierre2_D", {x: 525 , y : 245}],
+			["Sol_pierre3_D", {x: 595 , y : 245}],
 			["Sol_pierre1_D", {x: 665 , y : 245}],
 			["Sol_5", {x: 735 , y : 245}],
 			["Sol_5", {x: 805 , y : 245}],
 			["grille140", {x: 975 , y : 145}],
-			
-	
-			
-			
+			["Sol_jump_neige", {x: 490 , y : 385}],
+			["bouton", {x: 488 , y : 350, coox : 975, cooy : 145}],
+						
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
 		
