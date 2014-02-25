@@ -13,7 +13,7 @@
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					if(music){
-					Q.audio.play('pop.mp3');
+						Q.audio.play('pop.mp3');
 					}
 					this.destroy();
 					Q.stage().locate(this.coox,this.cooy).destroy();
@@ -21,7 +21,6 @@
             });		
 		}
     });
-
 
 	Q.Sprite.extend("bouton_bouton", {
         init: function(p) {
@@ -36,7 +35,7 @@
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				    if(music){
-					Q.audio.play('pop.mp3');
+						Q.audio.play('pop.mp3');
 					}
 					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
 					Q.stage().insert(nouvelle_case);
@@ -46,7 +45,7 @@
 		}
     });
 
-		Q.Sprite.extend("bouton_pasteque", {
+	Q.Sprite.extend("bouton_pasteque", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "push2.png"});
 			this.coox = p.coox;
@@ -60,13 +59,13 @@
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
 					if(music){
-					Q.audio.play('pop.mp3');
+						Q.audio.play('pop.mp3');
 					}
 					if(this.booleen){
-					pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
-					Q.stage().insert(pasteque);
-					this.destroy();
-					this.booleen = false;
+						pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
+						Q.stage().insert(pasteque);
+						this.destroy();
+						this.booleen = false;
 					}
 				}
             });

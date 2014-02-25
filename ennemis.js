@@ -10,19 +10,20 @@
 		step: function(dt) {        
         	var dirX = this.p.vx/Math.abs(this.p.vx);
             var ground = Q.stage().locate(this.p.x, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);
-            var nextTile = Q.stage().locate(this.p.x + dirX * this.p.w/2 + dirX, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);   
+            var nextTile = Q.stage().locate(
+					this.p.x + dirX * this.p.w/2 + dirX, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);   
 				
             if(!nextTile && ground) {
             	if(this.p.vx > 0) {
                 	if(this.p.defaultDirection == "right") {
                 	    this.p.flip = "x";
-                    } else {
+                    }else{
                         this.p.flip = false;
                     }
                 } else {
                     if(this.p.defaultDirection == "left") {
                         this.p.flip = "x";
-                    } else {
+                    }else{
                         this.p.flip = false;
                     }
                 }
@@ -49,22 +50,24 @@
 		}
 	});
 	
-	//Comportement for common enemy behaviors
+//Comportement for common enemy behaviors
 	Q.component("commonEnemy", {
     	added: function() {
         	var entity = this.entity;
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
+           		if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || 
+				   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
                 	collision.obj.damage();
 					
 					if(music){
 						Q.audio.play('creature.mp3');
 					}
                 }
-            });
+        });
 				
-            entity.on("bump.top",function(collision) {
-            	            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
+        entity.on("bump.top",function(collision) {
+              	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) ||
+				   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
                 	collision.obj.p.vy = -100;
                     this.destroy();
                 }

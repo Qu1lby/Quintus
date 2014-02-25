@@ -1,4 +1,4 @@
-// Raccourcis du jeu
+// Raccourcis clavier du jeu
 
 	var scene_courante = null;
 	var scene_prec = null;
@@ -24,7 +24,6 @@
 		}
 	});﻿	
 		
-		
 	Q.input.on("replay", function () {  
 		if (scene_courante != null && !pause){	
 			if (scene_courante == "lvl1"){
@@ -39,6 +38,7 @@
 				Q.audio.play('lvl1.mp3',{ loop: true });
 				music = true;
 			}
+			
 			if (scene_courante == "lvl2"){
 				Q.clearStages();
 				
@@ -50,12 +50,14 @@
 				Q.audio.play('lvl2.mp3',{ loop: true });
 				music = true;
 			}
+			
 			if (scene_courante == "lvl3"){
 				Q.clearStages();
     			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
 				music = true;
 			}
+			
 			if (scene_courante == "lvl4"){
 				Q.clearStages();
     			Q.stageScene('level4');
@@ -64,8 +66,7 @@
 			}
 		}
 	});﻿	
-	
-	
+		
 	var music = true;
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
@@ -73,20 +74,23 @@
 				Q.audio.play('lvl1.mp3',{ loop: true });
 				music = true;
 			}
+			
 			if (scene_courante == "lvl2"){
 				Q.audio.play('lvl2.mp3',{ loop: true });
 				music = true;
 			}
+			
 			if (scene_courante == "lvl3"){
 			}
+			
 			if (scene_courante == "lvl4"){
 			}
+			
 		}else{
 			Q.audio.stop(); 
 			music = false;
 		}
 	});﻿	
-		
 		
 	var echap = false
 	Q.input.on("echap", function () {  
