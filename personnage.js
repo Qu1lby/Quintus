@@ -101,9 +101,9 @@
 			
 			if(this.p.y>= 1700 && !this.p.changeMusic){
 				if (music){
-				Q.audio.stop();}
+				Q.audio.stop();
 				Q.audio.play("boss.mp3",{ loop: true });
-				this.p.changeMusic = true;
+				this.p.changeMusic = true;}
 			}
 			
 		// Tutoriel
@@ -112,19 +112,17 @@
 			Q.stageScene('Blanc',2);
 			nouvelle = new Q.bouton({x: 200 , y : 205, coox : 975, cooy : 145}),
 			Q.stage().insert(nouvelle);
-			
 		}
-		
-		
-			
         },
 
         damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
                 this.p.timeInvincible = 1;
-                    
-				Q.audio.play("canon.mp3");
+                
+				if (music){				
+					Q.audio.play("canon.mp3");
+				}
 				
                 if(this.p.lives == 0) {
                     this.destroy();

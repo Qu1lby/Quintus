@@ -245,9 +245,12 @@
 		stage.insert(background);
 		
 		Q.audio.stop();
-		music = false;
+
+		if(music){
+			Q.audio.play("rire.mp3");
+		}
 		
-		Q.audio.play("rire.mp3");
+		music = false;
 		
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
@@ -308,9 +311,12 @@
 		stage.insert(background);
 		
 		Q.audio.stop();
+
+		if(music){
+			Q.audio.play("fin.mp3");
+		}	
 		music = false;
-		Q.audio.play("fin.mp3");
-			
+				
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
                 x: wi/2,

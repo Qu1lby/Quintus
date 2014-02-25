@@ -70,7 +70,7 @@
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
-				Q.audio.play('lvl1.mp3');
+				Q.audio.play('lvl1.mp3',{ loop: true });
 				music = true;
 			}
 			if (scene_courante == "lvl2"){
