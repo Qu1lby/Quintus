@@ -62,7 +62,7 @@
 						Q.audio.play('pop.mp3');
 					}
 					if(this.booleen){
-						pasteque = new Q.BallTrap({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
+						pasteque = new Q.pastequeSP({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
 						Q.stage().insert(pasteque);
 						this.destroy();
 						this.booleen = false;

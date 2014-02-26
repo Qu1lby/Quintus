@@ -102,7 +102,7 @@
 			"plateforme.png", "plateforme2.png", "cabine.png", "prof.png", "tetedemort.png",
 			"bouletr.png", "pastequeSP.png", "boule.png", "Autruche.jpg", "cage.png",
 			
-			"lvl1.mp3", "lvl2.mp3",
+			"lvl1.mp3", "lvl2.mp3", "sprite.json",
 			"rire.mp3","dessous_neige.png","creature.mp3", "boss.mp3",,"bienvenue.mp3","pop.mp3",
 			"canon.mp3", "saut.mp3","fin.mp3","tut.mp3",
 			
@@ -110,6 +110,7 @@
 		, function() {
 			Q.sheet("tiles","tiles_map.png", {tilew: 70, tileh: 70});  
 			Q.sheet("tilesmenu","htmltiles.jpg", {tilew: 70, tileh: 70}); 
+			Q.compileSheets("pastequeSP.png","sprite.json");
 			//Q.sheet("pastequeSP","pastequeSP.png", { "tilew": 201, "tileh": 300,"sx": 0,"sy": 0});  			
 			Q.stageScene("Debut");
 			
