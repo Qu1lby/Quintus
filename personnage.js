@@ -314,7 +314,7 @@
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
 
-			if(this.p.y>1645){
+			if(this.p.y>1800){
 				this.destroy();
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"})
