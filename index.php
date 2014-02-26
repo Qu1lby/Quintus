@@ -87,6 +87,7 @@
 		include ('lvl2.js');
 		include ('lvl3.js');
 		include ('lvl4.js');
+		include ('lvl5.js');
 		
 		
 	// Charge tous les éléments

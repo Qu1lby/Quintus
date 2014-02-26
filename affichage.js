@@ -60,7 +60,7 @@
         }),Menu2);
 				
 		var cred = stage.insert(new Q.UI.Button({ 
-        	label: "Crédits",
+        	label: "Infos",
             x: 0,
 			y: 0,
         }),Menu3);
@@ -70,6 +70,12 @@
       		Q.stageScene('niveau');
 			scene_courante = "niveau";
 			scene_prec = "menu";
+     	});	
+		
+		cred.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('level5');
+			Q.stageScene("gameStats",1);
      	});	
 	});
 		

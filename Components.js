@@ -372,6 +372,23 @@
         }
     });
 	
+	
+	Q.Sprite.extend("Sol_B2", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
+			this.variable = 5;
+			this.add("2d2, AutoCube");
+        }
+    });
+	
+	Q.Sprite.extend("Sol_B5", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
+			this.variable = 5;
+			this.add("2d2, AutoCube");
+        }
+    });
+	
 // Case qui detruit les cases adjacentes
 		Q.Sprite.extend("casedestruc", {
         init: function(p) {
