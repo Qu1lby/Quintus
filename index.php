@@ -102,7 +102,7 @@
 			"grille70.png", "grille200.png","grille140.png", "grille200H.png",
 			"htmltiles.jpg", "pause.png", "play.png", "mort.png", "bullet.png", "fraise.png",
 			"plateforme.png", "plateforme2.png", "cabine.png", "prof.png", "tetedemort.png",
-			"bouletr.png", "pastequeSP.png", "boule.png", "Autruche.jpg", "cage.png",
+			"bouletr.png", "pastequeSP.png", "boule.png", "Autruche.jpg", "cage.png", "ennemi.png",
 			
 			"lvl1.mp3", "lvl2.mp3", "sprite.json",
 			"rire.mp3","dessous_neige.png","creature.mp3", "boss.mp3",,"bienvenue.mp3","pop.mp3",
