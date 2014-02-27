@@ -459,35 +459,30 @@
         }
     });	
 	
-	// balle tiré
-/*  Q.Sprite.extend('CannonBall',{
-    init: function(props) {
-      this._super({
-        shape: 'circle',
-        color: 'red',
-        r: 8,
-        restitution: 0.5,
-        density: 4,
-        x: props.dx * 50 + 10,
-        y: props.dy * 50 + 210,
-        seconds: 5
-      });
-      this.add('physics');
-      this.on('step',this,'countdown');
-    },
- 
-    countdown: function(dt) {
-      this.p.seconds -= dt;
-      if(this.p.seconds < 0) { 
-        this.destroy();
-      } else if(this.p.seconds < 1) {
-        this.set({ "fill-opacity": this.p.seconds });
-      }
-    },
-	
-	 collision: function(col) {
- 		   collision.obj.damage();
-          this.destroy();
-		  },
-  });*/
+	// Bullet
+	Q.Sprite.extend("Gerard", {
+    	init: function(p) {
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
+            this.add("2d, aiBounce");
+            this.p.initialY = this.p.y;
+			this.p.initialX = this.p.x;
+        },
+        
+		  step: function(dt) {                
+          if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
+        	    this.p.vx = -this.p.vx;
+            } 
+            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
+                 	this.p.vx = -this.p.vx;
+        	}
+			this.on("bump.right",function(collision) {
+				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
+ 			collision.obj.damage();
+			this.destroy();
+					}
+
+            });
+		}
+    });
  
