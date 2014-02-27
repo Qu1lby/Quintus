@@ -34,7 +34,7 @@
 			["Sol_pierre1_P", {x: 595 , y : 1435}],
 			["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
-			["bouton_bouton", {x: 525, y: 1525, coox : 805, cooy : 1575}],
+			["bouton_case_droite", {x: 525, y: 1505, coox : 945, cooy : 1435}],
 			
 			
 			//["UN PONT ICI", {x: 735 , y : 1645}],

@@ -31,7 +31,31 @@
         },
 
 		step: function(dt) {			
-            this.on("bump.top, bump.right",function(collision) {
+            this.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				    if(music){
+						Q.audio.play('pop.mp3');
+					}
+					this.destroy();
+					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
+					Q.stage().insert(nouvelle_case);
+				}
+            });
+		}
+    });
+	
+	
+	Q.Sprite.extend("bouton_case_droite", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "push3.png"});
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.add("2d2");
+        },
+
+		step: function(dt) {			
+            this.on("bump.right",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				    if(music){
