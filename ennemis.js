@@ -66,7 +66,7 @@
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
 
 					if(this.booleen == true){
-						balle = new Q.Gerard({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
+						balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 						Q.stage().insert(balle);
 						this.booleen = false;
 					}

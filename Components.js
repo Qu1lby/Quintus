@@ -450,15 +450,16 @@
     });	
 	
 	// Bullet
-	Q.Sprite.extend("Gerard", {
+	Q.Sprite.extend("Bullet", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
+			this.on('step',this,'countdown');
         },
         
-		  step: function(dt) {                
+		  step: function(dt) {             
 			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
@@ -467,6 +468,17 @@
 					}
 
             });
-		}
+		},
+		
+		countdown: function(dt) {
+			this.p.seconds -= dt;
+			if(this.p.seconds < 0) { 
+				this.destroy();
+			} else if(this.p.seconds < 1) {
+				this.set({ "fill-opacity": this.p.seconds });
+      }
+    }
     });
+	
+	
  
