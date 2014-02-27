@@ -396,15 +396,16 @@
 			this.add("2d2");
         },
 
-		step: function(dt) {	
+		step: function(dt) {
             this.on("bump.top", function(collision) {
 			var pass = 0;
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {
 					if(pass == 0){
 					Q.stage().locate(this.p.x+70, this.p.y).destroy();
 					Q.stage().locate(this.p.x-70, this.p.y).destroy();
+					Q.audio.play("canon.mp3");
 					this.destroy();	
-					
+
 				}
 				}
 				pass = pass +1;
