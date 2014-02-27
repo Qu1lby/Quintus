@@ -31,7 +31,7 @@
         },
 
 		step: function(dt) {			
-            this.on("bump.top",function(collision) {
+            this.on("bump.top, bump.right",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				    if(music){
