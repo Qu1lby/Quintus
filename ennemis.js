@@ -53,10 +53,10 @@
 	//Comportement des ennemmies qui tirent
 	Q.Sprite.extend("DrawEnnemy", {
         init: function(p) {
-            this._super(p,  {gravity : 0, asset : "ennemi.png"});
+            this._super(p,  {gravity : 1, asset : "ennemi.png"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
-			this.add("2d2, animation");
+			this.add("2d, animation");
 			this.booleen = true;
         },
 

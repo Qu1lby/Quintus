@@ -172,10 +172,8 @@
 	});
 	
 	Q.animations('pastequeSP', {
-        run_left: {frames: [0,1,2,3,4,5,6,7,8,9], next: 'stand_left', rate: 1/5},
-        run_right: {frames: [0,1,2,3,4,5,6,7,8,9], next: 'stand_right', rate: 1/5},
-        stand_left: {frames: [0]},
-        stand_right: {frames: [0]},
+        run_left: {frames: [9,8,7,6,5,4,3,2,1,0,9,8,7,6,5,4,3,2,1,0], next: 'run_left', rate: 1/5},
+
     });
 	
 	// Piege de la boule qui roule et qui n'amasse pas mousse
@@ -188,20 +186,11 @@
 			this.play("run_left");
         },
         
-		  step: function(dt) {  	  
-			/*if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
-        	    this.p.vx = -this.p.vx;
-				this.play("run_right", 1);
-            } 
-            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
-                 	this.p.vx = -this.p.vx;
-					this.play("run_right");
-        	}*/ 
-			
+		  step: function(dt) {  	  		
 				this.on("bump.top, bump.right, bump.left",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
-					collision.obj.p.vx = 200;
-					this.play("run_right", 1);
+					collision.obj.p.vx = 150;
+					this.play("run_left");
 			}
             });
 		}
@@ -463,20 +452,14 @@
 	// Bullet
 	Q.Sprite.extend("Gerard", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
         },
         
 		  step: function(dt) {                
-          if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
-        	    this.p.vx = -this.p.vx;
-            } 
-            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
-                 	this.p.vx = -this.p.vx;
-        	}
-			this.on("bump.right",function(collision) {
+			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
  			collision.obj.damage();
