@@ -99,7 +99,7 @@
 			"fond_pierre.png","fond_pierre_haut.png", "fond_pierre_haut2.png",
 			"fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png", "pierre_terre.png",
 			"grille70.png", "grille200.png","grille140.png", "grille200H.png",
-			"htmltiles.jpg", "pause.png", "play.png", "mort.png", 
+			"htmltiles.jpg", "pause.png", "play.png", "mort.png", "bullet.png"
 			"plateforme.png", "plateforme2.png", "cabine.png", "prof.png", "tetedemort.png",
 			"bouletr.png", "pastequeSP.png", "boule.png", "Autruche.jpg", "cage.png",
 			
