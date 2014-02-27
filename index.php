@@ -95,6 +95,7 @@
 			
 			"tiles_map.png", "orange.png", "tomate.png", "banane.png", "ananas.png",
 			"dessous.png", "jump.png", "jumpn.png", "slime3.png", "push.png", "push2.png",
+			"push3.png","tomateboss.png",
 			"Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "Lvl5.tmx", "men.tmx",
 			"fond_pierre.png","fond_pierre_haut.png", "fond_pierre_haut2.png",
 			"fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png", "pierre_terre.png",
