@@ -132,6 +132,9 @@
 			//sous sol deuxieme etage
 			["Sol_pierre1_H", {x: 455 , y : 525}],
 			
+			["Sol_pierre1_H", {x: 1365 , y : 805}],
+			["casedestruc", {x: 1505 , y : 805}],
+			
 			["Sol_pierre1_H", {x: 1715 , y : 805}],
 			["Sol_pierre1_H", {x: 1785 , y : 805}],
 			["Sol_pierre1_H", {x: 1855 , y : 805}],
@@ -159,6 +162,10 @@
 			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
 			
 			["grille200", {asset: "grille200H.png", x: 3330, y: 945}],
+			
+			
+			["Fin", {x: 1855 , y : 1505, asset: "tomate.png"}],		
+			["Sol_5", {x: 1855 , y : 1504, asset: "cage.png"}],	
 			
 			            ];
               stage.loadAssets(levelAssets);  
