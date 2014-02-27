@@ -37,9 +37,9 @@
 				    if(music){
 						Q.audio.play('pop.mp3');
 					}
+					this.destroy();
 					nouvelle_case = new Q.bouton({x: this.coox, y: this.cooy});
 					Q.stage().insert(nouvelle_case);
-					this.destroy();
 				}
             });
 		}
