@@ -52,7 +52,7 @@ Q.scene("level1",function(stage) {
 			["HorizontalPlatform", {x: 1300, y : 800, rangeX: 400, vx : 200, asset: "plateforme2.png"  }],	
 			["HorizontalPlatform", {x: 670, y : 750, rangeX: 200, vx : 150, asset: "plateforme2.png"  }],
 			
-			["HorizontalPlatform", {x: 400, y : 1020, rangeX : 1600, vx : 100, asset: "cabine.png"  }],
+			["HorizontalPlatform", {x: 400, y : 1020, rangeX : 1600, vx : 100, asset: "cabine.png", type: Q.SPRITE_NONE, collisionMask:Q.SPRITE_NONE }],
 				
 			["GroundEnemy", {x: 1710 , y : 245, asset: "slime3.png"}],
 			

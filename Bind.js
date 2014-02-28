@@ -68,6 +68,11 @@
 	});﻿	
 		
 	var music = true;
+	document.cookie = 'Musique=Oui; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+	
+	/*<?php
+		setCookie('developpez','tutoriel sur les cookies / sessions',time()+24*3600);
+	?>*/
 	
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	

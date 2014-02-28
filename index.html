@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,10 +7,6 @@
 	<body >
     
  <script src="script/include.js"></script>
- <script src="script/jquery.js"></script>
- <script src="script/textEffect.js"></script>
- <script src="script/jcanvas.min.js"></script>
- <script src="script/novacancy.js"></script>
  
  <script src="lib/quintus.js"></script>
  <script src="lib/quintus_2d.js"></script>
@@ -32,26 +27,9 @@
       	</div>
     </div>
     
-	<canvas id='Quintus' width='960' height='610' style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
-    
-	<!--
-    <canvas id='Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
-    <div id = 'Jquery' width='960' height='300' style="position: absolute; left: 0; top: 0; z-index: 1;"></div>
+	<canvas id='Quintus' width='960' height='610' style="position: absolute; left: 0; top: 0; z-index: 0;">						  	</canvas>
 
-     
-	<script>
-		var widt = ((document.documentElement.clientWidth -960)/2)-1;
-		var obj = document.getElementById('Jquery');
-		obj.style.left = widt+"px";
-	</script>
-
-
-	<script>
-		setInterval(function(){$('#Jquery').novacancy();}, 1000);
-	</script>
-	-->
-
-<script>	
+<script>
 	var wi = 960;
 	var hi = 610;
 	
@@ -94,26 +72,30 @@
         Q.load([
 			
 			"tiles_map.png", "orange.png", "tomate.png", "banane.png", "ananas.png",
+			
 			"dessous.png", "jump.png", "jumpn.png", "slime3.png", "push.png", "push2.png",
-			"push3.png","tomateboss.png",
-			"Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "Lvl5.tmx", "men.tmx",
-			"fond_pierre.png","fond_pierre_haut.png", "fond_pierre_haut2.png", "audio.png",
+			"push3.png","tomateboss.png", "dessous_neige.png", "fond_pierre.png",
+			"fond_pierre_haut.png", "fond_pierre_haut2.png", "audio.png",
 			"fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png", "pierre_terre.png",
 			"grille70.png", "grille200.png","grille140.png", "grille200H.png",
-			"htmltiles.jpg", "pause.png", "play.png", "mort.png", "bullet.png", "fraise.png",
+			"htmltiles.jpg", "mort.png", "bullet.png", "fraise.png",
 			"plateforme.png", "plateforme2.png", "cabine.png", "prof.png", "tetedemort.png",
-			"bouletr.png", "pastequeSP.png", "boule.png", "Autruche.jpg", "cage.png", "ennemi.png",
+			"pastequeSP.png", "boule.png", "autruche.jpg", "cage.png", "ennemi.png",
 			
-			"lvl1.mp3", "lvl2.mp3", "sprite.json",
-			"rire.mp3","dessous_neige.png","creature.mp3", "boss.mp3",,"bienvenue.mp3","pop.mp3",
+			"sprite.json",
+			
+			"Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "Lvl5.tmx", "men.tmx",
+			
+			"lvl1.mp3", "lvl2.mp3", 
+			"rire.mp3", "creature.mp3", "boss.mp3",,"bienvenue.mp3","pop.mp3",
 			"canon.mp3", "saut.mp3","fin.mp3","tut.mp3",
 			
 			]
+			
 		, function() {
 			Q.sheet("tiles","tiles_map.png", {tilew: 70, tileh: 70});  
 			Q.sheet("tilesmenu","htmltiles.jpg", {tilew: 70, tileh: 70}); 
-			Q.compileSheets("pastequeSP.png","sprite.json");
-			//Q.sheet("pastequeSP","pastequeSP.png", { "tilew": 201, "tileh": 300,"sx": 0,"sy": 0});  			
+			Q.compileSheets("pastequeSP.png","sprite.json");		
 			Q.stageScene("Debut");
 			
 		}, { 
