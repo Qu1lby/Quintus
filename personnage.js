@@ -10,6 +10,7 @@
 			this.p.sol = 0;
 			this.p.first = 1;
 			this.p.changeMusic = false;
+			this.p.tut3 = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -110,8 +111,17 @@
 				}
 			}
 			
+			if(this.p.x> 1850 && this.p.y>500 && !this.p.tut3){
+				Q.stageScene("tut3",2);
+			}
+			
+			
 		// Tutoriel
 		if(this.p.x >= 700 && this.p.x <= 800){
+			Q.stageScene('Blanc',2);
+		}
+		
+		if(this.p.x >= 1500 && this.p.x <= 1600){
 			Q.stageScene('Blanc',2);
 		}
         },

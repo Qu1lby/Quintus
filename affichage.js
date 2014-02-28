@@ -259,8 +259,6 @@
 			Q.audio.play("rire.mp3");
 		}
 		
-		music = false;
-		
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
                 x: wi/2,
