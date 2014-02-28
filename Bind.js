@@ -9,12 +9,12 @@
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
 			if (!echap){
 				if (!pause){
-					Q.stageScene('PauseAff',2);
+					Q.stageScene('PauseAff',3);
 					Q.stage().pause();
 					scene_prec = scene_courante;
 					scene_courante = "pause";
 				}else{
-					Q.stageScene('Blanc',2);
+					Q.stageScene('Blanc',3);
 					Q.stage().unpause();
 					scene_courante=scene_prec;
 					scene_prec = "pause";

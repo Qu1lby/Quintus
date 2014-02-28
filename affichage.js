@@ -322,7 +322,7 @@
 		if(music){
 			Q.audio.play("fin.mp3");
 		}	
-		music = false;
+
 				
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
