@@ -68,6 +68,7 @@
 	});﻿	
 		
 	var music = true;
+	
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){

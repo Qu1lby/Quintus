@@ -1,5 +1,7 @@
 Q.scene("tut1", function(stage) {
-		Q.audio.play("bienvenue.mp3");
+		if (music){
+			Q.audio.play("bienvenue.mp3");
+		}
 		
 		var Opacite = stage.insert(new Q.UI.Container({
         	fill: "rgb(0,0,0)",
@@ -56,7 +58,9 @@ Q.scene("tut1", function(stage) {
 							
 		msg.on("click",function() {
       		Q.stageScene('tut2',2);
-			Q.audio.play("tut.mp3");
+			if (music){
+				Q.audio.play("tut.mp3");
+			}
      	});	
 	});
 

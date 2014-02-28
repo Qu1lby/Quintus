@@ -68,6 +68,7 @@
 		men.on("click",function() {
 			Q.clearStages();
       		Q.stageScene('niveau');
+			Q.stageScene('Audio',4);
 			scene_courante = "niveau";
 			scene_prec = "menu";
      	});	
@@ -191,9 +192,11 @@
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
 				Q.stageScene('tut1',2);
+				Q.stageScene('Audio',4);
 				
-				Q.audio.play('lvl1.mp3',{ loop: true });
-				music = true;
+				if(music){
+					Q.audio.play('lvl1.mp3',{ loop: true });
+				}
 				
 				scene_courante = "lvl1";
 				scene_prec = "niveau";
@@ -203,8 +206,11 @@
 				Q.clearStages();
       			Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
-				Q.audio.play('lvl2.mp3',{ loop: true });
-				music = true;
+				Q.stageScene('Audio',4);
+				
+				if(music){
+					Q.audio.play('lvl2.mp3',{ loop: true });
+				}
 				
 				scene_courante = "lvl2";
 				scene_prec = "niveau";
@@ -214,6 +220,7 @@
 				Q.clearStages();
       			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
+				Q.stageScene('Audio',4);
 				
 				scene_courante = "lvl3";
 				scene_prec = "niveau";
@@ -223,6 +230,7 @@
 				Q.clearStages();
       			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
+				Q.stageScene('Audio',4);
 				
 				scene_courante = "lvl4";
 				scene_prec = "niveau";
@@ -297,6 +305,7 @@
 		msg.on("click",function() {
        		Q.clearStages();
    			Q.stageScene('niveau');
+			Q.stageScene('Audio',4);
 				
 			scene_prec = scene_courante
 			scene_courante = "niveau";
@@ -362,6 +371,7 @@
 		msg.on("click",function() {
        		Q.clearStages();
    			Q.stageScene('niveau');
+			Q.stageScene('Audio',4);
 			
 			Q.audio.stop();
 			music = false;
@@ -470,6 +480,7 @@
 		msg.on("click",function() {
        		Q.clearStages();
    			Q.stageScene('niveau');
+			Q.stageScene('Audio',4);
 			
 			Q.audio.stop();
 			music = false;
@@ -487,6 +498,41 @@
 	
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){
+	});
+	
+	Q.scene("Audio", function(stage) {
+ 	   var aud = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+ 	       asset: "audio.png",
+        	x: wi-20,
+        	y: 20,
+        	w: 29,
+        	h: 28
+   		}));
+			
+		aud.on("click",function() {
+		if (scene_courante != null && !pause && !music){	
+			if (scene_courante == "lvl1"){
+				Q.audio.play('lvl1.mp3',{ loop: true });
+				music = true;
+			}
+			
+			if (scene_courante == "lvl2"){
+				Q.audio.play('lvl2.mp3',{ loop: true });
+				music = true;
+			}
+			
+			if (scene_courante == "lvl3"){
+			}
+			
+			if (scene_courante == "lvl4"){
+			}
+			
+		}else{
+			Q.audio.stop(); 
+			music = false;
+		}
+		});
 	});
 	
 /*

@@ -106,7 +106,9 @@
             entity.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vy = -650;
-					Q.audio.play("saut.mp3");
+					if (music){
+						Q.audio.play("saut.mp3");
+					}
 					}
             });
         },
