@@ -394,7 +394,10 @@
 					if(pass == 0){
 					Q.stage().locate(this.p.x+70, this.p.y).destroy();
 					Q.stage().locate(this.p.x-70, this.p.y).destroy();
-					Q.audio.play("canon.mp3");
+					
+					if (music){
+						Q.audio.play("canon.mp3");
+					}
 					this.destroy();	
 
 				}

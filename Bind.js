@@ -23,7 +23,7 @@
 			}
 		}
 	});﻿	
-		
+		/*
 	Q.input.on("replay", function () {  
 		if (scene_courante != null && !pause){	
 			if (scene_courante == "lvl1"){
@@ -65,24 +65,50 @@
 				music = true;
 			}
 		}
-	});﻿	
+	});﻿	*/
 		
-	var music = true;
-	document.cookie = 'Musique=Oui; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+		
+	function lireCookie(nom) {
+      var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+		
+			var deb = c.split('=');
 	
-	/*<?php
-		setCookie('developpez','tutoriel sur les cookies / sessions',time()+24*3600);
-	?>*/
+			if (deb [0] == nom){
+				return deb[1];
+			}
+		}
+	return null;
+	}
+		
+	var music = lireCookie("Musique");
+	if (music == null){
+		document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+		music = true;
+	}
+	
+	if (music == "false"){
+		music = false;
+	}
+	
+	/*if (music == "true")'
+		music = true;
+	}*/
+	
 	
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
 				Q.audio.play('lvl1.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 				music = true;
 			}
 			
 			if (scene_courante == "lvl2"){
 				Q.audio.play('lvl2.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 				music = true;
 			}
 			
@@ -94,6 +120,7 @@
 			
 		}else{
 			Q.audio.stop(); 
+			document.cookie = 'Musique=false; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 			music = false;
 		}
 	});﻿	

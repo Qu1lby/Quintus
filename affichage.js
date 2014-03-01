@@ -338,7 +338,7 @@
 			
 		var mort = stage.insert(new Q.UI.Button({
 			fill: "transparent",
-			asset: "Autruche.jpg",
+			asset: "autruche.jpg",
         	x: wi/2,
         	y: hi-(hi/6)-175,
    		}));

@@ -138,3 +138,39 @@ Q.scene("tut3", function(stage) {
         }),Menu);					
 	});
 //-----------------------------------------------------------
+
+Q.scene("tut4", function(stage) {
+		var Menu = stage.insert(new Q.UI.Container({
+			fill: "rgb(255,255,255)",
+			x: wi/2,
+			y: hi/1.25,
+			border: 1,
+			w: wi/2,
+            h: 100
+		}));
+		
+			
+		var mort = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+			asset: "prof.png",
+        	x: wi-130,
+        	y: hi-160,
+   		}));
+		
+		
+		var tuto = stage.insert(new Q.UI.Text({ 
+            label: "Les choses sériseuses commencent ! Bonne chance !",
+            x: 0,
+            y: -15,
+			family : "comic sans ms",
+			size: 17
+        }),Menu);
+		
+		var tuto = stage.insert(new Q.UI.Text({ 
+            label: "Un conseil : Evites les balles",
+            x: 0,
+            y: 15,
+			family : "comic sans ms",
+			size: 15
+        }),Menu);					
+	});

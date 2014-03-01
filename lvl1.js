@@ -1,6 +1,7 @@
 // Setup level 1
 
-Q.scene("level1",function(stage) {		
+Q.scene("level1",function(stage) {	
+	
 	var background = new Q.TileLayer({
 		dataAsset: "Lvl1.tmx",
 		layerIndex: 0,

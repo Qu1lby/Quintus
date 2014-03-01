@@ -115,6 +115,10 @@
 				Q.stageScene("tut3",2);
 			}
 			
+			if(this.p.x> 100 && this.p.y>1700){
+				Q.stageScene("tut4",2);
+			}
+			
 			
 		// Tutoriel
 		if(this.p.x >= 700 && this.p.x <= 800){
@@ -122,6 +126,10 @@
 		}
 		
 		if(this.p.x >= 1500 && this.p.x <= 1600){
+			Q.stageScene('Blanc',2);
+		}
+		
+		if(this.p.x >= 700 && this.p.y >= 1700){
 			Q.stageScene('Blanc',2);
 		}
         },
