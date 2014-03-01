@@ -243,7 +243,7 @@
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"});
 				scene_courante = "GO";
-				scene_prec = "lvl2";
+				scene_prec = "lvl3";
                 
 			}
         },
@@ -258,7 +258,7 @@
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
-					scene_prec = "lvl2";
+					scene_prec = "lvl3";
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
@@ -355,7 +355,7 @@
 				Q.clearStages();
 				Q.stageScene("endGame",1, {label: "Game Over"});
 				scene_courante = "GO";
-				scene_prec = "lvl3";
+				scene_prec = "lvl2";
                 
 			}
         },
@@ -370,7 +370,7 @@
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
-					scene_prec = "lvl3";
+					scene_prec = "lvl2";
                 }
                 else {
                     var livesLabel = Q("UI.Text",1).first();

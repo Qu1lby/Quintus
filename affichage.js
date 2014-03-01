@@ -311,7 +311,7 @@
 				scene_courante = "lvl1";
 			}
 			
-			if (scene_courante == "lvl2"){
+			if (scene_prec == "lvl2"){
 				Q.clearStages();
    				Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
@@ -324,7 +324,7 @@
 				scene_courante = "lvl2";
 			}
 			
-			if (scene_courante == "lvl3"){
+			if (scene_prec == "lvl3"){
 				Q.clearStages();
     			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
@@ -333,7 +333,7 @@
 				scene_courante = "lvl3";
 			}
 			
-			if (scene_courante == "lvl4"){
+			if (scene_prec == "lvl4"){
 				Q.clearStages();
     			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
