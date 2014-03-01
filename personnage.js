@@ -85,21 +85,30 @@
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1)
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl1";
+                
 			}
 
 		// Détruit le personnage s'il tombe second niveau
 			if(this.p.y> 1100 && this.p.y<1200 && this.p.x>300){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1)
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl1";
+                
 			}
 		
 		// Détruit le personnage s'il tombe troisième niveau
 			if(this.p.y> 2000){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1)
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl1";
+                
 			}
 			
 		// Changement de la musique pour le boss
@@ -143,6 +152,9 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
+					scene_courante = "GO";
+					scene_prec = "lvl1";
+                
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
@@ -229,7 +241,10 @@
 			if(this.p.y>30*70){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1, {label: "Game Over"});
+				scene_courante = "GO";
+				scene_prec = "lvl2";
+                
 			}
         },
 
@@ -242,6 +257,9 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
+					scene_courante = "GO";
+					scene_prec = "lvl2";
+                
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
@@ -335,7 +353,10 @@
 			if(this.p.y>1800){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1, {label: "Game Over"});
+				scene_courante = "GO";
+				scene_prec = "lvl3";
+                
 			}
         },
 
@@ -348,6 +369,8 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
+					scene_courante = "GO";
+					scene_prec = "lvl3";
                 }
                 else {
                     var livesLabel = Q("UI.Text",1).first();
@@ -434,7 +457,10 @@
 			if(this.p.y>1645){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"})
+				Q.stageScene("endGame",1, {label: "Game Over"});
+				scene_courante = "GO";
+				scene_prec = "lvl4";
+           
 			}
 
         },
@@ -448,6 +474,9 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
+					scene_courante = "GO";
+					scene_prec = "lvl4";
+                
                 } else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
@@ -545,6 +574,9 @@
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
+					scene_courante = "GO";
+					scene_prec = "lvl5";
+                
                 } else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;

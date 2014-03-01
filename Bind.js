@@ -21,9 +21,56 @@
 				}
 				pause = !pause;
 			}
+		}/*else {
+		if (scene_courante == "GO"){	
+			if (scene_prec == "lvl1"){
+				Q.clearStages();
+   				Q.stageScene('level1');
+				Q.stageScene("gameStats",1);
+				Q.stageScene('tut1',2);
+				
+				if (music){
+				Q.audio.play('lvl1.mp3',{ loop: true });
+				}
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl1";
+			}
+			
+			if (scene_courante == "lvl2"){
+				Q.clearStages();
+   				Q.stageScene('level2');
+				Q.stageScene("gameStats",1);
+				
+				if (music){
+				Q.audio.play('lvl2.mp3',{ loop: true });
+				}
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl2";
+			}
+			
+			if (scene_courante == "lvl3"){
+				Q.clearStages();
+    			Q.stageScene('level3');
+				Q.stageScene("gameStats",1);
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl3";
+			}
+			
+			if (scene_courante == "lvl4"){
+				Q.clearStages();
+    			Q.stageScene('level4');
+				Q.stageScene("gameStats",1);
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl4";
+			}
 		}
-	});﻿	
-		/*
+		}*/
+	});﻿
+	/*
 	Q.input.on("replay", function () {  
 		if (scene_courante != null && !pause){	
 			if (scene_courante == "lvl1"){
@@ -92,10 +139,6 @@
 	if (music == "false"){
 		music = false;
 	}
-	
-	/*if (music == "true")'
-		music = true;
-	}*/
 	
 	
 	Q.input.on("musique", function () {  

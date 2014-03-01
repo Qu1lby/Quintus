@@ -296,11 +296,52 @@
         }),GameoV);
 		
 		msg.on("click",function() {
-       		Q.clearStages();
-   			Q.stageScene('niveau');
+       	if (scene_courante != null){	
+			if (scene_prec == "lvl1"){
+				Q.clearStages();
+   				Q.stageScene('level1');
+				Q.stageScene("gameStats",1);
+				Q.stageScene('tut1',2);
 				
-			scene_prec = scene_courante
-			scene_courante = "niveau";
+				if (music){
+				Q.audio.play('lvl1.mp3',{ loop: true });
+				}
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl1";
+			}
+			
+			if (scene_courante == "lvl2"){
+				Q.clearStages();
+   				Q.stageScene('level2');
+				Q.stageScene("gameStats",1);
+				
+				if (music){
+				Q.audio.play('lvl2.mp3',{ loop: true });
+				}
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl2";
+			}
+			
+			if (scene_courante == "lvl3"){
+				Q.clearStages();
+    			Q.stageScene('level3');
+				Q.stageScene("gameStats",1);
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl3";
+			}
+			
+			if (scene_courante == "lvl4"){
+				Q.clearStages();
+    			Q.stageScene('level4');
+				Q.stageScene("gameStats",1);
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl4";
+			}
+		}
 		});
 		
 	});
