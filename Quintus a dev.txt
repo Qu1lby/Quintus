@@ -10,7 +10,7 @@ Pas très dur a faire simplement le developpement du boss
 
 - Fraise graphique (retour de vacance pas le fichier)
 
-- Faire un contour rouge pour indiquer la perte de vie
+x Faire un contour rouge pour indiquer la perte de vie
 en plus du son.
 
 x Bind Espace quand on est sur le Game over pour relancer le 
