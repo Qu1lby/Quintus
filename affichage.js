@@ -93,7 +93,6 @@
         stage.insert(background);
 			
 		var Menu = stage.insert(new Q.UI.Container({
-		  //  fill: "rgb(252,183,64)",
 			fill: "rgb(248,156,69)",
             x: wi/2 - wi/10,
  			y: hi/2 +50,
@@ -106,7 +105,6 @@
         );
 			
 		var Menu2 = stage.insert(new Q.UI.Container({
-		    //fill: "rgb(255,255,130)",
             fill: "rgb(204,240,122)",
 			x: wi/2 + wi/10,
             y: hi/2 +50,
@@ -119,7 +117,6 @@
         );
 			
 		var Menu3 = stage.insert(new Q.UI.Container({
-		    //fill: "rgb(255,90,64)",
             fill: "rgb(204,240,122)",
 			x: wi/2 - wi/10,
             y: hi/2 +130,
@@ -132,7 +129,6 @@
         );
 			
 		var Menu4 = stage.insert(new Q.UI.Container({
-			//fill: "rgb(179,125,31)",
             fill: "rgb(248,156,69)",
 			x: wi/2 + wi/10,
             y: hi/2 + 130,
@@ -364,7 +360,6 @@
 			Q.audio.play("fin.mp3");
 		}	
 
-				
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
                 x: wi/2,
@@ -376,13 +371,6 @@
                 h: 150
                 })
             );
-			
-		var mort = stage.insert(new Q.UI.Button({
-			fill: "transparent",
-			asset: "autruche.jpg",
-        	x: wi/2,
-        	y: hi-(hi/6)-175,
-   		}));
 		
 		var msge = stage.insert(new Q.UI.Text({ 
                 label: "Victory",
@@ -414,7 +402,6 @@
 		});
 
 	});
-		
 		
 // Fenêtre des scores / vies
 	Q.scene("gameStats", function(stage) {
@@ -458,11 +445,13 @@
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
 				Q.audio.play('lvl1.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 				music = true;
 			}
 			
 			if (scene_courante == "lvl2"){
 				Q.audio.play('lvl2.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 				music = true;
 			}
 			
@@ -474,6 +463,7 @@
 			
 		}else{
 			Q.audio.stop(); 
+			document.cookie = 'Musique=false; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 			music = false;
 		}
 		});
@@ -521,7 +511,6 @@
 	
 // Touche echap
 	Q.scene("Echp", function(stage) {
-			
 		var Choix = stage.insert(new Q.UI.Container({
                 fill: "rgb(204,255,153)",
                 x: wi/2,
@@ -561,6 +550,83 @@
 			echap = !echap;
 		});
 	});
+	
+// Touche R
+	Q.scene("Repl", function(stage) {
+			
+		var Choix = stage.insert(new Q.UI.Container({
+                fill: "rgb(94,160,250)",
+                x: wi/2,
+                y: hi/2,
+                border: 1,
+                w: wi/3,
+                h: 150
+                })
+            );
+		
+		var lab = stage.insert(new Q.UI.Button({ 
+                label: "Recommencer le niveau ?",
+                x: 5,
+                y: -25
+        }),Choix);
+		
+		var msg = stage.insert(new Q.UI.Button({ 
+                label: "Oui",
+                x: -50,
+                y: 25,
+        }),Choix);
+		
+		var msg2 = stage.insert(new Q.UI.Button({ 
+                label: "Non",
+                x: 50,
+                y: 25
+        }),Choix);
+		
+		msg.on("click",function() {
+       		if (scene_courante != null && !pause){	
+			if (scene_courante == "lvl1"){
+				Q.clearStages();
+      			Q.stageScene('level1');
+				Q.stageScene("gameStats",1);
+				Q.stageScene('tut1',2);
+				
+				Q.audio.stop();
+				if(music){
+					Q.audio.play('lvl1.mp3',{ loop: true });
+				}
+				
+				scene_courante = "lvl1";
+				scene_prec = "niveau";
+			}
+			
+			if (scene_courante == "lvl2"){
+				Q.clearStages();
+      			Q.stageScene('level2');
+				Q.stageScene("gameStats",1);
+				
+				Q.audio.stop();
+				if(music){
+					Q.audio.play('lvl2.mp3',{ loop: true });
+				}
+				
+				scene_courante = "lvl2";
+				scene_prec = "niveau";
+			}
+			
+			if (scene_courante == "lvl3"){
+			
+			}
+			
+			if (scene_courante == "lvl4"){
+			
+			}
+		}
+		});
+		
+		msg2.on("click",function() {
+       		Q.stageScene('Blanc',2);	
+		});
+	});	
 	
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){

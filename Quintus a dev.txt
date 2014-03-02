@@ -16,7 +16,7 @@ en plus du son.
 x Bind Espace quand on est sur le Game over pour relancer le 
 niveau sans avoir besoin d'aller chercher la souris.
 
-- Replay indiquer msg oui non avant de relancer le niveau
+x Replay indiquer msg oui non avant de relancer le niveau
 
 - Calcul des scores fin de niveau
 
@@ -29,6 +29,7 @@ niveau sans avoir besoin d'aller chercher la souris.
 - Gestion des cookies. 
 (J'ai deja commencé a voir comment ca marchait si questions)
 
+- Image explicative des binds et case pour le menu infos (K)
 
 Lvl 1 :
  - Inclure le boss

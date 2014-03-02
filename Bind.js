@@ -1,9 +1,27 @@
 // Raccourcis clavier du jeu
 
+	function lireCookie(nom) {
+      var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+		
+			var deb = c.split('=');
+	
+			if (deb [0] == nom){
+				return deb[1];
+			}
+		}
+	return null;
+	}
+
+// Initialisation des variables
 	var scene_courante = null;
 	var scene_prec = null;
 	var pause = false;
+	var echap = false;
 
+// Pause 'P'
 	Q.input.on("pause", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
@@ -22,7 +40,7 @@
 				pause = !pause;
 			}
 		}
-		
+
 		if (scene_courante == "GO"){	
 			if (scene_prec == "lvl1"){
 				Q.clearStages();
@@ -70,77 +88,25 @@
 			}
 		}
 	});﻿
-	/*
-	Q.input.on("replay", function () {  
-		if (scene_courante != null && !pause){	
-			if (scene_courante == "lvl1"){
-				Q.clearStages();
-				
-				Q.audio.stop('lvl1.mp3');
-				music = false;
-				
-   				Q.stageScene('level1');
-				Q.stageScene("gameStats",1);
-				Q.stageScene('tut1',2);
-				Q.audio.play('lvl1.mp3',{ loop: true });
-				music = true;
-			}
-			
-			if (scene_courante == "lvl2"){
-				Q.clearStages();
-				
-				Q.audio.stop('lvl2.mp3');
-				music = false;
-				
-   				Q.stageScene('level2');
-				Q.stageScene("gameStats",1);
-				Q.audio.play('lvl2.mp3',{ loop: true });
-				music = true;
-			}
-			
-			if (scene_courante == "lvl3"){
-				Q.clearStages();
-    			Q.stageScene('level3');
-				Q.stageScene("gameStats",1);
-				music = true;
-			}
-			
-			if (scene_courante == "lvl4"){
-				Q.clearStages();
-    			Q.stageScene('level4');
-				Q.stageScene("gameStats",1);
-				music = true;
-			}
-		}
-	});﻿	*/
-		
-		
-	function lireCookie(nom) {
-      var nameEQ = name + "=";
-		var ca = document.cookie.split(';');
-		for(var i=0;i < ca.length;i++) {
-			var c = ca[i];
-		
-			var deb = c.split('=');
 	
-			if (deb [0] == nom){
-				return deb[1];
-			}
-		}
-	return null;
-	}
+// Replay 'R'
+	Q.input.on("replay", function () {  
+		Q.stageScene('Repl',2);
+	});﻿	
 		
+
+// Cookie Musique 		
 	var music = lireCookie("Musique");
 	if (music == null){
 		document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 		music = true;
 	}
-	
+
 	if (music == "false"){
 		music = false;
 	}
 	
-	
+// Musique 'M'
 	Q.input.on("musique", function () {  
 		if (scene_courante != null && !pause && !music){	
 			if (scene_courante == "lvl1"){
@@ -168,7 +134,7 @@
 		}
 	});﻿	
 		
-	var echap = false
+// Echap
 	Q.input.on("echap", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
