@@ -1,7 +1,7 @@
 - Personnage appui droite gauche simultané :
 Problème d'image.
 
-- Continuer developpement du boss.
+- Continuer developpement des boss.
 
 - Essaier de mettre en place le lvl 5.
 Pas très dur a faire simplement le developpement du boss
@@ -13,8 +13,8 @@ Pas très dur a faire simplement le developpement du boss
 - Faire un contour rouge pour indiquer la perte de vie
 en plus du son.
 
-- Bind Espace quand on est sur le Game over pour relancer le 
-niveau sans avoir besoin d'aller chercher la souris
+x Bind Espace quand on est sur le Game over pour relancer le 
+niveau sans avoir besoin d'aller chercher la souris.
 
 - Replay indiquer msg oui non avant de relancer le niveau
 

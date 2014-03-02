@@ -21,7 +21,8 @@
 				}
 				pause = !pause;
 			}
-		}/*else {
+		}
+		
 		if (scene_courante == "GO"){	
 			if (scene_prec == "lvl1"){
 				Q.clearStages();
@@ -68,7 +69,6 @@
 				scene_courante = "lvl4";
 			}
 		}
-		}*/
 	});﻿
 	/*
 	Q.input.on("replay", function () {  

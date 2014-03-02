@@ -285,7 +285,7 @@
         }),GameoV);
         
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Try again",
+                label: "Espace",
                 color: "white",
 				border: 1,
                 shadow: 3,
@@ -565,35 +565,3 @@
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){
 	});
-	
-/*
-	Q.scene("Pau_bouton", function(stage) {
- 	   var Pause = stage.insert(new Q.UI.Button({
-			fill: "transparent",
- 	       asset: "pause.png",
-        	x: wi-20,
-        	y: 20,
-        	w: 29,
-        	h: 28
-   		}));
-			
-		Pause.on("click",function() {
-			Q.stage().pause(); 			
-		});
-	});
-			
-	Q.scene("Pla_bouton", function(stage) {
-	    var Play = stage.insert(new Q.UI.Button({
-			fill: "transparent",
-	        asset: "play.png",
-	        x: wi-20,
-	        y: 20,
-	        w: 32,
-	        h: 32
-   		}));
-			
-		Play.on("click",function() {
-			Q.stage().unpause() ; 
-		});
-	});           
-*/
