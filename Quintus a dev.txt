@@ -22,6 +22,14 @@ niveau sans avoir besoin d'aller chercher la souris
 
 - Musique bouton en haut a droite : Changer le cookie
 
+- Second menu principal avec le lvl5. -> readcookie
+
+- BDD meilleurs scores
+
+- Gestion des cookies. 
+(J'ai deja commencé a voir comment ca marchait si questions)
+
+
 Lvl 1 :
  - Inclure le boss
 
