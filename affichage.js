@@ -628,6 +628,18 @@
 		});
 	});	
 	
+// Degat
+	Q.scene("Degat", function(stage){
+		var pt = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+			asset: "degats.png",
+        	x: wi-(wi/2),
+        	y: hi-(hi/2),
+   		}));
+	});
+	
+	
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){
 	});
+	

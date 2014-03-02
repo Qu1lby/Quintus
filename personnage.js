@@ -146,6 +146,8 @@
         damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
+				Q.stageScene("Degat",4);
+				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
 				
                 if(this.p.lives == 0) {
@@ -248,12 +250,14 @@
 			}
         },
 
-        damage: function(){
+       damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
+				Q.stageScene("Degat",4);
+				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
-                    
-                if(this.p.lives == 0){
+				
+                if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
@@ -360,19 +364,21 @@
 			}
         },
 
-        damage: function(){
+       damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
+				Q.stageScene("Degat",4);
+				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
-                    
+				
                 if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
 					scene_prec = "lvl2";
-                }
-                else {
+                
+                }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
                 }
@@ -465,19 +471,21 @@
 
         },
 
-        damage: function(){
+       damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
+				Q.stageScene("Degat",4);
+				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
-                    
-                if(this.p.lives == 0){
+				
+                if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
 					scene_prec = "lvl4";
                 
-                } else{
+                }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
                 }
@@ -565,19 +573,21 @@
             }
         },
 
-        damage: function(){
+       damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
+				Q.stageScene("Degat",4);
+				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
-                    
-                if(this.p.lives == 0){
+				
+                if(this.p.lives == 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
 					scene_prec = "lvl5";
                 
-                } else{
+                }else{
                     var livesLabel = Q("UI.Text",1).first();
                     livesLabel.p.label = "Lives x "+this.p.lives;
                 }
