@@ -346,11 +346,11 @@
 	Q.scene("GoodGame",function(stage) {
 					
 		var background = new Q.TileLayer({
-		dataAsset: "men.tmx",
-		layerIndex: 0,
-		sheet: "tilesmenu",
-		tileW: 70, tileH: 70,
-		type: Q.SPRITE_NONE });
+			dataAsset: "men.tmx",
+			layerIndex: 0,
+			sheet: "tilesmenu",
+			tileW: 70, tileH: 70,
+			type: Q.SPRITE_NONE });
         
 		stage.insert(background);
 		
@@ -359,6 +359,13 @@
 		if(music){
 			Q.audio.play("fin.mp3");
 		}	
+		
+		var mort = stage.insert(new Q.UI.Button({
+			fill: "transparent",
+			asset: "prof.png",
+        	x: wi/2,
+        	y: hi-(hi/6)-200,
+   		}));
 
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
@@ -373,7 +380,7 @@
             );
 		
 		var msge = stage.insert(new Q.UI.Text({ 
-                label: "Victory",
+                label: "Bien joué !",
                 x: 0,
                 y: -30
         }),GameoV);
@@ -538,7 +545,6 @@
    			Q.stageScene('niveau');
 			
 			Q.audio.stop();
-			music = false;
 			
 			scene_prec = scene_courante
 			scene_courante = "niveau";
@@ -583,17 +589,19 @@
         }),Choix);
 		
 		msg.on("click",function() {
-       		if (scene_courante != null && !pause){	
+       		if (scene_courante != null && !pause){
+				replay = false;
 			if (scene_courante == "lvl1"){
 				Q.clearStages();
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
-				Q.stageScene('tut1',2);
 				
 				Q.audio.stop();
 				if(music){
 					Q.audio.play('lvl1.mp3',{ loop: true });
 				}
+				
+				Q.stageScene('tut1',2);
 				
 				scene_courante = "lvl1";
 				scene_prec = "niveau";
@@ -625,6 +633,7 @@
 		
 		msg2.on("click",function() {
        		Q.stageScene('Blanc',2);	
+			replay = false;
 		});
 	});	
 	

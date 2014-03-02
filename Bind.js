@@ -20,6 +20,7 @@
 	var scene_prec = null;
 	var pause = false;
 	var echap = false;
+	var replay = false;
 
 // Pause 'P'
 	Q.input.on("pause", function () {  
@@ -91,7 +92,12 @@
 	
 // Replay 'R'
 	Q.input.on("replay", function () {  
-		Q.stageScene('Repl',2);
+		if(!replay){
+			Q.stageScene('Repl',2);
+		}else{
+			Q.stageScene('Blanc',2);
+		}
+		replay = !replay;
 	});﻿	
 		
 
