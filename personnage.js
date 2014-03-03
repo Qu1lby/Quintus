@@ -4,8 +4,6 @@
 
 
 Q.animations('orangeSP', {
-        run_left: {frames: [0,1,2,3], next: 'run_left', rate: 1/3},
-		run_right: {frames: [0,1,2,3], next: 'run_right', rate: 1/3},
 		run: {frames:[0,1,2,3], rate: 1/3}
 });
 	
