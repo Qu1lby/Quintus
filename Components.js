@@ -174,7 +174,7 @@
 	});
 	
 	Q.animations('pastequeSP', {
-        run_left: {frames: [9,8,7,6,5,4,3,2,1,0,9,8,7,6,5,4,3,2,1,0], next: 'run_left', rate: 1/5},
+        run_left: {frames: [9,8,7,6,5,4,3,2,1,0,9,8,7,6,5,4,3,2,1,0], rate: 1/5},
 
     });
 	
@@ -192,7 +192,7 @@
 				this.on("bump.top, bump.right, bump.left",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vx = 150;
-					this.play("run_left");
+					//this.play("run_right");
 			}
             });
 		}
