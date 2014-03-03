@@ -37,4 +37,4 @@ Lvl 1 :
 Lvl1 2 :
  - Musique 'boss.mp3' quand le boss est tombé
  - Fond neige
- - Verifier pasteque marche bien
+ - Verifier pasteque sens roulade
