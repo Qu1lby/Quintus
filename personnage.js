@@ -88,7 +88,7 @@ Q.animations('orangeSP', {
             if(this.p.timeInvincible > 0){
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
-
+/*
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -118,7 +118,7 @@ Q.animations('orangeSP', {
 				scene_prec = "lvl1";
                 
 			}
-			
+*/			
 		// Changement de la musique pour le boss
 			if(this.p.y>= 1700 && !this.p.changeMusic){
 				if (music){

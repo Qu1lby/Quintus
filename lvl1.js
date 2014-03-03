@@ -108,12 +108,14 @@ Q.scene("level1",function(stage) {
 			["Sol_pierre2_T", {x: 1575 , y : 1855}],
 			
 			["Mal", {x: 1155 , y : 1925}],
-			["Mal", {x: 1225 , y : 1925}],
+			["Sol_jump", {x: 1225 , y : 1925}],
 			["Mal", {x: 1295 , y : 1925}],
-			["Mal", {x: 1365 , y : 1925}],
+			["Sol_jump", {x: 1365 , y : 1925}],
 			["Mal", {x: 1435 , y : 1925}],
-			["Mal", {x: 1505 , y : 1925}],
+			["Sol_jump", {x: 1505 , y : 1925}],
 			["Mal", {x: 1575 , y : 1925}],
+			
+			["DrawEnnemy", {x: 1505 , y : 1600, coox : 1575, cooy : 1050}],
 			
 			["Fin", {x: 1900 , y : 1785, asset: "banane.png"}],	
 			["Fin", {x: 1900 , y : 1785, asset: "cage.png"}],	
