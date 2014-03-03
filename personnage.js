@@ -2,10 +2,17 @@
 // step : à chaque instant
 // damage : à chaque dommage
 
+
+Q.animations('orangeSP', {
+        run_left: {frames: [0,1,2,3], next: 'run_left', rate: 1/3},
+		run_right: {frames: [0,1,2,3], next: 'run_right', rate: 1/3},
+		run: {frames:[0,1,2,3], rate: 1/3}
+});
+	
 	Q.Sprite.extend("Orange",{
         init: function(p){
-    	    this._super(p, {asset: "orange.png", x: 200, y: 100, jumpSpeed: -400, lives: 2});
-    	    this.add("2d, platformerControls"); 
+    	    this._super(p, {x: 200, y: 100, jumpSpeed: -400, lives: 2, sheet: "orange", sprite: "orangeSP",});
+    	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
@@ -18,6 +25,7 @@
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
 			this.on("bump.bottom",this,"stomp");
+			this.play("run");
 			},
 
 		stomp: function(collision) {

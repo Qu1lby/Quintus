@@ -181,7 +181,7 @@
 	// Piege de la boule qui roule et qui n'amasse pas mousse
 	Q.Sprite.extend("pastequeSP", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 1, defaultDirection: "left", sheet: "pasteque", sprite: "pastequeSP",});
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 1, defaultDirection: "left", sheet: "pasteque", sprite: "pastequeSP"});
             this.add("2d, madBounce, animation");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;

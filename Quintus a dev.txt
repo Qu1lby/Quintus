@@ -20,7 +20,7 @@ x Replay indiquer msg oui non avant de relancer le niveau
 
 - Calcul des scores fin de niveau
 
-- Musique bouton en haut a droite : Changer le cookie
+x Musique bouton en haut a droite : Changer le cookie
 
 - Second menu principal avec le lvl5. -> readcookie
 
