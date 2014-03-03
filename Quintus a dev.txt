@@ -1,32 +1,33 @@
 - Personnage appui droite gauche simultané :
 Problème d'image.
 
-- Continuer developpement des boss.
+- Continuer developpement des boss. Boss simple / boss simultanée 2 / boss qui bouge / Boss qui tire que sur le perso
 
 - Essaier de mettre en place le lvl 5.
-Pas très dur a faire simplement le developpement du boss
+Pas très dur a faire simplement le developpement du boss (ressemble au lvl 4)
 
-- Sprite anim des personnages. (banane -> Debut de semaine)
+- Sprite anim des personnages : Faire en sorte quand le personnage bouge et pas tout le temps
 
 - Fraise graphique (retour de vacance pas le fichier)
 
-x Faire un contour rouge pour indiquer la perte de vie
-en plus du son.
+- Sprite fraise/ ananas
+
+x Faire un contour rouge pour indiquer la perte de vie en plus du son.
 
 x Bind Espace quand on est sur le Game over pour relancer le 
 niveau sans avoir besoin d'aller chercher la souris.
 
 x Replay indiquer msg oui non avant de relancer le niveau
 
-- Calcul des scores fin de niveau
+- Calcul des scores fin de niveau ! nb cases + temps, reinitialiser à tous les endroits, cookie.
+
+- Affichage du menu niveau adequat selon point total du joueur.
 
 x Musique bouton en haut a droite : Changer le cookie
 
-- Second menu principal avec le lvl5. -> readcookie
-
 - BDD meilleurs scores
 
-- Gestion des cookies. 
+- Gestion des cookies scores sur le niveau. 
 (J'ai deja commencé a voir comment ca marchait si questions)
 
 - Image explicative des binds et case pour le menu infos (K)
