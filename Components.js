@@ -192,7 +192,6 @@
 				this.on("bump.top, bump.right, bump.left",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vx = 150;
-					//this.play("run_right");
 			}
             });
 		}
