@@ -57,18 +57,26 @@
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d, animation");
-			this.booleen = true;
+			this.frame_number = this.frame_count();
         },
+		
+		frame_count: function(){
+         var count = 0;
+         return function(){
+            return count += 1;
+         }
+      },
 
-		step: function(dt) {			
+		update: function(dt) {		
+	 
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
-
-					if(this.booleen == true){
+					
+					if(this.frame_number() % 10000 == 0){
 						balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 						Q.stage().insert(balle);
-						this.booleen = false;
+						frame_number() = 0;
 					}
 				}
             });
