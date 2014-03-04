@@ -10,7 +10,7 @@ Pas très dur a faire simplement le developpement du boss (ressemble au lvl 4)
 
 - Fraise graphique (retour de vacance pas le fichier)
 
-- Sprite fraise/ ananas
+- Sprite fraise/ ananas / tomate
 
 x Faire un contour rouge pour indiquer la perte de vie en plus du son.
 

@@ -584,10 +584,13 @@ Q.animations('orangeSP', {
 				Q.clearStages();
 				Q.stageScene("endGame",1);
 				scene_courante = "GO";
-				scene_prec = "lvl5";
-                
+				scene_prec = "lvl5";   
 			}
-        },
+			
+			if (this.p.y>800){
+				Q.stageScene("Blanc",2);
+			}
+		},
 
        damage: function(){
             if(!this.p.timeInvincible){

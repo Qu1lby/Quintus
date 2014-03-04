@@ -149,6 +149,18 @@
 			if (scene_courante == "lvl4"){
 			
 			}
+			
+			if (scene_courante == "lvl5"){
+				Q.clearStages();
+      			Q.stageScene('level5');
+				Q.stageScene("gameStats",1);
+				Q.stageScene("tuto5",2);
+				
+				
+				scene_courante = "lvl5";
+				scene_prec = "niveau";
+			}
+			
 		}
 		});
 		

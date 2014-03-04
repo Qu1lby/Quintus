@@ -21,6 +21,9 @@
 	var pause = false;
 	var echap = false;
 	var replay = false;
+	
+// Scores
+	include('score.js');
 
 // Pause 'P'
 	Q.input.on("pause", function () {  
@@ -93,6 +96,7 @@
 				Q.clearStages();
     			Q.stageScene('level5');
 				Q.stageScene("gameStats",1);
+				Q.stageScene("tuto5",2);
 				
 				scene_prec = 'GO';
 				scene_courante = "lvl5";
