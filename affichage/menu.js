@@ -53,7 +53,7 @@
 		var sco = stage.insert(new Q.UI.Button({ 
         	label: "Scores", x: 0, y: 0 }),Menu2);
 				
-		var cred = stage.insert(new Q.UI.Button({ 
+		var inf = stage.insert(new Q.UI.Button({ 
         	label: "Infos", x: 0, y: 0 }),Menu3);
 							
 		men.on("click",function() {
@@ -63,16 +63,14 @@
 			scene_prec = "menu";
      	});	
 		
-		cred.on("click",function() {
-			Q.clearStages();
-      		Q.stageScene('level5');
-			Q.stageScene("gameStats",1);
+		inf.on("click",function() {
+			
      	});	
 	});
 		
 		
 //  Choix du niveau (1) ----------------------------------------------
-	Q.scene("niveau2", function(stage) {
+	Q.scene("niveau", function(stage) {
 			
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
@@ -228,7 +226,7 @@
 		});
 	
 //  Choix du niveau (2) ----------------------------------------------
-	Q.scene("niveau", function(stage) {
+	Q.scene("niveau2", function(stage) {
 			
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
@@ -300,12 +298,12 @@
         );
 		
 		var Menu6 = stage.insert(new Q.UI.Container({
-			fill: "rgb(255,64,64)",
+			fill: "rgb(255,148,112)",
             x: wi/2,
             y: hi/2 +60,
             border: 1,
             shadow: 3,
-            shadowColor: "rgb(160,160,160)",
+            shadowColor: "rgb(255,64,64)",
             w: wi/6.5,
             h: 50
 		    })
@@ -404,6 +402,7 @@
 				Q.clearStages();
       			Q.stageScene('level5');
 				Q.stageScene("gameStats",1);
+				Q.stageScene("tuto5",2);
 				
 				scene_courante = "lvl5";
 				scene_prec = "niveau";
