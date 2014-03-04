@@ -577,6 +577,16 @@ Q.animations('orangeSP', {
             if(this.p.timeInvincible > 0){
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
+			
+			// Détruit le personnage s'il tombe premier niveau
+			if(this.p.y> 1500){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl5";
+                
+			}
         },
 
        damage: function(){

@@ -3,7 +3,8 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) ||  (collision.obj.isA("Ananas"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) ||  (collision.obj.isA("Ananas"))
+				|| (collision.obj.isA("Tomate"))) {  
                   	if (collision.obj.first == 1){
 						collision.obj.first = 0 ;
 						collision.obj.sol = this;
@@ -32,7 +33,8 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Fraise")) || (collision.obj.isA("Ananas"))
+					|| (collision.obj.isA("Tomate"))){  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
 						if (collision.obj.sol.variable == 0){
@@ -104,7 +106,8 @@
     	added: function() {
         	var entity = this.entity;				
             entity.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))
+				|| (collision.obj.isA("Tomate"))) {  
 					collision.obj.p.vy = -650;
 					if (music){
 						Q.audio.play("saut.mp3");
@@ -222,6 +225,14 @@
 	Q.Sprite.extend("Sol_2n", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "neige.png"});
+			this.variable = 2;
+			this.add("2d2, cube");
+        }
+    });
+	
+		Q.Sprite.extend("Sol_2", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
 			this.variable = 2;
 			this.add("2d2, cube");
         }

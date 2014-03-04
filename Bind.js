@@ -25,7 +25,8 @@
 // Pause 'P'
 	Q.input.on("pause", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
-		    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
+		    scene_courante == "lvl3" || scene_courante == "lvl4" || 
+			|| scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!echap){
 				if (!pause){
 					Q.stageScene('PauseAff',3);
@@ -79,13 +80,22 @@
 				scene_courante = "lvl3";
 			}
 			
-			if (scene_pred == "lvl4"){
+			if (scene_prec == "lvl4"){
 				Q.clearStages();
     			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
 				
 				scene_prec = 'GO';
 				scene_courante = "lvl4";
+			}
+			
+			if (scene_prec == "lvl5"){
+				Q.clearStages();
+    			Q.stageScene('level5');
+				Q.stageScene("gameStats",1);
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl5";
 			}
 		}
 	});﻿
@@ -133,6 +143,9 @@
 			if (scene_courante == "lvl4"){
 			}
 			
+			if (scene_courante == "lvl5"){
+			}
+			
 		}else{
 			Q.audio.stop(); 
 			document.cookie = 'Musique=false; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -143,7 +156,8 @@
 // Echap
 	Q.input.on("echap", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
-		    scene_courante == "lvl3" || scene_courante == "lvl4" || scene_courante == "pause" ){
+		    scene_courante == "lvl3" || scene_courante == "lvl4" || 
+			|| scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!pause){
 				if (!echap){
 					Q.stageScene('Echp',2);

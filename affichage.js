@@ -60,6 +60,9 @@ include ('affichage/touche.js');
 			if (scene_courante == "lvl4"){
 			}
 			
+			if (scene_courante == "lvl5"){
+			}
+			
 		}else{
 			Q.audio.stop(); 
 			document.cookie = 'Musique=false; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';

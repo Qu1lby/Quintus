@@ -72,7 +72,7 @@
 		
 		
 //  Choix du niveau (1) ----------------------------------------------
-	Q.scene("niveau", function(stage) {
+	Q.scene("niveau2", function(stage) {
 			
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
@@ -228,7 +228,7 @@
 		});
 	
 //  Choix du niveau (2) ----------------------------------------------
-	Q.scene("niveau2", function(stage) {
+	Q.scene("niveau", function(stage) {
 			
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",

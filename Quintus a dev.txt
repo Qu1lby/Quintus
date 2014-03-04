@@ -33,7 +33,7 @@ x Musique bouton en haut a droite : Changer le cookie
 - Image explicative des binds et case pour le menu infos (K)
 
 Lvl 1 :
- - Inclure le boss
+ X Inclure le boss
 
 Lvl1 2 :
  X Musique 'boss.mp3' quand le boss est tombé
