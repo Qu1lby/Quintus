@@ -66,20 +66,23 @@
             return count += 1;
          }
       },
+	  
 
 		update: function(dt) {		
-	 
-            this.on("bump.top",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
-				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
-					
-					if(this.frame_number() % 10000 == 0){
+				if(this.p.y != 720){
+					if(this.frame_number() % 50 == 0){
 						balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 						Q.stage().insert(balle);
 						frame_number() = 0;
 					}
+					}
+			this.on("bump.top,bump.bottom,bump.right", function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+					this.destroy();
+					//Q.stage().locate(this.coox,this.cooy).destroy();
 				}
-            });
+            });	
 		}
     });
 	
