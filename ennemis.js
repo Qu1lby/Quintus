@@ -53,7 +53,7 @@
 	//Comportement des ennemmies qui tirent
 	Q.Sprite.extend("DrawEnnemy", {
         init: function(p) {
-            this._super(p,  {gravity : 1, asset : "ennemi.png"});
+            this._super(p,  {gravity : 2, asset : "ennemi.png"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d, animation");
@@ -80,7 +80,8 @@
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					this.destroy();
-					//Q.stage().locate(this.coox,this.cooy).destroy();
+					Q.stage().locate(1505, 1155).destroy();
+					Q.stage().locate(1505, 1225).destroy();
 				}
             });	
 		}
