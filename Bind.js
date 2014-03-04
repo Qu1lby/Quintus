@@ -26,7 +26,7 @@
 	Q.input.on("pause", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || 
-			|| scene_courante == "lvl5" || scene_courante == "pause" ){
+			scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!echap){
 				if (!pause){
 					Q.stageScene('PauseAff',3);
@@ -157,7 +157,7 @@
 	Q.input.on("echap", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || 
-			|| scene_courante == "lvl5" || scene_courante == "pause" ){
+			scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!pause){
 				if (!echap){
 					Q.stageScene('Echp',2);
