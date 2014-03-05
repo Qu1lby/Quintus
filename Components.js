@@ -254,6 +254,15 @@
         }
     });
 	
+			Q.Sprite.extend("Sol_fin", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
+			this.variable = 10;
+			this.add("2d2, cube");
+        }
+    });
+	
+	
 	Q.Sprite.extend("Sol_2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
