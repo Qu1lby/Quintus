@@ -149,6 +149,7 @@ Q.animations('orangeSP', {
 		if(this.p.x >= 700 && this.p.y >= 1700 && !this.p.tut4){
 			Q.stageScene('Blanc',2);
 			this.p.tut4 = true;
+			Q.stage().locate(1505,1700).destroy();
 		}
         },
 		
