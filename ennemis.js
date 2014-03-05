@@ -64,7 +64,7 @@
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
 			this.frame_number = this.frame_number+1;
-				if(this.frame_number == 1000000){
+				if(this.frame_number == 100000){
 					var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 					Q.stage().insert(balle);
 					this.frame_number = 0;
