@@ -68,14 +68,18 @@
       },
 	  
 
-		/*update: function(dt) {		
-				if(this.p.y != 720){
-					if(this.frame_number % 50 == 0){
-						balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
-						Q.stage().insert(balle);
-						this.frame_number = 0;
+		step: function(dt) {	
+		this.on("hit.sprite",function(collision) {
+			if(collision.obj.isA("Sol_fin")){
+				alert("lol");
+				if(this.frame_number % 50 == 0){
+					balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
+					Q.stage().insert(balle);
+					this.frame_number = 0;
 					}
-					}
+				}	
+			});				
+
 			this.on("bump.top,bump.bottom,bump.right", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
@@ -84,7 +88,8 @@
 					Q.stage().locate(1505, 1225).destroy();
 				}
             });	
-		}*/
+		},
+
     });
 	
 //Comportement for common enemy behaviors
