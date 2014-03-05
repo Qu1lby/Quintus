@@ -45,6 +45,23 @@
             });
         },
 	});
+	
+// Cube du boss
+	Q.component("CubeBoss", {
+    	added: function() {
+        	var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if(collision.obj.isA("Grenade")){  
+					if (this != collision.obj.sol){             
+                    	this.variable = this.variable - 1;						
+						if (collision.obj.sol.variable == 0){
+							collision.obj.sol.destroy();
+						}
+					collision.obj.sol = this;
+				}}
+            });
+        },
+	});
 		
 	
 	// Destruction quand les cubes sont détruits par le bas
@@ -63,8 +80,7 @@
             });
         },
 	});
-	
-		
+
 	
 // Case qui fait mal au personnage
 	Q.component("CaseMal", {
@@ -220,6 +236,14 @@
 			this.variable = 0;
 			this.add("2d2, AutoCube");
         }
+    });	
+
+	Q.Sprite.extend("Sol_1Boss", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
+			this.variable = 1;
+			this.add("2d2, AutoCube");
+        }
     });		
 		
 	Q.Sprite.extend("Sol_2n", {
@@ -230,11 +254,19 @@
         }
     });
 	
-		Q.Sprite.extend("Sol_2", {
+	Q.Sprite.extend("Sol_2", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
 			this.variable = 2;
-			this.add("2d2, cube");
+			this.add("2d2, AutoCube");
+        }
+    });
+	
+	Q.Sprite.extend("Sol_2Boss", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
+			this.variable = 2;
+			this.add("2d2, CubeBoss");
         }
     });
 		
@@ -465,7 +497,7 @@
         }
     });	
 	
-	// Bullet
+// Bullet des boss
 	Q.Sprite.extend("Bullet", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
@@ -496,5 +528,14 @@
     }
     });
 	
-	
- 
+// Boss Final
+	Q.Sprite.extend("Grenade", {
+    	init: function(p) {
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
+            this.add("2d, aiBounce");
+            this.p.initialY = this.p.y;
+			this.p.initialX = this.p.x;
+			this.on('step',this,'countdown');
+        },
+     
+    });
