@@ -61,6 +61,9 @@ include ('affichage/touche.js');
 			}
 			
 			if (scene_courante == "lvl5"){
+				Q.audio.play('lvl5.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+				music = true;
 			}
 			
 		}else{

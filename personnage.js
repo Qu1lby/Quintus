@@ -9,7 +9,7 @@ Q.animations('orangeSP', {
 	
 	Q.Sprite.extend("Orange",{
         init: function(p){
-    	    this._super(p, {x: 200, y: 100, jumpSpeed: -400, lives: 2, sheet: "orange", sprite: "orangeSP"});
+    	    this._super(p, {x: 200, y: 100, jumpSpeed: -450, lives: 2, sheet: "orange", sprite: "orangeSP"});
     	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
