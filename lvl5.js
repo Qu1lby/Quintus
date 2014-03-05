@@ -17,14 +17,14 @@ Q.scene("level5",function(stage) {
 		tileW: 70, tileH: 70,
 		type: Q.SPRITE_DEFAULT }));
             
-    var player = stage.insert(new Q.Orange());
+    var player = stage.insert(new Q.Tomate());
           
     var levelAssets = [
 		
 			["Sol_5", {x: 105 , y : 385, asset : "pierre_haut2.png"}],
 			["Sol_5", {x: 175 , y : 385, asset : "pierre_haut2.png"}],
+		
 		// Premier niveau
-			["Sol_pierre1_D", {x: 315 , y : 1015, asset : "pierre_haut2.png"}],
 			["Sol_2Boss", {x: 385 , y : 945}],
 			["Sol_2Boss", {x: 455 , y : 945}],
 			["Sol_2Boss", {x: 525 , y : 945}],
@@ -78,26 +78,27 @@ Q.scene("level5",function(stage) {
 			["Sol_3", {x: 1365 , y : 1225, asset : "fond_pierre.png"}],
 			
 		// Troisème niveau
-			["Sol_2", {x: 385 , y : 1225, asset : "fond_pierre.png"}],
-			["Mal", {x: 455 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 525 , y : 1225, asset : "fond_pierre.png"}],
-			["Mal", {x: 595 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 665 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 735 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 805 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 875 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 945 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 1015 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 1085 , y : 1225, asset : "fond_pierre.png"}],
-			["Mal", {x: 1155 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 1225 , y : 1225, asset : "fond_pierre.png"}],
-			["Mal", {x: 1295 , y : 1225, asset : "fond_pierre.png"}],
-			["Sol_2", {x: 1365 , y : 1225, asset : "fond_pierre.png"}],
-
+			["Sol_2", {x: 385 , y : 1295, asset : "fond_pierre.png"}],
+			["Mal", {x: 455 , y : 1295}],
+			["Sol_2", {x: 525 , y : 1295, asset : "fond_pierre.png"}],
+			["Mal", {x: 595 , y : 1295}],
+			["Sol_2", {x: 665 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 735 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 805 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 875 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 945 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 1015 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 1085 , y : 1295, asset : "fond_pierre.png"}],
+			["Mal", {x: 1155 , y : 1295}],
+			["Sol_2", {x: 1225 , y : 1295, asset : "fond_pierre.png"}],
+			["Mal", {x: 1295 , y : 1295}],
+			["Sol_2", {x: 1365 , y : 1295, asset : "fond_pierre.png"}],
 			
 			
 			["Sol_jump", {x: 315 , y : 1225}],
 			["Sol_jump", {x: 1435 , y : 1225}],
+			
+			
 
 			
 			

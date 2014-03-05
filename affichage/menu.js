@@ -402,7 +402,11 @@
 				Q.clearStages();
       			Q.stageScene('level5');
 				Q.stageScene("gameStats",1);
-				Q.stageScene("tuto5",2);
+				Q.stageScene("tut5",2);
+				
+				if(music){
+					Q.audio.play('lvl5.mp3');
+				}
 				
 				scene_courante = "lvl5";
 				scene_prec = "niveau";

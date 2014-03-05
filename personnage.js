@@ -510,12 +510,11 @@ Q.animations('bananeSP', {
 // ------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Tomate",{
         init: function(p){
-    	    this._super(p, {asset: "tomate.png", x: 200, y: 300, jumpSpeed: -400, lives: 2});
+    	    this._super(p, {asset: "tomate.png", x: 120, y: 300, jumpSpeed: -400, lives: 2});
     	    this.add("2d, platformerControls"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
-			this.p.changeMusic = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -586,7 +585,7 @@ Q.animations('bananeSP', {
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
 			
-			// Détruit le personnage s'il tombe premier niveau
+			// Détruit le personnage s'il tombe
 			if(this.p.y> 1500){
 				this.destroy();
 				Q.clearStages();
@@ -595,7 +594,8 @@ Q.animations('bananeSP', {
 				scene_prec = "lvl5";   
 			}
 			
-			if (this.p.y>800){
+			// Enlève le tuto
+			if (this.p.y>800 && this.p.y<850){
 				Q.stageScene("Blanc",2);
 			}
 		},
