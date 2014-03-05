@@ -71,9 +71,8 @@
 		step: function(dt) {	
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
-				alert("lol");
 				if(this.frame_number % 50 == 0){
-					balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
+					var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 					Q.stage().insert(balle);
 					this.frame_number = 0;
 					}
