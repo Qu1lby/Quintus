@@ -53,7 +53,7 @@
 	//Comportement des ennemmies qui tirent
 	Q.Sprite.extend("DrawEnnemy", {
         init: function(p) {
-            this._super(p,  {gravity : 2, asset : "ennemi.png"});
+            this._super(p,  {gravity : 1, asset : "ennemi.png"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.add("2d, animation");
@@ -68,12 +68,12 @@
       },
 	  
 
-		update: function(dt) {		
+		/*update: function(dt) {		
 				if(this.p.y != 720){
-					if(this.frame_number() % 50 == 0){
+					if(this.frame_number % 50 == 0){
 						balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 						Q.stage().insert(balle);
-						frame_number() = 0;
+						this.frame_number = 0;
 					}
 					}
 			this.on("bump.top,bump.bottom,bump.right", function(collision) {
@@ -84,7 +84,7 @@
 					Q.stage().locate(1505, 1225).destroy();
 				}
             });	
-		}
+		}*/
     });
 	
 //Comportement for common enemy behaviors

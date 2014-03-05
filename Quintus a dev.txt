@@ -1,9 +1,11 @@
 - Personnage appui droite gauche simultané :
 Problème d'image.
 
+- Game over good bloquer bind
+
 - Continuer developpement des boss. Boss simple / boss simultanée 2 / boss qui bouge / Boss qui tire que sur le perso
 
-- Essaier de mettre en place le lvl 5.
+~ Essaier de mettre en place le lvl 5.
 Pas très dur a faire simplement le developpement du boss (ressemble au lvl 4)
 
 - Sprite anim des personnages : Faire en sorte quand le personnage bouge et pas tout le temps
@@ -31,11 +33,3 @@ x Musique bouton en haut a droite : Changer le cookie
 (J'ai deja commencé a voir comment ca marchait si questions)
 
 - Image explicative des binds et case pour le menu infos (K)
-
-Lvl 1 :
- X Inclure le boss
-
-Lvl1 2 :
- X Musique 'boss.mp3' quand le boss est tombé
- X Fond neige
- X Verifier pasteque sens roulade

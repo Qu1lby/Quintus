@@ -9,13 +9,14 @@ Q.animations('orangeSP', {
 	
 	Q.Sprite.extend("Orange",{
         init: function(p){
-    	    this._super(p, {x: 200, y: 100, jumpSpeed: -400, lives: 2, sheet: "orange", sprite: "orangeSP",});
+    	    this._super(p, {x: 200, y: 100, jumpSpeed: -400, lives: 2, sheet: "orange", sprite: "orangeSP"});
     	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
 			this.p.changeMusic = false;
 			this.p.tut3 = false;
+			this.p.tut4 = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -130,22 +131,24 @@ Q.animations('orangeSP', {
 				Q.stageScene("tut3",2);
 			}
 			
-			if(this.p.x> 100 && this.p.y>1700){
+			if(this.p.x> 100 && this.p.y>1700 && !this.p.tut4){
 				Q.stageScene("tut4",2);
 			}
 			
 			
 		// Tutoriel
-		if(this.p.x >= 700 && this.p.x <= 800){
+		if(this.p.x >= 700 && this.p.x <= 730){
 			Q.stageScene('Blanc',2);
 		}
 		
-		if(this.p.x >= 1500 && this.p.x <= 1600){
+		if(this.p.x >= 1500 && this.p.x <= 1600 && this.p.y >500 && !this.p.tut3){
 			Q.stageScene('Blanc',2);
+			this.p.tut3 = true;
 		}
 		
-		if(this.p.x >= 700 && this.p.y >= 1700){
+		if(this.p.x >= 700 && this.p.y >= 1700 && !this.p.tut4){
 			Q.stageScene('Blanc',2);
+			this.p.tut4 = true;
 		}
         },
 		
@@ -280,10 +283,14 @@ Q.animations('orangeSP', {
 
 
 // ------------------------------------------------------------------------------------------------------------------
+Q.animations('bananeSP', {
+		run: {frames:[0,1,2,3], rate: 1/3}
+});
+
 	Q.Sprite.extend("Banane",{
         init: function(p){
-       		this._super(p, { asset: "banane.png", x: 1505, y: 1085, jumpSpeed: -530, lives: 3});
-        	this.add("2d, platformerControls"); 
+       		this._super(p, {sheet: "banane", sprite: "bananeSP", x: 1505, y: 1085, jumpSpeed: -530, lives: 3});
+        	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
@@ -295,6 +302,7 @@ Q.animations('orangeSP', {
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
 			this.on("bump.bottom",this,"stomp");
+			this.play("run");
         },
 
 		stomp: function(collision) {
