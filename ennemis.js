@@ -56,15 +56,23 @@
             this._super(p,  {gravity : 1, asset : "ennemi.png"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
+			this.tps = p.tps;
 			this.add("2d, animation");
 			this.frame_number = 0;
+			this.changemusic = false;
         },
       
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
+			if (music && !this.changemusic){
+				Q.audio.stop();
+				Q.audio.play("boss.mp3",{ loop: true });
+				this.changemusic = true;
+			}
+			
 			this.frame_number = this.frame_number+1;
-				if(this.frame_number == 100000){
+				if(this.frame_number == this.tps){
 					var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 					Q.stage().insert(balle);
 					this.frame_number = 0;
