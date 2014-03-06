@@ -509,7 +509,7 @@
 // Bullet des boss
 	Q.Sprite.extend("Bullet", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
@@ -521,6 +521,9 @@
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
  			collision.obj.damage();
+			if(music){
+				Q.audio.play("canon.mp3");
+			}
 			this.destroy();
 					}
 

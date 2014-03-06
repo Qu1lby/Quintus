@@ -1,5 +1,13 @@
 // Initialisation des variables
 
+var score_l1 = lireCookie("Lvl1");
+	if (score_l1 == null){
+		document.cookie = 'Lvl1=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+		score_l1 = "0";
+	}
+
+	score_l1 = parseInt(score_l1);
+
 var score_l2 = lireCookie("Lvl2");
 	if (score_l2 == null){
 		document.cookie = 'Lvl2=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';

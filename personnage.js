@@ -9,12 +9,11 @@ Q.animations('orangeSP', {
 	
 	Q.Sprite.extend("Orange",{
         init: function(p){
-    	    this._super(p, {x: 200, y: 100, jumpSpeed: -450, lives: 2, sheet: "orange", sprite: "orangeSP"});
+    	    this._super(p, {x: 200, y: 100, jumpSpeed: -400, lives: 2, sheet: "orange", sprite: "orangeSP"});
     	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
-			this.p.changeMusic = false;
 			this.p.tut3 = false;
 			this.p.tut4 = false;
 			
@@ -29,7 +28,7 @@ Q.animations('orangeSP', {
 
 		stomp: function(collision) {
 			if(collision.obj.isA("HorizontalPlatform")) {
-			// make the player stay on the platform
+			// make the player stay on the platform 
 				this.p.x = collision.obj.p.x; 
 			}
 				
@@ -39,6 +38,11 @@ Q.animations('orangeSP', {
 			}
 			
 			if(collision.obj.isA("Fin")){
+			
+				score_l1 = score_l1 + (2*this.p.secondeabs);
+				score_l1 = score_l1 + (100*this.p.minute);
+				document.cookie = 'Lvl1='+score_l1+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+			
 				Q.clearStages();
 				Q.stageScene("GoodGame",1, {label: "Victory"})
 			}
@@ -118,15 +122,6 @@ Q.animations('orangeSP', {
                 
 			}
 */			
-		// Changement de la musique pour le boss
-			if(this.p.y>= 1700 && !this.p.changeMusic){
-				if (music){
-					Q.audio.stop();
-					Q.audio.play("boss.mp3",{ loop: true });
-					this.p.changeMusic = true;
-				}
-			}
-			
 			if(this.p.x> 1850 && this.p.y>500 && !this.p.tut3){
 				Q.stageScene("tut3",2);
 			}

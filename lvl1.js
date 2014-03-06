@@ -115,7 +115,7 @@ Q.scene("level1",function(stage) {
 			["Sol_jump", {x: 1505 , y : 1925}],
 			["Mal", {x: 1575 , y : 1925}],
 			
-			["DrawEnnemy", {x: 1505 , y : 1600, coox : 1470, cooy : 1800, tps : 100000}],
+			["DrawEnnemy", {x: 1505 , y : 1600, coox : 1470, cooy : 1800, tps : 150000}],
 			["Sol_5", {x: 1505 , y : 1700}],
 			
 			["Fin", {x: 1900 , y : 1785, asset: "banane.png"}],	
