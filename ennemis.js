@@ -83,6 +83,10 @@
 			this.on("bump.top,bump.bottom,bump.right", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				   
+					if (music){
+						Q.audio.play("coup.mp3");
+					}
 					this.destroy();
 					Q.stage().locate(1505, 1155).destroy();
 					Q.stage().locate(1505, 1225).destroy();

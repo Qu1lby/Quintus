@@ -16,6 +16,7 @@ Q.animations('orangeSP', {
 			this.p.first = 1;
 			this.p.tut3 = false;
 			this.p.tut4 = false;
+			this.p.score = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -37,12 +38,12 @@ Q.animations('orangeSP', {
 				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
-			if(collision.obj.isA("Fin")){
-			
-				score_l1 = score_l1 + (2*this.p.secondeabs);
-				score_l1 = score_l1 + (100*this.p.minute);
-				document.cookie = 'Lvl1='+score_l1+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
-			
+			if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l1 = 0 + (2*this.p.secondeabs)+ (100*this.p.minute) ;
+					document.cookie = 'Lvl1='+score_l1+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					this.p.score = true;
+				
+				
 				Q.clearStages();
 				Q.stageScene("GoodGame",1, {label: "Victory"})
 			}
