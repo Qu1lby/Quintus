@@ -120,12 +120,12 @@
 			Q.audio.play("fin.mp3");
 		}	
 		
-		var mort = stage.insert(new Q.UI.Button({
+		/*var mort = stage.insert(new Q.UI.Button({
 			fill: "transparent",
 			asset: "prof.png",
         	x: wi/2,
         	y: hi-(hi/6)-200,
-   		}));
+   		}));*/
 
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
@@ -140,7 +140,7 @@
             );
 		
 		var msge = stage.insert(new Q.UI.Text({ 
-                label: "Bien joué !",
+                label: "Sc : "+score_l1,
                 x: 0,
                 y: -30
         }),GameoV);
