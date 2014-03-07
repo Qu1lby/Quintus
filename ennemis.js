@@ -58,26 +58,47 @@
 			this.cooy = p.cooy;
 			this.tps = p.tps;
 			this.add("2d, animation");
-			this.frame_number = 0;
 			this.changemusic = false;
-        },
+			this.init = true;
+			
+			this.p.seconde = 0; 
+			this.p.once = false;
+			},
       
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
-			if (music && !this.changemusic){
-				Q.audio.stop();
-				Q.audio.play("boss.mp3",{ loop: true });
-				this.changemusic = true;
+				if (music && !this.changemusic){
+					Q.audio.stop();
+					Q.audio.play("boss.mp3",{ loop: true });
+					this.changemusic = true;
+				}
+				if (this.init){
+					this.p.maintenant = new Date();
+					this.p.date_prec = this.p.maintenant;
+					this.init = false;
+				}
+			
+			var now = new Date();	
+			
+			if (now.getSeconds()>this.p.date_prec.getSeconds()){	
+					this.p.seconde++;
+					this.p.once = false;
+					
+			}else{
+				if (this.p.seconde == 60){
+					this.p.seconde = 0;
+				}
 			}
 			
-			this.frame_number = this.frame_number+1;
-				if(this.frame_number == this.tps){
-					var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
-					Q.stage().insert(balle);
-					this.frame_number = 0;
-					}
-				}	
+			this.p.date_prec = now;
+			
+			if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
+				var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
+				Q.stage().insert(balle);
+				this.p.once = true;
+				}
+			}		
 			});				
 
 			this.on("bump.top,bump.bottom,bump.right", function(collision) {
@@ -88,11 +109,14 @@
 						Q.audio.play("coup.mp3");
 					}
 					this.destroy();
-					Q.stage().locate(1505, 1155).destroy();
-					Q.stage().locate(1505, 1225).destroy();
+					
+					if (scene_courante == "lvl2"){
+						Q.stage().locate(1505, 1155).destroy();
+						Q.stage().locate(1505, 1225).destroy();
+					}
 				}
             });	
-		},
+		}
 
     });
 	
