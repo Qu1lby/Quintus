@@ -1,6 +1,6 @@
-// Initialise les deux type d'ennemis (sol et vol)
+// Initialise les types d'ennemis
 
-//Comportement for ground enemy behaviors
+// Comportement for ground enemy behaviors
 	Q.Sprite.extend("GroundEnemy", {
     	init: function(p) {
         	this._super(p, {vx: -100, defaultDirection: "left"});
@@ -32,7 +32,7 @@
         }
         });
         
-//Comportement for vertical enemy behaviors	
+// Comportement for vertical enemy behaviors	
 	Q.Sprite.extend("VerticalEnemy", {
     	init: function(p) {
        		this._super(p, {vy: -100, rangeY: 100, gravity: 0, asset: "fly.png" });
@@ -50,20 +50,22 @@
 		}
 	});
 	
-	//Comportement des ennemmies qui tirent
+// Comportement des ennemmies qui tirent
 	Q.Sprite.extend("DrawEnnemy", {
         init: function(p) {
             this._super(p,  {gravity : 1, asset : "ennemi.png"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
-			this.tps = p.tps;
-			this.add("2d, animation");
+			this.tps = p.tps; // A passer en param (seconde)
+
+			this.p.seconde = 0; 
 			this.changemusic = false;
 			this.init = true;
 			this.notdone = true;
-			this.p.seconde = 0; 
 			this.p.once = false;
 			this.sound = true;
+			
+			this.add("2d, animation");
 			},
       
 		step: function(dt) {
@@ -97,16 +99,28 @@
 			
 			this.p.date_prec = now;
 			
+			// Envoi une balle tous les 'this.tps' secondes
 			if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
+			
 				var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 				Q.stage().insert(balle);
 				this.p.once = true;
-					
+				
+			// Différents ajouts de complexité selon le niveau
 				if (scene_courante == "lvl2"){
 					this.p.vy = -500;
 					this.p.vx = -5;
-					}
 				}
+				
+				if (scene_courante == "lvl3"){
+					
+				}
+				
+				if (scene_courante == "lvl4"){
+					
+				}
+			}
+			
 			}		
 			});				
 
@@ -120,6 +134,7 @@
 					}
 					this.destroy();
 					
+				// Détruit les cases pour Pierrick
 					if ((scene_courante == "lvl2") && (this.notdone)){
 						Q.stage().locate(1505, 1155).destroy();
 						Q.stage().locate(1505, 1225).destroy();
@@ -131,42 +146,43 @@
 
     });
 	
-//Comportement for common enemy behaviors
+// Comportement for common enemy behaviors
 	Q.component("commonEnemy", {
     	added: function() {
         	var entity = this.entity;
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-           		if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || 
-				   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
-                	collision.obj.damage();
+           	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || 
+			   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {                   
+               	collision.obj.damage();
 					
-					if(music){
-						Q.audio.play('creature.mp3');
-					}
-                }
+				if(music){
+					Q.audio.play('creature.mp3');
+				}
+            }
         });
 				
         entity.on("bump.top",function(collision) {
-              	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) ||
-				   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
-                	collision.obj.p.vy = -100;
-                    this.destroy();
-                }
-            });
-        },        
+            if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) ||
+			   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
+				collision.obj.p.vy = -100;
+                this.destroy();
+            }
+        });
+        }        
     });
 	
-	//ennemie special
-		Q.component("SpecialEnemy", {
+// Ennemi special
+	Q.component("SpecialEnemy", {
     	added: function() {
         	var entity = this.entity;
             entity.on("bump.left,bump.right,bump.bottom",function(collision) {
-           		if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || 
-				   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
+			
+           	if((collision.obj.isA("Orange")) || (collision.obj.isA("Fraise")) || 
+			   (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas"))) {  
 					
-						projectile = new Q.HorizontalPlatform({ x: this.x, y: this.y, rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
-						Q.stage().insert(pasteque);
-                }
+				projectile = new Q.HorizontalPlatform({ x: this.x, y: this.y, rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
+				Q.stage().insert(pasteque);
+            }
         });
 				
         entity.on("bump.top",function(collision) {

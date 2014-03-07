@@ -25,7 +25,7 @@
 // Scores
 	include('score.js');
 
-// Pause 'P'
+// Pause 'espace'
 	Q.input.on("pause", function () {  
 		if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
 		    scene_courante == "lvl3" || scene_courante == "lvl4" || 

@@ -100,8 +100,8 @@ Q.scene("tut1", function(stage) {
 			size: 15
         }),Menu);					
 	});
+	
 //-----------------------------------------------------------
-
 Q.scene("tut3", function(stage) {
 		var Menu = stage.insert(new Q.UI.Container({
 			fill: "rgb(255,255,255)",
@@ -137,8 +137,8 @@ Q.scene("tut3", function(stage) {
 			size: 15
         }),Menu);					
 	});
+	
 //-----------------------------------------------------------
-
 Q.scene("tut4", function(stage) {
 		var Menu = stage.insert(new Q.UI.Container({
 			fill: "rgb(255,255,255)",
@@ -176,7 +176,6 @@ Q.scene("tut4", function(stage) {
 	});
 	
 //-----------------------------------------------------------
-
 Q.scene("tut5", function(stage) {
 		var Menu = stage.insert(new Q.UI.Container({
 			fill: "rgb(255,255,255)",

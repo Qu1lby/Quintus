@@ -27,6 +27,7 @@
             });
         },
 	});
+	
 		
 // Cubes qui s'autodetruisent apres nb passage d'un personnage
 	Q.component("AutoCube", {
@@ -45,6 +46,7 @@
             });
         },
 	});
+	
 	
 // Cube du boss
 	Q.component("CubeBoss", {
@@ -97,8 +99,7 @@
         },
 	});
 	
-
-		
+	
 // Cases qui détruisent autour d'eux
 		Q.component("AutoDestruc", {
     	added: function() {
@@ -133,8 +134,9 @@
         },
 	});
 	
-		
-// HorizontalPlatform ( probleme s'arrete quand percute le joueur)
+// -------------------------------SPRITES-------------------------------
+	
+// HorizontalPlatform 
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
@@ -173,7 +175,7 @@
 		}
 	});
 	
-	//VerticalPlatform
+//VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
 			// parametre {vx: , rangeX: }
@@ -195,10 +197,9 @@
 // ----------------------------------------------------------------------------------------
 	Q.animations('pastequeSP', {
         run_left: {frames: [9,8,7,6,5,4,3,2,1,0,9,8,7,6,5,4,3,2,1,0], rate: 1/5},
-
     });
 	
-	// Piege de la boule qui roule et qui n'amasse pas mousse
+// Piege de la boule qui roule et qui n'amasse pas mousse
 	Q.Sprite.extend("pastequeSP", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 1, defaultDirection: "left", sheet: "pasteque", sprite: "pastequeSP"});
@@ -208,19 +209,18 @@
 			this.play("run_left");
         },
         
-		  step: function(dt) {  	  		
-				this.on("bump.top, bump.right, bump.left",function(collision) {
-            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+		step: function(dt) {  	  		
+			this.on("bump.top, bump.right, bump.left",function(collision) {
+				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					collision.obj.p.vx = 150;
-			}
+				}
             });
 		}
 	});
 	
 
-	
 // Differents sprites de cubes...	
-// variable = nb fois que l'on peut marcher sur le cube
+// variable = nombre de fois que l'on peut marcher sur le cube
    
 	Q.Sprite.extend("Sol_pierre1_D", {
     	init: function(p) {
@@ -252,16 +252,7 @@
 			this.variable = 2;
 			this.add("2d2, cube");
         }
-    });
-	
-			Q.Sprite.extend("Sol_fin", {
-        init: function(p) {
-            this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
-			this.variable = 10;
-			this.add("2d2, cube");
-        }
-    });
-	
+    });	
 	
 	Q.Sprite.extend("Sol_2", {
         init: function(p) {
@@ -295,13 +286,13 @@
         }
     });
 	
-	Q.Sprite.extend("Sol_G5", {
+	/*Q.Sprite.extend("Sol_G5", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
 			this.variable = 5;
 			this.add("2d2, cube");
         }
-    });
+    });*/
 		
 	Q.Sprite.extend("Sol_pierre1_D", {
         init: function(p) {
@@ -432,12 +423,20 @@
         }
     });
 	
+	Q.Sprite.extend("Sol_fin", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
+			this.variable = 10;
+			this.add("2d2, cube");
+        }
+    });
+	
 // Case qui detruit les cases adjacentes
-		Q.Sprite.extend("casedestruc", {
+	Q.Sprite.extend("casedestruc", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
 			this.add("2d2");
-        },
+		},
 
 		step: function(dt) {
             this.on("bump.top", function(collision) {
@@ -498,7 +497,7 @@
         }
     });
 	
-		Q.Sprite.extend("Fin", {
+	Q.Sprite.extend("Fin", {
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
 			this.variable = 1;
