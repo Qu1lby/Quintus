@@ -107,7 +107,7 @@ Q.scene("level1",function(stage) {
 			["Sol_fin", {x: 1505 , y : 1855, asset : "pierre_terre.png"}],
 			["Sol_pierre2_T", {x: 1575 , y : 1855}],
 			
-			["Sol_5", {x: 1155 , y : 1925, asset : "fond_pierre.png"}],
+			["Mal", {x: 1155 , y : 1925}],
 			["Sol_jump", {x: 1225 , y : 1925}],
 			["Mal", {x: 1295 , y : 1925}],
 			["Sol_jump", {x: 1365 , y : 1925}],

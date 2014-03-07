@@ -19,7 +19,7 @@
 				["Sol_fin", {x: 1645 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1225, asset: "fond_pierre.png"}],		
 
-	//["Sol_5", {x: 1645 , y : 805}],							
+				["Sol_5", {x: 1645 , y : 805}],							
 
 				["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],		
 				["Sol_5", {x: 1505 , y : 1364, asset: "cage.png"}],				
@@ -78,8 +78,9 @@
 				["Sol_jump", {x: 1015 , y : 1365}],
 				
 				["Sol_pierre2_D", {x: 1785 , y : 1085}],
-				["Sol_pierre2_D", {x: 1855 , y : 1085}],
-				["Sol_pierre2_D", {x: 1925 , y : 1085}],
+				["Sol_pierre2_D", {x: 1855 , y : 1085, asset: "fond_pierre.png"}],
+				["Sol_pierre2_D", {x: 1855 , y : 1015}],
+				["Sol_pierre2_D", {x: 1925 , y : 1085, asset: "fond_pierre.png"}],
 				["Sol_pierre1_DB", {x: 1995 , y : 1085, asset: "dessous_neige.png"}],
 				["Sol_pierre2_D", {x: 2065 , y : 1085}],
 				
