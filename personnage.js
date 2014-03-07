@@ -3,9 +3,13 @@
 // damage : à chaque dommage
 
 
-Q.animations('orangeSP', {
-		run: {frames:[0,1,2,3], rate: 1/3}
-});
+	Q.animations('orangeSP', {
+		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
+		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
+		stand_left: { frames: [0]},
+		stand_right: { frames: [0]},
+		jump: { frames: [2], loop:false, rate: 1},
+	});
 	
 	Q.Sprite.extend("Orange",{
         init: function(p){
@@ -147,7 +151,19 @@ Q.animations('orangeSP', {
 			this.p.tut4 = true;
 			Q.stage().locate(1505,1700).destroy();
 		}
-        },
+		
+		if(Q.inputs['up']) {
+			this.play("jump",1);      // add priority to animation
+        } else if(this.p.vx < 0) {
+			this.p.flip="x";          // flip when going right
+			this.play("run_right");
+        } else if(this.p.vx > 0) {
+			this.p.flip="";           // no flip when going left
+			this.play("run_left");
+        } else {
+			this.play("stand_" + this.p.direction); // stand_left or stand_right
+        }
+    },
 		
         damage: function(){
             if(!this.p.timeInvincible){
@@ -280,11 +296,13 @@ Q.animations('orangeSP', {
 
 
 // ------------------------------------------------------------------------------------------------------------------
-Q.animations('bananeSP', {
-		run: {frames:[0,1,2,3], next: 'stand', rate: 1/3},
-		stand: { frames: [0]},
+	Q.animations('bananeSP', {
+		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
+		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
+		stand_left: { frames: [0]},
+		stand_right: { frames: [0]},
 		jump: { frames: [2], loop:false, rate: 1},
-});
+	});
 
 	Q.Sprite.extend("Banane",{
         init: function(p){
@@ -301,7 +319,7 @@ Q.animations('bananeSP', {
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
 			this.on("bump.bottom",this,"stomp");
-			this.play("run");
+			
         },
 
 		stomp: function(collision) {
@@ -376,16 +394,16 @@ Q.animations('bananeSP', {
                 
 			}
 			
-			 if(Q.inputs['up']) {
+	        if(Q.inputs['up']) {
           this.play("jump",1);      // add priority to animation
-        } else if(this.p.vx > 0) {
-          this.p.flip="x";          // flip when going right
-          this.play("run");
         } else if(this.p.vx < 0) {
+          this.p.flip="x";          // flip when going right
+          this.play("run_right");
+        } else if(this.p.vx > 0) {
           this.p.flip="";           // no flip when going left
-          this.play("run");
+          this.play("run_left");
         } else {
-          this.play("stand");
+          this.play("stand_" + this.p.direction); // stand_left or stand_right
         }
         },
 
