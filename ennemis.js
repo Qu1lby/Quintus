@@ -72,6 +72,9 @@
 				if (music && !this.changemusic){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
+						if (scene_courante == "lvl2"){
+							Q.audio.play("rire2.mp3");
+						}
 					this.changemusic = true;
 				}
 				if (this.init){
@@ -98,11 +101,16 @@
 				var balle = new Q.Bullet({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "bullet.png"});
 				Q.stage().insert(balle);
 				this.p.once = true;
+					
+				if (scene_courante == "lvl2"){
+					this.p.vy = -500;
+					this.p.vx = -5;
+					}
 				}
 			}		
 			});				
 
-			this.on("bump.top,bump.bottom,bump.right", function(collision) {
+			this.on("bump.top", function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				   
