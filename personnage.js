@@ -281,7 +281,9 @@ Q.animations('orangeSP', {
 
 // ------------------------------------------------------------------------------------------------------------------
 Q.animations('bananeSP', {
-		run: {frames:[0,1,2,3], rate: 1/3}
+		run: {frames:[0,1,2,3], next: 'stand', rate: 1/3},
+		stand: { frames: [0]},
+		jump: { frames: [2], loop:false, rate: 1},
 });
 
 	Q.Sprite.extend("Banane",{
@@ -373,6 +375,18 @@ Q.animations('bananeSP', {
 				scene_prec = "lvl2";
                 
 			}
+			
+			 if(Q.inputs['up']) {
+          this.play("jump",1);      // add priority to animation
+        } else if(this.p.vx > 0) {
+          this.p.flip="x";          // flip when going right
+          this.play("run");
+        } else if(this.p.vx < 0) {
+          this.p.flip="";           // no flip when going left
+          this.play("run");
+        } else {
+          this.play("stand");
+        }
         },
 
        damage: function(){
