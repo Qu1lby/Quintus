@@ -526,6 +526,9 @@
 						Q.audio.play("canon.mp3");
 					}
 					this.destroy();
+				}else{
+					if (!collision.obj.isA("DrawEnnemy")){
+						this.destroy();}
 				}
             });
 		},
@@ -535,9 +538,9 @@
 			if(this.p.seconds < 0) { 
 				this.destroy();
 			} else if(this.p.seconds < 1) {
-				this.set({ "fill-opacity": this.p.seconds });
-      }
-    }
+					this.set({ "fill-opacity": this.p.seconds });
+				}
+		}
     });
 	
 // Boss Final

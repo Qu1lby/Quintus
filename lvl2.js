@@ -8,7 +8,6 @@
             
             var player = stage.insert(new Q.Banane());
             
-            //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
 
 				["Sol_5", {x: 1295 , y : 1155}],

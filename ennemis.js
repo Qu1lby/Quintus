@@ -60,9 +60,10 @@
 			this.add("2d, animation");
 			this.changemusic = false;
 			this.init = true;
-			
+			this.notdone = true;
 			this.p.seconde = 0; 
 			this.p.once = false;
+			this.sound = true;
 			},
       
 		step: function(dt) {
@@ -105,15 +106,17 @@
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				   
-					if (music){
+					if ((music)&&(this.sound)){
 						Q.audio.play("coup.mp3");
+						this.sound = false;
 					}
 					this.destroy();
 					
-					/*if (scene_courante == "lvl2"){
+					if ((scene_courante == "lvl2") && (this.notdone)){
 						Q.stage().locate(1505, 1155).destroy();
 						Q.stage().locate(1505, 1225).destroy();
-					}*/
+						this.notdone = false;
+					}
 				}
             });	
 		}

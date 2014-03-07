@@ -119,13 +119,6 @@
 		if(music){
 			Q.audio.play("fin.mp3");
 		}	
-		
-		/*var mort = stage.insert(new Q.UI.Button({
-			fill: "transparent",
-			asset: "prof.png",
-        	x: wi/2,
-        	y: hi-(hi/6)-200,
-   		}));*/
 
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(225,225,225)",
@@ -161,7 +154,6 @@
    			Q.stageScene('niveau');
 			
 			Q.audio.stop();
-			music = false;
 			
 			scene_prec = scene_courante
 			scene_courante = "niveau";
