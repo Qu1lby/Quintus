@@ -110,10 +110,10 @@
 					}
 					this.destroy();
 					
-					if (scene_courante == "lvl2"){
+					/*if (scene_courante == "lvl2"){
 						Q.stage().locate(1505, 1155).destroy();
 						Q.stage().locate(1505, 1225).destroy();
-					}
+					}*/
 				}
             });	
 		}

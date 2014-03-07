@@ -14,13 +14,13 @@
 				["Sol_5", {x: 1295 , y : 1155}],
 				["Sol_5", {x: 1365 , y : 1155}],
 				["Sol_5", {x: 1435 , y : 1155}],
-				["DrawEnnemy", {x: 1645 , y : 735, coox : 1575, cooy : 1070, tps : 250000}],
+				["DrawEnnemy", {x: 1645 , y : 735, coox : 1615, cooy : 1085, tps : 5}],
 				["Sol_5", {x: 1505 , y : 1155}],
 				["Sol_5", {x: 1575 , y : 1155}],
 				["Sol_fin", {x: 1645 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1225, asset: "fond_pierre.png"}],		
 
-				["Sol_5", {x: 1645 , y : 805}],							
+			//	["Sol_5", {x: 1645 , y : 805}],							
 
 				["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],		
 				["Sol_5", {x: 1505 , y : 1364, asset: "cage.png"}],				

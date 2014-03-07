@@ -520,13 +520,13 @@
 			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
- 			collision.obj.damage();
-			if(music){
-				Q.audio.play("canon.mp3");
-			}
-			this.destroy();
+				   
+					collision.obj.damage();
+					if(music){
+						Q.audio.play("canon.mp3");
 					}
-
+					this.destroy();
+				}
             });
 		},
 		
