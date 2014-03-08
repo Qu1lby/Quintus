@@ -545,11 +545,36 @@
 // Boss Final
 	Q.Sprite.extend("Grenade", {
     	init: function(p) {
-       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "right" });
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
 			this.on('step',this,'countdown');
         },
-     
+        
+		  step: function(dt) {             
+			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
+				if((collision.obj.isA("Tomate"))) {
+				   
+					collision.obj.damage();
+					if(music){
+						Q.audio.play("canon.mp3");
+					}
+					this.destroy();
+				}else{				
+					if (!collision.obj.isA("DrawEnnemy")){
+						this.destroy();
+						}
+				}
+            });
+		},
+		
+		countdown: function(dt) {
+			this.p.seconds -= dt;
+			if(this.p.seconds < 0) { 
+				this.destroy();
+			} else if(this.p.seconds < 1) {
+					this.set({ "fill-opacity": this.p.seconds });
+				}
+		}
     });

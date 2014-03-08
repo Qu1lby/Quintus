@@ -194,3 +194,81 @@
             });
         },        
     });
+	
+	// Comportement du BOSS
+	Q.Sprite.extend("Boss", {
+        init: function(p) {
+            this._super(p,  {gravity : 1, asset : "tomateboss.png"});
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.tps = p.tps; // A passer en param (seconde)
+
+			this.p.seconde = 0; 
+			this.changemusic = false;
+			this.init = true;
+			this.notdone = true;
+			this.p.once = false;
+			this.sound = true;
+			
+			this.add("2d, animation");
+			},
+      
+step: function(dt) {
+		this.on("hit.sprite",function(collision) {
+			if(collision.obj.isA("Sol_fin")){
+				if (music && !this.changemusic){
+					Q.audio.stop();
+					Q.audio.play("boss.mp3",{ loop: true });
+						if (scene_courante == "lvl2"){
+							Q.audio.play("rire2.mp3");
+						}
+					this.changemusic = true;
+				}
+				if (this.init){
+					this.p.maintenant = new Date();
+					this.p.date_prec = this.p.maintenant;
+					this.init = false;
+				}
+			
+			var now = new Date();	
+			
+			if (now.getSeconds()>this.p.date_prec.getSeconds()){	
+					this.p.seconde++;
+					this.p.once = false;
+					
+			}else{
+				if (this.p.seconde == 60){
+					this.p.seconde = 0;
+				}
+			}
+			
+			this.p.date_prec = now;
+			
+			// Envoi une balle tous les 'this.tps' secondes
+				if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
+					var tmp1 = (Math.random() * (1505 - 385));
+					var tmp2 = (Math.random() * (1505 - 385));
+					var balle = new Q.Grenade({x: this.coox, y : this.cooy, vy : -700, vx: -100, rangeY : 550 , speed : 300, asset : "grenade.png"});
+					Q.stage().insert(balle);
+					this.p.once = true;
+					var balle2 = new Q.Grenade({x: tmp1, y : tmp2, vy : tmp1, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+					Q.stage().insert(balle2);
+				}
+			}		
+		});				
+
+			this.on("bump.top", function(collision) {
+            	if((collision.obj.isA("Tomate")) || (collision.obj.isA("Banane")) ||
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				   
+					if ((music)&&(this.sound)){
+						Q.audio.play("coup.mp3");
+						this.sound = false;
+					}
+					this.destroy();
+				}
+            });	
+		}
+
+    });
+	

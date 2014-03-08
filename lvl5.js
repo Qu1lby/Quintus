@@ -23,6 +23,7 @@ Q.scene("level5",function(stage) {
 		
 			["Sol_5", {x: 105 , y : 385, asset : "pierre_haut2.png"}],
 			["Sol_5", {x: 175 , y : 385, asset : "pierre_haut2.png"}],
+			
 		
 		// Premier niveau
 			["Sol_2Boss", {x: 385 , y : 945}],
@@ -37,9 +38,10 @@ Q.scene("level5",function(stage) {
 			["Sol_2Boss", {x: 1015 , y : 945}],
 			["Sol_2Boss", {x: 1085 , y : 945}],
 			["Sol_2Boss", {x: 1155 , y : 945}],
-			["Sol_2Boss", {x: 1225 , y : 945}],
-			["Sol_2Boss", {x: 1295 , y : 945}],
-			["Sol_2Boss", {x: 1365 , y : 945}],
+			["Sol_fin", {x: 1225 , y : 945}],
+			["Boss", {x: 1295 , y : 805, coox : 1205, cooy : 875, tps: 1}],
+			["Sol_fin", {x: 1295 , y : 945}],
+			["Sol_fin", {x: 1365 , y : 945}],
 			
 		// Second niveau
 			["Sol_1Boss", {x: 315 , y : 1155}],
