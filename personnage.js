@@ -305,7 +305,7 @@
 		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
 		stand_left: { frames: [0]},
 		stand_right: { frames: [0]},
-		jump: { frames: [2], loop:false, rate: 1},
+		jump: { frames: [4], loop:false, rate: 1},
 	});
 
 	Q.Sprite.extend("Banane",{
