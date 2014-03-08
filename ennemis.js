@@ -247,11 +247,10 @@ step: function(dt) {
 			// Envoi une balle tous les 'this.tps' secondes
 				if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
 					var tmp1 = (Math.random() * (1505 - 385));
-					var tmp2 = (Math.random() * (1505 - 385));
 					var balle = new Q.Grenade({x: this.coox, y : this.cooy, vy : -700, vx: -100, rangeY : 550 , speed : 300, asset : "grenade.png"});
 					Q.stage().insert(balle);
 					this.p.once = true;
-					var balle2 = new Q.Grenade({x: tmp1, y : tmp2, vy : tmp1, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+					var balle2 = new Q.Grenade({x: tmp1, y : 200, vy : tmp1, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
 					Q.stage().insert(balle2);
 				}
 			}		
