@@ -123,7 +123,7 @@
 		var GameoV = stage.insert(new Q.UI.Container({
                 fill: "rgb(250,232,95)",
                 x: wi/2 ,
-                y: hi/2 +150,
+                y: hi/2 +100,
                 border: 1,
                 shadow: 3,
                 shadowColor: "rgb(160,160,160)",
@@ -134,6 +134,14 @@
 		
 		if (scene_courante != null){	
 			if (scene_courante == "lvl1"){
+			
+					var msge3 = stage.insert(new Q.UI.Text({ 
+						label: "Niveau 1",
+						x: wi/2,
+						y: hi/2-50,
+						color: "rgb(168,86,45)",
+						size :40
+						}));
 							
 					var msge = stage.insert(new Q.UI.Text({ 
 						label: "Score : "+score_l1_tmp,
@@ -142,7 +150,8 @@
 						}),GameoV);		
 				
 				if (score_l1_tmp > score_l1){
-					document.cookie = 'Lvl1='+score_l1_tmp+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					var tmp = "Lvl1="+score_l1_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					document.cookie = tmp;
 					score_l1 = score_l1_tmp;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
@@ -162,7 +171,40 @@
 			}
 			
 			if (scene_prec == "lvl2"){
+				var msge3 = stage.insert(new Q.UI.Text({ 
+						label: "Niveau 2",
+						x: wi/2,
+						y: hi/2-50,
+						color: "rgb(168,86,45)",
+						size :40
+						}));
+							
+					var msge = stage.insert(new Q.UI.Text({ 
+						label: "Score : "+score_l2_tmp,
+						x: 0,
+						y: -50
+						}),GameoV);		
 				
+				if (score_l2_tmp > score_l2){
+					var tmp = "Lvl2="+score_l2_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					document.cookie = tmp;
+					
+					score_l2 = score_l2_tmp;
+					
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "BEST SCORE",
+						x: 0,
+						y: 0
+						}),GameoV);
+				}else{
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l2,
+						x: 0,
+						y: 0
+						}),GameoV);
+		
+				}
+		
 			}
 			
 			if (scene_prec == "lvl3"){
@@ -175,10 +217,10 @@
 		}
 
 		var msg = stage.insert(new Q.UI.Button({ 
-            label: "Continue",
+            label: "Continuer",
 			border: 1,
             shadow: 3,
-            shadowColor: "rgb(255,64,64)",
+            shadowColor: "rgb(168,86,45)",
             x: 0,
             y: 70,
 			fill: "rgb(160,160,160)"
