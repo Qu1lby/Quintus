@@ -131,9 +131,8 @@
                 h: 230
                 })
             );
-		
-		if (scene_courante != null){	
-			if (scene_courante == "lvl1"){
+	
+			if (scene_prec == "lvl1"){
 			
 					var msge3 = stage.insert(new Q.UI.Text({ 
 						label: "Niveau 1",
@@ -214,7 +213,7 @@
 			if (scene_prec == "lvl4"){
 			
 			}
-		}
+		
 
 		var msg = stage.insert(new Q.UI.Button({ 
             label: "Continuer",

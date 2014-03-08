@@ -8,7 +8,7 @@
 		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
 		stand_left: { frames: [0]},
 		stand_right: { frames: [0]},
-		jump: { frames: [2], loop:false, rate: 1},
+		jump: { frames: [4], loop:false, rate: 1},
 	});
 	
 	Q.Sprite.extend("Orange",{
@@ -46,9 +46,13 @@
 			if(collision.obj.isA("Fin")&&!this.p.score){
 					score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
 					this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl1";
 				
 				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"})
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
 			}
 		},
 
@@ -340,8 +344,12 @@
 					document.cookie = 'Lvl2='+score_l2+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 					this.p.score = true;
 				
+				scene_courante = "GOG";
+				scene_prec = "lvl2";
+				
 				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"})
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
 				}
 			}
 		  },

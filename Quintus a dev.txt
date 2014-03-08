@@ -1,7 +1,4 @@
-- Personnage appui droite gauche simultané :
-Problème d'image.
-
-- Game over good bloquer bind
+x Game over good bloquer bind
 
 - Continuer developpement des boss. SPRITE rapidos
 x Boss simple / x boss simultanée 2 /

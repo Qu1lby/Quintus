@@ -108,12 +108,17 @@
 	
 // Replay 'R'
 	Q.input.on("replay", function () {  
+	if (scene_courante == "lvl1" || scene_courante == "lvl2" || 
+		scene_courante == "lvl3" || scene_courante == "lvl4" || 
+		scene_courante == "lvl5"){
+			
 		if(!replay){
 			Q.stageScene('Repl',2);
 		}else{
 			Q.stageScene('Blanc',2);
 		}
 		replay = !replay;
+	}
 	});﻿	
 		
 
