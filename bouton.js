@@ -147,9 +147,7 @@
             this.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) { 
-					if(music){
-						Q.audio.play('pop.mp3');
-					}
+
 					if(this.booleen){
 						pasteque = new Q.pastequeSP({x: this.coox, y : this.cooy, vx :175, rangeX : 550 ,asset : "boule.png"});
 						Q.stage().insert(pasteque);

@@ -42,11 +42,10 @@
 				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
+			// Calcul du score final
 			if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l1 = 0 + (2*this.p.secondeabs)+ (100*this.p.minute) ;
-					document.cookie = 'Lvl1='+score_l1+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
 					this.p.score = true;
-				
 				
 				Q.clearStages();
 				Q.stageScene("GoodGame",1, {label: "Victory"})
@@ -152,6 +151,7 @@
 			Q.stage().locate(1505,1700).destroy();
 		}
 		
+		// Sprite mouvement 
 		if(Q.inputs['up']) {
 			this.play("jump",1);      // add priority to animation
         } else if(this.p.vx < 0) {
@@ -333,11 +333,16 @@
 				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
+			// Calcul du score final
 			if(collision.obj.isA("Fin")){
-				this.destroy();
+				if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l2 = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					document.cookie = 'Lvl2='+score_l2+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					this.p.score = true;
+				
 				Q.clearStages();
-				//setCookie('fini','fin du lvl2',time()+24*3600);
 				Q.stageScene("GoodGame",1, {label: "Victory"})
+				}
 			}
 		  },
 
@@ -394,16 +399,16 @@
                 
 			}
 			
-	        if(Q.inputs['up']) {
-          this.play("jump",1);      // add priority to animation
-        } else if(this.p.vx < 0) {
-          this.p.flip="x";          // flip when going right
-          this.play("run_right");
-        } else if(this.p.vx > 0) {
-          this.p.flip="";           // no flip when going left
-          this.play("run_left");
-        } else {
-          this.play("stand_" + this.p.direction); // stand_left or stand_right
+	    if(Q.inputs['up']) {
+			this.play("jump",1);      // add priority to animation
+        }else if(this.p.vx < 0) {
+			this.p.flip="x";          // flip when going right
+			this.play("run_right");
+        }else if(this.p.vx > 0) {
+			this.p.flip="";           // no flip when going left
+			this.play("run_left");
+        }else{
+			this.play("stand_" + this.p.direction); // stand_left or stand_right
         }
         },
 

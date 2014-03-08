@@ -121,32 +121,67 @@
 		}	
 
 		var GameoV = stage.insert(new Q.UI.Container({
-                fill: "rgb(225,225,225)",
-                x: wi/2,
-                y: hi-(hi/6)-20,
+                fill: "rgb(250,232,95)",
+                x: wi/2 ,
+                y: hi/2 +150,
                 border: 1,
                 shadow: 3,
                 shadowColor: "rgb(160,160,160)",
-                w: wi/4,
-                h: 150
+                w: wi/2-100,
+                h: 230
                 })
             );
 		
-		var msge = stage.insert(new Q.UI.Text({ 
-                label: "Sc : "+score_l1,
-                x: 0,
-                y: -30
-        }),GameoV);
-        
+		if (scene_courante != null){	
+			if (scene_courante == "lvl1"){
+							
+					var msge = stage.insert(new Q.UI.Text({ 
+						label: "Score : "+score_l1_tmp,
+						x: 0,
+						y: -50
+						}),GameoV);		
+				
+				if (score_l1_tmp > score_l1){
+					document.cookie = 'Lvl1='+score_l1_tmp+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					score_l1 = score_l1_tmp;
+					
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "BEST SCORE",
+						x: 0,
+						y: 0
+						}),GameoV);
+				}else{
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l1,
+						x: 0,
+						y: 0
+						}),GameoV);
+		
+				}
+		
+			}
+			
+			if (scene_prec == "lvl2"){
+				
+			}
+			
+			if (scene_prec == "lvl3"){
+			
+			}
+			
+			if (scene_prec == "lvl4"){
+			
+			}
+		}
+
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Continue",
-                color: "white",
-				border: 1,
-                shadow: 3,
-                shadowColor: "rgb(160,160,160)",
-                x: 0,
-                y: 28,
-				fill: "rgb(160,160,160)"
+            label: "Continue",
+			border: 1,
+            shadow: 3,
+            shadowColor: "rgb(255,64,64)",
+            x: 0,
+            y: 70,
+			fill: "rgb(160,160,160)"
         }),GameoV);
 		
 		msg.on("click",function() {
