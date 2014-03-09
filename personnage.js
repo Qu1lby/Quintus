@@ -340,8 +340,7 @@
 			// Calcul du score final
 			if(collision.obj.isA("Fin")){
 				if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l2 = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
-					document.cookie = 'Lvl2='+score_l2+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+					score_l2_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
 					this.p.score = true;
 				
 				scene_courante = "GOG";

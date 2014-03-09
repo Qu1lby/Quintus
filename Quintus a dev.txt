@@ -8,11 +8,9 @@ x Boss simple / x boss simultanée 2 /
 
 x Fond du level 5
 
-- Sprite anim des personnages : Faire en sorte quand le personnage bouge et pas tout le temps
+x Sprite anim des personnages : Faire en sorte quand le personnage bouge et pas tout le temps
 
 - Sprite fraise/ ananas / tomate
-
-- Sprite Saut
 
 x Faire un contour rouge pour indiquer la perte de vie en plus du son.
 
@@ -21,16 +19,12 @@ niveau sans avoir besoin d'aller chercher la souris.
 
 x Replay indiquer msg oui non avant de relancer le niveau
 
-~ Calcul des scores fin de niveau ! temps, reinitialiser à tous les endroits, cookie.
--> Affichage GOG
-
-- Affichage du menu niveau (1 ou 2) adequat selon point total du joueur.
+- Affichage du menu niveau (1 ou 2) adequat selon point total du joueur. Bloquer niveau (Fin du dev)
 
 x Musique bouton en haut a droite : Changer le cookie
 
 - BDD meilleurs scores
 
 x Gestion des cookies scores sur le niveau. 
-(J'ai deja commencé a voir comment ca marchait si questions)
 
 - Image explicative des binds et case pour le menu infos (K)

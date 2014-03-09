@@ -63,11 +63,70 @@
 			scene_prec = "menu";
      	});	
 		
-		inf.on("click",function() {
+		var copy = stage.insert(new Q.UI.Button({ 
+        	label: "©Kimanipi", x: wi-50, y: hi-20 }));
 			
+		copy.p.fontColor = "white";﻿
+		copy.p.font = "400 18px arial";
+		
+		copy.on("click",function() {
+			Q.stageScene('Credit',2);
      	});	
 	});
 		
+//  Credit ------------------------------------------------------
+	Q.scene("Credit", function(stage) {
+	
+		var Opacite = stage.insert(new Q.UI.Button({
+        		fill: "rgb(0,0,0)",
+				opacity : 0.7,
+                x: 0,
+                y: 0,
+                w: wi*2,
+                h: hi*2
+                })
+            );
+			
+		var Fond = stage.insert(new Q.UI.Container({
+                fill: "rgb(167,200,240)",
+                x: wi/2,
+                y: hi/2+80,
+                border: 1,
+                w: wi/3.5,
+                h: 400
+                })
+            );
+		
+		Opacite.on("click",function() {
+			Q.stageScene('Blanc',2);
+     	});	
+		
+		var lives = stage.insert(new Q.UI.Text({ 
+                label: "- Credits -",
+				size : 20,
+				family : "comic sans ms",
+                x: 0,
+                y: -155,
+                }),Fond);
+				
+		var lives = stage.insert(new Q.UI.Text({ 
+                label: "   Traps 'n fruits\n\n\n      Kilian Cuny\n Maxime Chaboissier\n     Nicolas Joly\n Pierrick Le clouërec",
+				size : 20,
+				family : "comic sans ms",
+                x: 0,
+                y: -55,
+                }),Fond);
+				
+		var lives = stage.insert(new Q.UI.Text({ 
+                label: "©Kimanipi       2014",
+				size : 20,
+				family : "comic sans ms",
+                x: 0,
+                y: 155,
+                }),Fond);
+				
+			
+	});
 		
 //  Choix du niveau (1) ----------------------------------------------
 	Q.scene("niveau2", function(stage) {
@@ -223,6 +282,18 @@
 				scene_courante = "menu";
 				scene_prec = "niveau";
 			});
+			
+			
+		var copy = stage.insert(new Q.UI.Button({ 
+        	label: "©Kimanipi", x: wi-50, y: hi-20 }));
+			
+		copy.p.fontColor = "white";﻿
+		copy.p.font = "400 18px arial";
+		
+		copy.on("click",function() {
+			Q.stageScene('Credit',2);
+     	});	
+		
 		});
 	
 //  Choix du niveau (2) ----------------------------------------------
@@ -411,4 +482,16 @@
 				scene_courante = "lvl5";
 				scene_prec = "niveau";
 			});
+			
+		
+		var copy = stage.insert(new Q.UI.Button({ 
+        	label: "©Kimanipi", x: wi-50, y: hi-20 }));
+			
+		copy.p.fontColor = "white";﻿
+		copy.p.font = "400 18px arial";
+		
+		copy.on("click",function() {
+			Q.stageScene('Credit',2);
+     	});	
+		
 		});
