@@ -204,7 +204,6 @@
 			this.tps = p.tps; // A passer en param (seconde)
 
 			this.p.seconde = 0; 
-			this.changemusic = false;
 			this.init = true;
 			this.notdone = true;
 			this.p.once = false;
@@ -216,14 +215,7 @@
 step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
-				if (music && !this.changemusic){
-					Q.audio.stop();
-					Q.audio.play("boss.mp3",{ loop: true });
-						if (scene_courante == "lvl2"){
-							Q.audio.play("rire2.mp3");
-						}
-					this.changemusic = true;
-				}
+			
 				if (this.init){
 					this.p.maintenant = new Date();
 					this.p.date_prec = this.p.maintenant;
