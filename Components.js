@@ -56,8 +56,8 @@
             	if(collision.obj.isA("Grenade")){  
 					if (this != collision.obj.sol){             
                     	this.variable = this.variable - 1;						
-						if (collision.obj.sol.variable == 0){
-							collision.obj.sol.destroy();
+						if (this.variable == 0){
+							collision.obj.destroy();
 						}
 					collision.obj.sol = this;
 				}}
@@ -242,7 +242,7 @@
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
 			this.variable = 1;
-			this.add("2d2, AutoCube");
+			this.add("2d2, CubeBoss");
         }
     });		
 		
