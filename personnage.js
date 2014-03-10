@@ -551,7 +551,7 @@
 // ------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Tomate",{
         init: function(p){
-    	    this._super(p, {asset: "tomate.png", x: 120, y: 300, jumpSpeed: -400, lives: 2});
+    	    this._super(p, {asset: "tomate.png", x: 120, y: 300, jumpSpeed: -400, lives: 100});
     	    this.add("2d, platformerControls"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;

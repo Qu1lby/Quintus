@@ -269,6 +269,14 @@
 			this.add("2d2, CubeBoss");
         }
     });
+	
+		Q.Sprite.extend("Sol_3Boss", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "pierre_haut2.png"});
+			this.variable = 3;
+			this.add("2d2, CubeBoss");
+        }
+    });
 		
 	Q.Sprite.extend("Sol_3", {
     	init: function(p) {
@@ -566,6 +574,11 @@
 						this.destroy();
 						}
 				}
+				if(collision.obj.isA("Sol_2Boss") || collision.obj.isA("Sol_3Boss")){
+					if(collision.obj.variable == 0){
+					collision.obj.destroy();
+					}
+				}				
             });
 		},
 		
