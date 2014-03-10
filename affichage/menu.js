@@ -1,3 +1,16 @@
+/**
+A rajouter pour bloquer les niveaux : 
+
+if ( score_l? !=0)[
+
+}
+
+Pour griser :
+
+  fill: "rgb(160,160,160)" 
+*/
+
+
 //  Menu Principal ------------------------------------------------------
 	Q.scene("Debut", function(stage) {
 		
@@ -62,6 +75,16 @@
 			scene_courante = "niveau";
 			scene_prec = "menu";
      	});	
+
+//TO DO		
+		sco.on("click",function() {
+
+     	});	
+		
+		inf.on("click",function() {
+
+     	});	
+// --
 		
 		var copy = stage.insert(new Q.UI.Button({ 
         	label: "©Kimanipi", x: wi-50, y: hi-20 }));
@@ -102,7 +125,7 @@
      	});	
 		
 		var lives = stage.insert(new Q.UI.Text({ 
-                label: "- Credits -",
+                label: "- Crédits -",
 				size : 20,
 				family : "comic sans ms",
                 x: 0,
@@ -261,6 +284,10 @@
 				Q.clearStages();
       			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
+								
+				if(music){
+// TO DO					Q.audio.play('lvl5.mp3');
+				}
 				
 				scene_courante = "lvl3";
 				scene_prec = "niveau";
@@ -270,6 +297,10 @@
 				Q.clearStages();
       			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
+								
+				if(music){
+// TO DO					Q.audio.play('lvl5.mp3');
+				}
 				
 				scene_courante = "lvl4";
 				scene_prec = "niveau";
@@ -282,17 +313,6 @@
 				scene_courante = "menu";
 				scene_prec = "niveau";
 			});
-			
-			
-		var copy = stage.insert(new Q.UI.Button({ 
-        	label: "©Kimanipi", x: wi-50, y: hi-20 }));
-			
-		copy.p.fontColor = "white";﻿
-		copy.p.font = "400 18px arial";
-		
-		copy.on("click",function() {
-			Q.stageScene('Credit',2);
-     	});	
 		
 		});
 	
@@ -447,6 +467,10 @@
 				Q.clearStages();
       			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
+								
+				if(music){
+// TO DO					Q.audio.play('lvl5.mp3');
+				}
 				
 				scene_courante = "lvl3";
 				scene_prec = "niveau";
@@ -456,6 +480,10 @@
 				Q.clearStages();
       			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
+				
+				if(music){
+// TO DO					Q.audio.play('lvl5.mp3');
+				}
 				
 				scene_courante = "lvl4";
 				scene_prec = "niveau";
@@ -482,16 +510,4 @@
 				scene_courante = "lvl5";
 				scene_prec = "niveau";
 			});
-			
-		
-		var copy = stage.insert(new Q.UI.Button({ 
-        	label: "©Kimanipi", x: wi-50, y: hi-20 }));
-			
-		copy.p.fontColor = "white";﻿
-		copy.p.font = "400 18px arial";
-		
-		copy.on("click",function() {
-			Q.stageScene('Credit',2);
-     	});	
-		
 		});

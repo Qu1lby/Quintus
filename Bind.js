@@ -52,7 +52,7 @@
 				Q.stageScene('tut1',2);
 				
 				if (music){
-				Q.audio.play('lvl1.mp3',{ loop: true });
+					Q.audio.play('lvl1.mp3',{ loop: true });
 				}
 				
 				scene_prec = 'GO';
@@ -77,6 +77,10 @@
     			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
 				
+				if (music){
+// TO DO					Q.audio.play('lvl3.mp3',{ loop: true });
+				}
+				
 				scene_prec = 'GO';
 				scene_courante = "lvl3";
 			}
@@ -85,6 +89,10 @@
 				Q.clearStages();
     			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
+				
+				if (music){
+// TO DO					Q.audio.play('lvl4.mp3',{ loop: true });
+				}
 				
 				scene_prec = 'GO';
 				scene_courante = "lvl4";
@@ -149,9 +157,15 @@
 			}
 			
 			if (scene_courante == "lvl3"){
+// TO DO				Q.audio.play('lvl3.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+				music = true;
 			}
 			
 			if (scene_courante == "lvl4"){
+// TO DO				Q.audio.play('lvl4.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+				music = true;
 			}
 			
 			if (scene_courante == "lvl5"){
