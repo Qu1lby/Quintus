@@ -641,11 +641,11 @@
 				
 			// Calcul du score final
 			if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l4_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					score_l5_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
 					this.p.score = true;
 					
 				scene_courante = "GOG";
-				scene_prec = "lvl4";
+				scene_prec = "lvl5";
 				
 				Q.clearStages();
 				Q.stageScene("GoodGame",1, {label: "Victory"});
@@ -724,7 +724,7 @@
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
-					scene_prec = "lvl1";
+					scene_prec = "lvl5";
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();

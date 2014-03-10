@@ -80,7 +80,7 @@ Pour griser :
      	});	
 		
 		inf.on("click",function() {
-
+			Q.stageScene('Aide',2);
      	});	
 // --
 		
@@ -93,6 +93,34 @@ Pour griser :
 		copy.on("click",function() {
 			Q.stageScene('Credit',2);
      	});	
+	});
+
+//  Aide ------------------------------------------------------
+	Q.scene("Aide", function(stage) {
+		
+		var background = new Q.TileLayer({ 
+		dataAsset: "aide.tmx",
+		layerIndex: 0,
+		sheet: "help",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+		
+        stage.insert(background);
+		
+		var Opacite = stage.insert(new Q.UI.Button({
+        		fill: "rgb(0,0,0)",
+				opacity : 0,
+                x: 0,
+                y: 0,
+                w: wi*2,
+                h: hi*2
+                })
+            );
+		
+		Opacite.on("click",function() {
+			Q.stageScene('Blanc',2);
+     	});	
+		
 	});
 		
 //  Credit ------------------------------------------------------
@@ -145,7 +173,6 @@ Pour griser :
                 x: 0,
                 y: 155,
                 }),Fond);
-				
 			
 	});
 		
