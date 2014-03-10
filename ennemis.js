@@ -212,7 +212,7 @@
 			this.add("2d, animation, commonEnemy, aiBounce");
 			},
       
-step: function(dt) {
+		step: function(dt) {
         	var dirX = this.p.vx/Math.abs(this.p.vx);
             var ground = Q.stage().locate(this.p.x, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);
             var nextTile = Q.stage().locate(
@@ -235,7 +235,7 @@ step: function(dt) {
                 this.p.vx = -this.p.vx;
             }
 		this.on("hit.sprite",function(collision) {
-			if(collision.obj.isA("Sol_fin")){
+			if(collision.obj.isA("Sol_2Boss") || collision.obj.isA("Sol_3Boss")){
 			
 				if (this.init){
 					this.p.maintenant = new Date();
@@ -266,7 +266,13 @@ step: function(dt) {
 					var balle2 = new Q.Grenade({x: tmp1, y : 200, vy : tmp1, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
 					Q.stage().insert(balle2);
 				}
-			}		
+			}
+           	if(collision.obj.isA("Tomate")) {                   
+               	collision.obj.damage();					
+				if(music){
+					Q.audio.play('creature.mp3');
+				}
+            }			
 		});				
 
 			this.on("bump.top", function(collision) {
@@ -280,7 +286,6 @@ step: function(dt) {
 					this.destroy();
 				}
             });	
-		}
-
+		},
     });
 	
