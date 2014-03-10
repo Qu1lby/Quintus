@@ -10,6 +10,7 @@ var score_l1 = lireCookie(" Lvl1");
 	
 var score_l1_tmp = 0;
 
+
 var score_l2 = lireCookie(" Lvl2");
 	if (score_l2 == null){
 		document.cookie = 'Lvl2=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -19,6 +20,7 @@ var score_l2 = lireCookie(" Lvl2");
 	score_l2 = parseInt(score_l2);
 
 var score_l2_tmp = 0;
+
 	
 var score_l3 = lireCookie(" Lvl3");
 	if (score_l3 == null){
@@ -30,6 +32,7 @@ var score_l3 = lireCookie(" Lvl3");
 	
 var score_l3_tmp = 0;
 
+
 var score_l4 = lireCookie(" Lvl4");
 	if (score_l4 == null){
 		document.cookie = 'Lvl4=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -39,6 +42,7 @@ var score_l4 = lireCookie(" Lvl4");
 	score_l4 = parseInt(score_l4);
 	
 var score_l4_tmp = 0;
+
 	
 var score_l5 = lireCookie(" Lvl5");
 	if (score_l5 == null){
@@ -49,3 +53,12 @@ var score_l5 = lireCookie(" Lvl5");
 	score_l5 = parseInt(score_l5);
 
 var score_l5_tmp = 0;
+
+
+var score_t = lireCookie(" Total");
+	if (score_t == null){
+		document.cookie = 'Total=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+		score_t = "0";
+	}
+
+	score_t = parseInt(score_t);

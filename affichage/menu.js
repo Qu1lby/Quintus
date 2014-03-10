@@ -1,10 +1,4 @@
 /**
-A rajouter pour bloquer les niveaux : 
-
-if ( score_l? !=0)[
-
-}
-
 Pour griser :
 
   fill: "rgb(160,160,160)" 
@@ -71,6 +65,10 @@ Pour griser :
 							
 		men.on("click",function() {
 			Q.clearStages();
+/*			if (score_t!= ? ){
+   				Q.stageScene('niveau2');
+			}else Q.stageScene('niveau');
+*/	
       		Q.stageScene('niveau');
 			scene_courante = "niveau";
 			scene_prec = "menu";

@@ -57,10 +57,9 @@
 				Q.clearStages();
    				Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
-				Q.stageScene('tut1',2);
 				
 				if (music){
-				Q.audio.play('lvl1.mp3',{ loop: true });
+					Q.audio.play('lvl1.mp3',{ loop: true });
 				}
 				
 				scene_prec = 'GO';
@@ -85,6 +84,10 @@
     			Q.stageScene('level3');
 				Q.stageScene("gameStats",1);
 				
+				if (music){
+// TO DO					Q.audio.play('lvl3.mp3',{ loop: true });
+				}
+				
 				scene_prec = 'GO';
 				scene_courante = "lvl3";
 			}
@@ -94,8 +97,25 @@
     			Q.stageScene('level4');
 				Q.stageScene("gameStats",1);
 				
+				if (music){
+// TO DO					Q.audio.play('lvl4.mp3',{ loop: true });
+				}
+				
 				scene_prec = 'GO';
 				scene_courante = "lvl4";
+			}
+			
+			if (scene_prec == "lvl5"){
+				Q.clearStages();
+      			Q.stageScene('level5');
+				Q.stageScene("gameStats",1);
+				
+				if(music){
+					Q.audio.play('lvl5.mp3');
+				}
+				
+				scene_prec = 'GO';
+				scene_courante = "lvl5";
 			}
 		}
 		});
@@ -164,7 +184,6 @@
 						x: 0,
 						y: 0
 						}),GameoV);
-		
 				}
 		
 			}
@@ -201,17 +220,113 @@
 						x: 0,
 						y: 0
 						}),GameoV);
-		
 				}
 		
 			}
 			
 			if (scene_prec == "lvl3"){
-			
+				var msge3 = stage.insert(new Q.UI.Text({ 
+						label: "Niveau 3",
+						x: wi/2,
+						y: hi/2-50,
+						color: "rgb(168,86,45)",
+						size :40
+						}));
+							
+					var msge = stage.insert(new Q.UI.Text({ 
+						label: "Score : "+score_l3_tmp,
+						x: 0,
+						y: -50
+						}),GameoV);		
+				
+				if (score_l3_tmp > score_l3){
+					var tmp = "Lvl3="+score_l3_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					document.cookie = tmp;
+					
+					score_l3 = score_l3_tmp;
+					
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "BEST SCORE",
+						x: 0,
+						y: 0
+						}),GameoV);
+				}else{
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l3,
+						x: 0,
+						y: 0
+						}),GameoV);
+				}
 			}
 			
 			if (scene_prec == "lvl4"){
+				var msge3 = stage.insert(new Q.UI.Text({ 
+						label: "Niveau 4",
+						x: wi/2,
+						y: hi/2-50,
+						color: "rgb(168,86,45)",
+						size :40
+						}));
+							
+					var msge = stage.insert(new Q.UI.Text({ 
+						label: "Score : "+score_l4_tmp,
+						x: 0,
+						y: -50
+						}),GameoV);		
+				
+				if (score_l4_tmp > score_l4){
+					var tmp = "Lvl4="+score_l4_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					document.cookie = tmp;
+					
+					score_l4 = score_l4_tmp;
+					
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "BEST SCORE",
+						x: 0,
+						y: 0
+						}),GameoV);
+				}else{
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l4,
+						x: 0,
+						y: 0
+						}),GameoV);
+				}
+			}
 			
+			if (scene_prec == "lvl5"){
+				var msge3 = stage.insert(new Q.UI.Text({ 
+						label: "- BOSS -",
+						x: wi/2,
+						y: hi/2-50,
+						color: "rgb(168,86,45)",
+						size :40
+						}));
+							
+					var msge = stage.insert(new Q.UI.Text({ 
+						label: "Score : "+score_l5_tmp,
+						x: 0,
+						y: -50
+						}),GameoV);		
+				
+				if (score_l5_tmp > score_l5){
+					var tmp = "Lvl5="+score_l5_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					document.cookie = tmp;
+					
+					score_l5 = score_l5_tmp;
+					
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "BEST SCORE",
+						x: 0,
+						y: 0
+						}),GameoV);
+				}else{
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l5,
+						x: 0,
+						y: 0
+						}),GameoV);
+				}
 			}
 		
 
@@ -227,6 +342,11 @@
 		
 		msg.on("click",function() {
        		Q.clearStages();
+			
+/*			if (score_t!= ? ){
+   				Q.stageScene('niveau2');
+			}else Q.stageScene('niveau');
+*/	
    			Q.stageScene('niveau');
 			
 			Q.audio.stop();

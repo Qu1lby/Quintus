@@ -55,9 +55,15 @@ include ('affichage/touche.js');
 			}
 			
 			if (scene_courante == "lvl3"){
+// TO DO		Q.audio.play('lvl3.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+				music = true;
 			}
 			
 			if (scene_courante == "lvl4"){
+// TO DO		Q.audio.play('lvl4.mp3',{ loop: true });
+				document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+				music = true;
 			}
 			
 			if (scene_courante == "lvl5"){

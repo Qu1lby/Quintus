@@ -63,8 +63,12 @@
 		
 		msg.on("click",function() {
        		Q.clearStages();
-   			Q.stageScene('niveau');
 			
+/*			if (score_t!= ? ){
+   				Q.stageScene('niveau2');
+			}else Q.stageScene('niveau');
+*/			
+			Q.stageScene('niveau');
 			Q.audio.stop();
 			
 			scene_prec = scene_courante
@@ -143,11 +147,31 @@
 			}
 			
 			if (scene_courante == "lvl3"){
-			
+				Q.clearStages();
+      			Q.stageScene('level3');
+				Q.stageScene("gameStats",1);
+				
+				Q.audio.stop();
+/*				if(music){
+					Q.audio.play('lvl3.mp3',{ loop: true });
+				}
+*/				
+				scene_courante = "lvl3";
+				scene_prec = "niveau";
 			}
 			
 			if (scene_courante == "lvl4"){
-			
+				Q.clearStages();
+      			Q.stageScene('level4');
+				Q.stageScene("gameStats",1);
+				
+				Q.audio.stop();
+/*				if(music){
+					Q.audio.play('lvl4.mp3',{ loop: true });
+			}
+*/				
+				scene_courante = "lvl4";
+				scene_prec = "niveau";
 			}
 			
 			if (scene_courante == "lvl5"){
@@ -156,6 +180,10 @@
 				Q.stageScene("gameStats",1);
 				Q.stageScene("tuto5",2);
 				
+				Q.audio.stop();
+				if(music){
+					Q.audio.play('lvl5.mp3',{ loop: true });
+				}
 				
 				scene_courante = "lvl5";
 				scene_prec = "niveau";
