@@ -198,7 +198,7 @@
 	// Comportement du BOSS
 	Q.Sprite.extend("Boss", {
         init: function(p) {
-            this._super(p,  {gravity : 1, asset : "tomateboss.png"});
+            this._super(p,  {vx : -100, gravity : 1, asset : "tomateboss.png", defaultDirection: "right"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
 			this.tps = p.tps; // A passer en param (seconde)
@@ -209,10 +209,31 @@
 			this.p.once = false;
 			this.sound = true;
 			
-			this.add("2d, animation");
+			this.add("2d, animation, commonEnemy, aiBounce");
 			},
       
 step: function(dt) {
+        	var dirX = this.p.vx/Math.abs(this.p.vx);
+            var ground = Q.stage().locate(this.p.x, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);
+            var nextTile = Q.stage().locate(
+					this.p.x + dirX * this.p.w/2 + dirX, this.p.y + this.p.h/2 + 1, Q.SPRITE_DEFAULT);   
+				
+            if(!nextTile && ground) {
+            	if(this.p.vx > 0) {
+                	if(this.p.defaultDirection == "right") {
+                	    this.p.flip = "x";
+                    }else{
+                        this.p.flip = false;
+                    }
+                } else {
+                    if(this.p.defaultDirection == "left") {
+                        this.p.flip = "x";
+                    }else{
+                        this.p.flip = false;
+                    }
+                }
+                this.p.vx = -this.p.vx;
+            }
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
 			
