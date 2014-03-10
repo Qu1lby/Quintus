@@ -28,7 +28,6 @@
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
 			this.on("bump.bottom",this,"stomp");
-			this.play("run");
 			},
 
 		stomp: function(collision) {
@@ -192,20 +191,29 @@
     });
 
 // ------------------------------------------------------------------------------------------------------------------
+
+/**Q.animations('FraiseSP', {
+		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
+		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
+		stand_left: { frames: [0]},
+		stand_right: { frames: [0]},
+		jump: { frames: [4], loop:false, rate: 1},
+});
+*/
 	Q.Sprite.extend("Fraise",{
         init: function(p){
        		this._super(p, { asset: "fraise.png", x: 17*70+35, y: 11*70+35, speed : 400,jumpSpeed: -900, lives: 1 });
-        	this.add("2d, platformerControls"); 
+        	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-
+			this.p.score = false;
+			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
-			
 			this.on("bump.bottom",this,"stomp");
         },
 
@@ -218,7 +226,19 @@
 			if(collision.obj.isA("VerticalPlatform")) {
 		
 			  this.p.y = collision.obj.p.y - (collision.obj.p.y - this.p.y); // make the player stay on the platform
-				// alert(this.p.y);
+			}
+			
+			// Calcul du score final
+			if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl3";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
 			}
 		  },
 		  
@@ -274,9 +294,22 @@
 				scene_prec = "lvl3";
                 
 			}
-        },
-
-       damage: function(){
+			
+	// Sprite mouvement 
+		if(Q.inputs['up']) {
+			this.play("jump",1);      // add priority to animation
+        } else if(this.p.vx < 0) {
+			this.p.flip="x";          // flip when going right
+			this.play("run_right");
+        } else if(this.p.vx > 0) {
+			this.p.flip="";           // no flip when going left
+			this.play("run_left");
+        } else {
+			this.play("stand_" + this.p.direction); // stand_left or stand_right
+        }
+    },
+		
+        damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
 				Q.stageScene("Degat",4);
@@ -300,6 +333,7 @@
 
 
 // ------------------------------------------------------------------------------------------------------------------
+
 	Q.animations('bananeSP', {
 		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
 		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
@@ -316,6 +350,7 @@
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
 			this.p.changeMusic = false;		// True : music du boss est changé
+			this.p.score = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -442,14 +477,25 @@
     });
 
 // ------------------------------------------------------------------------------------------------------------------
+
+/**Q.animations('AnanasSP', {
+		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
+		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
+		stand_left: { frames: [0]},
+		stand_right: { frames: [0]},
+		jump: { frames: [4], loop:false, rate: 1},
+});
+*/
+
 	Q.Sprite.extend("Ananas",{
         init: function(p){
         	this._super(p, { asset: "ananas.png", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
-        	this.add("2d, platformerControls"); 
+        	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
-
+			this.p.score = false;
+			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
@@ -468,6 +514,20 @@
 		
 			  this.p.y = collision.obj.p.y ; // make the player stay on the platform
 			}
+			
+			// Calcul du score final
+			if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l4_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl4";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
+			}
+			
 		  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
@@ -524,9 +584,21 @@
            
 			}
 
-        },
-
-       damage: function(){
+      		// Sprite mouvement 
+		if(Q.inputs['up']) {
+			this.play("jump",1);      // add priority to animation
+        } else if(this.p.vx < 0) {
+			this.p.flip="x";          // flip when going right
+			this.play("run_right");
+        } else if(this.p.vx > 0) {
+			this.p.flip="";           // no flip when going left
+			this.play("run_left");
+        } else {
+			this.play("stand_" + this.p.direction); // stand_left or stand_right
+        }
+    },
+		
+        damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
 				Q.stageScene("Degat",4);
@@ -547,7 +619,6 @@
             }
         },
     });
-	
 // ------------------------------------------------------------------------------------------------------------------
 	Q.Sprite.extend("Tomate",{
         init: function(p){
@@ -556,6 +627,7 @@
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;
+			this.p.score = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -566,19 +638,18 @@
 			},
 
 		stomp: function(collision) {
-			if(collision.obj.isA("HorizontalPlatform")) {
-			// make the player stay on the platform
-				this.p.x = collision.obj.p.x; 
-			}
 				
-			if(collision.obj.isA("VerticalPlatform")) {
-			// make the player stay on the platform
-				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
-			}
-			
-			if(collision.obj.isA("Fin")){
+			// Calcul du score final
+			if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l4_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl4";
+				
 				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"})
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
 			}
 		},
 
@@ -639,9 +710,9 @@
 			if (this.p.y>800 && this.p.y<850){
 				Q.stageScene("Blanc",2);
 			}
-		},
-
-       damage: function(){
+    },
+		
+        damage: function(){
             if(!this.p.timeInvincible){
                 this.p.lives--;
 				Q.stageScene("Degat",4);
@@ -653,7 +724,7 @@
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
-					scene_prec = "lvl5";
+					scene_prec = "lvl1";
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
