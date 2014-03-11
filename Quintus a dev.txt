@@ -10,7 +10,7 @@ x Fond du level 5
 
 x Sprite anim des personnages : Faire en sorte quand le personnage bouge et pas tout le temps
 
-- Sprite fraise/ ananas / tomate
+- Sprite fraise / tomate
 
 x Faire un contour rouge pour indiquer la perte de vie en plus du son.
 
@@ -27,4 +27,4 @@ x Musique bouton en haut a droite : Changer le cookie
 
 x Gestion des cookies scores sur le niveau. 
 
-- Image explicative des binds et case pour le menu infos (K)
+x Image explicative des binds et case pour le menu infos (K)

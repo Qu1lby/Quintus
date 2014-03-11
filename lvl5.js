@@ -45,21 +45,21 @@ Q.scene("level5",function(stage) {
 			
 		// Second niveau
 			
-			["Sol_3Boss", {x: 385 , y : 1155}],
-			["Sol_2Boss", {x: 455 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 525 , y : 1155}],
-			["Sol_2Boss", {x: 595 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 665 , y : 1155}],
-			["Sol_2Boss", {x: 735 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 805 , y : 1155}],
-			["Sol_2Boss", {x: 875 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 945 , y : 1155}],
-			["Sol_2Boss", {x: 1015 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 1085 , y : 1155}],
-			["Sol_2Boss", {x: 1155 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 1225 , y : 1155}],
-			["Sol_2Boss", {x: 1295 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3Boss", {x: 1365 , y : 1155}],
+			["Sol_3", {x: 385 , y : 1155}],
+			["Sol_2", {x: 455 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 525 , y : 1155}],
+			["Sol_2", {x: 595 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 665 , y : 1155}],
+			["Sol_2", {x: 735 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 805 , y : 1155}],
+			["Sol_2", {x: 875 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 945 , y : 1155}],
+			["Sol_2", {x: 1015 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 1085 , y : 1155}],
+			["Sol_2", {x: 1155 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 1225 , y : 1155}],
+			["Sol_2", {x: 1295 , y : 1155, asset : "pierre_haut2.png"}],
+			["Sol_3", {x: 1365 , y : 1155}],
 			
 			
 		// Troisème niveau
@@ -80,7 +80,7 @@ Q.scene("level5",function(stage) {
 			["Sol_3", {x: 1365 , y : 1225, asset : "fond_pierre.png"}],
 			
 		// Quatrieme niveau
-			/*["Sol_2", {x: 385 , y : 1295, asset : "fond_pierre.png"}],
+			["Sol_2", {x: 385 , y : 1295, asset : "fond_pierre.png"}],
 			["Mal", {x: 455 , y : 1295}],
 			["Sol_2", {x: 525 , y : 1295, asset : "fond_pierre.png"}],
 			["Mal", {x: 595 , y : 1295}],
@@ -94,7 +94,7 @@ Q.scene("level5",function(stage) {
 			["Mal", {x: 1155 , y : 1295}],
 			["Sol_2", {x: 1225 , y : 1295, asset : "fond_pierre.png"}],
 			["Mal", {x: 1295 , y : 1295}],
-			["Sol_2", {x: 1365 , y : 1295, asset : "fond_pierre.png"}],*/
+			["Sol_2", {x: 1365 , y : 1295, asset : "fond_pierre.png"}],
 			
 			
 			["Sol_jump", {x: 315 , y : 1225}],
