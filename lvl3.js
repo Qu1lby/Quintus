@@ -1,6 +1,5 @@
         //setup level 1, @TODO make it so that it could be multiple levels?
-		 Q.debug = true;
-		Q.debugFill = true;
+
 		
 	   Q.scene("level3",function(stage) {
 				
