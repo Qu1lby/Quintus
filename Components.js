@@ -120,7 +120,20 @@
         },
 	});
 	
-	
+	//Permet au personnage de rester sur la platforme 
+	Q.component("stay" ,{
+	added: function() {
+		var entity = this.entity;				
+            entity.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) ||
+				(collision.obj.isA("Fraise")) || (collision.obj.isA("Tomate"))){ 
+					collision.obj.p.vy = 0;
+					
+				}
+            });
+        },
+	});
+		
 // Case qui fait sauter le personnage
 	Q.component("CaseJump", {
     	added: function() {
@@ -143,7 +156,7 @@
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {
        		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
-            this.add("2d, aiBounce");
+            this.add("2d, aiBounce, stay");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
         },
