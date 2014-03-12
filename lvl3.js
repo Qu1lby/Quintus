@@ -13,7 +13,8 @@
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
 							
-				
+				["Porte", { x: 25*70+35 , y: 11*70+35}],
+				["Porte", { x: 25*70+35 , y: 10*70+35, asset: "door1.png"}],
 				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],

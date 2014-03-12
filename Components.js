@@ -161,7 +161,14 @@
 			this.p.initialX = this.p.x;
         },
         
-		  step: function(dt) {                
+		  step: function(dt) {  
+
+			this.on("bump.top",function(collision) {
+				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+					collision.obj.p.x = this.p.x;
+				}
+            });
+			
           if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
         	    this.p.vx = -this.p.vx;
             } 
@@ -237,7 +244,27 @@
 
 // Differents sprites de cubes...	
 // variable = nombre de fois que l'on peut marcher sur le cube
-   
+    Q.Sprite.extend("Porte", {
+        init: function(p) {
+            this._super(p, {
+                asset: "door2.png",
+                // nextStage: ''
+				
+            });
+             
+            this.add('2d');
+             
+            this.on("bump.top, bump.right, bump.left",function(collision) {
+               if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
+                     
+                Q.clearStages();
+      			// Q.stageScene(nextStage);
+				Q.stageScene('level1'); // probleme a resoudre 
+				Q.stageScene("gameStats",1);
+                }
+            });
+        },
+    });
 	Q.Sprite.extend("Sol_pierre1_D", {
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});
