@@ -45,21 +45,21 @@ Q.scene("level5",function(stage) {
 			
 		// Second niveau
 			
-			["Sol_3", {x: 385 , y : 1155}],
+			["Sol_3", {x: 385 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 455 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 525 , y : 1155}],
+			["Sol_3", {x: 525 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 595 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 665 , y : 1155}],
+			["Sol_3", {x: 665 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 735 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 805 , y : 1155}],
+			["Sol_3", {x: 805 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 875 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 945 , y : 1155}],
+			["Sol_3", {x: 945 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 1015 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 1085 , y : 1155}],
+			["Sol_3", {x: 1085 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 1155 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 1225 , y : 1155}],
+			["Sol_3", {x: 1225 , y : 1155, asset : "pierre_haut2.png"}],
 			["Sol_2", {x: 1295 , y : 1155, asset : "pierre_haut2.png"}],
-			["Sol_3", {x: 1365 , y : 1155}],
+			["Sol_3", {x: 1365 , y : 1155, asset : "pierre_haut2.png"}],
 			
 			
 		// Troisème niveau

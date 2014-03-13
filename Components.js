@@ -246,21 +246,21 @@
 // variable = nombre de fois que l'on peut marcher sur le cube
     Q.Sprite.extend("Porte", {
         init: function(p) {
-            this._super(p, {
-                asset: "door2.png",
-                // nextStage: ''
-				
-            });
+            this._super(p, { asset: "door2.png"});
              
             this.add('2d');
              
             this.on("bump.top, bump.right, bump.left",function(collision) {
-               if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
+               if(collision.obj.isA("Fraise")) {
                      
-                Q.clearStages();
-      			// Q.stageScene(nextStage);
-				Q.stageScene('level1'); // probleme a resoudre 
-				Q.stageScene("gameStats",1);
+				score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+				this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl3";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
                 }
             });
         },

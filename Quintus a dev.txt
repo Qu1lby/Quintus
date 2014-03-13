@@ -23,8 +23,13 @@ x Replay indiquer msg oui non avant de relancer le niveau
 
 x Musique bouton en haut a droite : Changer le cookie
 
-- BDD meilleurs scores
-
 x Gestion des cookies scores sur le niveau. 
 
 x Image explicative des binds et case pour le menu infos (K)
+
+k:
+- Petit sprite tire projectile de nimporte ou
+
+- Enregistrer le temps avec le score
+
+- BDD meilleurs scores

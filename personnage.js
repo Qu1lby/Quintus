@@ -41,18 +41,6 @@
 				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
 			
-			// Calcul du score final
-			if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
-					this.p.score = true;
-					
-				scene_courante = "GOG";
-				scene_prec = "lvl1";
-				
-				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"});
-				
-			}
 		},
 
 	// Gère le temps que le personnage est en vie -> fin du lvl
@@ -99,6 +87,20 @@
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
 
+			// Détruit le personnage s'il gagne
+			if(this.p.x> 1870  && this.p.y>1850){
+				score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+				this.p.score = true;
+					
+				scene_courante = "GOG";
+				scene_prec = "lvl1";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
+                
+			}
+			
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -228,18 +230,6 @@
 			  this.p.y = collision.obj.p.y - (collision.obj.p.y - this.p.y); // make the player stay on the platform
 			}
 			
-			// Calcul du score final
-			if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
-					this.p.score = true;
-					
-				scene_courante = "GOG";
-				scene_prec = "lvl3";
-				
-				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"});
-				
-			}
 		  },*/
 		  
 		// Gère le temps que le personnage est en vie -> fin du lvl

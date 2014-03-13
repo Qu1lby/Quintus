@@ -118,8 +118,8 @@ Q.scene("level1",function(stage) {
 			["DrawEnnemy", {x: 1505 , y : 1600, coox : 1470, cooy : 1800, tps : 3}],
 			["Sol_5", {x: 1505 , y : 1700}],
 			
-			["Fin", {x: 1900 , y : 1785, asset: "banane.png"}],	
-			["Fin", {x: 1900 , y : 1785, asset: "cage.png"}],	
+			["Fin", {x: 1900 , y : 1785, asset: "banane.png", type: Q.SPRITE_NONE}],	
+			["Fin", {x: 1900 , y : 1785, asset: "cage.png", type: Q.SPRITE_NONE}],	
     ];
             
 	stage.loadAssets(levelAssets);  
