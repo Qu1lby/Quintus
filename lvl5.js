@@ -39,7 +39,7 @@ Q.scene("level5",function(stage) {
 			["Sol_2Boss", {x: 1085 , y : 945}],
 			["Sol_2Boss", {x: 1155 , y : 945}],
 			["Sol_2Boss", {x: 1225 , y : 945}],
-			["Boss", {x: 1295 , y : 805, coox : 1205, cooy : 875, tps: 1}],
+			["Boss", {x: 1220 , y : 805, coox : 1205, cooy : 875, tps: 3}],
 			["Sol_2Boss", {x: 1295 , y : 945}],
 			["Sol_2Boss", {x: 1365 , y : 945}],
 			
