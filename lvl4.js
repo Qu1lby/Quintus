@@ -32,7 +32,7 @@
 			["Sol_pierre1_H", {x: 525 , y : 1295}],
 			["Sol_pierre1_H", {x: 595 , y : 1365}],
 			["Sol_pierre1_P", {x: 595 , y : 1435}],
-			["Sol_pierre1_P", {x: 595 , y : 1505}],
+			//["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			
 			["bouton_case_droite_multi", {x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
@@ -81,6 +81,9 @@
 			["Sol_pierre1_H", {x: 455 , y : 1015}],
 			["Sol_pierre2_H", {x: 385 , y : 1015}],
 			
+			["GroundEnemy", {x: 945, y :  1015 ,vx : 100, asset: "slime3.png"}],
+			["GroundEnemy", {x: 598, y :  945,vx : 100, asset: "slime3.png"}],
+			
 			// a supprimer 
 			
 			
@@ -89,18 +92,18 @@
 			["Sol_jump", {x: 175 , y : 595}],
 			
 			//Deuxieme etage 
-			["Sol_pierre1_P", {x: 805 , y : 525}],
-			["Sol_pierre1_P", {x: 805 , y : 455}],
-			["Sol_pierre1_P", {x: 805 , y : 385}],
-			["Sol_pierre1_H", {x: 805 , y : 315}],
-			["Sol_pierre1_P", {x: 735 , y : 455}],
-			["Sol_pierre1_H", {x: 735 , y : 385}],
-			["Sol_pierre1_P", {x: 665 , y : 525}],
-			["Sol_pierre1_H", {x: 665 , y : 455}],
-			["Sol_pierre1_H", {x: 595 , y : 525}],
-			["Sol_pierre1_H", {x: 525 , y : 525}],
-			["Sol_pierre1_H", {x: 455 , y : 525}],
-			["Sol_pierre2_H", {x: 385 , y : 525}],
+			// ["Sol_pierre1_P", {x: 805 , y : 525}],
+			// ["Sol_pierre1_P", {x: 805 , y : 455}],
+			// ["Sol_pierre1_P", {x: 805 , y : 385}],
+			// ["Sol_pierre1_H", {x: 805 , y : 315}],
+			// ["Sol_pierre1_P", {x: 735 , y : 455}],
+			// ["Sol_pierre1_H", {x: 735 , y : 385}],
+			// ["Sol_pierre1_P", {x: 665 , y : 525}],
+			// ["Sol_pierre1_H", {x: 665 , y : 455}],
+			 ["Sol_pierre1_H", {x: 595 , y : 525}],
+			 ["Sol_pierre1_H", {x: 525 , y : 525}],
+			 ["Sol_pierre1_H", {x: 455 , y : 525}],
+			 ["Sol_pierre2_H", {x: 385 , y : 525}],
 			
 			["Sol_pierre1_H", {x: 1015 , y : 525}],
 			["Sol_pierre1_H", {x: 1085 , y : 525}],
@@ -108,32 +111,36 @@
 			["Sol_pierre1_H", {x: 1225 , y : 525}],
 			
 			
-			["Sol_pierre4_H", {x: 1295 , y : 595}],
-			["Sol_pierre4_H", {x: 1365 , y : 595}],
-			["Sol_pierre4_H", {x: 1435 , y : 595}],
-			["Sol_pierre4_H", {x: 1505 , y : 595}],
-			["Sol_pierre4_H", {x: 1575 , y : 595}],
-			["Sol_pierre4_H", {x: 1645 , y : 595}],
-			["Sol_pierre4_H", {x: 1715 , y : 595}],
-			["Sol_pierre4_H", {x: 1785 , y : 595}],
-			["Sol_pierre4_H", {x: 1855 , y : 595}],
-			["Sol_pierre4_H", {x: 1925 , y : 595}],
-			["Sol_pierre4_H", {x: 1995 , y : 595}],
-			["Sol_pierre4_H", {x: 2065 , y : 595}],
-			["Sol_pierre4_H", {x: 2135 , y : 595}],
-			["Sol_pierre4_H", {x: 2205 , y : 595}],
-			["Sol_pierre4_H", {x: 2275 , y : 595}],
-			["Sol_pierre4_H", {x: 2345 , y : 595}],
-			["Sol_pierre4_H", {x: 2415 , y : 595}],
-			["Sol_pierre4_H", {x: 2485 , y : 595}],
-			["Sol_pierre4_H", {x: 2555 , y : 595}],
-			["Sol_pierre4_H", {x: 2625 , y : 595}],
+			["Sol_pierre4_H", {x: 1295 , y : 525}],
+			["Sol_pierre4_H", {x: 1365 , y : 525}],
+			["Sol_pierre4_H", {x: 1225 , y : 525}], // a changer
+			["Sol_pierre4_H", {x: 1435 , y : 525}],
+			["Sol_pierre4_H", {x: 1505 , y : 525}],
+			["Sol_pierre4_H", {x: 1575 , y : 525}],
+			["Sol_pierre4_H", {x: 1645 , y : 525}],
+			["Sol_pierre4_H", {x: 1715 , y : 525}],
+			["Sol_pierre4_H", {x: 1785 , y : 525}],
+			["Sol_pierre4_H", {x: 1855 , y : 525}],
+			["Sol_pierre4_H", {x: 1925 , y : 525}],
+			["Sol_pierre4_H", {x: 1995 , y : 525}],
+			["Sol_pierre4_H", {x: 2065 , y : 525}],
+			["Sol_pierre4_H", {x: 2135 , y : 525}],
+			["Sol_pierre4_H", {x: 2205 , y : 525}],
+			["Sol_pierre4_H", {x: 2275 , y : 525}],
+			["Sol_pierre4_H", {x: 2345 , y : 525}],
+			["Sol_pierre4_H", {x: 2415 , y : 525}],
+			["Sol_pierre4_H", {x: 2485 , y : 525}],
+			["Sol_pierre4_H", {x: 2555 , y : 525}],
+			["Sol_pierre4_H", {x: 2625 , y : 525}],
 			
 			//sous sol deuxieme etage
 			["Sol_pierre1_H", {x: 455 , y : 525}],
 			
 			["Sol_pierre1_H", {x: 1365 , y : 805}],
+			
+			["Sol_pierre1_H", {x: 1435 , y : 805}],
 			["casedestruc", {x: 1505 , y : 805}],
+			["Sol_pierre1_H", {x: 1575 , y : 805}],
 			
 			["Sol_pierre1_H", {x: 1715 , y : 805}],
 			["Sol_pierre1_H", {x: 1785 , y : 805}],
@@ -153,11 +160,16 @@
 			
 			
 			//Petit ilot de droite
-			["Sol_pierre2_H", {x: 2905 , y : 875}],
-			["Sol_pierre1_H", {x: 3045 , y : 875}],
-			["Sol_pierre1_H", {x: 3115 , y : 875}],
+			["Sol_pierre1_H", {x: 2905 , y : 875}],
+			//["Sol_pierre1_H", {x: 3045 , y : 875}],
+			["Sol_jump", {x: 3115 , y : 875}],
 			["Sol_pierre1_H", {x: 2905 , y : 665}],
 			["Sol_pierre1_H", {x: 2835 , y : 595}],
+			["Sol_pierre1_H", {x: 2835 , y : 875}],
+			
+			["Mal", {x: 2975 , y : 875}],
+			["Sol_jump", {x: 3045 , y : 1015}],
+			
 			
 			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
 			
