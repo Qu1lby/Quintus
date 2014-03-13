@@ -468,19 +468,19 @@
 
 // ------------------------------------------------------------------------------------------------------------------
 
-/**Q.animations('AnanasSP', {
+	Q.animations('AnanasSP', {
 		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
 		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
 		stand_left: { frames: [0]},
 		stand_right: { frames: [0]},
 		jump: { frames: [4], loop:false, rate: 1},
-});
-*/
+	});
+
 
 	Q.Sprite.extend("Ananas",{
         init: function(p){
-        	this._super(p, { asset: "ananas.png", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
-        	this.add("2d, platformerControls"); 
+        	this._super(p, { sheet: "ananas", sprite: "AnanasSP", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
+        	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
@@ -575,7 +575,7 @@
 			}
 
       		// Sprite mouvement 
-		/*if(Q.inputs['up']) {
+		if(Q.inputs['up']) {
 			this.play("jump",1);      // add priority to animation
         } else if(this.p.vx < 0) {
 			this.p.flip="x";          // flip when going right
@@ -585,7 +585,7 @@
 			this.play("run_left");
         } else {
 			this.play("stand_" + this.p.direction); // stand_left or stand_right
-        }*/
+        }
     },
 		
         damage: function(){

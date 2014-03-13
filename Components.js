@@ -337,13 +337,13 @@
         }
     });
 	
-	/*Q.Sprite.extend("Sol_G5", {
+	Q.Sprite.extend("Sol_G5", {
         init: function(p) {
             this._super(p,  {gravity : 0, asset : "pierre_haut.png"});
 			this.variable = 5;
 			this.add("2d2, cube");
         }
-    });*/
+    });
 		
 	Q.Sprite.extend("Sol_pierre1_D", {
         init: function(p) {
