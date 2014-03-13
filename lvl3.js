@@ -56,7 +56,7 @@
 			
 				["Sol_5", {x: 47*70+35 , y : 21*70+35}],
 				
-				["bouton", {asset:"push3.png", scale: 0.3, x: 51*70+35 , y : 12*70+35+25, coox : 53*70+35, cooy :14*70+35}],
+				["bouton", {asset:"push4.png", scale: 0.3, x: 51*70+5 , y : 12*70+30, coox : 53*70+35, cooy :14*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 15*70+35}],
 				
@@ -66,7 +66,7 @@
 				["Sol_pierre2_D", {x: 55*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 55*70+35 , y : 15*70+35}],
 				
-				["bouton", {asset: "push4.png", scale : 0.3, x: 59*70+35 , y : 12*70+35+25, coox : 56*70+35, cooy :14*70+35}],
+				["bouton", {asset: "push3.png", scale : 0.3, x: 59*70+65 , y : 12*70+30, coox : 56*70+35, cooy :14*70+35}],
 				["Sol_pierre2_D", {x: 56*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 56*70+35 , y : 15*70+35}],
 				
