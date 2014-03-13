@@ -35,7 +35,7 @@
 			//["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			
-			["bouton_case_droite_multi", {x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
+			["bouton_case_droite_multi", {asset: "push4.png",x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
 			
 			
 			//["UN PONT ICI", {x: 735 , y : 1645}],
@@ -183,27 +183,26 @@
 			
 			//bloc pour le boss
 			
-			["Sol_2n", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
-			["Sol_2n", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
-			["Sol_2n", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
-			["Sol_2n", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
-			["Sol_2n", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
-			["Sol_2n", {asset: "fond_pierre.png",x: 2915 , y : 1505}],
-
+			["Sol_fin", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 3045 , y : 1505}],
 			
 			["Sol_jump", {x: 1855 , y : 1645}],
 			["Sol_jump", {x: 2065 , y : 1645}],
 			["Sol_jump", {x: 2275 , y : 1645}],
 			["Sol_jump", {x: 2485 , y : 1645}],
 			["Sol_jump", {x: 2695 , y : 1645}],
-			["Sol_jump", {x: 2915 , y : 1645}],
+			["Sol_jump", {x: 2905 , y : 1645}],
 			
-			["bouton", {x: 1855, y: 1600, coox : 3330, cooy : 945}],
-			["bouton", {x: 2065, y: 1600, coox : 3330, cooy : 945}],
-			["bouton", {x: 2275, y: 1600, coox : 3330, cooy : 945}],
-			["bouton", {x: 2485, y: 1600, coox : 3330, cooy : 945}],
-			["bouton", {x: 2695, y: 1600, coox : 3330, cooy : 945}],
-			["bouton", {x: 2915, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 1855, y: 1600, coox : 2275 , cooy : 1505}],
+			["bouton", {x: 2065, y: 1600, coox : 2695, cooy : 1505}],
+			["bouton", {x: 2275, y: 1600, coox : 2485, cooy : 1505}],
+			["bouton", {x: 2485, y: 1600, coox : 3045, cooy : 1505}],
+			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
+			["bouton", {x: 2905, y: 1600, coox : 2065, cooy : 1505}],
 
 			
 			
