@@ -109,3 +109,22 @@ var score_ttps = lireCookie(" Lvlttps");
 		document.cookie = 'Lvlttps=00:00; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 		score_ttps = "00:00";
 	}
+	
+Q.scene("Total", function(stage) {
+	var Opacite = stage.insert(new Q.UI.Container({
+       		fill: "rgb(0,0,0)",
+			opacity : 0.7,
+            x: 0,
+            y: 0,
+            w: wi*2,
+            h: hi*2
+    })
+    );
+	
+	Opacite.on("click",function() {
+			Q.stageScene('Blanc',2);
+    });	
+		
+		
+});
+			

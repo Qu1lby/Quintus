@@ -100,7 +100,7 @@
 				
                 
 			}
-			
+	/*		
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -130,7 +130,7 @@
 				scene_prec = "lvl1";
                 
 			}
-			
+*/			
 			if(this.p.x> 1850 && this.p.y>500 && !this.p.tut3){
 				Q.stageScene("tut3",2);
 			}
