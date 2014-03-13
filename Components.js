@@ -253,7 +253,8 @@
             this.on("bump.top, bump.right, bump.left",function(collision) {
                if(collision.obj.isA("Fraise")) {
                      
-				score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+				score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) 
+				score_l3tps_tmp = this.p.minute+":"+this.p.secondeabs;
 				this.p.score = true;
 					
 				scene_courante = "GOG";

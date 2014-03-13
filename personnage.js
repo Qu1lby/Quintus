@@ -100,7 +100,7 @@
 				
                 
 			}
-/*			
+			
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -130,7 +130,7 @@
 				scene_prec = "lvl1";
                 
 			}
-			*/
+			
 			if(this.p.x> 1850 && this.p.y>500 && !this.p.tut3){
 				Q.stageScene("tut3",2);
 			}
@@ -365,7 +365,8 @@
 			// Calcul du score final
 			if(collision.obj.isA("Fin")){
 				if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l2_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					score_l2_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute);
+					score_l2tps_tmp = this.p.minute+":"+this.p.secondeabs;
 					this.p.score = true;
 				
 				scene_courante = "GOG";
@@ -508,6 +509,7 @@
 			// Calcul du score final
 			if(collision.obj.isA("Fin")&&!this.p.score){
 					score_l4_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+					score_l4tps_tmp = this.p.minute+":"+this.p.secondeabs;
 					this.p.score = true;
 					
 				scene_courante = "GOG";
