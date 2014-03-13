@@ -529,7 +529,7 @@ Pour griser :
 				Q.stageScene("tut5",2);
 				
 				if(music){
-					Q.audio.play('lvl5.mp3',{ loop : true});
+					Q.audio.play('lvl5.mp3');
 				}
 				
 				scene_courante = "lvl5";
