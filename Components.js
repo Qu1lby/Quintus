@@ -127,7 +127,7 @@
             entity.on("bump.top",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) ||
 				(collision.obj.isA("Fraise")) || (collision.obj.isA("Tomate"))){ 
-					collision.obj.p.vy = 0;
+					collision.obj.p.vx = 0;
 					
 				}
             });
@@ -244,28 +244,7 @@
 
 // Differents sprites de cubes...	
 // variable = nombre de fois que l'on peut marcher sur le cube
-    Q.Sprite.extend("Porte", {
-        init: function(p) {
-            this._super(p, { asset: "door2.png"});
-             
-            this.add('2d');
-             
-            this.on("bump.top, bump.right, bump.left",function(collision) {
-               if(collision.obj.isA("Fraise")) {
-                     
-				score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) 
-				score_l3tps_tmp = this.p.minute+":"+this.p.secondeabs;
-				this.p.score = true;
-					
-				scene_courante = "GOG";
-				scene_prec = "lvl3";
-				
-				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"});
-                }
-            });
-        },
-    });
+
 	Q.Sprite.extend("Sol_pierre1_D", {
     	init: function(p) {
         	this._super(p,  {gravity : 0, asset : "fond_pierre_haut2.png"});

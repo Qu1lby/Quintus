@@ -12,9 +12,8 @@
             
             //level assets. format must be as shown: [[ClassName, params], .. ] 
             var levelAssets = [
-							
-				["Porte", { x: 8*70+35 , y: 5*70+35}],
-				["Porte", { x: 8*70+35 , y: 4*70+35, asset: "door1.png"}],
+				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "ananas.png", type: Q.SPRITE_NONE}],	
+				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],
 				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
@@ -79,12 +78,12 @@
 				["Sol_5", {x: 34*70+35 , y : 23*70+35}],
 			
 				//pic 
-				["Mal", {x: 24*70+35 , y : 19*70+35}],
-				["Mal", {x: 25*70+35 , y : 19*70+35}],
-				["Mal", {x: 26*70+35 , y : 19*70+35}],
-				["Mal", {x: 27*70+35 , y : 19*70+35}],
-				["Mal", {x: 28*70+35 , y : 19*70+35}],
-				["Mal", {x: 29*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 24*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 25*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 26*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 27*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 28*70+35 , y : 19*70+35}],
+				["Mal", {asset:"grille70bas.png", x: 29*70+35 , y : 19*70+35}],
 	
             ];
               stage.loadAssets(levelAssets);  

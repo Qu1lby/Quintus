@@ -218,19 +218,6 @@
    			this.p.secondeabs = 0; 
 		
         },
-
-		/*	stomp: function(collision) {
-			if(collision.obj.isA("HorizontalPlatform")) {
-		
-			  this.p.x = collision.obj.p.x; // make the player stay on the platform
-			}
-			
-			if(collision.obj.isA("VerticalPlatform")) {
-		
-			  this.p.y = collision.obj.p.y - (collision.obj.p.y - this.p.y); // make the player stay on the platform
-			}
-			
-		  },*/
 		  
 		// Gère le temps que le personnage est en vie -> fin du lvl
  		step: function(dt){	
@@ -286,7 +273,7 @@
 			}
 			
 			// Calcul du score final
-			if(collision.obj.isA("Fin")){
+	/*		if(collision.obj.isA("Fin")){
 				if(collision.obj.isA("Fin")&&!this.p.score){
 					score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute);
 					score_l3tps_tmp = this.p.minute+":"+this.p.secondeabs;
@@ -299,7 +286,7 @@
 				Q.stageScene("GoodGame",1, {label: "Victory"});
 				
 				}
-			}
+			}*/
 	/*		
 	// Sprite mouvement 
 		if(Q.inputs['up']) {
