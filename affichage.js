@@ -90,7 +90,7 @@ include ('affichage/touche.js');
         	y: hi-(hi/2),
    		}));
 	});
-	
+
 // Reinitialiser un stage
 	Q.scene("Blanc", function(stage){
 	});

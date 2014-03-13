@@ -109,11 +109,10 @@ var score_ttps = lireCookie(" Lvlttps");
 		document.cookie = 'Lvlttps=00:00; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 		score_ttps = "00:00";
 	}
-	
 Q.scene("Total", function(stage) {
-	var Opacite = stage.insert(new Q.UI.Container({
+	var Opacite = stage.insert(new Q.UI.Button({
        		fill: "rgb(0,0,0)",
-			opacity : 0.7,
+			opacity : 0.6,
             x: 0,
             y: 0,
             w: wi*2,
@@ -121,10 +120,35 @@ Q.scene("Total", function(stage) {
     })
     );
 	
+	var fond = stage.insert(new Q.UI.Container({
+            fill: "rgb(250,232,95)",
+            x: wi/2 ,
+            y: hi/2 +120,
+            border: 1,
+            shadow: 3,
+            shadowColor: "rgb(160,160,160)",
+            w: wi/2-100,
+            h: 250
+    })
+    );
+			
+	var niv = stage.insert(new Q.UI.Text({ 
+        label: "Niveau 1 - "+score_l1tps+" ("+score_l1+")\nNiveau 2 - "+score_l2tps+" ("+score_l2+")\n"+
+		"Niveau 3 - "+score_l3tps+" ("+score_l3+")\nNiveau 4 - "+score_l4tps+" ("+score_l4+")\n"+
+		"Niveau 5 - "+score_l5tps+" ("+score_l5+")\Total   - "+score_ttps+" ("+score_t+")",
+		size : 20,
+		family : "comic sans ms",
+        x: 500,
+        y: 400,
+		
+        }), Opacite
+		);
+	
 	Opacite.on("click",function() {
-			Q.stageScene('Blanc',2);
+		Q.stageScene('Blanc',2);
     });	
 		
 		
 });
+	
 			
