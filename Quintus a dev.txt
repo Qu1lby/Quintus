@@ -28,7 +28,7 @@ x Gestion des cookies scores sur le niveau.
 x Image explicative des binds et case pour le menu infos (K)
 
 k:
-- Petit sprite tire projectile de nimporte ou
+x Petit sprite tire projectile de nimporte ou
 
 - Enregistrer le temps avec le score
 

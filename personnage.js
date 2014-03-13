@@ -40,7 +40,6 @@
 			// make the player stay on the platform
 				this.p.y = collision.obj.p.y + (collision.obj.p.y - this.p.y); 
 			}
-			
 		},
 
 	// Gère le temps que le personnage est en vie -> fin du lvl
@@ -90,8 +89,9 @@
 			// Détruit le personnage s'il gagne
 			if(this.p.x> 1870  && this.p.y>1850){
 				score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+				score_l1tps_tmp = this.p.minute+":"+this.p.secondeabs;
 				this.p.score = true;
-					
+				
 				scene_courante = "GOG";
 				scene_prec = "lvl1";
 				
@@ -100,7 +100,7 @@
 				
                 
 			}
-			
+/*			
 		// Détruit le personnage s'il tombe premier niveau
 			if(this.p.y> 420 && this.p.y<470 && this.p.x<1800){
 				this.destroy();
@@ -130,7 +130,7 @@
 				scene_prec = "lvl1";
                 
 			}
-			
+			*/
 			if(this.p.x> 1850 && this.p.y>500 && !this.p.tut3){
 				Q.stageScene("tut3",2);
 			}
