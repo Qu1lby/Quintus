@@ -137,7 +137,7 @@
 		Q.audio.stop();
 
 		if(music){
-			Q.audio.play("fin.mp3");
+			Q.audio.play("fin.mp3",{ loop: false });
 		}	
 
 		var GameoV = stage.insert(new Q.UI.Container({
