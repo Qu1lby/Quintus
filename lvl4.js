@@ -163,8 +163,6 @@
 			["Sol_pierre1_H", {x: 2905 , y : 875}],
 			//["Sol_pierre1_H", {x: 3045 , y : 875}],
 			["Sol_jump", {x: 3115 , y : 875}],
-			["Sol_pierre1_H", {x: 2905 , y : 665}],
-			["Sol_pierre1_H", {x: 2835 , y : 595}],
 			["Sol_pierre1_H", {x: 2835 , y : 875}],
 			
 			["Mal", {x: 2975 , y : 875}],
@@ -178,6 +176,38 @@
 			
 			["Fin", {x: 1855 , y : 1505, asset: "tomate.png"}],		
 			["Sol_5", {x: 1855 , y : 1504, asset: "cage.png"}],	
+			
+			
+			
+			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
+			
+			//bloc pour le boss
+			
+			["Sol_2n", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
+			["Sol_2n", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
+			["Sol_2n", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
+			["Sol_2n", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
+			["Sol_2n", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
+			["Sol_2n", {asset: "fond_pierre.png",x: 2915 , y : 1505}],
+
+			
+			["Sol_jump", {x: 1855 , y : 1645}],
+			["Sol_jump", {x: 2065 , y : 1645}],
+			["Sol_jump", {x: 2275 , y : 1645}],
+			["Sol_jump", {x: 2485 , y : 1645}],
+			["Sol_jump", {x: 2695 , y : 1645}],
+			["Sol_jump", {x: 2915 , y : 1645}],
+			
+			["bouton", {x: 1855, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 2065, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 2275, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 2485, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 2695, y: 1600, coox : 3330, cooy : 945}],
+			["bouton", {x: 2915, y: 1600, coox : 3330, cooy : 945}],
+
+			
+			
+			
 			
 			            ];
               stage.loadAssets(levelAssets);  
