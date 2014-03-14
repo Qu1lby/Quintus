@@ -18,7 +18,7 @@ var score_l1tps = lireCookie(" Lvl1tps");
 	
 var score_l1tps_tmp = "";
 
-
+// ------------------------------------------------------------------------------------
 var score_l2 = lireCookie(" Lvl2");
 	if (score_l2 == null){
 		document.cookie = 'Lvl2=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -37,7 +37,7 @@ var score_l2tps = lireCookie(" Lvl2tps");
 	
 var score_l2tps_tmp = "";
 	
-	
+// ------------------------------------------------------------------------------------	
 var score_l3 = lireCookie(" Lvl3");
 	if (score_l3 == null){
 		document.cookie = 'Lvl3=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -57,7 +57,7 @@ var score_l3tps = lireCookie(" Lvl3tps");
 	
 var score_l3tps_tmp = "";
 
-
+// ------------------------------------------------------------------------------------
 var score_l4 = lireCookie(" Lvl4");
 	if (score_l4 == null){
 		document.cookie = 'Lvl4=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -76,7 +76,7 @@ var score_l4tps = lireCookie(" Lvl4tps");
 	
 var score_l4tps_tmp = "";
 
-	
+// ------------------------------------------------------------------------------------	
 var score_l5 = lireCookie(" Lvl5");
 	if (score_l5 == null){
 		document.cookie = 'Lvl5=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -95,7 +95,7 @@ var score_l5tps = lireCookie(" Lvl5tps");
 	
 var score_l5tps_tmp = "";
 
-
+// ------------------------------------------------------------------------------------
 var score_t = lireCookie(" Total");
 	if (score_t == null){
 		document.cookie = 'Total=0; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
@@ -103,12 +103,9 @@ var score_t = lireCookie(" Total");
 	}
 
 	score_t = parseInt(score_t);
-	
-var score_ttps = lireCookie(" Lvlttps");
-	if (score_ttps == null){
-		document.cookie = 'Lvlttps=00:00; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
-		score_ttps = "00:00";
-	}
+
+
+// ------------------------------------------------------------------------------------
 Q.scene("Total", function(stage) {
 	var Opacite = stage.insert(new Q.UI.Button({
        		fill: "rgb(0,0,0)",
@@ -135,7 +132,7 @@ Q.scene("Total", function(stage) {
 	var niv = stage.insert(new Q.UI.Text({ 
         label: "Niveau 1 - "+score_l1tps+" ("+score_l1+")\nNiveau 2 - "+score_l2tps+" ("+score_l2+")\n"+
 		"Niveau 3 - "+score_l3tps+" ("+score_l3+")\nNiveau 4 - "+score_l4tps+" ("+score_l4+")\n"+
-		"Niveau 5 - "+score_l5tps+" ("+score_l5+")\n\n    Total - "+score_t,
+		"  Boss - "+score_l5tps+" ("+score_l5+")\n\n    Total - "+score_t+" points",
 		size : 20,
 		family : "comic sans ms",
         x: 0,

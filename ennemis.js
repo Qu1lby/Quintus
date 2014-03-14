@@ -71,7 +71,7 @@
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin")){
-				if (music && !this.changemusic){
+				if (music && !this.changemusic && scene_courante!="lvl5"){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
 						if (scene_courante == "lvl2"){
@@ -201,7 +201,7 @@
             this._super(p,  {vx : -100, gravity : 1, asset : "tomateboss.png", defaultDirection: "right"});
 			this.coox = p.coox;
 			this.cooy = p.cooy;
-			this.tps = p.tps; // A passer en param (seconde)
+			this.tps = p.tps;
 
 			this.p.seconde = 0; 
 			this.init = true;
@@ -220,7 +220,6 @@
 
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_2Boss") || collision.obj.isA("Sol_3Boss")){
-			
 				if (this.init){
 					this.p.maintenant = new Date();
 					this.p.date_prec = this.p.maintenant;
@@ -241,7 +240,10 @@
 			
 			this.p.date_prec = now;
 			
-			// Envoi une balle tous les 'this.tps' secondes
+// CETTE PARTIE DU CODE GENERE DES ERREURS -> RANDOM ?
+// Soucis de listener ou je sais quoi
+
+			/*// Envoi une balle tous les 'this.tps' secondes
 				if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
 					if(this.p.vx > 0) {
 					var gerard = this.p.x + 65;
@@ -258,27 +260,18 @@
 						var balle3 = new Q.Grenade({x: playerTomate.p.x, y : 250, vy : playerTomate.p.x, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
 						Q.stage().insert(balle3);
 					}
-				}
+				}*/
 			}			
-		});				
+		});			
 
 			this.on("bump.top", function(collision) {
-            	if((collision.obj.isA("Tomate")) || (collision.obj.isA("Banane")) ||
-				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
-				   
-					if ((music)&&(this.sound)){
-						Q.audio.play("coup.mp3");
-						this.sound = false;
-					}
+            	if(collision.obj.isA("Tomate")) {  
 					this.destroy();
 				}
             });	
 				this.on("bump.left, bump.right", function(collision) {
             	if(collision.obj.isA("Tomate")) {  
 					collision.obj.damage();								
-					if(music){
-						Q.audio.play('creature.mp3');
-					}
 				}
             });
 		},

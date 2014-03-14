@@ -187,6 +187,12 @@
 						x: 0,
 						y: 15
 						}),GameoV);
+				}else {
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l1tps,
+						x: 0,
+						y: 15
+						}),GameoV);
 				}
 		
 			}
@@ -223,6 +229,12 @@
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
+						x: 0,
+						y: 15
+						}),GameoV);
+				}else {
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l2tps,
 						x: 0,
 						y: 15
 						}),GameoV);
@@ -264,7 +276,13 @@
 						x: 0,
 						y: 15
 					}),GameoV);
-			}
+				}else {
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l3tps,
+						x: 0,
+						y: 15
+						}),GameoV);
+				}
 			}
 			
 			if (scene_prec == "lvl4"){
@@ -302,7 +320,13 @@
 						x: 0,
 						y: 15
 						}),GameoV);
-			}
+				}else {
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l4tps,
+						x: 0,
+						y: 15
+						}),GameoV);
+				}
 			}
 			
 			if (scene_prec == "lvl5"){
@@ -341,6 +365,12 @@
 						x: 0,
 						y: 15
 						}),GameoV);
+				}else {
+					var msge2 = stage.insert(new Q.UI.Text({ 
+						label: "Best : "+score_l5tps,
+						x: 0,
+						y: 15
+						}),GameoV);
 				}
 			}
 		
@@ -350,12 +380,12 @@
 			border: 1,
             shadow: 3,
             shadowColor: "rgb(168,86,45)",
-            x: 80,
+            x: 0,
             y: 70,
 			fill: "rgb(160,160,160)"
         }),GameoV);
 		
-		var msg3 = stage.insert(new Q.UI.Button({ 
+	/*	var msg3 = stage.insert(new Q.UI.Button({ 
             label: "Scores",
 			border: 1,
             shadow: 3,
@@ -364,7 +394,7 @@
             y: 70,
 			fill: "rgb(160,160,160)"
         }),GameoV);
-		
+	*/	
 		msg.on("click",function() {
        		Q.clearStages();
 			
@@ -381,8 +411,9 @@
 			echap = !echap;
 		});
 		
-		msg3.on("click",function() {
+	/*	msg3.on("click",function() {
 			Q.stageScene("Total",2);
 		});
+	*/
 	});
 		

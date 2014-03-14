@@ -3,7 +3,6 @@ x Game over good bloquer bind
 - Continuer developpement des boss. SPRITE rapidos
 x Boss simple / x boss simultanée 2 /
   Boss qui bouge / Boss qui tire que sur le perso
-  Haricot
 
 - Boss du Level 5
 

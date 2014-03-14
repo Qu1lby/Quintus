@@ -549,7 +549,8 @@
 		  step: function(dt) {             
 			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
-				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))
+				   || (collision.obj.isA("Tomate"))) {
 				   
 					collision.obj.damage();
 					if(music){
