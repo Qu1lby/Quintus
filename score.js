@@ -112,7 +112,7 @@ var score_ttps = lireCookie(" Lvlttps");
 Q.scene("Total", function(stage) {
 	var Opacite = stage.insert(new Q.UI.Button({
        		fill: "rgb(0,0,0)",
-			opacity : 0.6,
+			opacity : 0.8,
             x: 0,
             y: 0,
             w: wi*2,
@@ -135,7 +135,7 @@ Q.scene("Total", function(stage) {
 	var niv = stage.insert(new Q.UI.Text({ 
         label: "Niveau 1 - "+score_l1tps+" ("+score_l1+")\nNiveau 2 - "+score_l2tps+" ("+score_l2+")\n"+
 		"Niveau 3 - "+score_l3tps+" ("+score_l3+")\nNiveau 4 - "+score_l4tps+" ("+score_l4+")\n"+
-		"Niveau 5 - "+score_l5tps+" ("+score_l5+")\n\nTotal   - "+score_ttps+" ("+score_t+")",
+		"Niveau 5 - "+score_l5tps+" ("+score_l5+")\n\n    Total - "+score_t,
 		size : 20,
 		family : "comic sans ms",
         x: 0,

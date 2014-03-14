@@ -111,7 +111,7 @@
 				Q.stageScene("gameStats",1);
 				
 				if(music){
-					Q.audio.play('lvl5.mp3');
+					Q.audio.play('lvl5.mp3',{ loop : true});
 				}
 				
 				scene_prec = 'GO';
@@ -153,33 +153,34 @@
             );
 	
 			if (scene_prec == "lvl1"){
-			
-					var msge3 = stage.insert(new Q.UI.Text({ 
-						label: "Niveau 1",
-						x: wi/2,
-						y: hi/2-50,
-						color: "rgb(168,86,45)",
-						size :40
-						}));
+				var msge3 = stage.insert(new Q.UI.Text({ 
+					label: "Niveau 1",
+					x: wi/2,
+					y: hi/2-50,
+					color: "rgb(168,86,45)",
+					size :40
+				}));
 							
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Score : "+score_l1_tmp,
-						x: 0,
-						y: -75
-						}),GameoV);		
-						
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Temps : "+score_l1tps_tmp,
-						x: 0,
-						y: -35
-						}),GameoV);		
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Score : "+score_l1_tmp,
+					x: 0,
+					y: -75
+					}),GameoV);		
+					
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Temps : "+score_l1tps_tmp,
+					x: 0,
+					y: -35
+					}),GameoV);		
 				
 				if (score_l1_tmp > score_l1){
 					var tmp = "Lvl1="+score_l1_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					document.cookie = tmp;
 					document.cookie = "Lvl1tps="+score_l1tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
-					
+				
 					score_l1 = score_l1_tmp;
+					score_l1tps = score_l1tps_tmp;
+					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
@@ -192,30 +193,33 @@
 			
 			if (scene_prec == "lvl2"){
 				var msge3 = stage.insert(new Q.UI.Text({ 
-						label: "Niveau 2",
-						x: wi/2,
-						y: hi/2-50,
-						color: "rgb(168,86,45)",
-						size :40
-						}));
+					label: "Niveau 2",
+					x: wi/2,
+					y: hi/2-50,
+					color: "rgb(168,86,45)",
+					size :40
+					}));
 							
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Score : "+score_l2_tmp,
-						x: 0,
-						y: -75
-						}),GameoV);	
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Score : "+score_l2_tmp,
+					x: 0,
+					y: -75
+					}),GameoV);	
 
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Temps : "+score_l2tps_tmp,
-						x: 0,
-						y: -35
-						}),GameoV);								
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Temps : "+score_l2tps_tmp,
+					x: 0,
+					y: -35
+					}),GameoV);								
 				
 				if (score_l2_tmp > score_l2){
 					var tmp = "Lvl2="+score_l2_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					document.cookie = tmp;
 					document.cookie = "Lvl2tps="+score_l2tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					score_l2 = score_l2_tmp;
+					score_l2tps = score_l2tps_tmp;
+					
+					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
@@ -223,29 +227,28 @@
 						y: 15
 						}),GameoV);
 				}
-		
 			}
 			
 			if (scene_prec == "lvl3"){
 				var msge3 = stage.insert(new Q.UI.Text({ 
-						label: "Niveau 3",
-						x: wi/2,
-						y: hi/2-50,
-						color: "rgb(168,86,45)",
-						size :40
-						}));
+					label: "Niveau 3",
+					x: wi/2,
+					y: hi/2-50,
+					color: "rgb(168,86,45)",
+					size :40
+				}));
 							
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Score : "+score_l3_tmp,
-						x: 0,
-						y: -75
-						}),GameoV);	
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Score : "+score_l3_tmp,
+					x: 0,
+					y: -75
+				}),GameoV);	
 						
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Temps : "+score_l3tps_tmp,
-						x: 0,
-						y: -35
-						}),GameoV);		
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Temps : "+score_l3tps_tmp,
+					x: 0,
+					y: -35
+				}),GameoV);		
 				
 				if (score_l3_tmp > score_l3){
 					var tmp = "Lvl3="+score_l3_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
@@ -253,35 +256,37 @@
 					document.cookie = "Lvl3tps="+score_l3tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 				
 					score_l3 = score_l3_tmp;
+					score_l3tps = score_l3tps_tmp;
+					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
 						x: 0,
 						y: 15
-						}),GameoV);
+					}),GameoV);
 			}
 			}
 			
 			if (scene_prec == "lvl4"){
 				var msge3 = stage.insert(new Q.UI.Text({ 
-						label: "Niveau 4",
-						x: wi/2,
-						y: hi/2-50,
-						color: "rgb(168,86,45)",
-						size :40
-						}));
+					label: "Niveau 4",
+					x: wi/2,
+					y: hi/2-50,
+					color: "rgb(168,86,45)",
+					size :40
+				}));
 							
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Score : "+score_l4_tmp,
-						x: 0,
-						y: -75
-						}),GameoV);	
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Score : "+score_l4_tmp,
+					x: 0,
+					y: -75
+				}),GameoV);	
 
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Temps : "+score_l4tps_tmp,
-						x: 0,
-						y: -35
-						}),GameoV);								
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Temps : "+score_l4tps_tmp,
+					x: 0,
+					y: -35
+				}),GameoV);								
 				
 				if (score_l4_tmp > score_l4){
 					var tmp = "Lvl4="+score_l4_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
@@ -289,6 +294,8 @@
 					document.cookie = "Lvl4tps="+score_l4tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					
 					score_l4 = score_l4_tmp;
+					score_l4tps = score_l4tps_tmp;
+					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
@@ -300,24 +307,24 @@
 			
 			if (scene_prec == "lvl5"){
 				var msge3 = stage.insert(new Q.UI.Text({ 
-						label: "- BOSS -",
-						x: wi/2,
-						y: hi/2-50,
-						color: "rgb(168,86,45)",
-						size :40
-						}));
+					label: "- BOSS -",
+					x: wi/2,
+					y: hi/2-50,
+					color: "rgb(168,86,45)",
+					size :40
+				}));
 							
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Score : "+score_l5_tmp,
-						x: 0,
-						y: -75
-						}),GameoV);	
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Score : "+score_l5_tmp,
+					x: 0,
+					y: -75
+				}),GameoV);	
 						
-					var msge = stage.insert(new Q.UI.Text({ 
-						label: "Temps : "+score_l5tps_tmp,
-						x: 0,
-						y: -35
-						}),GameoV);								
+				var msge = stage.insert(new Q.UI.Text({ 
+					label: "Temps : "+score_l5tps_tmp,
+					x: 0,
+					y: -35
+				}),GameoV);								
 				
 				if (score_l5_tmp > score_l5){
 					var tmp = "Lvl5="+score_l5_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
@@ -325,6 +332,9 @@
 					document.cookie = "Lvl5tps="+score_l5tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					
 					score_l5 = score_l5_tmp;
+					score_l5tps = score_l5tps_tmp;
+					
+					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
