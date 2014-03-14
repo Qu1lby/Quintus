@@ -243,7 +243,6 @@
 			
 			// Envoi une balle tous les 'this.tps' secondes
 				if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
-					var tmp1 = (Math.random() * (1505 - 385));
 					if(this.p.vx > 0) {
 					var gerard = this.p.x + 65;
 					}else{
@@ -253,17 +252,14 @@
 					var balle = new Q.Grenade({x: gerard, y : patrick, vy : -700, vx: -100, rangeY : 550 , speed : 300, asset : "grenade.png"});
 					Q.stage().insert(balle);
 					this.p.once = true;
-					var balle2 = new Q.Grenade({x: tmp1, y : 200, vy : tmp1, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+					var balle2 = new Q.Grenade({x: (Math.random() * (1505 - 385)), y : 250, vy : (Math.random() * (1505 - 385)), vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
 					Q.stage().insert(balle2);
+					if(playerTomate.p.y > 700) {
+						var balle3 = new Q.Grenade({x: playerTomate.p.x, y : 250, vy : playerTomate.p.x, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+						Q.stage().insert(balle3);
+					}
 				}
-			}
-           	if(collision.obj.isA("Tomate")) {                   
-               	collision.obj.damage();				
-					//alert(this.p.x);				
-				if(music){
-					Q.audio.play('creature.mp3');
-				}
-            }			
+			}			
 		});				
 
 			this.on("bump.top", function(collision) {
@@ -277,6 +273,14 @@
 					this.destroy();
 				}
             });	
+				this.on("bump.left, bump.right", function(collision) {
+            	if(collision.obj.isA("Tomate")) {  
+					collision.obj.damage();								
+					if(music){
+						Q.audio.play('creature.mp3');
+					}
+				}
+            });
 		},
     });
 	

@@ -1,5 +1,5 @@
 // Setup level 1
-
+var playerTomate;
 Q.scene("level5",function(stage) {		
 	var background = new Q.TileLayer({
 		dataAsset: "Lvl5.tmx",
@@ -17,7 +17,7 @@ Q.scene("level5",function(stage) {
 		tileW: 70, tileH: 70,
 		type: Q.SPRITE_DEFAULT }));
             
-    var player = stage.insert(new Q.Tomate());
+		playerTomate = stage.insert(new Q.Tomate());
           
     var levelAssets = [
 		
@@ -39,7 +39,7 @@ Q.scene("level5",function(stage) {
 			["Sol_2Boss", {x: 1085 , y : 945}],
 			["Sol_2Boss", {x: 1155 , y : 945}],
 			["Sol_2Boss", {x: 1225 , y : 945}],
-			["Boss", {x: 1220 , y : 805, coox : 1205, cooy : 875, tps: 3}],
+			["Boss", {x: 1220 , y : 805, coox : 1205, cooy : 875, tps: 2}],
 			["Sol_2Boss", {x: 1295 , y : 945}],
 			["Sol_2Boss", {x: 1365 , y : 945}],
 			
@@ -108,6 +108,6 @@ Q.scene("level5",function(stage) {
             
 	stage.loadAssets(levelAssets);  
 
-    stage.add("viewport").follow(player,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
+    stage.add("viewport").follow(playerTomate,{x: true, y: true},{minX: 0, maxX: background.p.w, minY: 0, maxY: background.p.h});
 		   
 });
