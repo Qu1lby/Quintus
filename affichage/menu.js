@@ -73,20 +73,11 @@ Pour griser :
 			scene_prec = "menu";
      	});	
 
-//TO DO		
+	
 		sco.on("click",function() {
-			
-			var xhr = getXMLHttpRequest();
-			xhr.open("GET", "bdd.php", true);
-			xhr.send(null);
-			
-			xhr.onreadystatechange = function() {
-			 if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-                alert(xhr.responseText); // Données textuelles récupérées
-			}
-			}
+			Q.stageScene('Score');
      	});	
-// --
+
 	
 		inf.on("click",function() {
 			Q.stageScene('Aide',2);
