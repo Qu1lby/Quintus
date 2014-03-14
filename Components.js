@@ -543,35 +543,33 @@
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
-			this.on('step',this,'countdown');
         },
         
-		  step: function(dt) {             
+		  step: function(dt) {  
+		  
+		  	this.p.seconds -= dt;
+			if(this.p.seconds < 0) { 
+				this.destroy();
+			} else if(this.p.seconds < 1) {
+				this.set({ "fill-opacity": this.p.seconds });
+			}
+				           
 			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) ||
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))
 				   || (collision.obj.isA("Tomate"))) {
 				   
 					collision.obj.damage();
-					if(music){
+					if(music && scene_courante!="lvl5"){
 						Q.audio.play("canon.mp3");
 					}
 					this.destroy();
-				}else{
-					if (!collision.obj.isA("DrawEnnemy")){
-						this.destroy();}
+				}
+				if (!collision.obj.isA("DrawEnnemy")){
+					this.destroy();
 				}
             });
 		},
-		
-		countdown: function(dt) {
-			this.p.seconds -= dt;
-			if(this.p.seconds < 0) { 
-				this.destroy();
-			} else if(this.p.seconds < 1) {
-					this.set({ "fill-opacity": this.p.seconds });
-				}
-		}
     });
 	
 // Boss Final
@@ -581,10 +579,16 @@
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
 			this.p.initialX = this.p.x;
-			this.on('step',this,'countdown');
         },
         
-		  step: function(dt) {             
+		  step: function(dt) {
+		  	this.p.seconds -= dt;
+			if(this.p.seconds < 0) { 
+				this.destroy();
+			} else if(this.p.seconds < 1) {
+				this.set({ "fill-opacity": this.p.seconds });
+			}
+				           
 			this.on("bump.right,bump.left,bump.top,bump.bottom",function(collision) {
 				if((collision.obj.isA("Tomate"))) {
 				   
@@ -605,13 +609,4 @@
 				}				
             });
 		},
-		
-		countdown: function(dt) {
-			this.p.seconds -= dt;
-			if(this.p.seconds < 0) { 
-				this.destroy();
-			} else if(this.p.seconds < 1) {
-					this.set({ "fill-opacity": this.p.seconds });
-				}
-		}
     });

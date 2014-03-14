@@ -243,25 +243,25 @@
 // CETTE PARTIE DU CODE GENERE DES ERREURS -> RANDOM ?
 // Soucis de listener ou je sais quoi
 
-			/*// Envoi une balle tous les 'this.tps' secondes
-				if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
-					if(this.p.vx > 0) {
-					var gerard = this.p.x + 65;
-					}else{
-					var gerard = this.p.x - 65;
-					}
-					var patrick = this.p.y - 80;
-					var balle = new Q.Grenade({x: gerard, y : patrick, vy : -700, vx: -100, rangeY : 550 , speed : 300, asset : "grenade.png"});
-					Q.stage().insert(balle);
-					this.p.once = true;
-					var balle2 = new Q.Grenade({x: (Math.random() * (1505 - 385)), y : 250, vy : (Math.random() * (1505 - 385)), vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
-					Q.stage().insert(balle2);
-					if(playerTomate.p.y > 700) {
-						var balle3 = new Q.Grenade({x: playerTomate.p.x, y : 250, vy : playerTomate.p.x, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
-						Q.stage().insert(balle3);
-					}
-				}*/
-			}			
+		// Envoi une balle tous les 'this.tps' secondes
+		if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
+			if(this.p.vx > 0) {
+				var gerard = this.p.x + 65;
+			}else{
+				var gerard = this.p.x - 65;
+			}
+			var patrick = this.p.y - 80;
+			var balle = new Q.Grenade({x: gerard, y : patrick, vy : -700, vx: -100, rangeY : 550 , speed : 300, asset : "grenade.png"});
+			Q.stage().insert(balle);
+				this.p.once = true;
+				var balle2 = new Q.Grenade({x: (Math.random() * (1505 - 385)), y : 250, vy : (Math.random() * (1505 - 385)), vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+				Q.stage().insert(balle2);
+				if(playerTomate.p.y > 700) {
+					var balle3 = new Q.Grenade({x: playerTomate.p.x, y : 250, vy : playerTomate.p.x, vx: 0, rangeY : 1550 , speed : 300, asset : "grenade.png"});
+				Q.stage().insert(balle3);
+				}
+			}
+		}			
 		});			
 
 			this.on("bump.top", function(collision) {

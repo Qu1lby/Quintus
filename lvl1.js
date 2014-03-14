@@ -89,6 +89,9 @@ Q.scene("level1",function(stage) {
 			["casedestruc", {x: 175 , y : 1435, asset:"fond_pierre2.png"}],
 			["Sol_1", {x: 245 , y : 1435}],
 			
+			["mur", {x: 35 , y : 1785}],
+			
+			
 		// Troisème niveau
 			["Sol_pierre1_D", {x: 385 , y : 1855}],
 			["Sol_pierre1_D", {x: 455 , y : 1855}],

@@ -79,7 +79,7 @@ Q.scene("level5",function(stage) {
 			["Sol_3", {x: 1225 , y : 1225, asset : "fond_pierre.png"}],
 			["Sol_2", {x: 1295 , y : 1225, asset : "fond_pierre.png"}],
 			["Sol_3", {x: 1365 , y : 1225, asset : "fond_pierre.png"}],
-			["DrawEnnemy", {x: 1575 , y : 1055, coox : 1545, cooy : 1085, tps : 6,  asset : "boite.png"}],
+			["DrawEnnemy", {x: 1575 , y : 1055, coox : 1545, cooy : 1085, tps :10,  asset : "boite.png"}],
 			["Sol_fin", {x: 1575 , y : 1155, asset : "fond_pierre.png"}],
 			
 		// Quatrieme niveau
@@ -100,6 +100,7 @@ Q.scene("level5",function(stage) {
 			["Sol_2", {x: 1365 , y : 1295, asset : "fond_pierre.png"}],
 			
 			
+			["mur", {x: 245 , y : 1085}],
 			["Sol_jump", {x: 315 , y : 1225}],
 			["Sol_jump", {x: 1435 , y : 1225}],
 			
