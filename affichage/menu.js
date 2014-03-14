@@ -4,10 +4,9 @@ Pour griser :
   fill: "rgb(160,160,160)" 
 */
 
-
 //  Menu Principal ------------------------------------------------------
 	Q.scene("Debut", function(stage) {
-		
+	
 		var background = new Q.TileLayer({ 
 		dataAsset: "men.tmx",
 		layerIndex: 0,
@@ -65,7 +64,7 @@ Pour griser :
 							
 		men.on("click",function() {
 			Q.clearStages();
-/*			if (score_t!= ? ){
+/*			if (score_t!< 2000 ){
    				Q.stageScene('niveau2');
 			}else Q.stageScene('niveau');
 */	
@@ -76,13 +75,22 @@ Pour griser :
 
 //TO DO		
 		sco.on("click",function() {
-
+			
+			var xhr = getXMLHttpRequest();
+			xhr.open("GET", "bdd.php", true);
+			xhr.send(null);
+			
+			xhr.onreadystatechange = function() {
+			 if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+                alert(xhr.responseText); // Données textuelles récupérées
+			}
+			}
      	});	
-		
+// --
+	
 		inf.on("click",function() {
 			Q.stageScene('Aide',2);
      	});	
-// --
 		
 		var copy = stage.insert(new Q.UI.Button({ 
         	label: "©Kimanipi", x: wi-50, y: hi-20 }));
@@ -139,10 +147,10 @@ Pour griser :
 		var Fond = stage.insert(new Q.UI.Container({
                 fill: "rgb(167,200,240)",
                 x: wi/2,
-                y: hi/2+80,
+                y: hi/2+50,
                 border: 1,
                 w: wi/3.5,
-                h: 400
+                h: 415
                 })
             );
 		
@@ -151,7 +159,7 @@ Pour griser :
      	});	
 		
 		var lives = stage.insert(new Q.UI.Text({ 
-                label: "- Crédits -",
+                label: "- Credits -",
 				size : 20,
 				family : "comic sans ms",
                 x: 0,

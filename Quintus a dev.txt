@@ -31,6 +31,6 @@ x Image explicative des binds et case pour le menu infos (K)
 k:
 x Petit sprite tire projectile de nimporte ou
 
-- Enregistrer le temps avec le score
+x Enregistrer le temps avec le score
 
 - BDD meilleurs scores
