@@ -62,17 +62,14 @@
 					 this.p.secondeabs = "0"+this.p.secondeabs;
 					 this.p.once = true;
 				}
-				if(this.p.minute<10){ 
-					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
-				}else{
-					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
-				}
+				
+				var livesLabel = Q("UI.Text",1).at(1);
+        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l1tps;	
+				
 			}
 			
 			var livesLabel = Q("UI.Text",1).first();
-			livesLabel.p.label = "Lives x "+this.p.lives;
+			livesLabel.p.label = "Vies x "+this.p.lives;
 
         	if(Q.inputs["left"]){
             	this.p.flip = "x";
