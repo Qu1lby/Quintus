@@ -25,6 +25,9 @@ Q.scene("Classe", function(stage) {
 	});
 
 <?php
+
+	session_start();
+
 	$db = mysql_connect('localhost', 'root', ''); 
 
 	// on sélectionne la base 
@@ -36,24 +39,34 @@ Q.scene("Classe", function(stage) {
 	// on envoie la requête 
 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
 
-	$i = 300;
-	while($data = mysql_fetch_assoc($req)) { ?>
+	$i = 262;
 
-		alert (<?php $data['Pseudo'] ?>);
+while($data = mysql_fetch_assoc($req)) { ?>
 
 		var niv = stage.insert(new Q.UI.Text({ 
-	        label:  "<?php $data['Pseudo'] ?>e",
-			size : 15,
+	        label: "<?php echo $data['Pseudo'] ?>",
+			size : 17,
 			family : "comic sans ms",
-	        x: 200,
-	        y: 260,
+	        x: 250,
+	        y: <?php echo $i?>,
 			
 	        }), Opacite
 	        );
 
-		<?php $i=$i+100; 
+	    var sc = stage.insert(new Q.UI.Text({ 
+	        label: "<?php echo $data['Score'] ?>",
+			size : 17,
+			family : "comic sans ms",
+	        x: 350,
+	        y: <?php echo $i?>,
+			
+	        }), Opacite
+	        );
+
+		<?php $i=$i+30; 
 
 	}
-	
+
     ?>    
+
 });
