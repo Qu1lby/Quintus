@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 16 Mars 2014 à 11:47
+-- Généré le: Dim 16 Mars 2014 à 20:27
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -32,6 +32,16 @@ CREATE TABLE IF NOT EXISTS `classement` (
   `Score` int(4) NOT NULL,
   PRIMARY KEY (`Place`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `classement`
+--
+
+INSERT INTO `classement` (`Place`, `Pseudo`, `Score`) VALUES
+(1, 'Inconnu', 0),
+(2, 'Inconnu', 0),
+(3, 'Inconnu', 0),
+(4, 'Inconnu', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
