@@ -57,10 +57,10 @@ Pour griser :
         	label: "Jouer", x: 0, y: 0 }),Menu);
 				
 		var sco = stage.insert(new Q.UI.Button({ 
-        	label: "Classement", x: 0, y: 0 }),Menu2);
+        	label: "Classement", x: 0, y: 0 }),Menu3);
 				
 		var inf = stage.insert(new Q.UI.Button({ 
-        	label: "Informations", x: 0, y: 0 }),Menu3);
+        	label: "Comment ?", x: 0, y: 0 }),Menu2);
 							
 		men.on("click",function() {
 			Q.clearStages();

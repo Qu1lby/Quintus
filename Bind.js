@@ -131,7 +131,12 @@
 		
 
 // Cookie Musique 		
-	var music = lireCookie("Musique");
+	if (Navigateur.indexOf("Chrome") !=-1){
+		var music = lireCookie(" Musique");
+	}else{
+		var music = lireCookie("Musique");
+	}
+
 	if (music == null){
 		document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
 		music = true;
@@ -140,6 +145,7 @@
 	if (music == "false"){
 		music = false;
 	}
+
 	
 // Musique 'M'
 	Q.input.on("musique", function () {  

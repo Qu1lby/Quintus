@@ -105,30 +105,39 @@ var score_t = lireCookie(" Total");
 	score_t = parseInt(score_t);
 
 
+	function send() {
+			var DSLScript  = document.createElement("script");
+			DSLScript.src  = "bdd.php";
+			DSLScript.type = "text/javascript";
+			document.body.appendChild(DSLScript);
+			document.body.removeChild(DSLScript);
+	}
+	
 // ------------------------------------------------------------------------------------
 Q.scene("Score", function(stage) {
 
-	var background = new Q.TileLayer({ 
-		dataAsset: "scaff.tmx",
-		layerIndex: 0,
-		sheet: "scor",
-		tileW: 70, tileH: 70,
-		type: Q.SPRITE_NONE });
-		
-        stage.insert(background);
+		send();
 
-        var xhr = getXMLHttpRequest();
+      /*  var xhr = getXMLHttpRequest();
 		xhr.open("GET", "bdd.php", true);
 		xhr.send(null);
 			
 		xhr.onreadystatechange = function() {
 		 if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-            alert(xhr.responseText); // Données textuelles récupérées
-		}
-		}
+  		
+		
+		
+		
+	echo "var background = new Q.TileLayer({ dataAsset: \"scaff.tmx\",
+		layerIndex: 0,
+		sheet: \"scor\",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
+		
+        stage.insert(background);
 	
-		var Opacite = stage.insert(new Q.UI.Button({
-        	fill: "rgb(0,0,0)",
+	var Opacite = stage.insert(new Q.UI.Button({
+        	fill: \"rgb(0,0,0)\",
 			opacity : 0,
             x: 0,
             y: 0,
@@ -137,9 +146,18 @@ Q.scene("Score", function(stage) {
            })
         );
 		
-	Opacite.on("click",function() {
+	Opacite.on(\"click\",function() {
 		Q.stageScene('Debut');
-    });	
+    });	";
+	
+		
+		
+		
+		
+		
+		
+		}
+		}*/
 
 	/*var niv = stage.insert(new Q.UI.Text({ 
         label: "Niveau 1 - "+score_l1tps+" ("+score_l1+")\nNiveau 2 - "+score_l2tps+" ("+score_l2+")\n"+
