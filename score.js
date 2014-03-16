@@ -105,6 +105,8 @@ var score_t = lireCookie(" Total");
 	score_t = parseInt(score_t);
 
 
+	
+// ------------------------------------------------------------------------------------
 	function send() {
 			var DSLScript  = document.createElement("script");
 			DSLScript.src  = "bdd.php";
@@ -112,11 +114,14 @@ var score_t = lireCookie(" Total");
 			document.body.appendChild(DSLScript);
 			document.body.removeChild(DSLScript);
 	}
-	
-// ------------------------------------------------------------------------------------
+
 Q.scene("Score", function(stage) {
 
 		send();
+		//alert();
+		setTimeout(function() {Q.stageScene("Classe",1);}, 100);
+		
+
 
       /*  var xhr = getXMLHttpRequest();
 		xhr.open("GET", "bdd.php", true);
@@ -125,32 +130,6 @@ Q.scene("Score", function(stage) {
 		xhr.onreadystatechange = function() {
 		 if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
   		
-		
-		
-		
-	echo "var background = new Q.TileLayer({ dataAsset: \"scaff.tmx\",
-		layerIndex: 0,
-		sheet: \"scor\",
-		tileW: 70, tileH: 70,
-		type: Q.SPRITE_NONE });
-		
-        stage.insert(background);
-	
-	var Opacite = stage.insert(new Q.UI.Button({
-        	fill: \"rgb(0,0,0)\",
-			opacity : 0,
-            x: 0,
-            y: 0,
-            w: wi*2,
-            h: hi*2
-           })
-        );
-		
-	Opacite.on(\"click\",function() {
-		Q.stageScene('Debut');
-    });	";
-	
-		
 		
 		
 		
