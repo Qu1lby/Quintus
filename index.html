@@ -40,7 +40,7 @@
 	var hi = 610;
 	
 	// Initialisation du moteur de jeu
-    var Q = Quintus()
+    var Q = Quintus(audioSupported: [ 'ogg','mp3' ])
         .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI, Anim")
 		.setup("Quintus", {
             width: 960,
