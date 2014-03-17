@@ -18,6 +18,7 @@
 			["Sol_G5", {x: 175 , y : 1575}],
 			["Sol_G5", {x: 245 , y : 1575}],
 			
+			["Pressoir", {x:175, y: 1365, vy : 100 , rangeY: 100, cooy: 1505, asset: "grille70bas.png"}],
 			
 			//["bouton2", {x: 245 , y : 1505, coox : 245, cooy :1365}],
 			
