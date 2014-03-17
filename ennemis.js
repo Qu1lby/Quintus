@@ -264,11 +264,13 @@
 		}			
 		});			
 
-			this.on("bump.top", function(collision) {
-            	if(collision.obj.isA("Tomate")) {  
+
+            	if(this.p.y > 1600) {  
 					this.destroy();
+					Q.clearStages();
+					Q.stageScene("GoodGame",1, {label: "Victory"});
 				}
-            });	
+
 				this.on("bump.left, bump.right", function(collision) {
             	if(collision.obj.isA("Tomate")) {  
 					collision.obj.damage();								
