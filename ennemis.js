@@ -70,7 +70,7 @@
       
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
-			if(collision.obj.isA("Sol_fin")){
+			if(collision.obj.isA("Sol_fin") || collision.obj.isA("DrawEnnemy")){
 				if (music && !this.changemusic && scene_courante!="lvl5"){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
@@ -264,11 +264,13 @@
 		}			
 		});			
 
-			this.on("bump.top", function(collision) {
-            	if(collision.obj.isA("Tomate")) {  
+
+            	if(this.p.y > 1600) {  
 					this.destroy();
+					Q.clearStages();
+					Q.stageScene("GoodGame",1, {label: "Victory"});
 				}
-            });	
+
 				this.on("bump.left, bump.right", function(collision) {
             	if(collision.obj.isA("Tomate")) {  
 					collision.obj.damage();								
