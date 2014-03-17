@@ -57,7 +57,7 @@ while($data = mysql_fetch_assoc($req)) { ?>
 	        label: "<?php echo $data['Score'] ?>",
 			size : 17,
 			family : "comic sans ms",
-	        x: 350,
+	        x: 380,
 	        y: <?php echo $i?>,
 			
 	        }), Opacite
@@ -67,6 +67,61 @@ while($data = mysql_fetch_assoc($req)) { ?>
 
 	}
 
-    ?>    
+    ?>
 
+    var lvl = stage.insert(new Q.UI.Text({ 
+	        label: score_l1tps+"min    ("+score_l1+" pts)",    
+
+			size : 17,
+			family : "comic sans ms",
+	        x: 630,
+	        y: 410
+			
+	        }), Opacite
+	        );
+
+	var lvl = stage.insert(new Q.UI.Text({ 
+	        label: score_l2tps+"min    ("+score_l2+" pts)",    
+
+			size : 17,
+			family : "comic sans ms",
+	        x: 630,
+	        y: 440
+			
+	        }), Opacite
+	        );
+
+    var lvl = stage.insert(new Q.UI.Text({ 
+	        label: score_l3tps+"min    ("+score_l3+" pts)",    
+
+			size : 17,
+			family : "comic sans ms",
+	        x: 630,
+	        y: 470
+			
+	        }), Opacite
+	        );
+	        
+	var lvl = stage.insert(new Q.UI.Text({ 
+	        label: score_l4tps+"min    ("+score_l4+" pts)",    
+
+			size : 17,
+			family : "comic sans ms",
+	        x: 630,
+	        y: 500
+			
+	        }), Opacite
+	        );
+
+    var lvl = stage.insert(new Q.UI.Text({ 
+	        label: score_l5tps+"min    ("+score_l5+" pts)",    
+
+			size : 17,
+			family : "comic sans ms",
+	        x: 630,
+	        y: 530
+			
+	        }), Opacite
+	        );
+	        
 });

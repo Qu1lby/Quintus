@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 16 Mars 2014 à 20:27
+-- Généré le: Lun 17 Mars 2014 à 17:44
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -38,10 +38,16 @@ CREATE TABLE IF NOT EXISTS `classement` (
 --
 
 INSERT INTO `classement` (`Place`, `Pseudo`, `Score`) VALUES
-(1, 'Inconnu', 0),
-(2, 'Inconnu', 0),
-(3, 'Inconnu', 0),
-(4, 'Inconnu', 0);
+(1, 'Inconnu', 5000),
+(2, 'Inconnu', 4500),
+(3, 'Inconnu', 4000),
+(4, 'Inconnu', 3500),
+(5, 'Inconnu', 3000),
+(6, 'Inconnu', 2000),
+(7, 'Inconnu', 1000),
+(8, 'Inconnu', 700),
+(9, 'Inconnu', 699),
+(10, 'Inconnu', 250);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

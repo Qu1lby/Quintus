@@ -177,10 +177,13 @@
 					var tmp = "Lvl1="+score_l1_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					document.cookie = tmp;
 					document.cookie = "Lvl1tps="+score_l1tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
-				
+
 					score_l1 = score_l1_tmp;
 					score_l1tps = score_l1tps_tmp;
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
+
+					verification();
+					alert('done');
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
@@ -222,11 +225,13 @@
 					var tmp = "Lvl2="+score_l2_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
 					document.cookie = tmp;
 					document.cookie = "Lvl2tps="+score_l2tps_tmp+"; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/";
+					
 					score_l2 = score_l2_tmp;
 					score_l2tps = score_l2tps_tmp;
-					
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
+					verification();
+
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
 						x: 0,
@@ -271,6 +276,8 @@
 					score_l3tps = score_l3tps_tmp;
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
+					verification();
+
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
 						x: 0,
@@ -315,6 +322,8 @@
 					score_l4tps = score_l4tps_tmp;
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
+					verification();
+
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
 						x: 0,
@@ -357,9 +366,10 @@
 					
 					score_l5 = score_l5_tmp;
 					score_l5tps = score_l5tps_tmp;
-					
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 					
+					verification();
+
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
 						x: 0,

@@ -104,6 +104,12 @@ var score_t = lireCookie(" Total");
 
 	score_t = parseInt(score_t);
 
+var pseudo = lireCookie(" Pseudo");
+	if (pseudo == null){
+		document.cookie = 'Pseudo=null; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+		pseudo = "null";
+	}
+
 
 	
 // ------------------------------------------------------------------------------------
@@ -115,39 +121,16 @@ var score_t = lireCookie(" Total");
 			document.body.removeChild(DSLScript);
 	}
 
+	function verification() {
+			var DSLScript  = document.createElement("script");
+			DSLScript.src  = "verification.php?donnee="+score_t;
+			DSLScript.type = "text/javascript";
+			document.body.appendChild(DSLScript);
+			document.body.removeChild(DSLScript);
+	}
+
 Q.scene("Score", function(stage) {
-
 		send();
-		//alert();
 		setTimeout(function() {Q.stageScene("Classe",1);}, 100);
-		
-
-
-      /*  var xhr = getXMLHttpRequest();
-		xhr.open("GET", "bdd.php", true);
-		xhr.send(null);
-			
-		xhr.onreadystatechange = function() {
-		 if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-  		
-		
-		
-		
-		
-		
-		}
-		}*/
-
-	/*var niv = stage.insert(new Q.UI.Text({ 
-        label: "Niveau 1 - "+score_l1tps+" ("+score_l1+")\nNiveau 2 - "+score_l2tps+" ("+score_l2+")\n"+
-		"Niveau 3 - "+score_l3tps+" ("+score_l3+")\nNiveau 4 - "+score_l4tps+" ("+score_l4+")\n"+
-		"  Boss - "+score_l5tps+" ("+score_l5+")\n\n    Total - "+score_t+" points",
-		size : 20,
-		family : "comic sans ms",
-        x: 0,
-        y: 10,
-		
-        })
-	);*/
 		
 });	
