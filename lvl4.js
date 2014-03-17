@@ -18,7 +18,7 @@
 			["Sol_G5", {x: 175 , y : 1575}],
 			["Sol_G5", {x: 245 , y : 1575}],
 			
-			["Pressoir", {x:175, y: 1365, vy : 100 , rangeY: 100, cooy: 1505, asset: "grille70bas.png"}],
+			
 			
 			//["bouton2", {x: 245 , y : 1505, coox : 245, cooy :1365}],
 			
@@ -33,7 +33,7 @@
 			["Sol_pierre1_H", {x: 525 , y : 1295}],
 			["Sol_pierre1_H", {x: 595 , y : 1365}],
 			["Sol_pierre1_P", {x: 595 , y : 1435}],
-			//["Sol_pierre1_P", {x: 595 , y : 1505}],
+			["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			
 			["bouton_case_droite_multi", {asset: "push4.png",x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
@@ -93,14 +93,14 @@
 			["Sol_jump", {x: 175 , y : 595}],
 			
 			//Deuxieme etage 
-			// ["Sol_pierre1_P", {x: 805 , y : 525}],
-			// ["Sol_pierre1_P", {x: 805 , y : 455}],
-			// ["Sol_pierre1_P", {x: 805 , y : 385}],
-			// ["Sol_pierre1_H", {x: 805 , y : 315}],
-			// ["Sol_pierre1_P", {x: 735 , y : 455}],
-			// ["Sol_pierre1_H", {x: 735 , y : 385}],
-			// ["Sol_pierre1_P", {x: 665 , y : 525}],
-			// ["Sol_pierre1_H", {x: 665 , y : 455}],
+			 ["Sol_pierre1_P", {x: 805 , y : 525}],
+			 ["Sol_pierre1_P", {x: 805 , y : 455}],
+			 ["Sol_pierre1_P", {x: 805 , y : 385}],
+			 ["Sol_pierre1_H", {x: 805 , y : 315}],
+			 ["Sol_pierre1_P", {x: 735 , y : 455}],
+			 ["Sol_pierre1_H", {x: 735 , y : 385}],
+			 ["Sol_pierre1_P", {x: 665 , y : 525}],
+			 ["Sol_pierre1_H", {x: 665 , y : 455}],
 			 ["Sol_pierre1_H", {x: 595 , y : 525}],
 			 ["Sol_pierre1_H", {x: 525 , y : 525}],
 			 ["Sol_pierre1_H", {x: 455 , y : 525}],
@@ -133,6 +133,30 @@
 			["Sol_pierre4_H", {x: 2485 , y : 525}],
 			["Sol_pierre4_H", {x: 2555 , y : 525}],
 			["Sol_pierre4_H", {x: 2625 , y : 525}],
+			
+			["Pressoir", {x:1225, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],			
+			["Pressoir", {x:1295, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1365, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1435, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1505, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1575, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1645, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1715, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1785, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1855, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1925, y: 105, vy : 7, rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1995, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2065, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2135, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2205, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2275, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2345, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2415, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2485, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2555, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2625, y: 105, vy : 7 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			
+			
 			
 			//sous sol deuxieme etage
 			["Sol_pierre1_H", {x: 455 , y : 525}],

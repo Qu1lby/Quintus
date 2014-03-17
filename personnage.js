@@ -622,12 +622,12 @@
 				setTimeout(function(){Q.stageScene("Blanc",4);},500);
                 this.p.timeInvincible = 1;
 				
-                if(this.p.lives == 0) {
+                if(this.p.lives <= 0) {
                     this.destroy();
 					Q.clearStages();
                     Q.stageScene("endGame",1, { label: "Game Over" }); 
 					scene_courante = "GO";
-					scene_prec = "lvl1";
+					scene_prec = "lvl4";
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();

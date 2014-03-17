@@ -198,6 +198,7 @@
 		}
 	});
 	
+
 //VerticalPlatform
 	Q.Sprite.extend("VerticalPlatform", {
     	init: function(p) {
@@ -216,6 +217,34 @@
         	} 
 		}
 	});
+	
+//Pressoir	
+	Q.Sprite.extend("Pressoir", {
+    	init: function(p) {
+			// parametre {vx: , rangeX: }
+       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0 });
+            this.add("2d");
+            this.p.initialY = this.p.y;
+			this.p.cooy = p.cooy;
+        },
+        
+		step: function(dt) {    
+
+			this.on("bump.top,bump.bottom,bump.right,bump.left",function(collision) {
+				if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+					collision.obj.mort();
+
+				}
+            });
+		
+			if (this.p.y  >= this.p.cooy) {
+				this.p.vy = 0;
+			}
+		
+		}
+	});
+	
+	
 	
 // ----------------------------------------------------------------------------------------
 	Q.animations('pastequeSP', {
