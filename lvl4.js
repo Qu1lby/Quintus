@@ -184,6 +184,9 @@
 			["Sol_pierre1_H", {x: 2695 , y : 805}],
 			
 			
+			["DrawEnnemy", {x: 2765 , y : 875, coox : 3735, cooy : 905, tps :3,  asset : "boite.png"}],
+			
+			
 			//Petit ilot de droite
 			["Sol_pierre1_H", {x: 2905 , y : 875}],
 			//["Sol_pierre1_H", {x: 3045 , y : 875}],
