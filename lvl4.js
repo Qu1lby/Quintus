@@ -33,7 +33,7 @@
 			["Sol_pierre1_H", {x: 525 , y : 1295}],
 			["Sol_pierre1_H", {x: 595 , y : 1365}],
 			["Sol_pierre1_P", {x: 595 , y : 1435}],
-			//["Sol_pierre1_P", {x: 595 , y : 1505}],
+			["Sol_pierre1_P", {x: 595 , y : 1505}],
 			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			
 			["bouton_case_droite_multi", {asset: "push4.png",x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
@@ -81,9 +81,9 @@
 			["Sol_jump", {x: 175 , y : 595}],
 			
 			//Deuxieme etage 
-			 //["Sol_pierre1_P", {x: 805 , y : 525}],
-			 //["Sol_pierre1_P", {x: 805 , y : 455}],
-			 //["Sol_pierre1_P", {x: 805 , y : 385}],
+			 ["Sol_pierre1_P", {x: 805 , y : 525}],
+			 ["Sol_pierre1_P", {x: 805 , y : 455}],
+			 ["Sol_pierre1_P", {x: 805 , y : 385}],
 			 ["Sol_pierre1_H", {x: 805 , y : 315}],
 			 ["Sol_pierre1_P", {x: 735 , y : 455}],
 			 ["Sol_pierre1_H", {x: 735 , y : 385}],
