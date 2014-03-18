@@ -13,7 +13,7 @@
 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
 
 	$i = 10; // variable pour trouver l'endroit où inserer
-	$j = 10;	//  variable qui va faire decaler le 9e à la 10e place par exemple
+	$j = 10; //  variable qui va faire decaler le 9e à la 10e place par exemple
 	$bool = 1; // Arrête une fois que c fait
 
 	$data = mysql_fetch_row($req);
@@ -33,24 +33,23 @@
 
 			// IF RESULTAT A LA PLACE i > SCORE il faut inserer juste en dessous
 
-			if( $data[2]> $_GET['donnee'] ){
+			if( $data[2]> $_GET['donnee']){
 
-			// Enleve la ligne 10 qui forcement va partir
-				$sql = 'DELETE FROM Classement WHERE Place = 10'; 
-				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
-
-			// Décale les lignes
+		/*	// Décale les lignes
 				while ($j != $i-1){
 					$sql = 'UPDATE Classement SET Place ='.($j+1).' WHERE Place = '.$j; 
 					$req = mysql_query($sql);
 					$j = $j--;
 				}
+				mysql_query("COMMIT");  */
 
-			// Insere score 660 a la ligne juste
-				$sql = 'INSERT INTO Classement (Place, Pseudo, Score) Values ('.($i+1).', "Cacao", '.$_GET['donnee'].')'; 
-				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
+
+				$sql = 'UPDATE Classement SET Score = '.$_GET['donnee'].' WHERE Place = '.($i+1); 
+				$req = mysql_query($sql);
+
 				$bool = 0;
-				
+				mysql_close();
+
 
 			}else{
 				$i--;
