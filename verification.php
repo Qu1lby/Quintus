@@ -13,7 +13,7 @@
 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
 
 	$i = 10; // variable pour trouver l'endroit où inserer
-	$j = 9;	//  variable qui va faire decaler le 9e à la 10e place par exemple
+	$j = 10;	//  variable qui va faire decaler le 9e à la 10e place par exemple
 	$bool = 1; // Arrête une fois que c fait
 
 	$data = mysql_fetch_row($req);
@@ -47,8 +47,7 @@
 				}
 
 			// Insere score 660 a la ligne juste
-				$variable = 660;
-				$sql = 'INSERT INTO Classement Values ('.$j.', "Cacao", '.$variable.')'; 
+				$sql = 'INSERT INTO Classement (Place, Pseudo, Score) Values ('.($i+1).', "Cacao", '.$_GET['donnee'].')'; 
 				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
 				$bool = 0;
 				
