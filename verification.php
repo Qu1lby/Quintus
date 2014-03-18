@@ -20,11 +20,9 @@
 
 	// IF le score minimum est inferieur au score total du joueur -> ajouté
 	// GET DONNEE = SCORE DU JOUEUR
-?> 		
 
-	if(<?php echo $data[1] ?> < <?php echo $_GET['donnee']?>){
+	if($data[1] < $_GET['donnee']){
 
-	<?php 
 		while ($bool == 1){
 
 			// Supposer chercher la bonne place
@@ -34,19 +32,12 @@
 
 
 			// IF RESULTAT A LA PLACE i > SCORE il faut inserer juste en dessous
-	?>
 
-		$u = <?php echo $data[2] ?>;
-		$v = <?php echo $_GET['donnee']?>;
+			if( $data[2]> $_GET['donnee'] ){
 
-		if( $u > $v ){
-
-			<?php
 			// Enleve la ligne 10 qui forcement va partir
 				$sql = 'DELETE FROM Classement WHERE Place = 10'; 
 				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
-
-				?>alert(<?php echo $j?>, <?php echo $i-1?>)<?php
 
 			// Décale les lignes
 				while ($j != $i-1){
@@ -60,15 +51,10 @@
 				$sql = 'INSERT INTO Classement Values ('.$j.', "Cacao", '.$variable.')'; 
 				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
 				$bool = 0;
-				?>
+				
 
-		}else{
-			<?php		
-			?>alert(<?php echo $i?>)<?php
+			}else{
 				$i--;
-			?>
+			}
 		}
-<?php
-	}
-?>
 	}
