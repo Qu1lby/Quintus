@@ -22,8 +22,6 @@
 
 	if($data[1] < $_GET['donnee']){
 
-		?>  var saisie = prompt("Saisissez votre pseudo :", ""); <?php
-
 		while ($bool == 1){
 
 			// Supposer chercher la bonne place
@@ -56,7 +54,7 @@
 				mysql_query("COMMIT");  
 
 
-				$sql = 'UPDATE Classement SET Score = '.$_GET['donnee'].', Pseudo = "'.?>saisie<?php.'" WHERE Place = '.($i+1); 
+				$sql = 'UPDATE Classement SET Score = '.$_GET['donnee'].', Pseudo = "'.$_GET['pseudo'].'" WHERE Place = '.($i+1); 
 				$req = mysql_query($sql);
 
 				$bool = 0;

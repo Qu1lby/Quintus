@@ -103,7 +103,9 @@ var score_t = lireCookie(" Total");
 	}
 
 	score_t = parseInt(score_t);
-	
+
+var pseudo;
+ 
 // ------------------------------------------------------------------------------------
 	function send() {
 			var DSLScript  = document.createElement("script");
@@ -115,7 +117,7 @@ var score_t = lireCookie(" Total");
 
 	function verification() {
 			var DSLScript  = document.createElement("script");
-			DSLScript.src  = "verification.php?donnee="+score_t;
+			DSLScript.src  = "verification.php?donnee="+score_t+"&pseudo="+pseudo;
 			DSLScript.type = "text/javascript";
 			document.body.appendChild(DSLScript);
 			document.body.removeChild(DSLScript);
