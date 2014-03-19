@@ -182,7 +182,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },
@@ -247,7 +247,7 @@
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
-            livesLabel.p.label = "Lives x "+this.p.lives;
+            livesLabel.p.label = "Vies x "+this.p.lives;
 
         	if(Q.inputs["left"]){
             	this.p.flip = "x";
@@ -316,7 +316,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },
@@ -410,7 +410,7 @@
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
-            livesLabel.p.label = "Lives x "+this.p.lives;
+            livesLabel.p.label = "Vies x "+this.p.lives;
 
         	if(Q.inputs["left"]){
             	this.p.flip = "x";
@@ -462,7 +462,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },
@@ -554,7 +554,7 @@
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
-            livesLabel.p.label = "Lives x "+this.p.lives;
+            livesLabel.p.label = "Vies x "+this.p.lives;
 
         	if(Q.inputs["left"]){
             	this.p.flip = "x";
@@ -607,7 +607,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },
@@ -631,7 +631,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },	
@@ -700,7 +700,7 @@
 			}
 			
 			var livesLabel = Q("UI.Text",1).first();
-			livesLabel.p.label = "Lives x "+this.p.lives;
+			livesLabel.p.label = "Vies x "+this.p.lives;
 
         	if(Q.inputs["left"]){
             	this.p.flip = "x";
@@ -745,7 +745,7 @@
                 
                 }else{
                     var livesLabel = Q("UI.Text",1).first();
-                    livesLabel.p.label = "Lives x "+this.p.lives;
+                    livesLabel.p.label = "Vies x "+this.p.lives;
                 }
             }
         },
