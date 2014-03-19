@@ -27,11 +27,11 @@ x Gestion des cookies scores sur le niveau.
 
 x Image explicative des binds et case pour le menu infos (K)
 
-- Generalisation du nouveau GameStat ?
+x Generalisation du nouveau GameStat ?
 
 k:
 x Petit sprite tire projectile de nimporte ou
 
 x Enregistrer le temps avec le score
 
-- BDD meilleurs scores
+x BDD meilleurs scores
