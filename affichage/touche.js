@@ -152,10 +152,10 @@
 				Q.stageScene("gameStats",1);
 				
 				Q.audio.stop();
-/*				if(music){
+				if(music){
 					Q.audio.play('lvl3.mp3',{ loop: true });
 				}
-*/				
+			
 				scene_courante = "lvl3";
 				scene_prec = "niveau";
 			}
