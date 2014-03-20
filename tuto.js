@@ -93,7 +93,7 @@ Q.scene("tut1", function(stage) {
         }),Menu);
 		
 		var tuto = stage.insert(new Q.UI.Text({ 
-            label: "Elles disparaitront si tu passes trop souvent dessus !",
+            label: "Elles disparaitront si tu passes plusieurs fois dessus !",
             x: 0,
             y: 15,
 			family : "comic sans ms",

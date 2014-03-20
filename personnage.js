@@ -85,7 +85,7 @@
 
 			// Détruit le personnage s'il gagne
 			if(this.p.x> 1870  && this.p.y>1850){
-				score_l1_tmp = 700 - (2*this.p.secondeabs)- (120*this.p.minute) ;
+				score_l1_tmp = 500 - (2*this.p.secondeabs) - (120*this.p.minute) + (100*this.p.lives) ;
 				score_l1tps_tmp = this.p.minute+":"+this.p.secondeabs;
 				this.p.score = true;
 				
