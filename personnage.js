@@ -623,10 +623,20 @@
         },	
     });
 // ------------------------------------------------------------------------------------------------------------------
+		
+	Q.animations('TomateSP', {
+		run_left: { frames: [0,1,2], next: 'stand_right', rate: 1/3},
+		run_right: { frames: [0,1,3], next: 'stand_left', rate: 1/3},
+		stand_left: { frames: [0]},
+		stand_right: { frames: [0]},
+		jump: { frames: [3], loop:false, rate: 1},
+	});
+
+
 	Q.Sprite.extend("Tomate",{
         init: function(p){
-    	    this._super(p, {asset: "tomate.png", x: 120, y: 300, jumpSpeed: -400, lives: 100});
-    	    this.add("2d, platformerControls"); 
+    	    this._super(p, {sheet: "tomate", sprite: "TomateSP", x: 120, y: 300, jumpSpeed: -400, lives: 100});
+    	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
 			this.p.first = 1;

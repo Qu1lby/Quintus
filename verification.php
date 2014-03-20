@@ -4,6 +4,11 @@
 
 	session_start();
 
+	/*
+	$db = mysql_connect('sql302.byethost9.com', 'b9_14502426', 'kimanipi'); 
+
+	mysql_select_db('b9_14502426_traps',$db); 
+	*/
 	$db = mysql_connect('localhost', 'root', ''); 
 	mysql_select_db('traps',$db); 
 
