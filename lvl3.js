@@ -16,17 +16,13 @@
 				["Sol_G5", {x: 16*70+35 , y : 12*70+35}],
 				["Sol_G5", {x: 17*70+35 , y : 12*70+35}],
 				["Sol_G5", {x: 18*70+35 , y : 12*70+35}],
-				
 			
+				
 				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "ananas.png", type: Q.SPRITE_NONE}],	
 				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],
 				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
-				
-			
-				["Sol_5", {x: 35*70+35 , y : 12*70+35}],
-				["Sol_5", {x: 35*70+35 , y : 13*70+35}],
 		
 				["GroundEnemy", {scale: 2, x: 44*70, y :  12*70,vx : 200, asset: "slime3.png"}],
 				["GroundEnemy", {x: 45*70, y :  12*70,vx : 150, asset: "slime3.png"}],
@@ -42,6 +38,9 @@
 				
 				["Sol_jump", {x: 29*70+35 , y : 24*70+85, scale:0.5}],
 				["Sol_jump", {x: 1*70+35 , y : 15*70+35}],
+				
+				
+			
 				
 				["Sol_5", {x: 55*70+35 , y : 21*70+35}],
 				["Sol_5", {x: 57*70+35 , y : 21*70+35}],
@@ -79,6 +78,14 @@
 				["Sol_5", {x: 33*70+35 , y : 23*70+35}],
 				["Sol_5", {x: 34*70+35 , y : 23*70+35}],
 				
+				["Sol_pierre1_H", {x: 25*70+35 , y : 22*70+35}],
+				["Sol_pierre1_H", {x: 23*70+35 , y : 22*70+35}],
+				["Sol_pierre1_H", {x: 21*70+35 , y : 22*70+35}],
+				
+				["Sol_pierre1_H", {x: 16*70+35 , y : 23*70+35}],
+				["Sol_pierre1_H", {x: 15*70+35 , y : 23*70+35}],
+			
+				
 				
 				
 				["Sol_pierre1_P", {x: 1*70+35 , y : 17*70+35}],
@@ -97,14 +104,11 @@
 				["Sol_pierre1_P", {x: 2*70+35 , y : 18*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 19*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 20*70+35}],
-				//["Sol_pierre1_P", {x: 2*70+35 , y : 22*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 23*70+35}],
-			//	["Sol_pierre1_P", {x: 2*70+35 , y : 25*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 26*70+35}],
 				
 				
 				["Sol_pierre1_P", {x: 3*70+35 , y : 17*70+35}],
-			//	["Sol_pierre1_P", {x: 3*70+35 , y : 19*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 20*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 21*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 22*70+35}],
@@ -132,9 +136,7 @@
 				["Mal", {asset:"grille70bas.png", x: 28*70+35 , y : 19*70+35}],
 				["Mal", {asset:"grille70bas.png", x: 29*70+35 , y : 19*70+35}],
 				
-				["DrawEnnemy", {x: 30*70+35 , y : 4*70, coox : 30*70, cooy : 4*70+65, tps : 0.1, asset:"patate.png"}],
-				["Sol_fin", {x: 30*70*35 , y : 5*70+35, asset : "pierre_terre.png"}],
-				
+
             ];
               stage.loadAssets(levelAssets);  
 			  

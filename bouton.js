@@ -110,7 +110,7 @@
         },
 
 		step: function(dt) {			
-            this.on("bump.right",function(collision) {
+            this.on("bump.right, bump.left",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 					
