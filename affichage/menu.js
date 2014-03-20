@@ -331,7 +331,7 @@ Pour griser :
 				Q.stageScene("gameStats",1);
 								
 				if(music){
-// TO DO					Q.audio.play('lvl5.mp3');
+					Q.audio.play('lvl4.mp3',{ loop: true });
 				}
 				
 				scene_courante = "lvl4";
@@ -514,7 +514,7 @@ Pour griser :
 				Q.stageScene("gameStats",1);
 				
 				if(music){
-// TO DO					Q.audio.play('lvl5.mp3');
+					Q.audio.play('lvl4.mp3',{ loop: true });
 				}
 				
 				scene_courante = "lvl4";

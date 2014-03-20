@@ -98,7 +98,7 @@
 				Q.stageScene("gameStats",1);
 				
 				if (music){
-// TO DO					Q.audio.play('lvl4.mp3',{ loop: true });
+					Q.audio.play('lvl4.mp3',{ loop: true });
 				}
 				
 				scene_prec = 'GO';
