@@ -6,7 +6,7 @@
  <tileset firstgid="21" name="fond_pierre2" tilewidth="70" tileheight="70">
   <image source="../images/fond_pierre2.png" width="70" height="70"/>
  </tileset>
- <layer name="background" width="50" height="24" visible="0">
+ <layer name="background" width="50" height="24">
   <data>
    <tile gid="14"/>
    <tile gid="14"/>
@@ -1202,7 +1202,7 @@
    <tile gid="5"/>
    <tile gid="4"/>
    <tile gid="5"/>
-   <tile gid="6"/>
+   <tile gid="4"/>
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="6"/>
@@ -1210,7 +1210,7 @@
    <tile gid="6"/>
   </data>
  </layer>
- <layer name="collision" width="50" height="24">
+ <layer name="collision" width="50" height="24" visible="0">
   <data>
    <tile gid="6"/>
    <tile gid="0"/>

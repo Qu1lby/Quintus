@@ -34,7 +34,6 @@
 			["Sol_pierre1_H", {x: 595 , y : 1365}],
 			["Sol_pierre1_P", {x: 595 , y : 1435}],
 			["Sol_pierre1_P", {x: 595 , y : 1505}],
-			//["BOUTON TA RACE", {x: 525 , y : 1575}],
 			
 			["bouton_case_droite_multi", {asset: "push4.png",x: 505, y: 1505, coox : 805, cooy : 1575, coox2 : 875, cooy2 : 1575, coox3 : 945, cooy3 : 1575, coox4 : 1015, cooy4 : 1575}],
 			
@@ -172,9 +171,9 @@
 			["Sol_pierre1_H", {x: 2695 , y : 805}],
 			
 			
-			["DrawEnnemy", {x: 2975 , y : 735, coox : 2945, cooy : 765, tps :3,  asset : "boite.png"}],
+			["DrawEnnemy", {x: 2975 , y : 735, coox : 2945, cooy : 745, tps :4,  asset : "boite.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 2975 , y : 805}],		
-			["DrawEnnemy", {x: 1715 , y : 1225, coox : 1685, cooy : 1255, tps :3,  asset : "boite2.png"}],
+			["DrawEnnemy", {x: 1715 , y : 1225, coox : 1745, cooy : 1235, tps :3,  asset : "boite2.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 1715 , y : 1295}],	
 			
 			//Petit ilot de droite
@@ -200,15 +199,17 @@
 			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
 			
 			//bloc pour le boss
+			["DrawEnnemy", {x: 3045 , y : 1435, coox : 3015, cooy : 1445, tps : 5, asset:"carotte.png"}],
 			
-			["Sol_fin", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
-			["Sol_fin", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
-			["Sol_fin", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
-			["Sol_fin", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
-			["Sol_fin", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
+			
+			["Sol_G5", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
+			["Sol_G5", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
+			["Sol_G5", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
+			["Sol_G5", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
+			["Sol_G5", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 3045 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 3115 , y : 1505}],
 			
-			//["grille200H", {asset: "bullet.png",x: 3045 , y : 1500}],
 			
 			["Sol_jump", {x: 1855 , y : 1645}],
 			["Sol_jump", {x: 2065 , y : 1645}],
@@ -224,7 +225,6 @@
 			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
 			["bouton", {x: 2905, y: 1600, coox : 2065, cooy : 1505}],
 
-			["DrawEnnemy", {x: 3045 , y : 1435, coox : 3015, cooy : 1465, tps : 10, asset:"carotte.png"}],
 			
 			
 			
