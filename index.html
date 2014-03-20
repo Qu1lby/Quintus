@@ -2,11 +2,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" id="css" href="style.css"/>
-      <SCRIPT LANGUAGE="JavaScript">
-		NavName = navigator.appCodeName;
-		NavVers = navigator.appVersion;
-		Navigateur = NavName + " " + NavVers;
-		</SCRIPT>
+      	<script LANGUAGE="JavaScript">
+			NavName = navigator.appCodeName;
+			NavVers = navigator.appVersion;
+			Navigateur = NavName + " " + NavVers;
+		</script>
     </head>
     
 	<body >
@@ -40,7 +40,7 @@
 	var hi = 610;
 	
 	// Initialisation du moteur de jeu
-    var Q = Quintus({audioSupported: [ 'ogg','mp3' ]})
+    var Q = Quintus({audioSupported: ['ogg','mp3']})
         .include("Audio, Sprites, Scenes, Input, 2D, 2D2, Touch, UI, Anim")
 		.setup("Quintus", {
             width: 960,
@@ -49,7 +49,6 @@
   			upsampleHeight: 320,  
 			downsampleWidth: 1024, 
   			downsampleHeight: 768 ,
-			//maximize: "touch"
 		})
 		.enableSound()
 		.controls()
@@ -71,7 +70,7 @@
 		include ('lvl4.js');
 		include ('lvl5.js');
 	
-	// Function AJAX	
+	// Fonction AJAX	
 	function getXMLHttpRequest() {
 		var xhr = null;
 	
@@ -86,8 +85,8 @@
 				xhr = new XMLHttpRequest(); 
 			}
 		} else {
-			alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
-		return null;
+			alert("Votre navigateur n'est pas compatible.");
+			return null;
 		}
 		return xhr;
 	}
@@ -96,26 +95,26 @@
         Q.load([
 			
 			"tiles_map.png", "orange.png", "tomate.png", "banane.png", "ananas.png",
-			"chou.png",
+			"chou.png", "carotte.png", "tomateboss.png", "patate.png", "fraise.png", 
 			
 			"dessous.png", "jump.png", "jumpn.png", "slime3.png", "push.png", "push2.png",
-			"push3.png", "tomateboss.png", "dessous_neige.png", "fond_pierre.png", "scaff.png",
+			"push3.png", "dessous_neige.png", "fond_pierre.png", "scaff.png",
 			"fond_pierre_haut.png", "fond_pierre_haut2.png", "audio.png", "degats.png",
 			"fond_pierre2.png", "pierre_haut.png", "pierre_haut2.png", "pierre_terre.png",
 			"grille70.png", "grille200.png","grille140.png", "grille200H.png", "grille70bas.png",
-			"htmltiles.jpg", "mort.png", "bullet.png", "fraise.png", "aide.png", "patate.png",
+			"htmltiles.jpg", "mort.png", "bullet.png", "aide.png",  "push4.png",
 			"plateforme.png", "plateforme2.png", "cabine.png", "prof.png", "tetedemort.png",
-			"boule.png", "cage.png", "ennemi.png", "grenade.png", "flocon.png", "push4.png",
+			"boule.png", "cage.png", "ennemi.png", "grenade.png", "flocon.png",
 			
-			"pastequeSP.png", "bananeSP.png", "orangeSP.png", "ananasSP.png", "tomateSP.png",
-			"sprite.json", "spriteO.json", "spriteB.json", "spriteA.json", "spriteT.json",
+			"pastequeSP.png", "bananeSP.png", "orangeSP.png", "ananasSP.png", "tomateSP.png", "fraiseSP.png",
+			"sprite.json", "spriteO.json", "spriteB.json", "spriteA.json", "spriteT.json", "spriteF.json",
 			
-			"door1.png", "door2.png", "boite.png", "boite2.png", "carotte.png",
+			"door1.png", "door2.png", "boite.png", "boite2.png",
 			
 			"Lvl1.tmx", "Lvl2.tmx", "Lvl3.tmx", "Lvl4.tmx", "Lvl5.tmx", "men.tmx", "aide.tmx",
 			"scaff.tmx",
 			
-			"lvl1.mp3", "lvl2.mp3", "lvl5.mp3", "lvl3.mp3", "lvl4.mp3",
+			"lvl1.mp3", "lvl2.mp3", "lvl3.mp3", "lvl4.mp3", "lvl5.mp3",
 			"rire.mp3", "rire2.mp3", "creature.mp3", "boss.mp3","bienvenue.mp3","pop.mp3",
 			"canon.mp3", "saut.mp3","fin.mp3","tut.mp3", "coup.mp3",
 			
@@ -126,10 +125,11 @@
 			Q.sheet("tilesmenu","htmltiles.jpg", {tilew: 70, tileh: 70}); 
 			Q.sheet("help","aide.png", {tilew: 70, tileh: 70}); 
 			Q.sheet("scor","scaff.png", {tilew: 70, tileh: 70});  
+			
 			Q.compileSheets("pastequeSP.png","sprite.json");
 			Q.compileSheets("orangeSP.png", "spriteO.json");
 			Q.compileSheets("bananeSP.png", "spriteB.json");
-			//Q.compileSheets("fraiseSP.png", "spriteF.json");
+			Q.compileSheets("fraiseSP.png", "spriteF.json");
 			Q.compileSheets("ananasSP.png", "spriteA.json");
 			Q.compileSheets("tomateSP.png", "spriteT.json");
 			

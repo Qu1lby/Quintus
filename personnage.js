@@ -192,18 +192,18 @@
 
 // ------------------------------------------------------------------------------------------------------------------
 
-/**Q.animations('FraiseSP', {
+	Q.animations('fraiseSP', {
 		run_left: { frames: [1,2,3], next: 'stand_right', rate: 1/3},
 		run_right: { frames: [1,2,3], next: 'stand_left', rate: 1/5},
 		stand_left: { frames: [0]},
 		stand_right: { frames: [0]},
 		jump: { frames: [4], loop:false, rate: 1},
-});
-*/
+	});
+
 	Q.Sprite.extend("Fraise",{
         init: function(p){
-       		this._super(p, { asset: "fraise.png", x: 17*70+35, y: 11*70+35, speed : 400,jumpSpeed: -700, lives: 2000 });
-        	this.add("2d, platformerControls"); 
+       		this._super(p, {sheet: "fraise", sprite: "fraiseSP", x: 17*70+35, y: 11*70+35, speed : 400,jumpSpeed: -700, lives: 2000 });
+        	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
@@ -280,7 +280,7 @@
 				
 				}
 			}*/
-	/*		
+		
 	// Sprite mouvement 
 		if(Q.inputs['up']) {
 			this.play("jump",1);      // add priority to animation
@@ -292,7 +292,7 @@
 			this.play("run_left");
         } else {
 			this.play("stand_" + this.p.direction); // stand_left or stand_right
-        }*/
+        }
     },
 		
         damage: function(){

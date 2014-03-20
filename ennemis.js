@@ -71,7 +71,7 @@
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin") || collision.obj.isA("DrawEnnemy")){
-				if (music && !this.changemusic && scene_courante!="lvl5"){
+				if (music && !this.changemusic && scene_courante!="lvl5" && scene_courante!="lvl3"){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
 						if (scene_courante == "lvl2"){
