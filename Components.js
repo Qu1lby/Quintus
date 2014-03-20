@@ -589,7 +589,7 @@
 				   || (collision.obj.isA("Tomate"))) {
 				   
 					collision.obj.damage();
-					if(music && scene_courante!="lvl5"){
+					if(music && scene_courante!="lvl5") {
 						Q.audio.play("canon.mp3");
 					}
 					this.destroy();

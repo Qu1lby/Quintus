@@ -102,7 +102,7 @@
 			
 			["Sol_pierre4_H", {x: 1295 , y : 525}],
 			["Sol_pierre4_H", {x: 1365 , y : 525}],
-			["Sol_pierre4_H", {x: 1225 , y : 525}], // a changer
+			["Sol_pierre4_H", {x: 1225 , y : 525}], 
 			["Sol_pierre4_H", {x: 1435 , y : 525}],
 			["Sol_pierre4_H", {x: 1505 , y : 525}],
 			["Sol_pierre4_H", {x: 1575 , y : 525}],
@@ -132,7 +132,7 @@
 			["Pressoir", {x:1715, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			["Pressoir", {x:1785, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			["Pressoir", {x:1855, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1925, y: 105, vy : 6, rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1925, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			["Pressoir", {x:1995, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			["Pressoir", {x:2065, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			["Pressoir", {x:2135, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
@@ -172,8 +172,10 @@
 			["Sol_pierre1_H", {x: 2695 , y : 805}],
 			
 			
-			["DrawEnnemy", {x: 42*70+35 , y : 10*70+35, coox : 42*70+5, cooy : 11*70+65, tps :3,  asset : "boite.png"}],
-			
+			["DrawEnnemy", {x: 2975 , y : 735, coox : 2945, cooy : 765, tps :3,  asset : "boite.png"}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 2975 , y : 805}],		
+			["DrawEnnemy", {x: 1715 , y : 1225, coox : 1685, cooy : 1255, tps :3,  asset : "boite2.png"}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 1715 , y : 1295}],	
 			
 			//Petit ilot de droite
 			["Sol_pierre1_H", {x: 2905 , y : 875}],
@@ -206,6 +208,8 @@
 			["Sol_fin", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 3045 , y : 1505}],
 			
+			//["grille200H", {asset: "bullet.png",x: 3045 , y : 1500}],
+			
 			["Sol_jump", {x: 1855 , y : 1645}],
 			["Sol_jump", {x: 2065 , y : 1645}],
 			["Sol_jump", {x: 2275 , y : 1645}],
@@ -220,7 +224,7 @@
 			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
 			["bouton", {x: 2905, y: 1600, coox : 2065, cooy : 1505}],
 
-			["DrawEnnemy", {x: 3045 , y : 1435, coox : 3015, cooy : 1465, tps : 1, asset:"chou.png"}],
+			["DrawEnnemy", {x: 3045 , y : 1435, coox : 3015, cooy : 1465, tps : 10, asset:"carotte.png"}],
 			
 			
 			
