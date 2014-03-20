@@ -173,7 +173,7 @@
 			
 			["DrawEnnemy", {x: 2975 , y : 735, coox : 2945, cooy : 745, tps :4,  asset : "boite.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 2975 , y : 805}],		
-			["DrawEnnemy", {x: 1715 , y : 1225, coox : 1745, cooy : 1235, tps :3,  asset : "boite2.png"}],
+			["DrawEnnemy", {x: 1720 , y : 1225, coox : 1755, cooy : 1235, tps :3,  asset : "boite2.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 1715 , y : 1295}],	
 			
 			//Petit ilot de droite
@@ -217,16 +217,18 @@
 			["Sol_jump", {x: 2485 , y : 1645}],
 			["Sol_jump", {x: 2695 , y : 1645}],
 			["Sol_jump", {x: 2905 , y : 1645}],
-			
-			["bouton", {x: 1855, y: 1600, coox : 2275 , cooy : 1505}],
-			["bouton", {x: 2065, y: 1600, coox : 2695, cooy : 1505}],
-			["bouton", {x: 2275, y: 1600, coox : 2485, cooy : 1505}],
-			["bouton", {x: 2485, y: 1600, coox : 3045, cooy : 1505}],
-			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
-			["bouton", {x: 2905, y: 1600, coox : 2065, cooy : 1505}],
 
 			
+			["bouton", {x: 2905, y: 1600, coox : 2275, cooy : 1505}],
+			["bouton", {x: 2275, y: 1600, coox : 2695, cooy : 1505}],
+			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
+			["bouton", {x: 1855, y: 1600, coox : 2485, cooy : 1505}],
+			["bouton", {x: 2485, y: 1600, coox : 2065, cooy : 1505}],
+			["bouton", {x: 2065, y: 1600, coox : 3115, cooy : 1505}],
+			["bouton", {x: 2065, y: 1600, coox : 3045, cooy : 1505}],
 			
+			["Fin", {x: 48*70+35 , y : 20*70+35, asset: "tomate.png", type: Q.SPRITE_NONE}],	
+			["Fin", {x: 48*70+35 , y : 20*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],
 			
 			            ];
               stage.loadAssets(levelAssets);  
