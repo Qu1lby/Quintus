@@ -97,14 +97,14 @@
 				["Sol_pierre1_P", {x: 2*70+35 , y : 18*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 19*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 20*70+35}],
-				["Sol_pierre1_P", {x: 2*70+35 , y : 22*70+35}],
+				//["Sol_pierre1_P", {x: 2*70+35 , y : 22*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 23*70+35}],
-				["Sol_pierre1_P", {x: 2*70+35 , y : 25*70+35}],
+			//	["Sol_pierre1_P", {x: 2*70+35 , y : 25*70+35}],
 				["Sol_pierre1_P", {x: 2*70+35 , y : 26*70+35}],
 				
 				
 				["Sol_pierre1_P", {x: 3*70+35 , y : 17*70+35}],
-				["Sol_pierre1_P", {x: 3*70+35 , y : 19*70+35}],
+			//	["Sol_pierre1_P", {x: 3*70+35 , y : 19*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 20*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 21*70+35}],
 				["Sol_pierre1_P", {x: 3*70+35 , y : 22*70+35}],
@@ -131,7 +131,10 @@
 				["Mal", {asset:"grille70bas.png", x: 27*70+35 , y : 19*70+35}],
 				["Mal", {asset:"grille70bas.png", x: 28*70+35 , y : 19*70+35}],
 				["Mal", {asset:"grille70bas.png", x: 29*70+35 , y : 19*70+35}],
-	
+				
+				["DrawEnnemy", {x: 30*70+35 , y : 4*70, coox : 30*70, cooy : 4*70+65, tps : 0.1, asset:"patate.png"}],
+				["Sol_fin", {x: 30*70*35 , y : 5*70+35, asset : "pierre_terre.png"}],
+				
             ];
               stage.loadAssets(levelAssets);  
 			  
