@@ -468,78 +468,78 @@ Pour griser :
 			y: 0,
         }),Menu6);
 		
-			un.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level1');
-				Q.stageScene("gameStats",1);
-				Q.stageScene('tut1',2);
-				
-				if(music){
-					Q.audio.play('lvl1.mp3',{ loop: true });
-				}
-				
-				scene_courante = "lvl1";
-				scene_prec = "niveau";
-			});
-				
-			deux.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level2');
-				Q.stageScene("gameStats",1);
-				
-				if(music){
-					Q.audio.play('lvl2.mp3',{ loop: true });
-				}
-				
-				scene_courante = "lvl2";
-				scene_prec = "niveau";
-			});
-				 
-			trois.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level3');
-				Q.stageScene("gameStats",1);
-								
-				if(music){
-					Q.audio.play('lvl3.mp3',{ loop: true });
-				}
-				
-				scene_courante = "lvl3";
-				scene_prec = "niveau";
-			});
-				 
-			quatre.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level4');
-				Q.stageScene("gameStats",1);
-				
-				if(music){
-					Q.audio.play('lvl4.mp3',{ loop: true });
-				}
-				
-				scene_courante = "lvl4";
-				scene_prec = "niveau";
-			});
+		un.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('level1');
+			Q.stageScene("gameStats",1);
+			Q.stageScene('tut1',2);
 			
-			cinq.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('Debut');
-				
-				scene_courante = "menu";
-				scene_prec = "niveau";
-			});
+			if(music){
+				Q.audio.play('lvl1.mp3',{ loop: true });
+			}
 			
-			six.on("click",function() {
-				Q.clearStages();
-      			Q.stageScene('level5');
-				Q.stageScene("gameStats",1);
-				Q.stageScene("tut5",2);
-				
-				if(music){
-					Q.audio.play('lvl5.mp3',{loop : true});
-				}
-				
-				scene_courante = "lvl5";
-				scene_prec = "niveau";
-			});
+			scene_courante = "lvl1";
+			scene_prec = "niveau";
 		});
+				
+		deux.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('level2');
+			Q.stageScene("gameStats",1);
+			
+			if(music){
+				Q.audio.play('lvl2.mp3',{ loop: true });
+			}
+			
+			scene_courante = "lvl2";
+			scene_prec = "niveau";
+		});
+				 
+		trois.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('level3');
+			Q.stageScene("gameStats",1);
+							
+			if(music){
+				Q.audio.play('lvl3.mp3',{ loop: true });
+			}
+			
+			scene_courante = "lvl3";
+			scene_prec = "niveau";
+		});
+				 
+		quatre.on("click",function() {
+			Q.clearStages();
+      		Q.stageScene('level4');
+			Q.stageScene("gameStats",1);
+				
+			if(music){
+				Q.audio.play('lvl4.mp3',{ loop: true });
+			}
+				
+			scene_courante = "lvl4";
+			scene_prec = "niveau";
+		});
+			
+		cinq.on("click",function() {
+			Q.clearStages();
+    		Q.stageScene('Debut');
+				
+			scene_courante = "menu";
+			scene_prec = "niveau";
+			});
+		
+			six.on("click",function() {
+			Q.clearStages();
+     		Q.stageScene('level5');
+			Q.stageScene("gameStats",1);
+			Q.stageScene("tut5",2);
+			
+			if(music){
+				Q.audio.play('lvl5.mp3',{loop : true});
+			}
+			
+			scene_courante = "lvl5";
+			scene_prec = "niveau";
+		});
+	});

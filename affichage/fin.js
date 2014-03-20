@@ -1,4 +1,4 @@
-// Fenêtre de fin mais mort -------------------------------------------
+// Mort du personnage
 	Q.scene("endGame",function(stage) {
 		var background = new Q.TileLayer({
 		dataAsset: "men.tmx",
@@ -41,7 +41,7 @@
         }),GameoV);
         
 		var msg = stage.insert(new Q.UI.Button({ 
-                label: "Espace",
+                label: "Try again",
                 color: "white",
 				border: 1,
                 shadow: 3,
@@ -122,15 +122,15 @@
 		
 	});
 	
-// Fenêtre de fin mais victoire -------------------------------------------
+// Victoire
 	Q.scene("GoodGame",function(stage) {
 					
 		var background = new Q.TileLayer({
-			dataAsset: "men.tmx",
-			layerIndex: 0,
-			sheet: "tilesmenu",
-			tileW: 70, tileH: 70,
-			type: Q.SPRITE_NONE });
+		dataAsset: "men.tmx",
+		layerIndex: 0,
+		sheet: "tilesmenu",
+		tileW: 70, tileH: 70,
+		type: Q.SPRITE_NONE });
         
 		stage.insert(background);
 		
@@ -141,7 +141,7 @@
 		}	
 
 		var GameoV = stage.insert(new Q.UI.Container({
-                fill: "rgb(250,232,95)",
+                fill: "rgb(255,255,130)",
                 x: wi/2 ,
                 y: hi/2 +120,
                 border: 1,
@@ -162,7 +162,7 @@
 				}));
 							
 				var msge = stage.insert(new Q.UI.Text({ 
-					label: "Score : "+score_l1_tmp,
+					label: score_l1_tmp+" points",
 					x: 0,
 					y: -75
 					}),GameoV);		
@@ -183,7 +183,6 @@
 					score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
 
 					verification();
-					alert('done');
 					
 					var msge2 = stage.insert(new Q.UI.Text({ 
 						label: "BEST SCORE",
@@ -197,7 +196,6 @@
 						y: 15
 						}),GameoV);
 				}
-		
 			}
 			
 			if (scene_prec == "lvl2"){
@@ -210,7 +208,7 @@
 					}));
 							
 				var msge = stage.insert(new Q.UI.Text({ 
-					label: "Score : "+score_l2_tmp,
+					label: score_l2_tmp+" points",
 					x: 0,
 					y: -75
 					}),GameoV);	
@@ -256,7 +254,7 @@
 				}));
 							
 				var msge = stage.insert(new Q.UI.Text({ 
-					label: "Score : "+score_l3_tmp,
+					label: score_l3_tmp+" points",
 					x: 0,
 					y: -75
 				}),GameoV);	
@@ -302,7 +300,7 @@
 				}));
 							
 				var msge = stage.insert(new Q.UI.Text({ 
-					label: "Score : "+score_l4_tmp,
+					label: score_l4_tmp+" points",
 					x: 0,
 					y: -75
 				}),GameoV);	
@@ -348,7 +346,7 @@
 				}));
 							
 				var msge = stage.insert(new Q.UI.Text({ 
-					label: "Score : "+score_l5_tmp,
+					label: score_l5_tmp+" points",
 					x: 0,
 					y: -75
 				}),GameoV);	
@@ -389,26 +387,15 @@
             label: "Continuer",
 			border: 1,
             shadow: 3,
-            shadowColor: "rgb(168,86,45)",
             x: 0,
             y: 70,
 			fill: "rgb(160,160,160)"
         }),GameoV);
 		
-	/*	var msg3 = stage.insert(new Q.UI.Button({ 
-            label: "Scores",
-			border: 1,
-            shadow: 3,
-            shadowColor: "rgb(168,86,45)",
-            x: -80,
-            y: 70,
-			fill: "rgb(160,160,160)"
-        }),GameoV);
-	*/	
 		msg.on("click",function() {
        		Q.clearStages();
 			
-/*			if (score_t!= ? ){
+/*			if (score_t < 2000){
    				Q.stageScene('niveau2');
 			}else Q.stageScene('niveau');
 */	
@@ -420,10 +407,4 @@
 			scene_courante = "niveau";
 			echap = !echap;
 		});
-		
-	/*	msg3.on("click",function() {
-			Q.stageScene("Total",2);
-		});
-	*/
 	});
-		

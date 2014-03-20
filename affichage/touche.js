@@ -37,6 +37,7 @@
                 }),Fond);
 	});
 	
+
 // Touche echap
 	Q.scene("Echp", function(stage) {
 		var Choix = stage.insert(new Q.UI.Container({
@@ -64,7 +65,7 @@
 		msg.on("click",function() {
        		Q.clearStages();
 			
-/*			if (score_t!= ? ){
+/*			if (score_t < 2000 ){
    				Q.stageScene('niveau2');
 			}else Q.stageScene('niveau');
 */			
@@ -82,9 +83,9 @@
 		});
 	});
 	
+	
 // Touche R
 	Q.scene("Repl", function(stage) {
-			
 		var Choix = stage.insert(new Q.UI.Container({
                 fill: "rgb(94,160,250)",
                 x: wi/2,
