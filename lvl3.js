@@ -21,8 +21,13 @@
 				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "ananas.png", type: Q.SPRITE_NONE}],	
 				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],
 				
+				["Sol_pierre2_D", {x: 29*70+35 , y : 12*70+35}],
+				["Sol_pierre2_D", {x: 30*70+35 , y : 12*70+35}],
+				["Sol_pierre2_D", {x: 30*70+35 , y : 11*70+35}],
+				["Sol_pierre2_D", {x: 31*70+35 , y : 10*70+35}],
+				
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
-				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
+				["HorizontalPlatform2", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
 		
 				["GroundEnemy", {scale: 1, x: 44*70, y :  12*70,vx : 200,coox : 51*70+35, cooy :15*70, asset: "slime3.png"}],
 				["GroundEnemy", {x: 45*70, y :  12*70,vx : 150,coox : 54*70+65, cooy :13*70+15, asset: "slime3.png"}],
@@ -65,6 +70,10 @@
 				["grille200", {scale : 0.77,asset: "grille200H.png", x: 54*70+65, y: 13*70+15}],
 				["grille140", {scale: 1.1 , x: 51*70+35 , y : 15*70}],
 				
+				["Mal", { scale : 0.8,x: 45*70+25 , y : 15*70+25}],
+				["Mal", {scale : 0.8, x: 43*70+25 , y : 17*70+25}],
+				["Mal", {scale : 0.8, x: 41*70+25 , y : 19*70+25}],
+				
 				["Sol_pierre2_D", {x: 54*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 54*70+35 , y : 15*70+35}],
 				
@@ -75,7 +84,7 @@
 				
 				
 				//["bouton_platf", {asset: "push3.png", scale : 0.3, x: 13*70+65 , y : 22*70+30, coox : 14*70+35, cooy :19*70+35}],
-				["bouton_pasteque", {asset:"push4.png", scale: 0.3, x: 46*70+35 , y : 20*70+35, coox : 46*70, cooy :20*70}],
+				["bouton_pasteque", {asset:"push4.png", scale: 0.3, x: 46*70+5 , y : 20*70+30, coox : 46*70, cooy :20*70}],
 				
 				
 				["Sol_pierre2_D", {x: 56*70+35 , y : 14*70+35}],
@@ -146,7 +155,16 @@
 				["Mal", {asset:"grille70bas.png", x: 28*70+35 , y : 19*70+35}],
 				["Mal", {asset:"grille70bas.png", x: 29*70+35 , y : 19*70+35}],
 				
-
+				["HorizontalPlatform", {x: 11*70, y : 28*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
+				["Sol_pierre1_P", {x: 17*70+35 , y : 29*70+35}],
+				["Sol_pierre1_P", {x: 18*70+35 , y : 29*70+35}],
+				
+				["HorizontalPlatform2", {x: 24*70, y : 28*70+15,vx :180, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
+				["Sol_pierre1_P", {x: 29*70+35 , y : 29*70+35}],
+				["Sol_pierre1_P", {x: 30*70+35 , y : 29*70+35}],
+				["Sol_pierre1_P", {x: 31*70+35 , y : 29*70+35}],
+				
+				["HorizontalPlatform", {x: 34*70, y : 28*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
             ];
               stage.loadAssets(levelAssets);  
 			  

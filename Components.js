@@ -178,45 +178,25 @@
 		}
 	});
 
-	
-//StrangePlatform
-	Q.Sprite.extend("StrangePlatform", {
+	Q.Sprite.extend("HorizontalPlatform2", {
     	init: function(p) {
-			// parametre {vx: , rangeX: }
-       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0, defaultDirection: "top" });
+       		this._super(p, { rangeX : 100,vx : 100 , gravity : 0, defaultDirection: "left" });
             this.add("2d, aiBounce");
             this.p.initialY = this.p.y;
+			this.p.initialX = this.p.x;
         },
         
-		step: function(dt) {                
-            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
-        	    this.p.vy = -this.p.vy;
-            }
-            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
-                 	this.p.vy = -this.p.vy;
+		  step: function(dt) {  
+			
+          if(this.p.x - this.p.initialX >= this.p.rangeX && this.p.vx > 0) {
+        	    this.p.vx = -this.p.vx;
+            } 
+            else if(-this.p.x + this.p.initialX >= this.p.rangeX && this.p.vx < 0) {
+                 	this.p.vx = -this.p.vx;
         	} 
 		}
 	});
-	
 
-//VerticalPlatform
-	Q.Sprite.extend("VerticalPlatform", {
-    	init: function(p) {
-			// parametre {vx: , rangeX: }
-       		this._super(p, {rangeY : 100, vy : 100 ,gravity: 0 });
-            this.add("2d");
-            this.p.initialY = this.p.y;
-        },
-        
-		step: function(dt) {                
-            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
-        	    this.p.vy = -this.p.vy;
-            }
-            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
-                 	this.p.vy = -this.p.vy;
-        	} 
-		}
-	});
 	
 //Pressoir	
 	Q.Sprite.extend("Pressoir", {
