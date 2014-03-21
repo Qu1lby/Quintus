@@ -109,6 +109,7 @@
 				Q.clearStages();
       			Q.stageScene('level5');
 				Q.stageScene("gameStats",1);
+				Q.audio.stop();
 				
 				if(music){
 					Q.audio.play('lvl5.mp3',{ loop : true});

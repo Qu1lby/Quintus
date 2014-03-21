@@ -64,14 +64,14 @@
 			this.notdone = true;
 			this.p.once = false;
 			this.sound = true;
-			
 			this.add("2d, animation");
 			},
       
 		step: function(dt) {
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin") || collision.obj.isA("DrawEnnemy")){
-				if (music && !this.changemusic && scene_courante!="lvl5" && scene_courante!="lvl3"){
+			
+				if (music && !this.changemusic && scene_courante!="lvl5" && scene_courante!="lvl3" && scene_courante!="GO" && scene_courante!="niveau"){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
 						if (scene_courante == "lvl2"){
@@ -225,7 +225,10 @@
 					this.p.date_prec = this.p.maintenant;
 					this.init = false;
 				}
-			
+				
+			if(collision.obj.isA("Grenade")){
+				this.p.flip = 'x';
+			}
 			var now = new Date();	
 			
 			if (now.getSeconds()>this.p.date_prec.getSeconds()){	
@@ -239,9 +242,7 @@
 			}
 			
 			this.p.date_prec = now;
-			
-// CETTE PARTIE DU CODE GENERE DES ERREURS -> RANDOM ?
-// Soucis de listener ou je sais quoi
+
 
 		// Envoi une balle tous les 'this.tps' secondes
 		if(((this.p.seconde % this.tps)==0) && (!this.p.once)){
@@ -269,6 +270,8 @@
 					this.destroy();
 					Q.clearStages();
 					Q.stageScene("GoodGame",1, {label: "Victory"});
+					scene_courante = "GO";
+					scene_prec = "lvl5";
 				}
 
 				this.on("bump.left, bump.right", function(collision) {

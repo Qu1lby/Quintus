@@ -24,8 +24,8 @@ Q.scene("level5",function(stage) {
 			["Sol_5", {x: 105 , y : 385, asset : "pierre_haut2.png"}],
 			["Sol_5", {x: 175 , y : 385, asset : "pierre_haut2.png"}],
 			
-			["DrawEnnemy", {x: 1575 , y : 1055, coox : 1545, cooy : 1085, tps :10,  asset : "boite.png"}],
-			["DrawEnnemy", {x: 1575 , y : 1125, coox : 1545, cooy : 1155, tps :10,  asset : "boite.png"}],
+			["DrawEnnemy", {x: 1575 , y : 1055, coox : 1545, cooy : 1085, tps :7,  asset : "boite.png"}],
+			["DrawEnnemy", {x: 1575 , y : 1125, coox : 1545, cooy : 1155, tps :7,  asset : "boite.png"}],
 			["Sol_fin", {x: 1575 , y : 1225, asset : "fond_pierre.png"}],
 			["Sol_2Boss", {x: 1505 , y : 1225, asset : "fond_pierre.png"}],
 			//["Sol_2Boss", {x: 1505 , y : 1125}],
