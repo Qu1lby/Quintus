@@ -152,6 +152,9 @@
 	
 // -------------------------------SPRITES-------------------------------
 	
+
+			
+			
 // HorizontalPlatform 
 	Q.Sprite.extend("HorizontalPlatform", {
     	init: function(p) {

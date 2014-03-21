@@ -21,6 +21,8 @@
 				["Fin", {x: 11*70+35 , y : 5*70+35, asset: "ananas.png", type: Q.SPRITE_NONE}],	
 				["Fin", {x: 11*70+35 , y : 5*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],
 			
+				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "door2.png"}],
+				["Fin", {x: 8*70+35 , y : 4*70+35, asset: "door1.png"}],
 //-----------------------------Premier etage--------------------------------------------------			
 				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 29*70+35 , y : 12*70+35}],
 				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 30*70+35 , y : 12*70+35}],

@@ -215,7 +215,29 @@
 			this.p.date_prec = this.p.maintenant;
    			this.p.secondeabs = 0; 
 		
+       	this.on("bump.right, bump.left",this,"stomp");
+			
         },
+
+		stomp: function(collision) {
+			
+			
+			// Calcul du score final
+			if(collision.obj.isA("Fin")){
+				if(collision.obj.isA("Fin")&&!this.p.score){
+					score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute);
+					score_l3tps_tmp = this.p.minute+":"+this.p.secondeabs;
+					this.p.score = true;
+				
+				scene_courante = "GOG";
+				scene_prec = "lvl3";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
+				}
+			}
+		  },
 		  
 		// Gère le temps que le personnage est en vie -> fin du lvl
  		step: function(dt){	
