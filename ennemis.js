@@ -208,11 +208,19 @@
 			this.notdone = true;
 			this.p.once = false;
 			this.sound = true;
+			bool = 1;
+			
 			
 			this.add("2d, animation, commonEnemy, aiBounce");
 			},
       
 		step: function(dt) {
+
+			if(bool == 1) {
+				var balle = new Q.Bullet({x: 1350, y : 805, vx :-300, rangeX : 550 ,asset : "bullet.png"});
+				Q.stage().insert(balle);
+				bool = 2;
+			}
 			if(this.p.x > 1350 || this.p.x < 400) {
 				 this.p.vx = -this.p.vx;
 				 this.p.flip = 'x';
@@ -226,9 +234,6 @@
 					this.init = false;
 				}
 				
-			if(collision.obj.isA("Grenade")){
-				this.p.flip = 'x';
-			}
 			var now = new Date();	
 			
 			if (now.getSeconds()>this.p.date_prec.getSeconds()){	
