@@ -17,7 +17,7 @@
 			["Sol_G5", {x: 105 , y : 1575}],
 			["Sol_G5", {x: 175 , y : 1575}],
 			["Sol_G5", {x: 245 , y : 1575}],
-			
+						
 			
 			
 			//["bouton2", {x: 245 , y : 1505, coox : 245, cooy :1365}],
@@ -121,27 +121,27 @@
 			["Sol_pierre4_H", {x: 2555 , y : 525}],
 			["Sol_pierre4_H", {x: 2625 , y : 525}],
 			
-			["Pressoir", {x:1225, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],			
-			["Pressoir", {x:1295, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1365, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1435, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1505, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1575, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1645, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1715, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1785, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1855, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1925, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:1995, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2065, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2135, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2205, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2275, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2345, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2415, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2485, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2555, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
-			["Pressoir", {x:2625, y: 105, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1225, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],			
+			["Pressoir", {x:1295, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1365, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1435, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1505, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1575, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1645, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1715, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1785, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1855, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1925, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:1995, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2065, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2135, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2205, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2275, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2345, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2415, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2485, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2555, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
+			["Pressoir", {x:2625, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "grille70bas.png"}],
 			
 			
 			
@@ -171,9 +171,9 @@
 			["Sol_pierre1_H", {x: 2695 , y : 805}],
 			
 			
-			["DrawEnnemy", {x: 2975 , y : 735, coox : 2945, cooy : 745, tps :4,  asset : "boite.png"}],
+			["DrawEnnemy", {x: 2975 , y : 731, coox : 2945, cooy : 745, tps :5,  asset : "boite.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 2975 , y : 805}],		
-			["DrawEnnemy", {x: 1720 , y : 1225, coox : 1755, cooy : 1235, tps :3,  asset : "boite2.png"}],
+			["DrawEnnemy", {x: 1720 , y : 1225, coox : 1755, cooy : 1235, tps :5,  asset : "boite2.png"}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 1715 , y : 1295}],	
 			
 			//Petit ilot de droite
@@ -191,27 +191,21 @@
 			["grille200", {asset: "grille200H.png", x: 3330, y: 945}],
 			
 			
-			["Fin", {x: 1855 , y : 1505, asset: "tomate.png"}],		
-			["Sol_5", {x: 1855 , y : 1504, asset: "cage.png"}],	
-			
-			
-			
 			["bouton", {x: 2765, y: 620, coox : 3330, cooy : 945}],
 			
 			//bloc pour le boss
 			["DrawEnnemy", {x: 3045 , y : 1435, coox : 3015, cooy : 1445, tps : 5, asset:"carotte.png"}],
 			
 			
-			["Sol_G5", {asset: "fond_pierre.png",x: 1855 , y : 1505}],
 			["Sol_G5", {asset: "fond_pierre.png",x: 2065 , y : 1505}],
 			["Sol_G5", {asset: "fond_pierre.png",x: 2275 , y : 1505}],
 			["Sol_G5", {asset: "fond_pierre.png",x: 2485 , y : 1505}],
 			["Sol_G5", {asset: "fond_pierre.png",x: 2695 , y : 1505}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 3045 , y : 1505}],
 			["Sol_fin", {asset: "fond_pierre.png",x: 3115 , y : 1505}],
+			["Sol_fin", {asset: "fond_pierre.png",x: 3145 , y : 1435}],
 			
 			
-			["Sol_jump", {x: 1855 , y : 1645}],
 			["Sol_jump", {x: 2065 , y : 1645}],
 			["Sol_jump", {x: 2275 , y : 1645}],
 			["Sol_jump", {x: 2485 , y : 1645}],
@@ -221,11 +215,11 @@
 			
 			["bouton", {x: 2905, y: 1600, coox : 2275, cooy : 1505}],
 			["bouton", {x: 2275, y: 1600, coox : 2695, cooy : 1505}],
-			["bouton", {x: 2695, y: 1600, coox : 1855, cooy : 1505}],
-			["bouton", {x: 1855, y: 1600, coox : 2485, cooy : 1505}],
+			["bouton", {x: 2695, y: 1600, coox : 2485, cooy : 1505}],
 			["bouton", {x: 2485, y: 1600, coox : 2065, cooy : 1505}],
 			["bouton", {x: 2065, y: 1600, coox : 3115, cooy : 1505}],
 			["bouton", {x: 2065, y: 1600, coox : 3045, cooy : 1505}],
+			["bouton", {x: 2065, y: 1600, coox : 3145, cooy : 1435}],
 			
 			["Fin", {x: 48*70+35 , y : 20*70+35, asset: "tomate.png", type: Q.SPRITE_NONE}],	
 			["Fin", {x: 48*70+35 , y : 20*70+35, asset: "cage.png", type: Q.SPRITE_NONE}],

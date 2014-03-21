@@ -472,7 +472,7 @@
 
 	Q.Sprite.extend("Ananas",{
         init: function(p){
-        	this._super(p, { sheet: "ananas", sprite: "AnanasSP", x: 105, y: 1505, jumpSpeed: -400, lives: 2});
+        	this._super(p, { sheet: "ananas", sprite: "AnanasSP", x: 105, y:1505, jumpSpeed: -400, lives: 2});
         	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
@@ -498,20 +498,7 @@
 			  this.p.y = collision.obj.p.y ; // make the player stay on the platform
 			}
 			
-			// Calcul du score final
-			if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l4_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute) ;
-					score_l4tps_tmp = this.p.minute+":"+this.p.secondeabs;
-					this.p.score = true;
-					
-				scene_courante = "GOG";
-				scene_prec = "lvl4";
-				
-				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"});
-				
-			}
-			
+						
 		  },
 
 		// Gère le temps que le personnage est en vie -> fin du lvl
@@ -554,15 +541,51 @@
                	this.p.timeInvincible = Math.max(this.p.timeInvincible - dt, 0);
             }
 
-			if(this.p.y>1645){
+			
+			// Détruit le personnage s'il tombe premier niveau
+			if(this.p.x> 11*70+35 && this.p.x<22*70+35 && this.p.y>23*70+35){
 				this.destroy();
 				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"});
+				Q.stageScene("endGame",1);
 				scene_courante = "GO";
 				scene_prec = "lvl4";
-           
+                
+			}
+			
+			// Détruit le personnage s'il tombe deuxieme niveau gauche
+			if(this.p.x>19*70+35 && this.p.x<22*70+35 && this.p.y>12*70+35 && this.p.y<14*70+35){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl4";
+                
+			}
+			
+			// Détruit le personnage s'il tombe deuxieme niveau droite
+			if(this.p.x>24*70+35 && this.p.x<38*70+35 && this.p.y>13*70+35 && this.p.y<15*70+35){
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1);
+				scene_courante = "GO";
+				scene_prec = "lvl4";
+                
 			}
 
+			if(this.p.x> 47*70+35  && this.p.y>18*70+35){
+				score_l1_tmp = 500 - (2*this.p.secondeabs) - (120*this.p.minute) + (100*this.p.lives) ;
+				score_l1tps_tmp = this.p.minute+":"+this.p.secondeabs;
+				this.p.score = true;
+				
+				scene_courante = "GOG";
+				scene_prec = "lvl4";
+				
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				
+                
+			}
+			
       		// Sprite mouvement 
 		if(Q.inputs['up']) {
 			this.play("jump",1);      // add priority to animation
