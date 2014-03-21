@@ -477,6 +477,7 @@
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
 			this.p.score = false;
+			this.p.bool = false;
 			
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
@@ -589,35 +590,34 @@
 					Q.audio.stop();
 					Q.audio.play('boss.mp3');
 			}
-			
-			this.p.bool = false;
+		
 			
 			if(this.p.x>12*70+35 && this.p.x<12*70+65 && this.p.y>5*70+35 && this.p.y<7*70+35 && this.p.bool == false){
-				Q.stage().insert(new Q.Pressoir({x:945, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1015, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1085, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1155, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1225, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1295, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1365, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1435, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1505, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1575, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1645, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1715, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1785, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1855, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1925, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1995, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2065, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2135, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2205, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2275, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2345, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2415, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2485, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2555, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2625, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:945, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1015, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1085, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1155, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1225, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1295, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1365, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1435, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1505, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1575, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1645, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1715, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1785, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1855, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1925, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1995, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2065, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2135, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2205, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2275, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2345, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2415, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2485, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2555, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2625, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				this.p.bool = true;
 			}
 			

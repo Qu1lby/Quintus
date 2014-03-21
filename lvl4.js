@@ -81,9 +81,9 @@
 			
 			//Deuxieme etage 
 			 ["Sol_pierre1_P", {x: 805 , y : 525}],
-			 ["Sol_pierre1_P", {x: 805 , y : 455}],
+			 ["Sol_pierre1_P", {x: 805 , y : 455}],/*
 			 ["Sol_pierre1_P", {x: 805 , y : 385}],
-			 ["Sol_pierre1_H", {x: 805 , y : 315}],
+			 ["Sol_pierre1_H", {x: 805 , y : 315}],*/
 			 ["Sol_pierre1_P", {x: 735 , y : 455}],
 			 ["Sol_pierre1_H", {x: 735 , y : 385}],
 			 ["Sol_pierre1_P", {x: 665 , y : 525}],
