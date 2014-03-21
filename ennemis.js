@@ -224,10 +224,17 @@
 				Q.stage().insert(balle);
 				bool = 2;
 			}
-			if(this.p.x > 1350 || this.p.x < 400) {
+			
+			if(this.p.x > 1350 || this.p.x < 450) {
 				 this.p.vx = -this.p.vx;
 				 this.p.flip = 'x';
-      }
+		}
+		
+				if(this.p.x < 450) {
+				var balle1 = new Q.Bullet({x: 380, y : 805, vx : 300, rangeX : 550 ,asset : "bullet.png"});
+				Q.stage().insert(balle1);
+		}
+
 
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_2Boss") || collision.obj.isA("Sol_3Boss")){
@@ -287,9 +294,10 @@
 
 				this.on("bump.left, bump.right", function(collision) {
             	if(collision.obj.isA("Tomate")) {  
-					collision.obj.damage();								
+					Q.stageScene("endGame",1);				
 				}
             });
 		},
+
     });
 	

@@ -717,7 +717,7 @@ var liv5=2;
 	
 	Q.Sprite.extend("Tomate",{
         init: function(p){
-    	    this._super(p, {sheet: "tomate", sprite: "TomateSP", x: 120, y: 300, jumpSpeed: -400, lives: 100});
+    	    this._super(p, {sheet: "tomate", sprite: "TomateSP", x: 120, y: 300, jumpSpeed: -400, lives: 5});
     	    this.add("2d, platformerControls, animation"); 
     	    this.p.timeInvincible = 0;
 			this.p.sol = 0;
