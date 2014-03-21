@@ -280,8 +280,7 @@
 		}			
 		});			
 
-
-            	if(this.p.y > 1600) {  
+		if(this.p.y > 1600) {  
 				score_l5_tmp = 700 - (2*sec5) - (120*min5) + (100*liv5) ;
 				score_l5tps_tmp = min5+":"+sec5;
 				
@@ -294,11 +293,16 @@
 
 				this.on("bump.left, bump.right", function(collision) {
             	if(collision.obj.isA("Tomate")) { 
-				this.destroy();
-				Q.clearStages();
-				Q.stageScene("endGame",1, {label: "Game Over"});
-				scene_courante = "GO";
-				scene_prec = "lvl5";			
+				
+					if (music){
+						Q.audio.play('rire.mp3');
+					}
+				
+					this.destroy();
+					Q.clearStages();
+					Q.stageScene("endGame",1, {label: "Game Over"});
+					scene_courante = "GO";
+					scene_prec = "lvl5";			
 				}
             });
 		},
