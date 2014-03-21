@@ -75,7 +75,7 @@
 		this.on("hit.sprite",function(collision) {
 			if(collision.obj.isA("Sol_fin") || collision.obj.isA("DrawEnnemy")){
 			
-				if (music && !this.changemusic && scene_courante!="lvl5" && scene_courante!="lvl3" && scene_courante!="GO" && scene_courante!="niveau"){
+				if (music && !this.changemusic && scene_courante!="lvl5" && scene_courante!="lvl4" && scene_courante!="GO" && scene_courante!="niveau"){
 					Q.audio.stop();
 					Q.audio.play("boss.mp3",{ loop: true });
 						if (scene_courante == "lvl2"){
@@ -284,6 +284,11 @@
 					Q.stageScene("GoodGame",1, {label: "Victory"});
 					scene_courante = "GO";
 					scene_prec = "lvl5";
+					
+				score_l5_tmp = 700 - (2*this.p.secondeabs) - (120*this.p.minute) + (100*this.p.lives) ;
+				score_l5tps_tmp = this.p.minute+":"+this.p.secondeabs;
+	
+				
 				}
 
 				this.on("bump.left, bump.right", function(collision) {
