@@ -293,8 +293,12 @@
 				}
 
 				this.on("bump.left, bump.right", function(collision) {
-            	if(collision.obj.isA("Tomate")) {  
-					Q.stageScene("endGame",1);				
+            	if(collision.obj.isA("Tomate")) { 
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("endGame",1, {label: "Game Over"});
+				scene_courante = "GO";
+				scene_prec = "lvl5";			
 				}
             });
 		},
