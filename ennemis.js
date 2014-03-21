@@ -119,10 +119,6 @@
 				if (scene_courante == "lvl3"){
 					
 				}
-				
-				if (scene_courante == "lvl4"){
-					
-				}
 			}
 			
 			}		
@@ -279,16 +275,14 @@
 
 
             	if(this.p.y > 1600) {  
-					this.destroy();
-					Q.clearStages();
-					Q.stageScene("GoodGame",1, {label: "Victory"});
-					scene_courante = "GO";
-					scene_prec = "lvl5";
-					
-				score_l5_tmp = 700 - (2*this.p.secondeabs) - (120*this.p.minute) + (100*this.p.lives) ;
-				score_l5tps_tmp = this.p.minute+":"+this.p.secondeabs;
-	
+				score_l5_tmp = 700 - (2*sec5) - (120*min5) + (100*liv5) ;
+				score_l5tps_tmp = min5+":"+sec5;
 				
+				this.destroy();
+				Q.clearStages();
+				Q.stageScene("GoodGame",1, {label: "Victory"});
+				scene_courante = "GO";
+				scene_prec = "lvl5";			
 				}
 
 				this.on("bump.left, bump.right", function(collision) {

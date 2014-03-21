@@ -689,6 +689,10 @@
 	});
 
 
+	var min5=0;
+var sec5=0;
+var liv5=2;
+	
 	Q.Sprite.extend("Tomate",{
         init: function(p){
     	    this._super(p, {sheet: "tomate", sprite: "TomateSP", x: 120, y: 300, jumpSpeed: -400, lives: 100});
@@ -698,6 +702,10 @@
 			this.p.first = 1;
 			this.p.score = false;
 			
+			min5=0;
+			sec5=0;
+			liv5=2;
+						
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
@@ -745,6 +753,10 @@
 				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
         		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
+					
+					var min5=this.p.minute;
+					var sec5=this.p.secondeabs;
+	
 				}else{
 					var livesLabel = Q("UI.Text",1).at(1);
         		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
@@ -782,6 +794,7 @@
     },
 		
         damage: function(){
+			liv5--;
             if(!this.p.timeInvincible){
                 this.p.lives--;
 				Q.stageScene("Degat",4);
