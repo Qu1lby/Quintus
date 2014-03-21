@@ -585,6 +585,18 @@
                 
 			}
 			
+			if(this.p.x>24*70+35 && this.p.x<26*70+35 && this.p.y>17*70+35 && this.p.y<19*70+35){
+					Q.audio.stop();
+					Q.audio.play('boss.mp3');
+			}
+			
+			this.p.bool = false;
+			
+			if(this.p.x>12*70+35 && this.p.x<14*70+35 && this.p.y>5*70+35 && this.p.y<7*70+35 && bool != true){
+				Q.stage().insert(new Q.Pressoir({x:1225, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"});
+				this.p.bool = true;
+			}
+			
       		// Sprite mouvement 
 		if(Q.inputs['up']) {
 			this.play("jump",1);      // add priority to animation
