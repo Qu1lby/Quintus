@@ -24,8 +24,8 @@
 				["Fin", {x: 8*70+35 , y : 5*70+35, asset: "door2.png"}],
 				["Fin", {x: 8*70+35 , y : 4*70+35, asset: "door1.png"}],
 //-----------------------------Premier etage--------------------------------------------------			
-				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 29*70+35 , y : 12*70+35}],
-				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 30*70+35 , y : 12*70+35}],
+				["Sol_pierre3_D", {asset : "pierre_haut2.png",x: 29*70+35 , y : 12*70+35}],
+				["Sol_pierre3_D", {asset : "fond_pierre.png",x: 30*70+35 , y : 12*70+35}],
 				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 30*70+35 , y : 11*70+35}],
 				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 31*70+35 , y : 10*70+35}],
 				
@@ -225,7 +225,8 @@
 				["Sol_pierre1_P", {asset : "pierre_haut2.png",x: 36*70+35 , y : 5*70+35}],
 				["Sol_pierre1_P", {asset : "pierre_haut2.png",x: 31*70+35 , y : 5*70+35}],
 				
-				["DrawEnnemy", {x: 30*70+25 , y : 4*70+35, coox : 30*70+35, cooy : 4*70+35, tps :2.5,  asset : "patate.png"}],
+				["Sol_pierre2_D", {asset : "pierre_haut2.png",x: 29*70+35 , y : 4*70+35}],
+				["DrawEnnemy", {x: 30*70+25 , y : 4*70+35, coox : 30*70+55, cooy : 4*70+35, tps :1.5,  asset : "patate.png"}],
 				["Sol_fin", {x: 30*70+35 , y : 5*70+35, asset : "pierre_haut2.png"}],
 				["GroundEnemy", {scale : 0.7,x: 23*70, y :  4*70+35,vx : 200, asset: "slime3.png"}],
 				["GroundEnemy", {scale : 1.4,x: 19*70, y :  4*70+35,vx : 200, asset: "slime3.png"}],
