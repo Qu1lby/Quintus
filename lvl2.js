@@ -13,6 +13,26 @@
 
 				["DrawEnnemy", {x: 1645 , y : 735, coox : 1615, cooy : 1085, tps : 1, asset:"chou.png"}],
 				["Sol_5", {x: 1505 , y : 1155}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 400, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
+				
+																								
+				
+				
 
 				["Sol_fin", {x: 1645 , y : 1155}],
 				["Sol_5", {x: 1505 , y : 1225, asset: "fond_pierre.png"}],		

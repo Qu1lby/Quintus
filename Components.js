@@ -565,6 +565,35 @@
         }
     });	
 	
+		Q.Sprite.extend("neige", {
+    	    	init: function(p) {
+			// parametre {vx: , rangeX: }
+			var tmp = (Math.random() * (2700 - 300) + 300);
+			//alert(tmp);
+       		this._super(p, {asset : "banane.png", type: Q.SPRITE_NONE});
+            this.add("2d");
+            this.p.initialY = this.p.y;
+        },
+        
+		step: function(dt) {   
+
+		
+			if(this.p.y > 1300){
+				var flocon1 = new Q.neige();
+				Q.stage().insert(flocon1);
+				this.destroy();
+			}
+            if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {
+        	    this.p.vy = -this.p.vy;
+            }
+            else if(-this.p.y + this.p.initialY >= this.p.rangeY && this.p.vy < 0) {
+                 	this.p.vy = -this.p.vy;
+        	}
+	
+		}
+
+    });
+	
 // Bullet des boss
 	Q.Sprite.extend("Bullet", {
     	init: function(p) {
