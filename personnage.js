@@ -238,7 +238,7 @@
 					 this.p.once = true;
 				}
 				var livesLabel = Q("UI.Text",1).at(1);
-        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l1tps;	
+        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l3tps;	
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
@@ -397,7 +397,7 @@
 				}
 				
 				var livesLabel = Q("UI.Text",1).at(1);
-        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l1tps;	
+        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l2tps;	
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
@@ -536,7 +536,7 @@
 					 this.p.once = true;
 				}
 				var livesLabel = Q("UI.Text",1).at(1);
-        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l1tps;	
+        		livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l4tps;	
 			}
 
 			var livesLabel = Q("UI.Text",1).first();
