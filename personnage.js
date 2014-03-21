@@ -202,7 +202,7 @@
 
 	Q.Sprite.extend("Fraise",{
         init: function(p){
-       		this._super(p, {sheet: "fraise", sprite: "fraiseSP", x: 17*70+35, y: 11*70+35, speed : 250,jumpSpeed: -400, lives: 2000 });
+       		this._super(p, {sheet: "fraise", sprite: "fraiseSP", x: 17*70+35, y: 11*70+35, speed : 250,jumpSpeed: -400, lives: 1 });
         	this.add("2d, platformerControls, animation"); 
         	this.p.timeInvincible = 0;
 			this.p.sol = 0; 	 // Retiens le dernier cube
