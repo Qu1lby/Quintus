@@ -24,7 +24,7 @@
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
 		
-				["GroundEnemy", {scale: 2, x: 44*70, y :  12*70,vx : 200, asset: "slime3.png"}],
+				["GroundEnemy", {scale: 1, x: 44*70, y :  12*70,vx : 200, asset: "slime3.png"}],
 				["GroundEnemy", {x: 45*70, y :  12*70,vx : 150, asset: "slime3.png"}],
 				
 				["Sol_jump", {x: 54*70+35 , y : 16*70+35}],
@@ -57,7 +57,7 @@
 			
 				["Sol_5", {x: 47*70+35 , y : 21*70+35}],
 				
-				["bouton", {asset:"push4.png", scale: 0.3, x: 51*70+5 , y : 12*70+30, coox : 53*70+35, cooy :14*70+35}],
+				["boutonDestr2", {asset:"push4.png", scale: 0.3, x: 51*70+5 , y : 12*70+30, coox : 53*70+35, cooy :14*70+35, coox2 :53*70+35, cooy2:15*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 15*70+35}],
 				
@@ -67,7 +67,13 @@
 				["Sol_pierre2_D", {x: 55*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 55*70+35 , y : 15*70+35}],
 				
-				["bouton", {asset: "push3.png", scale : 0.3, x: 59*70+65 , y : 12*70+30, coox : 56*70+35, cooy :14*70+35}],
+				["boutonDestr2", {asset: "push3.png", scale : 0.3, x: 59*70+65 , y : 12*70+30, coox : 56*70+35, cooy :14*70+35, coox2 :56*70+35, cooy2:15*70+35}],
+				
+				
+				//["bouton_platf", {asset: "push3.png", scale : 0.3, x: 13*70+65 , y : 22*70+30, coox : 14*70+35, cooy :19*70+35}],
+				["bouton_pasteque", {asset:"push4.png", scale: 0.3, x: 46*70+35 , y : 20*70+35, coox : 46*70, cooy :20*70}],
+				
+				
 				["Sol_pierre2_D", {x: 56*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 56*70+35 , y : 15*70+35}],
 				

@@ -70,6 +70,61 @@
 		}
     });
 	
+	//bouton creant une plateforme 
+		Q.Sprite.extend("bouton_platf", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "push2.png"});
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.booleen = true;
+			this.add("2d2");
+        },
+
+		step: function(dt) {			
+            this.on("bump.top",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				    if(music){
+						Q.audio.play('pop.mp3');
+					}
+					
+					if(this.booleen){
+				
+					nouvelle_platef = new Q.HorizontalPlatform({x: this.coox, y: this.cooy});
+					Q.stage().insert(nouvelle_platef);
+					this.destroy();
+					this.booleen = false;
+					}
+				}
+            });
+		}
+    });
+	
+	// bouton detruisant deux cases et en creer deux
+	Q.Sprite.extend("boutonDestr2", {
+        init: function(p) {
+            this._super(p,  {gravity : 0, asset : "push2.png"});
+			this.coox = p.coox;
+			this.cooy = p.cooy;
+			this.coox2 = p.coox2;
+			this.cooy2 = p.cooy2;
+			this.add("2d2");
+        },
+
+		step: function(dt) {			
+            this.on("bump.top, bump.right, bump.left",function(collision) {
+            	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
+				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
+				    if(music){
+						Q.audio.play('pop.mp3');
+					}
+					this.destroy();
+					Q.stage().locate(this.coox,this.cooy).destroy();
+					Q.stage().locate(this.coox2,this.cooy2).destroy();
+				}
+            });
+		}
+    });
 	
 	Q.Sprite.extend("bouton_case_droite", {
         init: function(p) {
