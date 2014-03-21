@@ -81,7 +81,7 @@
         },
 
 		step: function(dt) {			
-            this.on("bump.top",function(collision) {
+            this.on("bump.right",function(collision) {
             	if((collision.obj.isA("Orange")) || (collision.obj.isA("Banane")) || 
 				   (collision.obj.isA("Ananas")) || (collision.obj.isA("Fraise"))) {  
 				    if(music){
@@ -90,7 +90,7 @@
 					
 					if(this.booleen){
 				
-					nouvelle_platef = new Q.HorizontalPlatform({x: this.coox, y: this.cooy});
+					nouvelle_platef = new Q.HorizontalPlatform2({x: this.coox, y: this.cooy});
 					Q.stage().insert(nouvelle_platef);
 					this.destroy();
 					this.booleen = false;
