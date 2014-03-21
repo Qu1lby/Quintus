@@ -24,8 +24,8 @@
 				["HorizontalPlatform", {x: 41*70, y : 11*70+15,vx :200, rangeX : 215 ,asset : "plateforme.png", defaultDirection: "right"}],
 				["HorizontalPlatform", {x: 47*70+15, y : 10*70+35,vx :175, rangeX : 155 ,asset : "plateforme.png"}],
 		
-				["GroundEnemy", {scale: 1, x: 44*70, y :  12*70,vx : 200, asset: "slime3.png"}],
-				["GroundEnemy", {x: 45*70, y :  12*70,vx : 150, asset: "slime3.png"}],
+				["GroundEnemy", {scale: 1, x: 44*70, y :  12*70,vx : 200,coox : 51*70+35, cooy :15*70, asset: "slime3.png"}],
+				["GroundEnemy", {x: 45*70, y :  12*70,vx : 150,coox : 54*70+65, cooy :13*70+15, asset: "slime3.png"}],
 				
 				["Sol_jump", {x: 54*70+35 , y : 16*70+35}],
 				["Sol_jump", {x: 55*70+35 , y : 16*70+35}],
@@ -60,6 +60,10 @@
 				["boutonDestr2", {asset:"push4.png", scale: 0.3, x: 51*70+5 , y : 12*70+30, coox : 53*70+35, cooy :14*70+35, coox2 :53*70+35, cooy2:15*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 53*70+35 , y : 15*70+35}],
+				
+				
+				["grille200", {scale : 0.77,asset: "grille200H.png", x: 54*70+65, y: 13*70+15}],
+				["grille140", {scale: 1.1 , x: 51*70+35 , y : 15*70}],
 				
 				["Sol_pierre2_D", {x: 54*70+35 , y : 14*70+35}],
 				["Sol_pierre2_D", {x: 54*70+35 , y : 15*70+35}],
