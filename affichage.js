@@ -126,46 +126,46 @@ Q.scene("flocon",function(stage) {
 	
 	else{
 	
-		var flocon1 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		var flocon1 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 6, ax : 0});
 		stage.insert(flocon1);
 		
-		var flocon2 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		var flocon2 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 2, ax : 0});
 		stage.insert(flocon2);
 	
-		flocon3 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon3 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 20, ax : 0});
 		stage.insert(flocon3);
 		
-		flocon4 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon4 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 7, ax : 0});
 		stage.insert(flocon4);
 		
-		flocon5 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon5 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 15, ax : 0});
 		stage.insert(flocon5);
 		
-		flocon6 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon6 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 50, ax : 0});
 		stage.insert(flocon6);
 		
-		flocon7 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon7 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 10, ax : 0});
 		stage.insert(flocon7);
 		
-		var flocon8 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		var flocon8 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 30, ax : 0});
 		stage.insert(flocon8);
 		
-		var flocon9 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		var flocon9 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 1, ax : 0});
 		stage.insert(flocon2);
 	
-		flocon3 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon3 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 55, ax : 0});
 		stage.insert(flocon9);
 		
-		flocon10 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon10 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 42, ax : 0});
 		stage.insert(flocon10);
 		
-		flocon11 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon11 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 23, ax : 0});
 		stage.insert(flocon11);
 		
-		flocon12 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon12 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 17, ax : 0});
 		stage.insert(flocon12);
 		
-		flocon13 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : (Math.random() * (60 - 5) + 5)});
+		flocon13 = new Q.neige({x: (Math.random() * (2700 - 300) + 300), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1, ay : 32, ax : 0});
 		stage.insert(flocon13);
 	
 	}
