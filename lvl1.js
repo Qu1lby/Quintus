@@ -37,7 +37,7 @@ Q.scene("level1",function(stage) {
 			["grille140", {x: 975 , y : 145}],
 			["Sol_jump_neige", {x: 490 , y : 385}],
 			["bouton", {x: 488 , y : 350, coox : 975, cooy : 145}],
-						
+			
 			["Sol_5", {x: 1085 , y : 245}],
 			["Sol_5", {x: 1015 , y : 245}],
 		
