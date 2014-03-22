@@ -290,6 +290,8 @@ Pour griser :
       			Q.stageScene('level1');
 				Q.stageScene("gameStats",1);
 				Q.stageScene('tut1',2);
+				Q.stageScene('neige',3);
+				
 				
 				if(music){
 					Q.audio.play('lvl1.mp3',{ loop: true });
@@ -303,6 +305,7 @@ Pour griser :
 				Q.clearStages();
       			Q.stageScene('level2');
 				Q.stageScene("gameStats",1);
+			
 				
 				if(music){
 					Q.audio.play('lvl2.mp3',{ loop: true });
