@@ -549,16 +549,21 @@
     });	
 	
 	Q.Sprite.extend("neige", {
-    	    init: function(p) {
-				this._super(p, {asset : "banane.png", type: Q.SPRITE_NONE});
-				this.add("2d");
-				this.p.initialY = this.p.y;
-			},
+		init: function(p) {
+			this._super(p, {asset : "flocon.png", type: Q.SPRITE_NONE});
+			this.add("2d");
+			this.p.initialY = this.p.y;
+			this.niveau = p.level;
+		},
         
 		step: function(dt) {   
 			if(this.p.y > 2000){
-				var flocon1 = new Q.neige();
-				Q.stage().insert(flocon1);
+				if (this.niveau == 1){
+					var flocon1 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : 1, rangeY : 2000, level : 1});
+					Q.stage().insert(flocon1);
+				}else{
+					// CODE
+				}
 				this.destroy();
 			}
             if(this.p.y - this.p.initialY >= this.p.rangeY && this.p.vy > 0) {

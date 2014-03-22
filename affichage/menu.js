@@ -473,9 +473,14 @@ Pour griser :
 		
 		un.on("click",function() {
 			Q.clearStages();
+			
+			scene_courante = "lvl1";
+			scene_prec = "niveau";
+			
       		Q.stageScene('level1');
 			Q.stageScene("gameStats",1);
 			Q.stageScene('tut1',2);
+			Q.stageScene('flocon',5);
 			
 			if(music){
 				Q.audio.play('lvl1.mp3',{ loop: true });
@@ -487,15 +492,19 @@ Pour griser :
 				
 		deux.on("click",function() {
 			Q.clearStages();
+			
+			cene_courante = "lvl2";
+			scene_prec = "niveau";
+			
       		Q.stageScene('level2');
 			Q.stageScene("gameStats",1);
+			Q.stageScene('flocon',5);
 			
 			if(music){
 				Q.audio.play('lvl2.mp3',{ loop: true });
 			}
 			
-			scene_courante = "lvl2";
-			scene_prec = "niveau";
+			
 		});
 				 
 		trois.on("click",function() {

@@ -92,35 +92,43 @@ include ('affichage/touche.js');
 	});
 
 // Reinitialiser un stage
-	Q.scene("Blanc", function(stage){
-	});
+Q.scene("Blanc", function(stage){
+});
 	
 	
 //setup level 1, @TODO make it so that it could be multiple levels?
-Q.scene("neige",function(stage) {
+Q.scene("flocon",function(stage) {
 	
-	var flocon1 = new Q.neige({x: 250, y : 50, vy : 400, rangeY : 2000});
-	Q.stage().insert(flocon1);
+	alert (scene_courante);
+	if (scene_courante == 'lvl1'){
 	
+		var flocon1 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon1);
+		
+		var flocon2 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon2);
+	
+		flocon3 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon3);
+		
+		flocon4 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon4);
+		
+		flocon5 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon5);
+		
+		flocon6 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon6);
+		
+		flocon7 = new Q.neige({x: (Math.random() * (2000 - 100) + 100), vy : (Math.random() * (10 - 5) + 5), rangeY : 2000, level : 1});
+		stage.insert(flocon7);
+		
+	}else{
+	
+	
+	}
 	/*		
 	var levelAssets = [	
 	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 400, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 50, rangeY : 2000,}],
-	];
-	
-	stage.loadAssets(levelAssets);  */
+	 */
 });
