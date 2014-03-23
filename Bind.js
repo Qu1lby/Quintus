@@ -30,7 +30,7 @@
 			scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!echap){
 				if (!pause){
-					Q.stageScene('PauseAff',3);
+					Q.stageScene('Pause',3);
 					Q.stage().pause();
 					scene_prec = scene_courante;
 					scene_courante = "pause";
@@ -121,7 +121,7 @@
 		scene_courante == "lvl5"){
 			
 		if(!replay){
-			Q.stageScene('Repl',2);
+			Q.stageScene('Replay',2);
 		}else{
 			Q.stageScene('Blanc',2);
 		}
@@ -194,7 +194,7 @@
 			scene_courante == "lvl5" || scene_courante == "pause" ){
 			if (!pause){
 				if (!echap){
-					Q.stageScene('Echp',2);
+					Q.stageScene('Echap',2);
 				}else{
 					Q.stageScene('Blanc',2);	
 				}
