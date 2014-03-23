@@ -60,10 +60,10 @@
         include ('ennemis.js');
 		include ('components.js');
 		include ('bouton.js');
-		include ('affichage.js');
+		include ('affichage/affichage.js');
 		include ('tuto.js');		
 		
-	// Ajout des scenes lvl
+	// Ajout des Niveau
 		include ('lvl1.js');
 		include ('lvl2.js');
 		include ('lvl3.js');
@@ -76,14 +76,11 @@
 	
 		if (window.XMLHttpRequest || window.ActiveXObject) {
 			if (window.ActiveXObject) {
-				try {
-					xhr = new ActiveXObject("Msxml2.XMLHTTP");
+				try { xhr = new ActiveXObject("Msxml2.XMLHTTP");
 				} catch(e) {
-					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+					  xhr = new ActiveXObject("Microsoft.XMLHTTP");
 				}
-			} else {
-				xhr = new XMLHttpRequest(); 
-			}
+			} else xhr = new XMLHttpRequest(); 
 		} else {
 			alert("Votre navigateur n'est pas compatible.");
 			return null;
@@ -92,7 +89,7 @@
 	}
 		
 	// Charge tous les éléments
-        Q.load([
+    	Q.load([
 			
 			"tiles_map.png", "orange.png", "tomate.png", "banane.png", "ananas.png",
 			"chou.png", "carotte.png", "tomateboss.png", "patate.png", "fraise.png", 
