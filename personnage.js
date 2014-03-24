@@ -286,22 +286,6 @@
 				scene_prec = "lvl3";
                 
 			}
-			
-			// Calcul du score final
-			if(collision.obj.isA("Fin")){
-				if(collision.obj.isA("Fin")&&!this.p.score){
-					score_l3_tmp = 1000 - (2*this.p.secondeabs)- (120*this.p.minute);
-					score_l3tps_tmp = this.p.minute+":"+this.p.secondeabs;
-					this.p.score = true;
-				
-				scene_courante = "GOG";
-				scene_prec = "lvl3";
-				
-				Q.clearStages();
-				Q.stageScene("GoodGame",1, {label: "Victory"});
-				
-				}
-			}
 		
 	// Sprite mouvement 
 		if(Q.inputs['up']) {

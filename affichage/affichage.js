@@ -158,8 +158,4 @@ Q.scene("flocon",function(stage) {
 		
 	
 	}
-	/*		
-	var levelAssets = [	
-	["neige", {x: (Math.random() * (2700 - 300) + 300), y : 20, vy : 400, rangeY : 2000,}],
-	 */
 });

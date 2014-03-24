@@ -69,12 +69,12 @@ Q.scene("Debut", function(stage) {
 			pseudo = saisie;
 		}
 
-/*		if (score_t!< 2000 ){
-			Q.stageScene('niveau');
-		}else Q.stageScene('niveau2');
-*/	
 		Q.clearStages();
+
+	if (score_t < 2000 ){
 		Q.stageScene('niveau');
+	}else Q.stageScene('niveau2');
+	
 		scene_courante = "niveau";
 		scene_prec = "menu";
 	});	
@@ -181,7 +181,7 @@ Q.scene("Credit", function(stage) {
 });
 		
 //  Choix du niveau (1) ----------------------------------------------
-Q.scene("niveau2", function(stage) {
+Q.scene("niveau", function(stage) {
 	var background = new Q.TileLayer({ 
 	dataAsset: "men.tmx",
 	layerIndex: 0,
@@ -202,43 +202,79 @@ Q.scene("niveau2", function(stage) {
 		h: 50
 		})
 	);
-		
-	var Menu2 = stage.insert(new Q.UI.Container({
-		fill: "rgb(204,240,122)",
-		x: wi/2 + wi/10,
-		y: hi/2 +50,
-		border: 1,
-		shadow: 3,
-		shadowColor: "rgb(160,160,160)",
-		w: wi/6.5,
-		h: 50	
-		})
-	);
-		
-	var Menu3 = stage.insert(new Q.UI.Container({
-		fill: "rgb(204,240,122)",
-		x: wi/2 - wi/10,
-		y: hi/2 +130,
-		border: 1,
-		shadow: 3,
-		shadowColor: "rgb(160,160,160)",
-		w: wi/6.5,
-		h: 50
-		})
-	);
-		
-	var Menu4 = stage.insert(new Q.UI.Container({
-		fill: "rgb(248,156,69)",
-		x: wi/2 + wi/10,
-		y: hi/2 + 130,
-		border: 1,
-		shadow: 3,
-		shadowColor: "rgb(160,160,160)",
-		w: wi/6.5,
-		h: 50
-		})
-	);
-		
+	
+	if (score_l1 !=0){
+		var Menu2 = stage.insert(new Q.UI.Container({
+			fill: "rgb(204,240,122)",
+			x: wi/2 + wi/10,
+			y: hi/2 +50,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50	
+		}));
+	}else{
+		var Menu2 = stage.insert(new Q.UI.Container({
+			fill: "rgb(160,160,160)" ,
+			x: wi/2 + wi/10,
+			y: hi/2 +50,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50	
+		}));
+	}
+	
+	if (score_l2 !=0){
+		var Menu3 = stage.insert(new Q.UI.Container({
+			fill: "rgb(204,240,122)",
+			x: wi/2 - wi/10,
+			y: hi/2 +130,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50
+		}));
+	}else{
+		var Menu3 = stage.insert(new Q.UI.Container({
+			fill: "rgb(160,160,160)",
+			x: wi/2 - wi/10,
+			y: hi/2 +130,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50
+		}));
+	}
+	
+	if (score_l3 !=0){
+		var Menu4 = stage.insert(new Q.UI.Container({
+			fill: "rgb(248,156,69)",
+			x: wi/2 + wi/10,
+			y: hi/2 + 130,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50
+		}));
+	}else{
+		var Menu4 = stage.insert(new Q.UI.Container({
+			fill: "rgb(160,160,160)",
+			x: wi/2 + wi/10,
+			y: hi/2 + 130,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(160,160,160)",
+			w: wi/6.5,
+			h: 50
+		}));
+	}
+			
 	var Menu5 = stage.insert(new Q.UI.Container({
 		fill: "rgb(255,255,130)",
 		x: wi/2,
@@ -286,7 +322,6 @@ Q.scene("niveau2", function(stage) {
 		Q.stageScene('level1');
 		Q.stageScene("gameStats",1);
 		Q.stageScene('tut1',2);
-		Q.stageScene('neige',3);
 		
 		if(music){
 			Q.audio.play('lvl1.mp3',{ loop: true });
@@ -296,45 +331,51 @@ Q.scene("niveau2", function(stage) {
 		scene_prec = "niveau";
 	});
 		
-	deux.on("click",function() {
-		Q.clearStages();
-		Q.stageScene('level2');
-		Q.stageScene("gameStats",1);
-		
-		if(music){
-			Q.audio.play('lvl2.mp3',{ loop: true });
-		}
-		
-		scene_courante = "lvl2";
-		scene_prec = "niveau";
-	});
-		 
-	trois.on("click",function() {
-		Q.clearStages();
-		Q.stageScene('level3');
-		Q.stageScene("gameStats",1);
-						
-		if(music){
-			Q.audio.play('lvl3.mp3',{ loop: true });
-		}
-		
-		scene_courante = "lvl3";
-		scene_prec = "niveau";
-	});
-		 
-	quatre.on("click",function() {
-		Q.clearStages();
-		Q.stageScene('level4');
-		Q.stageScene("gameStats",1);
-						
-		if(music){
-			Q.audio.play('lvl4.mp3',{ loop: true });
-		}
-		
-		scene_courante = "lvl4";
-		scene_prec = "niveau";
-	});
+	if (score_l1 !=0){
+		deux.on("click",function() {
+			Q.clearStages();
+			Q.stageScene('level2');
+			Q.stageScene("gameStats",1);
+			
+			if(music){
+				Q.audio.play('lvl2.mp3',{ loop: true });
+			}
+			
+			scene_courante = "lvl2";
+			scene_prec = "niveau";
+		});
+	}
 	
+	if (score_l2 !=0){	 
+		trois.on("click",function() {
+			Q.clearStages();
+			Q.stageScene('level3');
+			Q.stageScene("gameStats",1);
+							
+			if(music){
+				Q.audio.play('lvl3.mp3',{ loop: true });
+			}
+			
+			scene_courante = "lvl3";
+			scene_prec = "niveau";
+		});
+	}
+
+	if (score_l3 !=0){	 
+		quatre.on("click",function() {
+			Q.clearStages();
+			Q.stageScene('level4');
+			Q.stageScene("gameStats",1);
+							
+			if(music){
+				Q.audio.play('lvl4.mp3',{ loop: true });
+			}
+			
+			scene_courante = "lvl4";
+			scene_prec = "niveau";
+		});
+	}
+
 	cinq.on("click",function() {
 		Q.clearStages();
 		Q.stageScene('Debut');
@@ -342,10 +383,11 @@ Q.scene("niveau2", function(stage) {
 		scene_courante = "menu";
 		scene_prec = "niveau";
 	});
+
 });
 
 //  Choix du niveau (2) ----------------------------------------------
-Q.scene("niveau", function(stage) {
+Q.scene("niveau2", function(stage) {
 	var background = new Q.TileLayer({ 
 	dataAsset: "men.tmx",
 	layerIndex: 0,
@@ -414,18 +456,30 @@ Q.scene("niveau", function(stage) {
 		h: 50
 		})
 	);
-	
-	var Menu6 = stage.insert(new Q.UI.Container({
-		fill: "rgb(255,148,112)",
-		x: wi/2,
-		y: hi/2 +60,
-		border: 1,
-		shadow: 3,
-		shadowColor: "rgb(255,64,64)",
-		w: wi/6.5,
-		h: 50
-		})
-	);
+
+	if (score_l4 !=0){	 
+		var Menu6 = stage.insert(new Q.UI.Container({
+			fill: "rgb(255,148,112)",
+			x: wi/2,
+			y: hi/2 +60,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(255,64,64)",
+			w: wi/6.5,
+			h: 50
+			}));
+	}else{
+		var Menu6 = stage.insert(new Q.UI.Container({
+			fill: "rgb(160,160,160)",
+			x: wi/2,
+			y: hi/2 +60,
+			border: 1,
+			shadow: 3,
+			shadowColor: "rgb(255,64,64)",
+			w: wi/6.5,
+			h: 50
+			}));
+	}
 	
 	var un = stage.insert(new Q.UI.Button({ 
 		label: "LvL 1",
@@ -472,7 +526,7 @@ Q.scene("niveau", function(stage) {
 		Q.stageScene('level1');
 		Q.stageScene("gameStats",1);
 		Q.stageScene('tut1',2);
-		Q.stageScene('flocon',5);
+		//Q.stageScene('flocon',5);
 		
 		if(music){
 			Q.audio.play('lvl1.mp3',{ loop: true });
@@ -482,12 +536,12 @@ Q.scene("niveau", function(stage) {
 	deux.on("click",function() {
 		Q.clearStages();
 		
-		cene_courante = "lvl2";
+		scene_courante = "lvl2";
 		scene_prec = "niveau";
 		
 		Q.stageScene('level2');
 		Q.stageScene("gameStats",1);
-		Q.stageScene('flocon',5);
+		//Q.stageScene('flocon',5);
 		
 		if(music){
 			Q.audio.play('lvl2.mp3',{ loop: true });
@@ -528,17 +582,19 @@ Q.scene("niveau", function(stage) {
 		scene_prec = "niveau";
 	});
 	
-	six.on("click",function() {
-		Q.clearStages();
-		Q.stageScene('level5');
-		Q.stageScene("gameStats",1);
-		Q.stageScene("tut5",2);
-		
-		if(music){
-			Q.audio.play('lvl5.mp3',{loop : true});
-		}
-		
-		scene_courante = "lvl5";
-		scene_prec = "niveau";
-	});
+	if (score_l4 !=0){	 
+		six.on("click",function() {
+			Q.clearStages();
+			Q.stageScene('level5');
+			Q.stageScene("gameStats",1);
+			Q.stageScene("tut5",2);
+			
+			if(music){
+				Q.audio.play('lvl5.mp3',{loop : true});
+			}
+			
+			scene_courante = "lvl5";
+			scene_prec = "niveau";
+		});
+	}
 });

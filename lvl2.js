@@ -165,7 +165,7 @@ Q.scene("level2",function(stage) {
 		["Sol_pierre1_DB", {x: 875, y : 105}],	
 				
 		["grille140", {x: 2325, y : 630}],
-		//["grille70", {x: 1260 , y : 1085}],
+		["grille70", {x: 1260 , y : 1085}],
 		["grille70", {x: 1274 , y : 525}],
 		["grille140", {x: 2615 , y : 1330}],				
 		["grille200", {x: 1065 , y : 330}],

@@ -68,11 +68,10 @@ Q.scene("Echap", function(stage) {
 	msg.on("click",function() {
 		Q.clearStages();
 		
-/*		if (score_t < 2000 ){
-			Q.stageScene('niveau');
-		}else Q.stageScene('niveau2');
-*/			
+	if (score_t < 2000 ){
 		Q.stageScene('niveau');
+	}else Q.stageScene('niveau2');
+
 		Q.audio.stop();
 		
 		scene_prec = scene_courante

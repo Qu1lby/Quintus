@@ -390,12 +390,11 @@ Q.scene("GoodGame",function(stage) {
 	}),GameoV);
 	
 	msg.on("click",function() {		
+		Q.clearStages();
+
 		if (score_t < 2000){
 			Q.stageScene('niveau');
 		}else Q.stageScene('niveau2');
-		
-		Q.clearStages();
-		Q.stageScene('niveau');
 		
 		Q.audio.stop();	
 		scene_prec = scene_courante
