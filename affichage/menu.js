@@ -64,21 +64,14 @@ Q.scene("Debut", function(stage) {
 	men.on("click",function() {
 		Q.clearStages();
 
-		pseudo = lireCookie(" Pseudo");
+		pseudo = lireCookie("Pseudo");
 		if (pseudo == null || pseudo == ""){
 			Q.stageScene('Aide',2);
 			var saisie = prompt("Bienvenue, a qui ai-je l'honneur ?", "");
 			Q.stageScene('Aide',2);
 
-	if (Navigateur.indexOf("Chrome") !=-1){
 		document.cookie = 'Pseudo='+saisie+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
-	}else{
-		document.cookie = ' Pseudo='+saisie+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';	
-	}
-			
-
-
-			pseudo = saisie;
+		pseudo = saisie;
 		}
 
 		

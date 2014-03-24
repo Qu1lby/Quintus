@@ -1,7 +1,5 @@
 // Raccourcis clavier du jeu
-
-	function lireCookie(nom) {
-      var nameEQ = name + "=";
+   /* var nameEQ = name + "=";
 		var ca = document.cookie.split(';');
 		for(var i=0;i < ca.length;i++) {
 			var c = ca[i];
@@ -11,6 +9,29 @@
 			}
 		}
 	return null;
+	}*/
+
+
+	function lireCookie(name) {
+  
+		if(document.cookie.length == 0)
+       		return null;
+
+       //	alert ("name : ."+name+".");
+	    var regSepCookie = new RegExp('(; )', 'g');
+	    var cookies = document.cookie.split(regSepCookie);
+		for(var i = 0; i < cookies.length; i++){
+		    var regInfo = new RegExp('=', 'g');
+		    var infos = cookies[i].split(regInfo);
+		    
+		   // alert ("."+infos[0]+".");
+		   
+		    if(infos[0] == name){
+		   // 	alert('R');
+	    	    return unescape(infos[1]);
+	    	}
+	    }
+	    return null;
 	}
 
 // Initialisation des variables
@@ -131,16 +152,12 @@
 		
 
 // Cookie Musique 		
-	if (Navigateur.indexOf("Chrome") !=-1){
-		var music = lireCookie(" Musique");
-	}else{
-		var music = lireCookie("Musique");
-	}
+	var music = lireCookie("Musique");
 
 	if (music == null){
-		document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
-		music = true;
-	}
+			document.cookie = 'Musique=true; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+			music = true;
+		}
 
 	if (music == "false"){
 		music = false;
