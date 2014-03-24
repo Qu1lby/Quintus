@@ -81,9 +81,9 @@
 			
 			//Deuxieme etage 
 			 ["Sol_pierre1_P", {x: 805 , y : 525}],
-			 ["Sol_pierre1_P", {x: 805 , y : 455}],/*
+			 ["Sol_pierre1_P", {x: 805 , y : 455}],
 			 ["Sol_pierre1_P", {x: 805 , y : 385}],
-			 ["Sol_pierre1_H", {x: 805 , y : 315}],*/
+			 ["Sol_pierre1_H", {x: 805 , y : 315}],
 			 ["Sol_pierre1_P", {x: 735 , y : 455}],
 			 ["Sol_pierre1_H", {x: 735 , y : 385}],
 			 ["Sol_pierre1_P", {x: 665 , y : 525}],
@@ -120,30 +120,7 @@
 			["Sol_pierre4_H", {x: 2485 , y : 525}],
 			["Sol_pierre4_H", {x: 2555 , y : 525}],
 			["Sol_pierre4_H", {x: 2625 , y : 525}],
-			
-			// ["Pressoir", {x:1225, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],			
-			// ["Pressoir", {x:1295, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1365, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1435, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1505, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1575, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1645, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1715, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1785, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1855, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1925, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:1995, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2065, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2135, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2205, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2275, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2345, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2415, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2485, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2555, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			// ["Pressoir", {x:2625, y: 35, vy : 6 , rangeY: 100, cooy: 455, asset: "plateforme.png"}],
-			
-			
+
 			
 			//sous sol deuxieme etage
 			["Sol_pierre1_H", {x: 455 , y : 525}],

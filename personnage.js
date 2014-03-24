@@ -483,7 +483,7 @@
 			this.p.sol = 0; 	 // Retiens le dernier cube
 			this.p.first = 1; 	 // Premier cube touché -> 0 (évite bug)
 			this.p.score = false;
-			
+			this.p.bool = false;
 			this.p.maintenant = new Date();
 			this.p.minute = 0;
 			this.p.once = false;
@@ -595,8 +595,6 @@
 					Q.audio.stop();
 					Q.audio.play('boss.mp3');
 			}
-			
-			this.p.bool = false;
 			
 			if(this.p.x>12*70+35 && this.p.x<12*70+65 && this.p.y>5*70+35 && this.p.y<7*70+35 && this.p.bool == false){
 				Q.stage().insert(new Q.Pressoir({x:945, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));

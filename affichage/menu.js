@@ -62,16 +62,28 @@ Q.scene("Debut", function(stage) {
 		label: "Comment ?", x: 0, y: 0 }),Menu2);
 						
 	men.on("click",function() {
+		Q.clearStages();
+
 		pseudo = lireCookie(" Pseudo");
 		if (pseudo == null || pseudo == ""){
+			Q.stageScene('Aide',2);
 			var saisie = prompt("Bienvenue, a qui ai-je l'honneur ?", "");
-			document.cookie = 'Pseudo='+saisie+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+			Q.stageScene('Aide',2);
+
+	if (Navigateur.indexOf("Chrome") !=-1){
+		document.cookie = 'Pseudo='+saisie+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';
+	}else{
+		document.cookie = ' Pseudo='+saisie+'; expires=Wed, 30 Dec 2015 00:00:00 UTC; path=/';	
+	}
+			
+
+
 			pseudo = saisie;
 		}
 
-		Q.clearStages();
+		
 
-	if (score_t < 2000 ){
+	if (score_t < 2500 ){
 		Q.stageScene('niveau');
 	}else Q.stageScene('niveau2');
 	
