@@ -593,35 +593,37 @@
 			
 			if(this.p.x>24*70+35 && this.p.x<26*70+35 && this.p.y>17*70+35 && this.p.y<19*70+35){
 					Q.audio.stop();
-					Q.audio.play('boss.mp3');
+					if(music){
+						Q.audio.play('boss.mp3');
+					}
 			}
 			
 			if(this.p.x>12*70+35 && this.p.x<12*70+65 && this.p.y>5*70+35 && this.p.y<7*70+35 && this.p.bool == false){
-				Q.stage().insert(new Q.Pressoir({x:945, y: 105, vy : 15 , rangeY: 125, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:945, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				Q.stage().insert(new Q.Pressoir({x:1015, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				Q.stage().insert(new Q.Pressoir({x:1085, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				Q.stage().insert(new Q.Pressoir({x:1155, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				Q.stage().insert(new Q.Pressoir({x:1225, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				Q.stage().insert(new Q.Pressoir({x:1295, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1365, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1435, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1505, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1575, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1645, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1715, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1785, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1855, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1925, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:1995, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2065, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2135, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2205, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2275, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2345, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2415, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2485, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2555, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
-				Q.stage().insert(new Q.Pressoir({x:2625, y: 105, vy : 10 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1365, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1435, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1505, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1575, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1645, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1715, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1785, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1855, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1925, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:1995, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2065, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2135, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2205, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2275, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2345, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2415, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2485, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2555, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
+				Q.stage().insert(new Q.Pressoir({x:2625, y: 105, vy : 15 , rangeY: 100, cooy: 455, asset: "plateforme.png"}));
 				this.p.bool = true;
 			}
 			
@@ -693,7 +695,7 @@
 	});
 
 
-	var min5=0;
+var min5=0;
 var sec5=0;
 var liv5=2;
 	
@@ -754,17 +756,12 @@ var liv5=2;
 					 this.p.secondeabs = "0"+this.p.secondeabs;
 					 this.p.once = true;
 				}
-				if(this.p.minute<10){ 
 					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : 0"+this.p.minute+":"+this.p.secondeabs;	
+        			livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l4tps;	
 					
 					var min5=this.p.minute;
 					var sec5=this.p.secondeabs;
 	
-				}else{
-					var livesLabel = Q("UI.Text",1).at(1);
-        		    livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs;	
-				}
 			}
 			
 			var livesLabel = Q("UI.Text",1).first();

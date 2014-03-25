@@ -275,6 +275,10 @@ Q.Sprite.extend("Boss", {
 	if(this.p.y > 1600) {  
 			score_l5_tmp = 700 - (2*sec5) - (120*min5) + (100*liv5) ;
 			score_l5tps_tmp = min5+":"+sec5;
+			score_t = score_l1 + score_l2 + score_l3 + score_l4 + score_l5;
+
+			verification();
+			
 			scene_courante = "GO";
 			scene_prec = "lvl5";	
 			

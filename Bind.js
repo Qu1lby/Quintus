@@ -1,17 +1,4 @@
 // Raccourcis clavier du jeu
-   /* var nameEQ = name + "=";
-		var ca = document.cookie.split(';');
-		for(var i=0;i < ca.length;i++) {
-			var c = ca[i];
-			var deb = c.split('=');
-			if (deb [0] == nom){
-				return deb[1];
-			}
-		}
-	return null;
-	}*/
-
-
 	function lireCookie(name) {
   
 		if(document.cookie.length == 0)
