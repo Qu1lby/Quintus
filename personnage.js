@@ -759,8 +759,8 @@ var liv5=2;
 					var livesLabel = Q("UI.Text",1).at(1);
         			livesLabel.p.label = "Temps : "+this.p.minute+":"+this.p.secondeabs+" / "+score_l4tps;	
 					
-					var min5=this.p.minute;
-					var sec5=this.p.secondeabs;
+					min5=this.p.minute;
+					sec5=this.p.secondeabs;
 	
 			}
 			
