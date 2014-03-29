@@ -20,7 +20,7 @@ Q.scene("level2",function(stage) {
 
 		["Sol_5", {x: 1645 , y : 805}],							
 
-		["Fin", {x: 1505 , y : 1365, asset: "ananas.png"}],		
+		["Fin", {x: 1505 , y : 1365, asset: "fraise.png"}],		
 		["Sol_5", {x: 1505 , y : 1364, asset: "cage.png"}],				
 		
 		["Sol_5", {x: 875 , y : 1505}],
