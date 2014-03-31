@@ -5,12 +5,12 @@
        		return null;
 
        //	alert ("name : ."+name+".");
-	    var regSepCookie = new RegExp('(; )', 'g');
+	    var regSepCoo
+		    var infos = cookies[i].split(regInfo);
+		    	    var regSepCookie = new RegExp('(; )', 'g');
 	    var cookies = document.cookie.split(regSepCookie);
 		for(var i = 0; i < cookies.length; i++){
 		    var regInfo = new RegExp('=', 'g');
-		    var infos = cookies[i].split(regInfo);
-		    
 		   // alert ("."+infos[0]+".");
 		   
 		    if(infos[0] == name){
